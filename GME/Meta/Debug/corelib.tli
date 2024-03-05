@@ -1,0 +1,1028 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (1bd2f80e).
+//
+// c:\users\69038\documents\gme-21.4.1_src\gme\meta\debug\corelib.tli
+//
+// Wrapper implementations for Win32 type library CoreLib.tlb
+// compiler-generated file created 06/28/23 at 14:39:19 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface ICoreDictionaryAttributeValue wrapper method implementations
+//
+
+_bstr_t ICoreDictionaryAttributeValue::GetValue ( _bstr_t Key ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Value(Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void ICoreDictionaryAttributeValue::PutValue ( _bstr_t Key, _bstr_t Value ) {
+    HRESULT _hr = put_Value(Key, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_variant_t ICoreDictionaryAttributeValue::GetKeys ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Keys(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t ICoreDictionaryAttributeValue::GetMap ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Map(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+void ICoreDictionaryAttributeValue::PutMap ( const _variant_t & Map ) {
+    HRESULT _hr = put_Map(Map);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+HRESULT ICoreDictionaryAttributeValue::__Clone ( struct ICoreDictionaryAttributeValue * * ret ) {
+    HRESULT _hr = Clone(ret);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IGMEVersionInfo wrapper method implementations
+//
+
+enum GMEInterfaceVersion_enum IGMEVersionInfo::Getversion ( ) {
+    enum GMEInterfaceVersion_enum _result;
+    HRESULT _hr = get_version(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface ICoreProject wrapper method implementations
+//
+
+void ICoreProject::PutStorage ( struct ICoreStorage * p ) {
+    HRESULT _hr = put_Storage(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+ICoreStoragePtr ICoreProject::GetStorage ( ) {
+    struct ICoreStorage * _result = 0;
+    HRESULT _hr = get_Storage(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreStoragePtr(_result, false);
+}
+
+ICoreMetaProjectPtr ICoreProject::GetMetaProject ( ) {
+    struct ICoreMetaProject * _result = 0;
+    HRESULT _hr = get_MetaProject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaProjectPtr(_result, false);
+}
+
+HRESULT ICoreProject::__OpenProject ( _bstr_t connection, struct ICoreMetaProject * p, VARIANT_BOOL * ro_mode ) {
+    HRESULT _hr = OpenProject(connection, p, ro_mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__CloseProject ( VARIANT_BOOL abort ) {
+    HRESULT _hr = CloseProject(abort);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__CreateProject ( _bstr_t connection, struct ICoreMetaProject * p ) {
+    HRESULT _hr = CreateProject(connection, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__SaveProject ( _bstr_t save_as_conn, VARIANT_BOOL keepoldname ) {
+    HRESULT _hr = SaveProject(save_as_conn, keepoldname);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__DeleteProject ( _bstr_t connection ) {
+    HRESULT _hr = DeleteProject(connection);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__OpenProject2 ( _bstr_t connection, long pUndoSize, struct ICoreMetaProject * p, VARIANT_BOOL * ro_mode ) {
+    HRESULT _hr = OpenProject2(connection, pUndoSize, p, ro_mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__CreateProject2 ( _bstr_t connection, long pUndoSize, struct ICoreMetaProject * p ) {
+    HRESULT _hr = CreateProject2(connection, pUndoSize, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+ICoreObjectPtr ICoreProject::GetObject ( short MetaID, long ObjID ) {
+    struct ICoreObject * _result = 0;
+    HRESULT _hr = get_Object(MetaID, ObjID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreObjectPtr(_result, false);
+}
+
+ICoreObjectPtr ICoreProject::__GetObjectDisp ( short MetaID, long ObjID ) {
+    struct ICoreObject * _result = 0;
+    HRESULT _hr = GetObjectDisp(MetaID, ObjID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreObjectPtr(_result, false);
+}
+
+HRESULT ICoreProject::__CreateObject ( short MetaID, struct ICoreObject * * p ) {
+    HRESULT _hr = CreateObject(MetaID, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+ICoreObjectPtr ICoreProject::GetRootObject ( ) {
+    struct ICoreObject * _result = 0;
+    HRESULT _hr = get_RootObject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreObjectPtr(_result, false);
+}
+
+HRESULT ICoreProject::__BeginTransaction ( enum transtype_enum transtype ) {
+    HRESULT _hr = BeginTransaction(transtype);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__CommitTransaction ( enum transtype_enum transtype ) {
+    HRESULT _hr = CommitTransaction(transtype);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__AbortTransaction ( enum transtype_enum transtype ) {
+    HRESULT _hr = AbortTransaction(transtype);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+short ICoreProject::GetNestedTransactionCount ( ) {
+    short _result = 0;
+    HRESULT _hr = get_NestedTransactionCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT ICoreProject::__UndoTransaction ( ) {
+    HRESULT _hr = UndoTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__RedoTransaction ( ) {
+    HRESULT _hr = RedoTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__FlushUndoQueue ( ) {
+    HRESULT _hr = FlushUndoQueue();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__FlushRedoQueue ( ) {
+    HRESULT _hr = FlushRedoQueue();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+short ICoreProject::GetUndoQueueSize ( ) {
+    short _result = 0;
+    HRESULT _hr = get_UndoQueueSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+short ICoreProject::GetRedoQueueSize ( ) {
+    short _result = 0;
+    HRESULT _hr = get_RedoQueueSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT ICoreProject::__CreateTerritory ( struct ICoreTerritory * * p ) {
+    HRESULT _hr = CreateTerritory(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__PushTerritory ( struct ICoreTerritory * p ) {
+    HRESULT _hr = PushTerritory(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreProject::__PopTerritory ( ) {
+    HRESULT _hr = PopTerritory();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoreStorage wrapper method implementations
+//
+
+ICoreMetaProjectPtr ICoreStorage::GetMetaProject ( ) {
+    struct ICoreMetaProject * _result = 0;
+    HRESULT _hr = get_MetaProject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaProjectPtr(_result, false);
+}
+
+void ICoreStorage::PutMetaProject ( struct ICoreMetaProject * p ) {
+    HRESULT _hr = put_MetaProject(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+long ICoreStorage::GetStorageType ( ) {
+    long _result = 0;
+    HRESULT _hr = get_StorageType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+ICoreMetaObjectPtr ICoreStorage::GetMetaObject ( ) {
+    struct ICoreMetaObject * _result = 0;
+    HRESULT _hr = get_MetaObject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaObjectPtr(_result, false);
+}
+
+void ICoreStorage::PutMetaObject ( struct ICoreMetaObject * p ) {
+    HRESULT _hr = put_MetaObject(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+short ICoreStorage::GetMetaID ( ) {
+    short _result = 0;
+    HRESULT _hr = get_MetaID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void ICoreStorage::PutMetaID ( short p ) {
+    HRESULT _hr = put_MetaID(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+ICoreMetaAttributePtr ICoreStorage::GetMetaAttribute ( ) {
+    struct ICoreMetaAttribute * _result = 0;
+    HRESULT _hr = get_MetaAttribute(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaAttributePtr(_result, false);
+}
+
+void ICoreStorage::PutMetaAttribute ( struct ICoreMetaAttribute * p ) {
+    HRESULT _hr = put_MetaAttribute(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+short ICoreStorage::GetAttrID ( ) {
+    short _result = 0;
+    HRESULT _hr = get_AttrID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void ICoreStorage::PutAttrID ( short p ) {
+    HRESULT _hr = put_AttrID(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+HRESULT ICoreStorage::__OpenProject ( _bstr_t connection, VARIANT_BOOL * ro_mode ) {
+    HRESULT _hr = OpenProject(connection, ro_mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__CloseProject ( VARIANT_BOOL abort ) {
+    HRESULT _hr = CloseProject(abort);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__SaveProject ( _bstr_t save_as_conn, VARIANT_BOOL keepoldname ) {
+    HRESULT _hr = SaveProject(save_as_conn, keepoldname);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__CreateProject ( _bstr_t connection ) {
+    HRESULT _hr = CreateProject(connection);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__DeleteProject ( ) {
+    HRESULT _hr = DeleteProject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__BeginTransaction ( ) {
+    HRESULT _hr = BeginTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__CommitTransaction ( ) {
+    HRESULT _hr = CommitTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__AbortTransaction ( ) {
+    HRESULT _hr = AbortTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__OpenObject ( long ObjID ) {
+    HRESULT _hr = OpenObject(ObjID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__CloseObject ( ) {
+    HRESULT _hr = CloseObject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__CreateObject ( long * ObjID ) {
+    HRESULT _hr = CreateObject(ObjID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__DeleteObject ( ) {
+    HRESULT _hr = DeleteObject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreStorage::__LockObject ( ) {
+    HRESULT _hr = LockObject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_variant_t ICoreStorage::GetAttributeValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_AttributeValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+void ICoreStorage::PutAttributeValue ( const _variant_t & p ) {
+    HRESULT _hr = put_AttributeValue(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICoreMetaProject wrapper method implementations
+//
+
+_variant_t ICoreMetaProject::GetGUID ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_GUID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+void ICoreMetaProject::PutGUID ( const _variant_t & p ) {
+    HRESULT _hr = put_GUID(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t ICoreMetaProject::GetToken ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Token(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void ICoreMetaProject::PutToken ( _bstr_t p ) {
+    HRESULT _hr = put_Token(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t ICoreMetaProject::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void ICoreMetaProject::PutName ( _bstr_t p ) {
+    HRESULT _hr = put_Name(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+ICoreMetaObjectPtr ICoreMetaProject::GetObject ( short MetaID ) {
+    struct ICoreMetaObject * _result = 0;
+    HRESULT _hr = get_Object(MetaID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaObjectPtr(_result, false);
+}
+
+ICoreMetaObjectPtr ICoreMetaProject::__GetObjectDisp ( short MetaID ) {
+    struct ICoreMetaObject * _result = 0;
+    HRESULT _hr = GetObjectDisp(MetaID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaObjectPtr(_result, false);
+}
+
+ICoreMetaObjectsPtr ICoreMetaProject::GetObjects ( ) {
+    struct ICoreMetaObjects * _result = 0;
+    HRESULT _hr = get_Objects(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaObjectsPtr(_result, false);
+}
+
+HRESULT ICoreMetaProject::__AddObject ( short MetaID, _bstr_t Token, _bstr_t Name, struct ICoreMetaObject * * p ) {
+    HRESULT _hr = AddObject(MetaID, Token, Name, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoreMetaObject wrapper method implementations
+//
+
+ICoreMetaProjectPtr ICoreMetaObject::GetProject ( ) {
+    struct ICoreMetaProject * _result = 0;
+    HRESULT _hr = get_Project(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaProjectPtr(_result, false);
+}
+
+short ICoreMetaObject::GetMetaID ( ) {
+    short _result = 0;
+    HRESULT _hr = get_MetaID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+_bstr_t ICoreMetaObject::GetToken ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Token(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t ICoreMetaObject::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+ICoreMetaAttributePtr ICoreMetaObject::GetAttribute ( short AttrID ) {
+    struct ICoreMetaAttribute * _result = 0;
+    HRESULT _hr = get_Attribute(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaAttributePtr(_result, false);
+}
+
+ICoreMetaAttributePtr ICoreMetaObject::__GetAttributeDisp ( short AttrID ) {
+    struct ICoreMetaAttribute * _result = 0;
+    HRESULT _hr = GetAttributeDisp(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaAttributePtr(_result, false);
+}
+
+ICoreMetaAttributesPtr ICoreMetaObject::GetAttributes ( ) {
+    struct ICoreMetaAttributes * _result = 0;
+    HRESULT _hr = get_Attributes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaAttributesPtr(_result, false);
+}
+
+SAFEARRAY * ICoreMetaObject::GetClassIDs ( ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = get_ClassIDs(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT ICoreMetaObject::__AddAttribute ( short AttrID, _bstr_t Token, _bstr_t Name, unsigned char valtype, struct ICoreMetaAttribute * * p ) {
+    HRESULT _hr = AddAttribute(AttrID, Token, Name, valtype, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreMetaObject::__AddClassID ( const _variant_t & classid ) {
+    HRESULT _hr = AddClassID(classid);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoreMetaAttribute wrapper method implementations
+//
+
+ICoreMetaObjectPtr ICoreMetaAttribute::GetObject ( ) {
+    struct ICoreMetaObject * _result = 0;
+    HRESULT _hr = get_Object(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaObjectPtr(_result, false);
+}
+
+short ICoreMetaAttribute::GetAttrID ( ) {
+    short _result = 0;
+    HRESULT _hr = get_AttrID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+_bstr_t ICoreMetaAttribute::GetToken ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Token(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t ICoreMetaAttribute::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+unsigned char ICoreMetaAttribute::GetValueType ( ) {
+    unsigned char _result = 0;
+    HRESULT _hr = get_ValueType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+short ICoreMetaAttribute::GetLockAttrID ( ) {
+    short _result = 0;
+    HRESULT _hr = get_LockAttrID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+long ICoreMetaAttribute::GetMaxSize ( ) {
+    long _result = 0;
+    HRESULT _hr = get_MaxSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface ICoreMetaAttributes wrapper method implementations
+//
+
+long ICoreMetaAttributes::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+ICoreMetaAttributePtr ICoreMetaAttributes::GetItem ( long n ) {
+    struct ICoreMetaAttribute * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaAttributePtr(_result, false);
+}
+
+IUnknownPtr ICoreMetaAttributes::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT ICoreMetaAttributes::__GetAll ( long Count, struct ICoreMetaAttribute * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreMetaAttributes::__Insert ( struct ICoreMetaAttribute * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreMetaAttributes::__Append ( struct ICoreMetaAttribute * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long ICoreMetaAttributes::__Find ( struct ICoreMetaAttribute * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT ICoreMetaAttributes::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoreMetaObjects wrapper method implementations
+//
+
+long ICoreMetaObjects::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+ICoreMetaObjectPtr ICoreMetaObjects::GetItem ( long n ) {
+    struct ICoreMetaObject * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaObjectPtr(_result, false);
+}
+
+IUnknownPtr ICoreMetaObjects::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT ICoreMetaObjects::__GetAll ( long Count, struct ICoreMetaObject * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreMetaObjects::__Insert ( struct ICoreMetaObject * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreMetaObjects::__Append ( struct ICoreMetaObject * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long ICoreMetaObjects::__Find ( struct ICoreMetaObject * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT ICoreMetaObjects::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoreObject wrapper method implementations
+//
+
+ICoreProjectPtr ICoreObject::GetProject ( ) {
+    struct ICoreProject * _result = 0;
+    HRESULT _hr = get_Project(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreProjectPtr(_result, false);
+}
+
+ICoreMetaObjectPtr ICoreObject::GetMetaObject ( ) {
+    struct ICoreMetaObject * _result = 0;
+    HRESULT _hr = get_MetaObject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaObjectPtr(_result, false);
+}
+
+long ICoreObject::GetObjID ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ObjID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+ICoreAttributePtr ICoreObject::GetAttribute ( short AttrID ) {
+    struct ICoreAttribute * _result = 0;
+    HRESULT _hr = get_Attribute(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreAttributePtr(_result, false);
+}
+
+ICoreAttributePtr ICoreObject::__GetAttributeDisp ( short AttrID ) {
+    struct ICoreAttribute * _result = 0;
+    HRESULT _hr = GetAttributeDisp(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreAttributePtr(_result, false);
+}
+
+ICoreAttributesPtr ICoreObject::GetAttributes ( ) {
+    struct ICoreAttributes * _result = 0;
+    HRESULT _hr = get_Attributes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreAttributesPtr(_result, false);
+}
+
+_variant_t ICoreObject::GetAttributeValue ( short AttrID ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_AttributeValue(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t ICoreObject::__GetAttributeValueDisp ( short AttrID ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetAttributeValueDisp(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+void ICoreObject::PutAttributeValue ( short AttrID, const _variant_t & p ) {
+    HRESULT _hr = put_AttributeValue(AttrID, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+HRESULT ICoreObject::__SetAttributeValueDisp ( short AttrID, const _variant_t & p ) {
+    HRESULT _hr = SetAttributeValueDisp(AttrID, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_variant_t ICoreObject::GetLoadedAttrValue ( short AttrID ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_LoadedAttrValue(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t ICoreObject::__GetLoadedAttrValueDisp ( short AttrID ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetLoadedAttrValueDisp(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t ICoreObject::GetPreviousAttrValue ( short AttrID ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_PreviousAttrValue(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t ICoreObject::__GetPreviousAttrValueDisp ( short AttrID ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetPreviousAttrValueDisp(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+unsigned char ICoreObject::GetPeerLockValue ( short AttrID ) {
+    unsigned char _result = 0;
+    HRESULT _hr = get_PeerLockValue(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+unsigned char ICoreObject::__GetPeerLockValueDisp ( short AttrID ) {
+    unsigned char _result = 0;
+    HRESULT _hr = GetPeerLockValueDisp(AttrID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+ICoreObjectPtr ICoreObject::__SearchCollection ( short coll_attrid, short search_attrid, const _variant_t & search_value ) {
+    struct ICoreObject * _result = 0;
+    HRESULT _hr = SearchCollection(coll_attrid, search_attrid, search_value, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreObjectPtr(_result, false);
+}
+
+void ICoreObject::GetIsDeleted ( VARIANT_BOOL * p ) {
+    HRESULT _hr = get_IsDeleted(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+HRESULT ICoreObject::__Delete ( ) {
+    HRESULT _hr = Delete();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreObject::__Clone ( struct ICoreObject * * p ) {
+    HRESULT _hr = Clone(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoreAttribute wrapper method implementations
+//
+
+ICoreObjectPtr ICoreAttribute::GetObject ( ) {
+    struct ICoreObject * _result = 0;
+    HRESULT _hr = get_Object(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreObjectPtr(_result, false);
+}
+
+ICoreMetaAttributePtr ICoreAttribute::GetMetaAttribute ( ) {
+    struct ICoreMetaAttribute * _result = 0;
+    HRESULT _hr = get_MetaAttribute(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreMetaAttributePtr(_result, false);
+}
+
+_variant_t ICoreAttribute::GetValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Value(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+void ICoreAttribute::PutValue ( const _variant_t & p ) {
+    HRESULT _hr = put_Value(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_variant_t ICoreAttribute::GetLoadedValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_LoadedValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t ICoreAttribute::GetPreviousValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_PreviousValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface ICoreAttributes wrapper method implementations
+//
+
+long ICoreAttributes::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+ICoreAttributePtr ICoreAttributes::GetItem ( long n ) {
+    struct ICoreAttribute * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreAttributePtr(_result, false);
+}
+
+IUnknownPtr ICoreAttributes::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT ICoreAttributes::__GetAll ( long Count, struct ICoreAttribute * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreAttributes::__Insert ( struct ICoreAttribute * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreAttributes::__Append ( struct ICoreAttribute * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long ICoreAttributes::__Find ( struct ICoreAttribute * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT ICoreAttributes::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoreTerritory wrapper method implementations
+//
+
+ICoreProjectPtr ICoreTerritory::GetProject ( ) {
+    struct ICoreProject * _result = 0;
+    HRESULT _hr = get_Project(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreProjectPtr(_result, false);
+}
+
+ICoreAttributesPtr ICoreTerritory::GetAttributes ( ) {
+    struct ICoreAttributes * _result = 0;
+    HRESULT _hr = get_Attributes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreAttributesPtr(_result, false);
+}
+
+HRESULT ICoreTerritory::__Clear ( ) {
+    HRESULT _hr = Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoreObjects wrapper method implementations
+//
+
+long ICoreObjects::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+ICoreObjectPtr ICoreObjects::GetItem ( long n ) {
+    struct ICoreObject * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICoreObjectPtr(_result, false);
+}
+
+IUnknownPtr ICoreObjects::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT ICoreObjects::__GetAll ( long Count, struct ICoreObject * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreObjects::__Insert ( struct ICoreObject * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT ICoreObjects::__Append ( struct ICoreObject * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long ICoreObjects::__Find ( struct ICoreObject * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT ICoreObjects::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

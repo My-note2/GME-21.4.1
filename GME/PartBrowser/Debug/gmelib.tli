@@ -1,0 +1,1443 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (7bf63fd2).
+//
+// c:\users\69038\documents\gme-21.4.1_src\gme\partbrowser\debug\gmelib.tli
+//
+// Wrapper implementations for Win32 type library GMELib.tlb
+// compiler-generated file created 01/11/24 at 17:50:57 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IMgaDecorator wrapper method implementations
+//
+
+HRESULT IMgaDecorator::__Initialize ( struct IMgaProject * p, struct IMgaMetaPart * meta, struct IMgaFCO * obj ) {
+    HRESULT _hr = Initialize(p, meta, obj);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__Destroy ( ) {
+    HRESULT _hr = Destroy();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__GetMnemonic ( BSTR * mnemonic ) {
+    HRESULT _hr = GetMnemonic(mnemonic);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__GetFeatures ( unsigned long * features ) {
+    HRESULT _hr = GetFeatures(features);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__SetParam ( _bstr_t Name, const _variant_t & value ) {
+    HRESULT _hr = SetParam(Name, value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__GetParam ( _bstr_t Name, VARIANT * value ) {
+    HRESULT _hr = GetParam(Name, value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__SetActive ( VARIANT_BOOL isActive ) {
+    HRESULT _hr = SetActive(isActive);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__GetPreferredSize ( long * sizex, long * sizey ) {
+    HRESULT _hr = GetPreferredSize(sizex, sizey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__SetLocation ( long sx, long sy, long ex, long ey ) {
+    HRESULT _hr = SetLocation(sx, sy, ex, ey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__GetLocation ( long * sx, long * sy, long * ex, long * ey ) {
+    HRESULT _hr = GetLocation(sx, sy, ex, ey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__GetLabelLocation ( long * sx, long * sy, long * ex, long * ey ) {
+    HRESULT _hr = GetLabelLocation(sx, sy, ex, ey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__GetPortLocation ( struct IMgaFCO * fco, long * sx, long * sy, long * ex, long * ey ) {
+    HRESULT _hr = GetPortLocation(fco, sx, sy, ex, ey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOsPtr IMgaDecorator::__GetPorts ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = GetPorts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+HRESULT IMgaDecorator::__Draw ( unsigned long hdc ) {
+    HRESULT _hr = Draw(hdc);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecorator::__SaveState ( ) {
+    HRESULT _hr = SaveState();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaCommonDecoratorEvents wrapper method implementations
+//
+
+HRESULT IMgaCommonDecoratorEvents::__Refresh ( enum refresh_mode_enum refreshMode ) {
+    HRESULT _hr = Refresh(refreshMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__OperationCanceled ( ) {
+    HRESULT _hr = OperationCanceled();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__CursorChanged ( long newCursorID ) {
+    HRESULT _hr = CursorChanged(newCursorID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__CursorRestored ( ) {
+    HRESULT _hr = CursorRestored();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelEditingStarted ( long left, long top, long right, long bottom ) {
+    HRESULT _hr = LabelEditingStarted(left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelEditingFinished ( long left, long top, long right, long bottom ) {
+    HRESULT _hr = LabelEditingFinished(left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelChanged ( _bstr_t newLabel ) {
+    HRESULT _hr = LabelChanged(newLabel);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelMovingStarted ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = LabelMovingStarted(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelMoving ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = LabelMoving(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelMovingFinished ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = LabelMovingFinished(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelMoved ( long nFlags, long x, long y ) {
+    HRESULT _hr = LabelMoved(nFlags, x, y);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelResizingStarted ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = LabelResizingStarted(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelResizing ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = LabelResizing(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelResizingFinished ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = LabelResizingFinished(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__LabelResized ( long nFlags, long cx, long cy ) {
+    HRESULT _hr = LabelResized(nFlags, cx, cy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__GeneralOperationStarted ( unsigned __int64 operationData ) {
+    HRESULT _hr = GeneralOperationStarted(operationData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaCommonDecoratorEvents::__GeneralOperationFinished ( unsigned __int64 * operationData ) {
+    HRESULT _hr = GeneralOperationFinished(operationData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaDecoratorCommon wrapper method implementations
+//
+
+HRESULT IMgaDecoratorCommon::__InitializeEx ( struct IMgaProject * p, struct IMgaMetaPart * meta, struct IMgaFCO * obj, struct IMgaCommonDecoratorEvents * eventSink, unsigned __int64 parentWnd ) {
+    HRESULT _hr = InitializeEx(p, meta, obj, eventSink, parentWnd);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__DrawEx ( unsigned long hdc, unsigned __int64 gdip ) {
+    HRESULT _hr = DrawEx(hdc, gdip);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__SetSelected ( VARIANT_BOOL isSelected ) {
+    HRESULT _hr = SetSelected(isSelected);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseMoved ( unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseMoved(nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseLeftButtonDown ( unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseLeftButtonDown(nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseLeftButtonUp ( unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseLeftButtonUp(nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseLeftButtonDoubleClick ( unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseLeftButtonDoubleClick(nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseRightButtonDown ( unsigned __int64 hCtxMenu, unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseRightButtonDown(hCtxMenu, nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseRightButtonUp ( unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseRightButtonUp(nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseRightButtonDoubleClick ( unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseRightButtonDoubleClick(nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseMiddleButtonDown ( unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseMiddleButtonDown(nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseMiddleButtonUp ( unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseMiddleButtonUp(nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseMiddleButtonDoubleClick ( unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseMiddleButtonDoubleClick(nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MouseWheelTurned ( unsigned long nFlags, long distance, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MouseWheelTurned(nFlags, distance, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__MenuItemSelected ( unsigned long menuItemId, unsigned long nFlags, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = MenuItemSelected(menuItemId, nFlags, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__OperationCanceled ( ) {
+    HRESULT _hr = OperationCanceled();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__DragEnter ( unsigned long * dropEffect, unsigned __int64 pCOleDataObject, unsigned long keyState, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = DragEnter(dropEffect, pCOleDataObject, keyState, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__DragOver ( unsigned long * dropEffect, unsigned __int64 pCOleDataObject, unsigned long keyState, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = DragOver(dropEffect, pCOleDataObject, keyState, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__Drop ( unsigned __int64 pCOleDataObject, unsigned long dropEffect, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = Drop(pCOleDataObject, dropEffect, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaDecoratorCommon::__DropFile ( unsigned __int64 hDropInfo, long pointx, long pointy, unsigned __int64 transformHDC ) {
+    HRESULT _hr = DropFile(hDropInfo, pointx, pointy, transformHDC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaElementDecoratorEvents wrapper method implementations
+//
+
+HRESULT IMgaElementDecoratorEvents::__WindowMovingStarted ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = WindowMovingStarted(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaElementDecoratorEvents::__WindowMoving ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = WindowMoving(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaElementDecoratorEvents::__WindowMovingFinished ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = WindowMovingFinished(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaElementDecoratorEvents::__WindowMoved ( long nFlags, long x, long y ) {
+    HRESULT _hr = WindowMoved(nFlags, x, y);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaElementDecoratorEvents::__WindowResizingStarted ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = WindowResizingStarted(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaElementDecoratorEvents::__WindowResizing ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = WindowResizing(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaElementDecoratorEvents::__WindowResizingFinished ( long nFlags, long left, long top, long right, long bottom ) {
+    HRESULT _hr = WindowResizingFinished(nFlags, left, top, right, bottom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaElementDecoratorEvents::__WindowResized ( long nFlags, long cx, long cy ) {
+    HRESULT _hr = WindowResized(nFlags, cx, cy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaDataSource wrapper method implementations
+//
+
+IUnknownPtr IMgaDataSource::GetData ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get_Data(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+IUnknownPtr IMgaDataSource::GetFolders ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get_Folders(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+IUnknownPtr IMgaDataSource::GetRegistryData ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get_RegistryData(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+IUnknownPtr IMgaDataSource::GetProject ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get_Project(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IGMEOLEColl wrapper method implementations
+//
+
+long IGMEOLEColl::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IGMEOLEColl::__Add ( IDispatch * newValue ) {
+    HRESULT _hr = Add(newValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IGMEOLEColl::__Find ( IDispatch * findValue ) {
+    long _result = 0;
+    HRESULT _hr = Find(findValue, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IGMEOLEColl::__Remove ( const _variant_t & removeValue ) {
+    HRESULT _hr = Remove(removeValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEColl::__RemoveAll ( ) {
+    HRESULT _hr = RemoveAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IDispatchPtr IGMEOLEColl::GetItem ( long nIndex ) {
+    IDispatch * _result = 0;
+    HRESULT _hr = get_Item(nIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+void IGMEOLEColl::PutItem ( long nIndex, IDispatch * val ) {
+    HRESULT _hr = put_Item(nIndex, val);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IUnknownPtr IGMEOLEColl::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IGMEOLEIt wrapper method implementations
+//
+
+VARIANT_BOOL IGMEOLEIt::GetValid ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Valid(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IGMEOLECollPtr IGMEOLEIt::GetAspects ( ) {
+    struct IGMEOLEColl * _result = 0;
+    HRESULT _hr = get_Aspects(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGMEOLECollPtr(_result, false);
+}
+
+IMgaModelPtr IGMEOLEIt::GetMgaModel ( ) {
+    struct IMgaModel * _result = 0;
+    HRESULT _hr = get_MgaModel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaModelPtr(_result, false);
+}
+
+HRESULT IGMEOLEIt::__Print ( ) {
+    HRESULT _hr = Print();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__PrintDialog ( ) {
+    HRESULT _hr = PrintDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__DumpWindowsMetaFile ( _bstr_t filePath ) {
+    HRESULT _hr = DumpWindowsMetaFile(filePath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__CheckConstraints ( ) {
+    HRESULT _hr = CheckConstraints();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__RunComponent ( _bstr_t appID ) {
+    HRESULT _hr = RunComponent(appID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__RunComponentDialog ( ) {
+    HRESULT _hr = RunComponentDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__Close ( ) {
+    HRESULT _hr = Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__GrayOutFCO ( VARIANT_BOOL bGray, VARIANT_BOOL bNeighbours, struct IMgaFCOs * mgaFCO ) {
+    HRESULT _hr = GrayOutFCO(bGray, bNeighbours, mgaFCO);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__GrayOutHide ( ) {
+    HRESULT _hr = GrayOutHide();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__ShowSetMembers ( struct IMgaFCO * mgaFCO ) {
+    HRESULT _hr = ShowSetMembers(mgaFCO);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__HideSetMembers ( ) {
+    HRESULT _hr = HideSetMembers();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__Zoom ( unsigned long percent ) {
+    HRESULT _hr = Zoom(percent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__ZoomTo ( struct IMgaFCOs * mgaFCOs ) {
+    HRESULT _hr = ZoomTo(mgaFCOs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__Scroll ( enum bar_enum __MIDL__IGMEOLEIt0000, enum scroll_enum __MIDL__IGMEOLEIt0001 ) {
+    HRESULT _hr = Scroll(__MIDL__IGMEOLEIt0000, __MIDL__IGMEOLEIt0001);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__DumpModelGeometryXML ( _bstr_t filePath ) {
+    HRESULT _hr = DumpModelGeometryXML(filePath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__ShowFCO ( _bstr_t path, VARIANT_BOOL inParent ) {
+    HRESULT _hr = ShowFCO(path, inParent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__ShowFCOPtr ( struct IMgaFCO * fco, VARIANT_BOOL inParent ) {
+    HRESULT _hr = ShowFCOPtr(fco, inParent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOPtr IGMEOLEIt::__Child ( _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = Child(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IGMEOLEIt::__Create ( _bstr_t part, _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = Create(part, Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IGMEOLEIt::__CreateInChild ( _bstr_t child_as_parent, _bstr_t part, _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CreateInChild(child_as_parent, part, Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IGMEOLEIt::__CreateInChildFCO ( struct IMgaFCO * child_as_parent, _bstr_t part, _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CreateInChildFCO(child_as_parent, part, Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IGMEOLEIt::__Duplicate ( _bstr_t existing_fco_name, _bstr_t new_fco_name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = Duplicate(existing_fco_name, new_fco_name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IGMEOLEIt::__DuplicateFCO ( struct IMgaFCO * existing_fco, _bstr_t new_fco_name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = DuplicateFCO(existing_fco, new_fco_name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+HRESULT IGMEOLEIt::__Rename ( _bstr_t oldname, _bstr_t newname ) {
+    HRESULT _hr = Rename(oldname, newname);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__SetName ( struct IMgaFCO * __MIDL__IGMEOLEIt0002, _bstr_t Name ) {
+    HRESULT _hr = SetName(__MIDL__IGMEOLEIt0002, Name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__Include ( _bstr_t SetName, _bstr_t Name ) {
+    HRESULT _hr = Include(SetName, Name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__Exclude ( _bstr_t SetName, _bstr_t membername ) {
+    HRESULT _hr = Exclude(SetName, membername);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__IncludeFCO ( struct IMgaSet * p_set, struct IMgaFCO * fco ) {
+    HRESULT _hr = IncludeFCO(p_set, fco);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__ExcludeFCO ( struct IMgaSet * p_set, struct IMgaFCO * fco ) {
+    HRESULT _hr = ExcludeFCO(p_set, fco);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaConnectionPtr IGMEOLEIt::__Connect ( _bstr_t src_part, _bstr_t dst_part, _bstr_t connection_role ) {
+    struct IMgaConnection * _result = 0;
+    HRESULT _hr = Connect(src_part, dst_part, connection_role, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConnectionPtr(_result, false);
+}
+
+HRESULT IGMEOLEIt::__Disconnect ( _bstr_t src_part, _bstr_t dst_part, _bstr_t connection_name ) {
+    HRESULT _hr = Disconnect(src_part, dst_part, connection_name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaConnectionPtr IGMEOLEIt::__ConnectThruPort ( _bstr_t src_part_1, _bstr_t src_part_2, _bstr_t dst_part_1, _bstr_t dst_part_2, _bstr_t connection_role ) {
+    struct IMgaConnection * _result = 0;
+    HRESULT _hr = ConnectThruPort(src_part_1, src_part_2, dst_part_1, dst_part_2, connection_role, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConnectionPtr(_result, false);
+}
+
+IMgaConnectionPtr IGMEOLEIt::__ConnectThruPortFCO ( struct IMgaFCO * src_part_1, struct IMgaFCO * src_part_2, struct IMgaFCO * dst_part_1, struct IMgaFCO * dst_part_2, _bstr_t connection_role ) {
+    struct IMgaConnection * _result = 0;
+    HRESULT _hr = ConnectThruPortFCO(src_part_1, src_part_2, dst_part_1, dst_part_2, connection_role, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConnectionPtr(_result, false);
+}
+
+HRESULT IGMEOLEIt::__DisconnectThruPort ( _bstr_t src_part_1, _bstr_t src_part_2, _bstr_t dst_part_1, _bstr_t dst_part_2, _bstr_t connection_name ) {
+    HRESULT _hr = DisconnectThruPort(src_part_1, src_part_2, dst_part_1, dst_part_2, connection_name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaConnectionPtr IGMEOLEIt::__ConnectFCOs ( struct IMgaFCO * src_part, struct IMgaFCO * dst_part, _bstr_t connection_role ) {
+    struct IMgaConnection * _result = 0;
+    HRESULT _hr = ConnectFCOs(src_part, dst_part, connection_role, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConnectionPtr(_result, false);
+}
+
+HRESULT IGMEOLEIt::__DisconnectFCOs ( struct IMgaFCO * src_part, struct IMgaFCO * dst_part, _bstr_t connection_name ) {
+    HRESULT _hr = DisconnectFCOs(src_part, dst_part, connection_name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__Refer ( _bstr_t reference, _bstr_t Referred ) {
+    HRESULT _hr = Refer(reference, Referred);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__ClearRef ( _bstr_t reference ) {
+    HRESULT _hr = ClearRef(reference);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__FollowRef ( _bstr_t reference ) {
+    HRESULT _hr = FollowRef(reference);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__ReferFCO ( struct IMgaReference * reference, struct IMgaFCO * Referred ) {
+    HRESULT _hr = ReferFCO(reference, Referred);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__ClearRefFCO ( struct IMgaReference * reference ) {
+    HRESULT _hr = ClearRefFCO(reference);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__FollowRefFCO ( struct IMgaReference * reference ) {
+    HRESULT _hr = FollowRefFCO(reference);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOPtr IGMEOLEIt::__NullFCO ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = NullFCO(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+HRESULT IGMEOLEIt::__SetAttribute ( _bstr_t Name, _bstr_t attr_name, const _variant_t & value ) {
+    HRESULT _hr = SetAttribute(Name, attr_name, value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_variant_t IGMEOLEIt::__GetAttribute ( _bstr_t Name, _bstr_t attr_name ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetAttribute(Name, attr_name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+HRESULT IGMEOLEIt::__SetAttributeFCO ( struct IMgaFCO * fco, _bstr_t attr_name, const _variant_t & value ) {
+    HRESULT _hr = SetAttributeFCO(fco, attr_name, value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_variant_t IGMEOLEIt::__GetAttributeFCO ( struct IMgaFCO * fco, _bstr_t attr_name ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetAttributeFCO(fco, attr_name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+IMgaFCOPtr IGMEOLEIt::__SubType ( _bstr_t base, _bstr_t name_of_subtype ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = SubType(base, name_of_subtype, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IGMEOLEIt::__Instantiate ( _bstr_t base, _bstr_t name_of_instance ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = Instantiate(base, name_of_instance, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IGMEOLEIt::__SubTypeFCO ( struct IMgaFCO * base, _bstr_t name_of_subtype ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = SubTypeFCO(base, name_of_subtype, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IGMEOLEIt::__InstantiateFCO ( struct IMgaFCO * base, _bstr_t name_of_instance ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = InstantiateFCO(base, name_of_instance, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+HRESULT IGMEOLEIt::__BeginTransaction ( ) {
+    HRESULT _hr = BeginTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__CommitTransaction ( ) {
+    HRESULT _hr = CommitTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__AbortTransaction ( ) {
+    HRESULT _hr = AbortTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IGMEOLEIt::__IsInTransaction ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = IsInTransaction(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaFCOPtr IGMEOLEIt::__PutInTerritory ( struct IMgaFCO * fco ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = PutInTerritory(fco, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+HRESULT IGMEOLEIt::__Help ( ) {
+    HRESULT _hr = Help();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__SetSelected ( _bstr_t space_delimited_string ) {
+    HRESULT _hr = SetSelected(space_delimited_string);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IGMEOLEIt::__GetSelected ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetSelected(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IGMEOLEIt::__SetSelectedFCOs ( struct IMgaFCOs * fcos_to_select ) {
+    HRESULT _hr = SetSelectedFCOs(fcos_to_select);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOsPtr IGMEOLEIt::__GetSelectedFCOs ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = GetSelectedFCOs(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+_bstr_t IGMEOLEIt::__GetCurrentAspect ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetCurrentAspect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IGMEOLEIt::__SetCurrentAspect ( _bstr_t aspectName ) {
+    HRESULT _hr = SetCurrentAspect(aspectName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__NextAspect ( ) {
+    HRESULT _hr = NextAspect();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__PrevAspect ( ) {
+    HRESULT _hr = PrevAspect();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__Next ( ) {
+    HRESULT _hr = Next();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__Prev ( ) {
+    HRESULT _hr = Prev();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__Position ( _bstr_t Child, _bstr_t aspect, long parX, long parY ) {
+    HRESULT _hr = Position(Child, aspect, parX, parY);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEIt::__PositionFCO ( struct IMgaFCO * fco, _bstr_t aspect, long parX, long parY ) {
+    HRESULT _hr = PositionFCO(fco, aspect, parX, parY);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IGMEOLEApp wrapper method implementations
+//
+
+void IGMEOLEApp::PutVisible ( VARIANT_BOOL isVisible ) {
+    HRESULT _hr = put_Visible(isVisible);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IGMEOLEApp::GetVisible ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Visible(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+_bstr_t IGMEOLEApp::GetVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Version(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+short IGMEOLEApp::GetVersionMajor ( ) {
+    short _result = 0;
+    HRESULT _hr = get_VersionMajor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+short IGMEOLEApp::GetVersionMinor ( ) {
+    short _result = 0;
+    HRESULT _hr = get_VersionMinor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+short IGMEOLEApp::GetVersionPatchLevel ( ) {
+    short _result = 0;
+    HRESULT _hr = get_VersionPatchLevel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IGMEOLECollPtr IGMEOLEApp::GetModels ( ) {
+    struct IGMEOLEColl * _result = 0;
+    HRESULT _hr = get_Models(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGMEOLECollPtr(_result, false);
+}
+
+IMgaProjectPtr IGMEOLEApp::GetMgaProject ( ) {
+    struct IMgaProject * _result = 0;
+    HRESULT _hr = get_MgaProject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaProjectPtr(_result, false);
+}
+
+IGMEOLECollPtr IGMEOLEApp::GetPanels ( ) {
+    struct IGMEOLEColl * _result = 0;
+    HRESULT _hr = get_Panels(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGMEOLECollPtr(_result, false);
+}
+
+void IGMEOLEApp::PutConsoleContents ( _bstr_t contents ) {
+    HRESULT _hr = put_ConsoleContents(contents);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IGMEOLEApp::GetConsoleContents ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ConsoleContents(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IGMEOLEApp::__CreateProject ( _bstr_t metaname, _bstr_t ConnStr ) {
+    HRESULT _hr = CreateProject(metaname, ConnStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__OpenProject ( _bstr_t ConnStr ) {
+    HRESULT _hr = OpenProject(ConnStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__CreateProjectDialog ( ) {
+    HRESULT _hr = CreateProjectDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__OpenProjectDialog ( ) {
+    HRESULT _hr = OpenProjectDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__CloseProject ( VARIANT_BOOL saveOnClose ) {
+    HRESULT _hr = CloseProject(saveOnClose);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__SaveProject ( ) {
+    HRESULT _hr = SaveProject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__SaveProjectAs ( _bstr_t ConnStr ) {
+    HRESULT _hr = SaveProjectAs(ConnStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__SaveProjectAsDialog ( ) {
+    HRESULT _hr = SaveProjectAsDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ExportProject ( _bstr_t ConnStr ) {
+    HRESULT _hr = ExportProject(ConnStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ImportProject ( _bstr_t ConnStr ) {
+    HRESULT _hr = ImportProject(ConnStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ConstraintsDialog ( ) {
+    HRESULT _hr = ConstraintsDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__CheckAllConstraints ( ) {
+    HRESULT _hr = CheckAllConstraints();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__RegisterParagimsDialog ( ) {
+    HRESULT _hr = RegisterParagimsDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__RegisterComponentsDialog ( ) {
+    HRESULT _hr = RegisterComponentsDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__RunComponent ( _bstr_t progID ) {
+    HRESULT _hr = RunComponent(progID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__RunComponentDialog ( ) {
+    HRESULT _hr = RunComponentDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__SettingsDialog ( ) {
+    HRESULT _hr = SettingsDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__Undo ( ) {
+    HRESULT _hr = Undo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__Redo ( ) {
+    HRESULT _hr = Redo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ClearUndoQueue ( ) {
+    HRESULT _hr = ClearUndoQueue();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ProjectPropertiesDialog ( ) {
+    HRESULT _hr = ProjectPropertiesDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ShowHelpContents ( ) {
+    HRESULT _hr = ShowHelpContents();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ShowAbout ( ) {
+    HRESULT _hr = ShowAbout();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ShowFCO ( struct IMgaFCO * mgaFCO, VARIANT_BOOL inParent ) {
+    HRESULT _hr = ShowFCO(mgaFCO, inParent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ConsoleMessage ( _bstr_t msg, enum msgtype_enum type ) {
+    HRESULT _hr = ConsoleMessage(msg, type);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ConsoleClear ( ) {
+    HRESULT _hr = ConsoleClear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ConsoleNavigateTo ( _bstr_t url ) {
+    HRESULT _hr = ConsoleNavigateTo(url);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__ChangeEditmode ( enum editmode_enum mode ) {
+    HRESULT _hr = ChangeEditmode(mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__GridShow ( VARIANT_BOOL show ) {
+    HRESULT _hr = GridShow(show);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__AttributepanelPage ( enum attribpanel_page page ) {
+    HRESULT _hr = AttributepanelPage(page);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IGMEOLEItPtr IGMEOLEApp::GetOleIt ( ) {
+    struct IGMEOLEIt * _result = 0;
+    HRESULT _hr = get_OleIt(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGMEOLEItPtr(_result, false);
+}
+
+HRESULT IGMEOLEApp::__DisableComp ( _bstr_t pCompProgID, VARIANT_BOOL pDisable ) {
+    HRESULT _hr = DisableComp(pCompProgID, pDisable);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__DisableCompForKinds ( _bstr_t pCompProgID, _bstr_t pKindSequenceDelimitedBySemicolon ) {
+    HRESULT _hr = DisableCompForKinds(pCompProgID, pKindSequenceDelimitedBySemicolon);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__SetCompFiltering ( VARIANT_BOOL pTurnOn ) {
+    HRESULT _hr = SetCompFiltering(pTurnOn);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IGMEOLEApp::__GetCompFiltering ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetCompFiltering(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IGMEOLEApp::__SetWorkingDirectory ( _bstr_t pDirPath ) {
+    HRESULT _hr = SetWorkingDirectory(pDirPath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEApp::__Exit ( ) {
+    HRESULT _hr = Exit();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IGMEOLEApp::__RefreshLib ( _bstr_t pLibName, VARIANT_BOOL ungroup ) {
+    long _result = 0;
+    HRESULT _hr = RefreshLib(pLibName, ungroup, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IGMEOLEModel wrapper method implementations
+//
+
+void IGMEOLEModel::PutActive ( VARIANT_BOOL isActive ) {
+    HRESULT _hr = put_Active(isActive);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IGMEOLEModel::GetActive ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Active(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IGMEOLECollPtr IGMEOLEModel::GetAspects ( ) {
+    struct IGMEOLEColl * _result = 0;
+    HRESULT _hr = get_Aspects(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGMEOLECollPtr(_result, false);
+}
+
+IMgaModelPtr IGMEOLEModel::GetMgaModel ( ) {
+    struct IMgaModel * _result = 0;
+    HRESULT _hr = get_MgaModel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaModelPtr(_result, false);
+}
+
+VARIANT_BOOL IGMEOLEModel::GetValid ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Valid(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IGMEOLEModel::__Print ( ) {
+    HRESULT _hr = Print();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__PrintDialog ( ) {
+    HRESULT _hr = PrintDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__DumpWindowsMetaFile ( _bstr_t filePath ) {
+    HRESULT _hr = DumpWindowsMetaFile(filePath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__CheckConstraints ( ) {
+    HRESULT _hr = CheckConstraints();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__RunComponent ( _bstr_t appID ) {
+    HRESULT _hr = RunComponent(appID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__RunComponentDialog ( ) {
+    HRESULT _hr = RunComponentDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__Close ( ) {
+    HRESULT _hr = Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__GrayOutFCO ( VARIANT_BOOL bGray, VARIANT_BOOL bNeighbours, struct IMgaFCOs * mgaFCO ) {
+    HRESULT _hr = GrayOutFCO(bGray, bNeighbours, mgaFCO);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__GrayOutHide ( ) {
+    HRESULT _hr = GrayOutHide();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__ShowSetMembers ( struct IMgaFCO * mgaFCO ) {
+    HRESULT _hr = ShowSetMembers(mgaFCO);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__HideSetMembers ( ) {
+    HRESULT _hr = HideSetMembers();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__Zoom ( unsigned long percent ) {
+    HRESULT _hr = Zoom(percent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__ZoomTo ( struct IMgaFCOs * mgaFCOs ) {
+    HRESULT _hr = ZoomTo(mgaFCOs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__Scroll ( enum bar_enum __MIDL__IGMEOLEModel0000, enum scroll_enum __MIDL__IGMEOLEModel0001 ) {
+    HRESULT _hr = Scroll(__MIDL__IGMEOLEModel0000, __MIDL__IGMEOLEModel0001);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IGMEOLEModel::__DumpModelGeometryXML ( _bstr_t filePath ) {
+    HRESULT _hr = DumpModelGeometryXML(filePath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IGMEOLEModel::__GetCurrentAspect ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetCurrentAspect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IGMEOLEModel::__SetCurrentAspect ( _bstr_t aspectName ) {
+    HRESULT _hr = SetCurrentAspect(aspectName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IGMEOLEAspect wrapper method implementations
+//
+
+IMgaMetaAspectPtr IGMEOLEAspect::GetMgaAspect ( ) {
+    struct IMgaMetaAspect * _result = 0;
+    HRESULT _hr = get_MgaAspect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaAspectPtr(_result, false);
+}
+
+void IGMEOLEAspect::PutActive ( VARIANT_BOOL isActive ) {
+    HRESULT _hr = put_Active(isActive);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IGMEOLEAspect::GetActive ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Active(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+VARIANT_BOOL IGMEOLEAspect::GetValid ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Valid(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IGMEOLEPanel wrapper method implementations
+//
+
+_bstr_t IGMEOLEPanel::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IGMEOLEPanel::PutVisible ( VARIANT_BOOL isVisible ) {
+    HRESULT _hr = put_Visible(isVisible);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IGMEOLEPanel::GetVisible ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Visible(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IDispatchPtr IGMEOLEPanel::GetInterface ( ) {
+    IDispatch * _result = 0;
+    HRESULT _hr = get_Interface(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}

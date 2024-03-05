@@ -1,0 +1,1210 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (34c96208).
+//
+// c:\users\69038\documents\gme-21.4.1_src\gme\objectinspector\debug\corelib.tlh
+//
+// C++ source equivalent of Win32 type library CoreLib.tlb
+// compiler-generated file created 06/28/23 at 14:39:06 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("9e9aaacf-28b8-11d3-b36c-0060082df884"))
+/* LIBID */ __MGACoreLib;
+enum locking_enum;
+enum valtype_enum;
+struct __declspec(uuid("fab8c11e-747a-45a5-bf05-1a8fb353b03b"))
+/* dual interface */ ICoreDictionaryAttributeValue;
+struct /* coclass */ CoreProject;
+struct __declspec(uuid("ad9dfa4e-2a3b-11d3-b36c-0060082df884"))
+/* dual interface */ ICoreProject;
+struct __declspec(uuid("ad9dfa4e-3a3b-11d3-b36c-0060082df884"))
+/* dual interface */ ICoreStorage;
+struct __declspec(uuid("98aa02d9-2e2c-11d3-b36d-0060082df884"))
+/* dual interface */ ICoreMetaProject;
+struct __declspec(uuid("98aa02db-2e2c-11d3-b36d-0060082df884"))
+/* dual interface */ ICoreMetaObject;
+struct __declspec(uuid("98aa02e1-2e2c-11d3-b36d-0060082df884"))
+/* dual interface */ ICoreMetaAttribute;
+struct __declspec(uuid("43d12127-12ca-11d3-a6ec-0060082df884"))
+/* dual interface */ ICoreMetaAttributes;
+struct __declspec(uuid("43d12111-12ca-11d3-a6ec-0060082df884"))
+/* dual interface */ ICoreMetaObjects;
+struct __declspec(uuid("826a8736-563b-11d3-b301-005004d38590"))
+/* dual interface */ ICoreObject;
+struct __declspec(uuid("826a8738-563b-11d3-b301-005004d38590"))
+/* dual interface */ ICoreAttribute;
+struct __declspec(uuid("43d12127-22ca-11d3-a6ec-0060082df884"))
+/* dual interface */ ICoreAttributes;
+enum transtype_enum;
+struct __declspec(uuid("4c3a57c3-8dff-11d3-b336-005004d38590"))
+/* dual interface */ ICoreTerritory;
+struct __declspec(uuid("9a228010-020b-11d2-bbb3-0040051f7117"))
+/* interface */ IGMEVersionInfo;
+enum GMEInterfaceVersion_enum;
+struct /* coclass */ CoreMetaProject;
+struct /* coclass */ CoreMetaObject;
+struct /* coclass */ CoreMetaAttribute;
+struct /* coclass */ CoreStorage;
+struct /* coclass */ CoreBinFile;
+struct /* coclass */ CoreObject;
+struct /* coclass */ CoreAttribute;
+struct /* coclass */ CoreTerritory;
+struct /* coclass */ CoreCollectionHandler;
+struct /* coclass */ CoreMetaObjects;
+struct /* coclass */ CoreMetaAttributes;
+struct /* coclass */ CoreObjects;
+struct __declspec(uuid("43d12111-22ca-11d3-a6ec-0060082df884"))
+/* dual interface */ ICoreObjects;
+struct /* coclass */ CoreAttributes;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ICoreDictionaryAttributeValue, __uuidof(ICoreDictionaryAttributeValue));
+_COM_SMARTPTR_TYPEDEF(IGMEVersionInfo, __uuidof(IGMEVersionInfo));
+_COM_SMARTPTR_TYPEDEF(ICoreProject, __uuidof(ICoreProject));
+_COM_SMARTPTR_TYPEDEF(ICoreStorage, __uuidof(ICoreStorage));
+_COM_SMARTPTR_TYPEDEF(ICoreMetaProject, __uuidof(ICoreMetaProject));
+_COM_SMARTPTR_TYPEDEF(ICoreMetaObject, __uuidof(ICoreMetaObject));
+_COM_SMARTPTR_TYPEDEF(ICoreMetaAttribute, __uuidof(ICoreMetaAttribute));
+_COM_SMARTPTR_TYPEDEF(ICoreMetaAttributes, __uuidof(ICoreMetaAttributes));
+_COM_SMARTPTR_TYPEDEF(ICoreMetaObjects, __uuidof(ICoreMetaObjects));
+_COM_SMARTPTR_TYPEDEF(ICoreObject, __uuidof(ICoreObject));
+_COM_SMARTPTR_TYPEDEF(ICoreAttribute, __uuidof(ICoreAttribute));
+_COM_SMARTPTR_TYPEDEF(ICoreAttributes, __uuidof(ICoreAttributes));
+_COM_SMARTPTR_TYPEDEF(ICoreTerritory, __uuidof(ICoreTerritory));
+_COM_SMARTPTR_TYPEDEF(ICoreObjects, __uuidof(ICoreObjects));
+
+//
+// Type library items
+//
+
+enum locking_enum
+{
+    LOCKING_NONE = 0,
+    LOCKING_READ = 1,
+    LOCKING_WRITE = 2,
+    LOCKING_EXCLUSIVE = 3
+};
+
+enum valtype_enum
+{
+    VALTYPE_NONE = 0,
+    VALTYPE_COLLECTION = 1,
+    VALTYPE_POINTER = 2,
+    VALTYPE_LOCK = 3,
+    VALTYPE_LONG = 4,
+    VALTYPE_STRING = 5,
+    VALTYPE_BINARY = 6,
+    VALTYPE_REAL = 7,
+    VALTYPE_DICT = 8,
+    VALTYPE_MAX = 8
+};
+
+struct __declspec(uuid("fab8c11e-747a-45a5-bf05-1a8fb353b03b"))
+ICoreDictionaryAttributeValue : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetValue,put=PutValue))
+    _bstr_t Value[];
+    __declspec(property(get=GetKeys))
+    _variant_t Keys;
+    __declspec(property(get=GetMap,put=PutMap))
+    _variant_t Map;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetValue (
+        _bstr_t Key );
+    void PutValue (
+        _bstr_t Key,
+        _bstr_t Value );
+    _variant_t GetKeys ( );
+    _variant_t GetMap ( );
+    void PutMap (
+        const _variant_t & Map );
+    HRESULT __Clone (
+        struct ICoreDictionaryAttributeValue * * ret );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Value (
+        /*[in]*/ BSTR Key,
+        /*[out,retval]*/ BSTR * Value ) = 0;
+      virtual HRESULT __stdcall put_Value (
+        /*[in]*/ BSTR Key,
+        /*[in]*/ BSTR Value ) = 0;
+      virtual HRESULT __stdcall get_Keys (
+        /*[out,retval]*/ VARIANT * Keys ) = 0;
+      virtual HRESULT __stdcall get_Map (
+        /*[out,retval]*/ VARIANT * Map ) = 0;
+      virtual HRESULT __stdcall put_Map (
+        /*[in]*/ VARIANT Map ) = 0;
+      virtual HRESULT __stdcall Clone (
+        /*[out]*/ struct ICoreDictionaryAttributeValue * * ret ) = 0;
+};
+
+struct __declspec(uuid("ad9dfa4f-2a3b-11d3-b36c-0060082df884"))
+CoreProject;
+    // [ default ] interface ICoreProject
+    // interface ISupportErrorInfo
+    // interface IGMEVersionInfo
+
+enum transtype_enum
+{
+    TRANSTYPE_NONE = 0,
+    TRANSTYPE_FIRST = 1,
+    TRANSTYPE_NESTED = 2,
+    TRANSTYPE_ANY = 3,
+    TRANSTYPE_READ = 4,
+    TRANSTYPE_READFIRST = 5,
+    TRANSTYPE_READNESTED = 6,
+    TRANSTYPE_READANY = 7
+};
+
+enum GMEInterfaceVersion_enum
+{
+    GMEInterfaceVersion_None = 0,
+    GMEInterfaceVersion_Legacy = 4,
+    GMEInterfaceVersion_Current = 131302
+};
+
+struct __declspec(uuid("9a228010-020b-11d2-bbb3-0040051f7117"))
+IGMEVersionInfo : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=Getversion))
+    enum GMEInterfaceVersion_enum version;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum GMEInterfaceVersion_enum Getversion ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_version (
+        /*[out,retval]*/ enum GMEInterfaceVersion_enum * pVal ) = 0;
+};
+
+struct __declspec(uuid("98aa02dd-2e2c-11d3-b36d-0060082df884"))
+CoreMetaProject;
+    // [ default ] interface ICoreMetaProject
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("98aa02dc-2e2c-11d3-b36d-0060082df884"))
+CoreMetaObject;
+    // [ default ] interface ICoreMetaObject
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("98aa02e2-2e2c-11d3-b36d-0060082df884"))
+CoreMetaAttribute;
+    // [ default ] interface ICoreMetaAttribute
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("09d9dcaf-3209-11d3-b2f7-005004d38590"))
+CoreStorage;
+    // [ default ] interface ICoreStorage
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("7281c07a-3e09-11d3-b2f7-005004d38590"))
+CoreBinFile;
+    // [ default ] interface ICoreStorage
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("826a8737-563b-11d3-b301-005004d38590"))
+CoreObject;
+    // [ default ] interface ICoreObject
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("826a8739-563b-11d3-b301-005004d38590"))
+CoreAttribute;
+    // [ default ] interface ICoreAttribute
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("4c3a57c4-8dff-11d3-b336-005004d38590"))
+CoreTerritory;
+    // [ default ] interface ICoreTerritory
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("9fe3bb80-b596-41ba-910f-0ff9c3b4f38a"))
+CoreCollectionHandler;
+    // [ default ] interface IUnknown
+
+struct __declspec(uuid("43d12112-12ca-11d3-a6ec-0060082df884"))
+CoreMetaObjects;
+    // [ default ] interface ICoreMetaObjects
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("43d12128-12ca-11d3-a6ec-0060082df884"))
+CoreMetaAttributes;
+    // [ default ] interface ICoreMetaAttributes
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("43d12112-22ca-11d3-a6ec-0060082df884"))
+CoreObjects;
+    // [ default ] interface ICoreObjects
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("43d12128-22ca-11d3-a6ec-0060082df884"))
+CoreAttributes;
+    // [ default ] interface ICoreAttributes
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("ad9dfa4e-2a3b-11d3-b36c-0060082df884"))
+ICoreProject : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetStorage,put=PutStorage))
+    ICoreStoragePtr Storage;
+    __declspec(property(get=GetObject))
+    ICoreObjectPtr Object[][];
+    __declspec(property(get=GetMetaProject))
+    ICoreMetaProjectPtr MetaProject;
+    __declspec(property(get=GetRootObject))
+    ICoreObjectPtr RootObject;
+    __declspec(property(get=GetNestedTransactionCount))
+    short NestedTransactionCount;
+    __declspec(property(get=GetUndoQueueSize))
+    short UndoQueueSize;
+    __declspec(property(get=GetRedoQueueSize))
+    short RedoQueueSize;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    void PutStorage (
+        struct ICoreStorage * p );
+    ICoreStoragePtr GetStorage ( );
+    ICoreMetaProjectPtr GetMetaProject ( );
+    HRESULT __OpenProject (
+        _bstr_t connection,
+        struct ICoreMetaProject * p,
+        VARIANT_BOOL * ro_mode );
+    HRESULT __CloseProject (
+        VARIANT_BOOL abort );
+    HRESULT __CreateProject (
+        _bstr_t connection,
+        struct ICoreMetaProject * p );
+    HRESULT __SaveProject (
+        _bstr_t save_as_conn,
+        VARIANT_BOOL keepoldname );
+    HRESULT __DeleteProject (
+        _bstr_t connection );
+    HRESULT __OpenProject2 (
+        _bstr_t connection,
+        long pUndoSize,
+        struct ICoreMetaProject * p,
+        VARIANT_BOOL * ro_mode );
+    HRESULT __CreateProject2 (
+        _bstr_t connection,
+        long pUndoSize,
+        struct ICoreMetaProject * p );
+    ICoreObjectPtr GetObject (
+        short MetaID,
+        long ObjID );
+    ICoreObjectPtr __GetObjectDisp (
+        short MetaID,
+        long ObjID );
+    HRESULT __CreateObject (
+        short MetaID,
+        struct ICoreObject * * p );
+    ICoreObjectPtr GetRootObject ( );
+    HRESULT __BeginTransaction (
+        enum transtype_enum transtype );
+    HRESULT __CommitTransaction (
+        enum transtype_enum transtype );
+    HRESULT __AbortTransaction (
+        enum transtype_enum transtype );
+    short GetNestedTransactionCount ( );
+    HRESULT __UndoTransaction ( );
+    HRESULT __RedoTransaction ( );
+    HRESULT __FlushUndoQueue ( );
+    HRESULT __FlushRedoQueue ( );
+    short GetUndoQueueSize ( );
+    short GetRedoQueueSize ( );
+    HRESULT __CreateTerritory (
+        struct ICoreTerritory * * p );
+    HRESULT __PushTerritory (
+        struct ICoreTerritory * p );
+    HRESULT __PopTerritory ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_Storage (
+        /*[in]*/ struct ICoreStorage * p ) = 0;
+      virtual HRESULT __stdcall get_Storage (
+        /*[out,retval]*/ struct ICoreStorage * * p ) = 0;
+      virtual HRESULT __stdcall get_MetaProject (
+        /*[out,retval]*/ struct ICoreMetaProject * * p ) = 0;
+      virtual HRESULT __stdcall OpenProject (
+        /*[in]*/ BSTR connection,
+        /*[in]*/ struct ICoreMetaProject * p,
+        /*[out]*/ VARIANT_BOOL * ro_mode ) = 0;
+      virtual HRESULT __stdcall CloseProject (
+        /*[in]*/ VARIANT_BOOL abort ) = 0;
+      virtual HRESULT __stdcall CreateProject (
+        /*[in]*/ BSTR connection,
+        /*[in]*/ struct ICoreMetaProject * p ) = 0;
+      virtual HRESULT __stdcall SaveProject (
+        /*[in]*/ BSTR save_as_conn,
+        /*[in]*/ VARIANT_BOOL keepoldname ) = 0;
+      virtual HRESULT __stdcall DeleteProject (
+        /*[in]*/ BSTR connection ) = 0;
+      virtual HRESULT __stdcall OpenProject2 (
+        /*[in]*/ BSTR connection,
+        /*[in]*/ long pUndoSize,
+        /*[in]*/ struct ICoreMetaProject * p,
+        /*[out]*/ VARIANT_BOOL * ro_mode ) = 0;
+      virtual HRESULT __stdcall CreateProject2 (
+        /*[in]*/ BSTR connection,
+        /*[in]*/ long pUndoSize,
+        /*[in]*/ struct ICoreMetaProject * p ) = 0;
+      virtual HRESULT __stdcall get_Object (
+        /*[in]*/ short MetaID,
+        /*[in]*/ long ObjID,
+        /*[out,retval]*/ struct ICoreObject * * p ) = 0;
+      virtual HRESULT __stdcall GetObjectDisp (
+        /*[in]*/ short MetaID,
+        /*[in]*/ long ObjID,
+        /*[out,retval]*/ struct ICoreObject * * p ) = 0;
+      virtual HRESULT __stdcall CreateObject (
+        /*[in]*/ short MetaID,
+        /*[out]*/ struct ICoreObject * * p ) = 0;
+      virtual HRESULT __stdcall get_RootObject (
+        /*[out,retval]*/ struct ICoreObject * * p ) = 0;
+      virtual HRESULT __stdcall BeginTransaction (
+        /*[in]*/ enum transtype_enum transtype ) = 0;
+      virtual HRESULT __stdcall CommitTransaction (
+        /*[in]*/ enum transtype_enum transtype ) = 0;
+      virtual HRESULT __stdcall AbortTransaction (
+        /*[in]*/ enum transtype_enum transtype ) = 0;
+      virtual HRESULT __stdcall get_NestedTransactionCount (
+        /*[out,retval]*/ short * p ) = 0;
+      virtual HRESULT __stdcall UndoTransaction ( ) = 0;
+      virtual HRESULT __stdcall RedoTransaction ( ) = 0;
+      virtual HRESULT __stdcall FlushUndoQueue ( ) = 0;
+      virtual HRESULT __stdcall FlushRedoQueue ( ) = 0;
+      virtual HRESULT __stdcall get_UndoQueueSize (
+        /*[out,retval]*/ short * p ) = 0;
+      virtual HRESULT __stdcall get_RedoQueueSize (
+        /*[out,retval]*/ short * p ) = 0;
+      virtual HRESULT __stdcall CreateTerritory (
+        /*[out]*/ struct ICoreTerritory * * p ) = 0;
+      virtual HRESULT __stdcall PushTerritory (
+        /*[in]*/ struct ICoreTerritory * p ) = 0;
+      virtual HRESULT __stdcall PopTerritory ( ) = 0;
+};
+
+struct __declspec(uuid("ad9dfa4e-3a3b-11d3-b36c-0060082df884"))
+ICoreStorage : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMetaProject,put=PutMetaProject))
+    ICoreMetaProjectPtr MetaProject;
+    __declspec(property(get=GetStorageType))
+    long StorageType;
+    __declspec(property(get=GetMetaObject,put=PutMetaObject))
+    ICoreMetaObjectPtr MetaObject;
+    __declspec(property(get=GetMetaID,put=PutMetaID))
+    short MetaID;
+    __declspec(property(get=GetMetaAttribute,put=PutMetaAttribute))
+    ICoreMetaAttributePtr MetaAttribute;
+    __declspec(property(get=GetAttrID,put=PutAttrID))
+    short AttrID;
+    __declspec(property(get=GetAttributeValue,put=PutAttributeValue))
+    _variant_t AttributeValue;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ICoreMetaProjectPtr GetMetaProject ( );
+    void PutMetaProject (
+        struct ICoreMetaProject * p );
+    long GetStorageType ( );
+    ICoreMetaObjectPtr GetMetaObject ( );
+    void PutMetaObject (
+        struct ICoreMetaObject * p );
+    short GetMetaID ( );
+    void PutMetaID (
+        short p );
+    ICoreMetaAttributePtr GetMetaAttribute ( );
+    void PutMetaAttribute (
+        struct ICoreMetaAttribute * p );
+    short GetAttrID ( );
+    void PutAttrID (
+        short p );
+    HRESULT __OpenProject (
+        _bstr_t connection,
+        VARIANT_BOOL * ro_mode );
+    HRESULT __CloseProject (
+        VARIANT_BOOL abort );
+    HRESULT __SaveProject (
+        _bstr_t save_as_conn,
+        VARIANT_BOOL keepoldname );
+    HRESULT __CreateProject (
+        _bstr_t connection );
+    HRESULT __DeleteProject ( );
+    HRESULT __BeginTransaction ( );
+    HRESULT __CommitTransaction ( );
+    HRESULT __AbortTransaction ( );
+    HRESULT __OpenObject (
+        long ObjID );
+    HRESULT __CloseObject ( );
+    HRESULT __CreateObject (
+        long * ObjID );
+    HRESULT __DeleteObject ( );
+    HRESULT __LockObject ( );
+    _variant_t GetAttributeValue ( );
+    void PutAttributeValue (
+        const _variant_t & p );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_MetaProject (
+        /*[out,retval]*/ struct ICoreMetaProject * * p ) = 0;
+      virtual HRESULT __stdcall put_MetaProject (
+        /*[in]*/ struct ICoreMetaProject * p ) = 0;
+      virtual HRESULT __stdcall get_StorageType (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_MetaObject (
+        /*[out,retval]*/ struct ICoreMetaObject * * p ) = 0;
+      virtual HRESULT __stdcall put_MetaObject (
+        /*[in]*/ struct ICoreMetaObject * p ) = 0;
+      virtual HRESULT __stdcall get_MetaID (
+        /*[out,retval]*/ short * p ) = 0;
+      virtual HRESULT __stdcall put_MetaID (
+        /*[in]*/ short p ) = 0;
+      virtual HRESULT __stdcall get_MetaAttribute (
+        /*[out,retval]*/ struct ICoreMetaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall put_MetaAttribute (
+        /*[in]*/ struct ICoreMetaAttribute * p ) = 0;
+      virtual HRESULT __stdcall get_AttrID (
+        /*[out,retval]*/ short * p ) = 0;
+      virtual HRESULT __stdcall put_AttrID (
+        /*[in]*/ short p ) = 0;
+      virtual HRESULT __stdcall OpenProject (
+        /*[in]*/ BSTR connection,
+        /*[out]*/ VARIANT_BOOL * ro_mode ) = 0;
+      virtual HRESULT __stdcall CloseProject (
+        /*[in]*/ VARIANT_BOOL abort ) = 0;
+      virtual HRESULT __stdcall SaveProject (
+        /*[in]*/ BSTR save_as_conn,
+        /*[in]*/ VARIANT_BOOL keepoldname ) = 0;
+      virtual HRESULT __stdcall CreateProject (
+        /*[in]*/ BSTR connection ) = 0;
+      virtual HRESULT __stdcall DeleteProject ( ) = 0;
+      virtual HRESULT __stdcall BeginTransaction ( ) = 0;
+      virtual HRESULT __stdcall CommitTransaction ( ) = 0;
+      virtual HRESULT __stdcall AbortTransaction ( ) = 0;
+      virtual HRESULT __stdcall OpenObject (
+        /*[in]*/ long ObjID ) = 0;
+      virtual HRESULT __stdcall CloseObject ( ) = 0;
+      virtual HRESULT __stdcall CreateObject (
+        /*[out]*/ long * ObjID ) = 0;
+      virtual HRESULT __stdcall DeleteObject ( ) = 0;
+      virtual HRESULT __stdcall LockObject ( ) = 0;
+      virtual HRESULT __stdcall get_AttributeValue (
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall put_AttributeValue (
+        /*[in]*/ VARIANT p ) = 0;
+};
+
+struct __declspec(uuid("98aa02d9-2e2c-11d3-b36d-0060082df884"))
+ICoreMetaProject : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetGUID,put=PutGUID))
+    _variant_t GUID;
+    __declspec(property(get=GetObject))
+    ICoreMetaObjectPtr Object[];
+    __declspec(property(get=GetToken,put=PutToken))
+    _bstr_t Token;
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetObjects))
+    ICoreMetaObjectsPtr Objects;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetGUID ( );
+    void PutGUID (
+        const _variant_t & p );
+    _bstr_t GetToken ( );
+    void PutToken (
+        _bstr_t p );
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t p );
+    ICoreMetaObjectPtr GetObject (
+        short MetaID );
+    ICoreMetaObjectPtr __GetObjectDisp (
+        short MetaID );
+    ICoreMetaObjectsPtr GetObjects ( );
+    HRESULT __AddObject (
+        short MetaID,
+        _bstr_t Token,
+        _bstr_t Name,
+        struct ICoreMetaObject * * p );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_GUID (
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall put_GUID (
+        /*[in]*/ VARIANT p ) = 0;
+      virtual HRESULT __stdcall get_Token (
+        /*[out,retval]*/ BSTR * p ) = 0;
+      virtual HRESULT __stdcall put_Token (
+        /*[in]*/ BSTR p ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * p ) = 0;
+      virtual HRESULT __stdcall put_Name (
+        /*[in]*/ BSTR p ) = 0;
+      virtual HRESULT __stdcall get_Object (
+        /*[in]*/ short MetaID,
+        /*[out,retval]*/ struct ICoreMetaObject * * p ) = 0;
+      virtual HRESULT __stdcall GetObjectDisp (
+        /*[in]*/ short MetaID,
+        /*[out,retval]*/ struct ICoreMetaObject * * p ) = 0;
+      virtual HRESULT __stdcall get_Objects (
+        /*[out,retval]*/ struct ICoreMetaObjects * * p ) = 0;
+      virtual HRESULT __stdcall AddObject (
+        /*[in]*/ short MetaID,
+        /*[in]*/ BSTR Token,
+        /*[in]*/ BSTR Name,
+        /*[out]*/ struct ICoreMetaObject * * p ) = 0;
+};
+
+struct __declspec(uuid("98aa02db-2e2c-11d3-b36d-0060082df884"))
+ICoreMetaObject : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetProject))
+    ICoreMetaProjectPtr Project;
+    __declspec(property(get=GetMetaID))
+    short MetaID;
+    __declspec(property(get=GetToken))
+    _bstr_t Token;
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetAttribute))
+    ICoreMetaAttributePtr Attribute[];
+    __declspec(property(get=GetAttributes))
+    ICoreMetaAttributesPtr Attributes;
+    __declspec(property(get=GetClassIDs))
+    SAFEARRAY * ClassIDs;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ICoreMetaProjectPtr GetProject ( );
+    short GetMetaID ( );
+    _bstr_t GetToken ( );
+    _bstr_t GetName ( );
+    ICoreMetaAttributePtr GetAttribute (
+        short AttrID );
+    ICoreMetaAttributePtr __GetAttributeDisp (
+        short AttrID );
+    ICoreMetaAttributesPtr GetAttributes ( );
+    SAFEARRAY * GetClassIDs ( );
+    HRESULT __AddAttribute (
+        short AttrID,
+        _bstr_t Token,
+        _bstr_t Name,
+        unsigned char valtype,
+        struct ICoreMetaAttribute * * p );
+    HRESULT __AddClassID (
+        const _variant_t & classid );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Project (
+        /*[out,retval]*/ struct ICoreMetaProject * * p ) = 0;
+      virtual HRESULT __stdcall get_MetaID (
+        /*[out,retval]*/ short * p ) = 0;
+      virtual HRESULT __stdcall get_Token (
+        /*[out,retval]*/ BSTR * p ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * p ) = 0;
+      virtual HRESULT __stdcall get_Attribute (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ struct ICoreMetaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall GetAttributeDisp (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ struct ICoreMetaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall get_Attributes (
+        /*[out,retval]*/ struct ICoreMetaAttributes * * p ) = 0;
+      virtual HRESULT __stdcall get_ClassIDs (
+        /*[out,retval]*/ SAFEARRAY * * p ) = 0;
+      virtual HRESULT __stdcall AddAttribute (
+        /*[in]*/ short AttrID,
+        /*[in]*/ BSTR Token,
+        /*[in]*/ BSTR Name,
+        /*[in]*/ unsigned char valtype,
+        /*[out]*/ struct ICoreMetaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall AddClassID (
+        /*[in]*/ VARIANT classid ) = 0;
+};
+
+struct __declspec(uuid("98aa02e1-2e2c-11d3-b36d-0060082df884"))
+ICoreMetaAttribute : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetObject))
+    ICoreMetaObjectPtr Object;
+    __declspec(property(get=GetAttrID))
+    short AttrID;
+    __declspec(property(get=GetToken))
+    _bstr_t Token;
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetValueType))
+    unsigned char ValueType;
+    __declspec(property(get=GetLockAttrID))
+    short LockAttrID;
+    __declspec(property(get=GetMaxSize))
+    long MaxSize;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ICoreMetaObjectPtr GetObject ( );
+    short GetAttrID ( );
+    _bstr_t GetToken ( );
+    _bstr_t GetName ( );
+    unsigned char GetValueType ( );
+    short GetLockAttrID ( );
+    long GetMaxSize ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Object (
+        /*[out,retval]*/ struct ICoreMetaObject * * p ) = 0;
+      virtual HRESULT __stdcall get_AttrID (
+        /*[out,retval]*/ short * p ) = 0;
+      virtual HRESULT __stdcall get_Token (
+        /*[out,retval]*/ BSTR * p ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * p ) = 0;
+      virtual HRESULT __stdcall get_ValueType (
+        /*[out,retval]*/ unsigned char * p ) = 0;
+      virtual HRESULT __stdcall get_LockAttrID (
+        /*[out,retval]*/ short * p ) = 0;
+      virtual HRESULT __stdcall get_MaxSize (
+        /*[out,retval]*/ long * p ) = 0;
+};
+
+struct __declspec(uuid("43d12127-12ca-11d3-a6ec-0060082df884"))
+ICoreMetaAttributes : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    ICoreMetaAttributePtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    ICoreMetaAttributePtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct ICoreMetaAttribute * * p );
+    HRESULT __Insert (
+        struct ICoreMetaAttribute * p,
+        long at );
+    HRESULT __Append (
+        struct ICoreMetaAttribute * p );
+    long __Find (
+        struct ICoreMetaAttribute * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct ICoreMetaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct ICoreMetaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct ICoreMetaAttribute * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct ICoreMetaAttribute * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct ICoreMetaAttribute * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("43d12111-12ca-11d3-a6ec-0060082df884"))
+ICoreMetaObjects : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    ICoreMetaObjectPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    ICoreMetaObjectPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct ICoreMetaObject * * p );
+    HRESULT __Insert (
+        struct ICoreMetaObject * p,
+        long at );
+    HRESULT __Append (
+        struct ICoreMetaObject * p );
+    long __Find (
+        struct ICoreMetaObject * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct ICoreMetaObject * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct ICoreMetaObject * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct ICoreMetaObject * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct ICoreMetaObject * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct ICoreMetaObject * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("826a8736-563b-11d3-b301-005004d38590"))
+ICoreObject : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetProject))
+    ICoreProjectPtr Project;
+    __declspec(property(get=GetMetaObject))
+    ICoreMetaObjectPtr MetaObject;
+    __declspec(property(get=GetObjID))
+    long ObjID;
+    __declspec(property(get=GetAttribute))
+    ICoreAttributePtr Attribute[];
+    __declspec(property(get=GetAttributes))
+    ICoreAttributesPtr Attributes;
+    __declspec(property(get=GetAttributeValue,put=PutAttributeValue))
+    _variant_t AttributeValue[];
+    __declspec(property(get=GetLoadedAttrValue))
+    _variant_t LoadedAttrValue[];
+    __declspec(property(get=GetPreviousAttrValue))
+    _variant_t PreviousAttrValue[];
+    __declspec(property(get=GetPeerLockValue))
+    unsigned char PeerLockValue[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ICoreProjectPtr GetProject ( );
+    ICoreMetaObjectPtr GetMetaObject ( );
+    long GetObjID ( );
+    ICoreAttributePtr GetAttribute (
+        short AttrID );
+    ICoreAttributePtr __GetAttributeDisp (
+        short AttrID );
+    ICoreAttributesPtr GetAttributes ( );
+    _variant_t GetAttributeValue (
+        short AttrID );
+    _variant_t __GetAttributeValueDisp (
+        short AttrID );
+    void PutAttributeValue (
+        short AttrID,
+        const _variant_t & p );
+    HRESULT __SetAttributeValueDisp (
+        short AttrID,
+        const _variant_t & p );
+    _variant_t GetLoadedAttrValue (
+        short AttrID );
+    _variant_t __GetLoadedAttrValueDisp (
+        short AttrID );
+    _variant_t GetPreviousAttrValue (
+        short AttrID );
+    _variant_t __GetPreviousAttrValueDisp (
+        short AttrID );
+    unsigned char GetPeerLockValue (
+        short AttrID );
+    unsigned char __GetPeerLockValueDisp (
+        short AttrID );
+    ICoreObjectPtr __SearchCollection (
+        short coll_attrid,
+        short search_attrid,
+        const _variant_t & search_value );
+    void GetIsDeleted (
+        VARIANT_BOOL * p );
+    HRESULT __Delete ( );
+    HRESULT __Clone (
+        struct ICoreObject * * p );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Project (
+        /*[out,retval]*/ struct ICoreProject * * p ) = 0;
+      virtual HRESULT __stdcall get_MetaObject (
+        /*[out,retval]*/ struct ICoreMetaObject * * p ) = 0;
+      virtual HRESULT __stdcall get_ObjID (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Attribute (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ struct ICoreAttribute * * p ) = 0;
+      virtual HRESULT __stdcall GetAttributeDisp (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ struct ICoreAttribute * * p ) = 0;
+      virtual HRESULT __stdcall get_Attributes (
+        /*[out,retval]*/ struct ICoreAttributes * * p ) = 0;
+      virtual HRESULT __stdcall get_AttributeValue (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall GetAttributeValueDisp (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall put_AttributeValue (
+        /*[in]*/ short AttrID,
+        /*[in]*/ VARIANT p ) = 0;
+      virtual HRESULT __stdcall SetAttributeValueDisp (
+        /*[in]*/ short AttrID,
+        /*[in]*/ VARIANT p ) = 0;
+      virtual HRESULT __stdcall get_LoadedAttrValue (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall GetLoadedAttrValueDisp (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall get_PreviousAttrValue (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall GetPreviousAttrValueDisp (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall get_PeerLockValue (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ unsigned char * p ) = 0;
+      virtual HRESULT __stdcall GetPeerLockValueDisp (
+        /*[in]*/ short AttrID,
+        /*[out,retval]*/ unsigned char * p ) = 0;
+      virtual HRESULT __stdcall SearchCollection (
+        /*[in]*/ short coll_attrid,
+        /*[in]*/ short search_attrid,
+        /*[in]*/ VARIANT search_value,
+        /*[out,retval]*/ struct ICoreObject * * p ) = 0;
+      virtual HRESULT __stdcall get_IsDeleted (
+        /*[out]*/ VARIANT_BOOL * p ) = 0;
+      virtual HRESULT __stdcall Delete ( ) = 0;
+      virtual HRESULT __stdcall Clone (
+        /*[out]*/ struct ICoreObject * * p ) = 0;
+};
+
+struct __declspec(uuid("826a8738-563b-11d3-b301-005004d38590"))
+ICoreAttribute : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetObject))
+    ICoreObjectPtr Object;
+    __declspec(property(get=GetMetaAttribute))
+    ICoreMetaAttributePtr MetaAttribute;
+    __declspec(property(get=GetValue,put=PutValue))
+    _variant_t Value;
+    __declspec(property(get=GetLoadedValue))
+    _variant_t LoadedValue;
+    __declspec(property(get=GetPreviousValue))
+    _variant_t PreviousValue;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ICoreObjectPtr GetObject ( );
+    ICoreMetaAttributePtr GetMetaAttribute ( );
+    _variant_t GetValue ( );
+    void PutValue (
+        const _variant_t & p );
+    _variant_t GetLoadedValue ( );
+    _variant_t GetPreviousValue ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Object (
+        /*[out,retval]*/ struct ICoreObject * * p ) = 0;
+      virtual HRESULT __stdcall get_MetaAttribute (
+        /*[out,retval]*/ struct ICoreMetaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall get_Value (
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall put_Value (
+        /*[in]*/ VARIANT p ) = 0;
+      virtual HRESULT __stdcall get_LoadedValue (
+        /*[out,retval]*/ VARIANT * p ) = 0;
+      virtual HRESULT __stdcall get_PreviousValue (
+        /*[out,retval]*/ VARIANT * p ) = 0;
+};
+
+struct __declspec(uuid("43d12127-22ca-11d3-a6ec-0060082df884"))
+ICoreAttributes : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    ICoreAttributePtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    ICoreAttributePtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct ICoreAttribute * * p );
+    HRESULT __Insert (
+        struct ICoreAttribute * p,
+        long at );
+    HRESULT __Append (
+        struct ICoreAttribute * p );
+    long __Find (
+        struct ICoreAttribute * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct ICoreAttribute * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct ICoreAttribute * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct ICoreAttribute * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct ICoreAttribute * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct ICoreAttribute * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("4c3a57c3-8dff-11d3-b336-005004d38590"))
+ICoreTerritory : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetProject))
+    ICoreProjectPtr Project;
+    __declspec(property(get=GetAttributes))
+    ICoreAttributesPtr Attributes;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ICoreProjectPtr GetProject ( );
+    ICoreAttributesPtr GetAttributes ( );
+    HRESULT __Clear ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Project (
+        /*[out,retval]*/ struct ICoreProject * * p ) = 0;
+      virtual HRESULT __stdcall get_Attributes (
+        /*[out,retval]*/ struct ICoreAttributes * * p ) = 0;
+      virtual HRESULT __stdcall Clear ( ) = 0;
+};
+
+struct __declspec(uuid("43d12111-22ca-11d3-a6ec-0060082df884"))
+ICoreObjects : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    ICoreObjectPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    ICoreObjectPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct ICoreObject * * p );
+    HRESULT __Insert (
+        struct ICoreObject * p,
+        long at );
+    HRESULT __Append (
+        struct ICoreObject * p );
+    long __Find (
+        struct ICoreObject * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct ICoreObject * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct ICoreObject * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct ICoreObject * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct ICoreObject * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct ICoreObject * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+#pragma pack(pop)

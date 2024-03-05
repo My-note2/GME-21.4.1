@@ -1,0 +1,1156 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (594d7b6a).
+//
+// c:\users\69038\documents\gme-21.4.1_src\gme\gmeactivebrowser\debug\mgautillib.tli
+//
+// Wrapper implementations for Win32 type library MgaUtilLib.tlb
+// compiler-generated file created 01/19/24 at 15:48:37 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IMgaResolver wrapper method implementations
+//
+
+HRESULT IMgaResolver::__Clear ( ) {
+    HRESULT _hr = Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+void IMgaResolver::PutIsInteractive ( VARIANT_BOOL p ) {
+    HRESULT _hr = put_IsInteractive(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaResolver::GetIsInteractive ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsInteractive(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaResolver::PutIsStickyEnabled ( VARIANT_BOOL p ) {
+    HRESULT _hr = put_IsStickyEnabled(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaResolver::GetIsStickyEnabled ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsStickyEnabled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaResolver::__getUserOptions ( ) {
+    HRESULT _hr = getUserOptions();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaMetaFolderPtr IMgaResolver::GetFolderByStr ( struct IMgaFolder * parent, _bstr_t kindname ) {
+    struct IMgaMetaFolder * _result = 0;
+    HRESULT _hr = get_FolderByStr(parent, kindname, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaFolderPtr(_result, false);
+}
+
+IMgaMetaFolderPtr IMgaResolver::__GetFolderByStrDisp ( struct IMgaFolder * parent, _bstr_t kindname ) {
+    struct IMgaMetaFolder * _result = 0;
+    HRESULT _hr = GetFolderByStrDisp(parent, kindname, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaFolderPtr(_result, false);
+}
+
+IMgaMetaFCOPtr IMgaResolver::GetKindByStr ( struct IMgaFolder * parent, _bstr_t kindname, enum objtype_enum objtype ) {
+    struct IMgaMetaFCO * _result = 0;
+    HRESULT _hr = get_KindByStr(parent, kindname, objtype, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaFCOPtr(_result, false);
+}
+
+IMgaMetaFCOPtr IMgaResolver::__GetKindByStrDisp ( struct IMgaFolder * parent, _bstr_t kindname, enum objtype_enum objtype ) {
+    struct IMgaMetaFCO * _result = 0;
+    HRESULT _hr = GetKindByStrDisp(parent, kindname, objtype, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaFCOPtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaResolver::GetRoleByStr ( struct IMgaModel * parent, _bstr_t kindname, enum objtype_enum objtype, _bstr_t rolename, _bstr_t aspect ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = get_RoleByStr(parent, kindname, objtype, rolename, aspect, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaResolver::__GetRoleByStrDisp ( struct IMgaModel * parent, _bstr_t kindname, enum objtype_enum objtype, _bstr_t rolename, _bstr_t aspect ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = GetRoleByStrDisp(parent, kindname, objtype, rolename, aspect, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaMetaAttributePtr IMgaResolver::GetAttrByStr ( struct IMgaFCO * parent, _bstr_t kindname ) {
+    struct IMgaMetaAttribute * _result = 0;
+    HRESULT _hr = get_AttrByStr(parent, kindname, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaAttributePtr(_result, false);
+}
+
+IMgaMetaAttributePtr IMgaResolver::__GetAttrByStrDisp ( struct IMgaFCO * parent, _bstr_t kindname ) {
+    struct IMgaMetaAttribute * _result = 0;
+    HRESULT _hr = GetAttrByStrDisp(parent, kindname, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaAttributePtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaResolver::GetRoleByMeta ( struct IMgaModel * parent, struct IMgaMetaFCO * p_kind, enum objtype_enum objtype, struct IMgaMetaRole * p_role, struct IMgaMetaAspect * aspect ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = get_RoleByMeta(parent, p_kind, objtype, p_role, aspect, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaResolver::__GetRoleByMetaDisp ( struct IMgaModel * parent, struct IMgaMetaFCO * p_kind, enum objtype_enum objtype, struct IMgaMetaRole * p_role, struct IMgaMetaAspect * aspect ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = GetRoleByMetaDisp(parent, p_kind, objtype, p_role, aspect, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaResolver::GetConnRoleByMeta ( struct IMgaModel * parent, struct IMgaMetaAspect * aspect, struct IMgaFCO * src, struct IMgaFCO * src_port, struct IMgaFCO * dst, struct IMgaFCO * dst_port ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = get_ConnRoleByMeta(parent, aspect, src, src_port, dst, dst_port, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaResolver::__GetConnRoleByMetaDisp ( struct IMgaModel * parent, struct IMgaMetaAspect * aspect, struct IMgaFCO * src, struct IMgaFCO * src_port, struct IMgaFCO * dst, struct IMgaFCO * dst_port ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = GetConnRoleByMetaDisp(parent, aspect, src, src_port, dst, dst_port, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaResolver::GetRefRoleByMeta ( struct IMgaModel * parent, struct IMgaMetaAspect * aspect, struct IMgaFCO * src ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = get_RefRoleByMeta(parent, aspect, src, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaResolver::__GetRefRoleByMetaDisp ( struct IMgaModel * parent, struct IMgaMetaAspect * aspect, struct IMgaFCO * src ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = GetRefRoleByMetaDisp(parent, aspect, src, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaMetaRolesPtr IMgaResolver::GetRolesByMetas ( struct IMgaModel * dst_parent, struct IMgaFCOs * src, struct IMgaMetaAspect * aspect, _bstr_t sz_aspect ) {
+    struct IMgaMetaRoles * _result = 0;
+    HRESULT _hr = get_RolesByMetas(dst_parent, src, aspect, sz_aspect, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolesPtr(_result, false);
+}
+
+IMgaMetaRolesPtr IMgaResolver::__GetRolesByMetasDisp ( struct IMgaModel * dst_parent, struct IMgaFCOs * src, struct IMgaMetaAspect * aspect, _bstr_t sz_aspect ) {
+    struct IMgaMetaRoles * _result = 0;
+    HRESULT _hr = GetRolesByMetasDisp(dst_parent, src, aspect, sz_aspect, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolesPtr(_result, false);
+}
+
+//
+// interface IMgaRegistrar wrapper method implementations
+//
+
+_bstr_t IMgaRegistrar::GetIconPath ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_IconPath(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaRegistrar::PutIconPath ( enum regaccessmode_enum mode, _bstr_t path ) {
+    HRESULT _hr = put_IconPath(mode, path);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaRegistrar::__GetIconPathDisp ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetIconPathDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__SetIconPathDisp ( enum regaccessmode_enum mode, _bstr_t path ) {
+    HRESULT _hr = SetIconPathDisp(mode, path);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::GetShowMultipleView ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ShowMultipleView(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutShowMultipleView ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = put_ShowMultipleView(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetShowMultipleViewDisp ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetShowMultipleViewDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetShowMultipleViewDisp ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = SetShowMultipleViewDisp(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::GetEventLoggingEnabled ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_EventLoggingEnabled(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutEventLoggingEnabled ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = put_EventLoggingEnabled(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetEventLoggingEnabledDisp ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetEventLoggingEnabledDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetEventLoggingEnabledDisp ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = SetEventLoggingEnabledDisp(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::GetAutosaveEnabled ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_AutosaveEnabled(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutAutosaveEnabled ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = put_AutosaveEnabled(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetAutosaveEnabledDisp ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetAutosaveEnabledDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetAutosaveEnabledDisp ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = SetAutosaveEnabledDisp(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaRegistrar::GetAutosaveFreq ( enum regaccessmode_enum mode ) {
+    long _result = 0;
+    HRESULT _hr = get_AutosaveFreq(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutAutosaveFreq ( enum regaccessmode_enum mode, long secs ) {
+    HRESULT _hr = put_AutosaveFreq(mode, secs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+long IMgaRegistrar::__GetAutosaveFreqDisp ( enum regaccessmode_enum mode ) {
+    long _result = 0;
+    HRESULT _hr = GetAutosaveFreqDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetAutosaveFreqDisp ( enum regaccessmode_enum mode, long secs ) {
+    HRESULT _hr = SetAutosaveFreqDisp(mode, secs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::GetAutosaveUseDir ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_AutosaveUseDir(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutAutosaveUseDir ( enum regaccessmode_enum mode, VARIANT_BOOL use ) {
+    HRESULT _hr = put_AutosaveUseDir(mode, use);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetAutosaveUseDirDisp ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetAutosaveUseDirDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetAutosaveUseDirDisp ( enum regaccessmode_enum mode, VARIANT_BOOL use ) {
+    HRESULT _hr = SetAutosaveUseDirDisp(mode, use);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaRegistrar::GetAutosaveDir ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_AutosaveDir(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaRegistrar::PutAutosaveDir ( enum regaccessmode_enum mode, _bstr_t dir ) {
+    HRESULT _hr = put_AutosaveDir(mode, dir);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaRegistrar::__GetAutosaveDirDisp ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetAutosaveDirDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__SetAutosaveDirDisp ( enum regaccessmode_enum mode, _bstr_t dir ) {
+    HRESULT _hr = SetAutosaveDirDisp(mode, dir);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::GetExternalEditorEnabled ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ExternalEditorEnabled(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutExternalEditorEnabled ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = put_ExternalEditorEnabled(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetExternalEditorEnabledDisp ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetExternalEditorEnabledDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetExternalEditorEnabledDisp ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = SetExternalEditorEnabledDisp(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaRegistrar::GetExternalEditor ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ExternalEditor(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaRegistrar::PutExternalEditor ( enum regaccessmode_enum mode, _bstr_t path ) {
+    HRESULT _hr = put_ExternalEditor(mode, path);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaRegistrar::__GetExternalEditorDisp ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetExternalEditorDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__SetExternalEditorDisp ( enum regaccessmode_enum mode, _bstr_t path ) {
+    HRESULT _hr = SetExternalEditorDisp(mode, path);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::GetUseAutoRouting ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_UseAutoRouting(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutUseAutoRouting ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = put_UseAutoRouting(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetUseAutoRoutingDisp ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetUseAutoRoutingDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetUseAutoRoutingDisp ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = SetUseAutoRoutingDisp(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::GetLabelAvoidance ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_LabelAvoidance(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutLabelAvoidance ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = put_LabelAvoidance(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetLabelAvoidanceDisp ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetLabelAvoidanceDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetLabelAvoidanceDisp ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = SetLabelAvoidanceDisp(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaRegistrar::GetScriptEngine ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ScriptEngine(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaRegistrar::PutScriptEngine ( enum regaccessmode_enum mode, _bstr_t path ) {
+    HRESULT _hr = put_ScriptEngine(mode, path);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaRegistrar::__GetScriptEngineDisp ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetScriptEngineDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__SetScriptEngineDisp ( enum regaccessmode_enum mode, _bstr_t path ) {
+    HRESULT _hr = SetScriptEngineDisp(mode, path);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaRegistrar::__GetDefZoomLevel ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetDefZoomLevel(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__SetDefZoomLevel ( enum regaccessmode_enum mode, _bstr_t zlevel ) {
+    HRESULT _hr = SetDefZoomLevel(mode, zlevel);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetMouseOverNotify ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetMouseOverNotify(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetMouseOverNotify ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = SetMouseOverNotify(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaRegistrar::__GetRealNmbFmtStr ( enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetRealNmbFmtStr(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__SetRealNmbFmtStr ( enum regaccessmode_enum mode, _bstr_t fmtStr ) {
+    HRESULT _hr = SetRealNmbFmtStr(mode, fmtStr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetTimeStamping ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetTimeStamping(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetTimeStamping ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = SetTimeStamping(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaRegistrar::__GetNavigation ( enum regaccessmode_enum mode ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetNavigation(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetNavigation ( enum regaccessmode_enum mode, VARIANT_BOOL enabled ) {
+    HRESULT _hr = SetNavigation(mode, enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__GetUndoQueueSize ( enum regaccessmode_enum mode, BSTR * queuesz ) {
+    HRESULT _hr = GetUndoQueueSize(mode, queuesz);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__SetUndoQueueSize ( enum regaccessmode_enum mode, _bstr_t queuesz ) {
+    HRESULT _hr = SetUndoQueueSize(mode, queuesz);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+enum edgesmoothmode_enum IMgaRegistrar::GetEdgeSmoothMode ( enum regaccessmode_enum mode ) {
+    enum edgesmoothmode_enum _result;
+    HRESULT _hr = get_EdgeSmoothMode(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutEdgeSmoothMode ( enum regaccessmode_enum mode, enum edgesmoothmode_enum smoothMode ) {
+    HRESULT _hr = put_EdgeSmoothMode(mode, smoothMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+enum edgesmoothmode_enum IMgaRegistrar::__GetEdgeSmoothModeDisp ( enum regaccessmode_enum mode ) {
+    enum edgesmoothmode_enum _result;
+    HRESULT _hr = GetEdgeSmoothModeDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetEdgeSmoothModeDisp ( enum regaccessmode_enum mode, enum edgesmoothmode_enum smoothMode ) {
+    HRESULT _hr = SetEdgeSmoothModeDisp(mode, smoothMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+enum fontsmoothmode_enum IMgaRegistrar::GetFontSmoothMode ( enum regaccessmode_enum mode ) {
+    enum fontsmoothmode_enum _result;
+    HRESULT _hr = get_FontSmoothMode(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegistrar::PutFontSmoothMode ( enum regaccessmode_enum mode, enum fontsmoothmode_enum smoothMode ) {
+    HRESULT _hr = put_FontSmoothMode(mode, smoothMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+enum fontsmoothmode_enum IMgaRegistrar::__GetFontSmoothModeDisp ( enum regaccessmode_enum mode ) {
+    enum fontsmoothmode_enum _result;
+    HRESULT _hr = GetFontSmoothModeDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegistrar::__SetFontSmoothModeDisp ( enum regaccessmode_enum mode, enum fontsmoothmode_enum smoothMode ) {
+    HRESULT _hr = SetFontSmoothModeDisp(mode, smoothMode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_variant_t IMgaRegistrar::GetParadigms ( enum regaccessmode_enum mode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Paradigms(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t IMgaRegistrar::__GetParadigmsDisp ( enum regaccessmode_enum mode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetParadigmsDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__RegisterParadigmFromData ( _bstr_t ConnStr, BSTR * newname, enum regaccessmode_enum mode ) {
+    HRESULT _hr = RegisterParadigmFromData(ConnStr, newname, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaRegistrar::__RegisterParadigmFromDataDisp ( _bstr_t ConnStr, enum regaccessmode_enum mode ) {
+    BSTR _result = 0;
+    HRESULT _hr = RegisterParadigmFromDataDisp(ConnStr, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__RegisterParadigm ( _bstr_t name, _bstr_t ConnStr, _bstr_t ver, const _variant_t & guid, enum regaccessmode_enum mode ) {
+    HRESULT _hr = RegisterParadigm(name, ConnStr, ver, guid, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__QueryParadigm ( _bstr_t name, BSTR * ConnStr, VARIANT * guid, enum regaccessmode_enum mode ) {
+    HRESULT _hr = QueryParadigm(name, ConnStr, guid, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaRegistrar::GetParadigmGUIDString ( enum regaccessmode_enum mode, _bstr_t name ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ParadigmGUIDString(mode, name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaRegistrar::__GetParadigmGUIDStringDisp ( enum regaccessmode_enum mode, _bstr_t name ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetParadigmGUIDStringDisp(mode, name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__QueryParadigmAllGUIDs ( _bstr_t name, VARIANT * names, enum regaccessmode_enum mode ) {
+    HRESULT _hr = QueryParadigmAllGUIDs(name, names, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__UnregisterParadigm ( _bstr_t name, enum regaccessmode_enum mode ) {
+    HRESULT _hr = UnregisterParadigm(name, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__UnregisterParadigmGUID ( _bstr_t name, const _variant_t & guid, enum regaccessmode_enum mode ) {
+    HRESULT _hr = UnregisterParadigmGUID(name, guid, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__VersionFromGUID ( _bstr_t name, const _variant_t & guid, BSTR * ver, enum regaccessmode_enum mode ) {
+    HRESULT _hr = VersionFromGUID(name, guid, ver, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__GUIDFromVersion ( _bstr_t name, _bstr_t ver, VARIANT * guid, enum regaccessmode_enum mode ) {
+    HRESULT _hr = GUIDFromVersion(name, ver, guid, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_variant_t IMgaRegistrar::GetComponents ( enum regaccessmode_enum mode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Components(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t IMgaRegistrar::__GetComponentsDisp ( enum regaccessmode_enum mode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetComponentsDisp(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__RegisterComponent ( _bstr_t ProgID, enum componenttype_enum type, _bstr_t desc, enum regaccessmode_enum mode ) {
+    HRESULT _hr = RegisterComponent(ProgID, type, desc, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__QueryComponent ( _bstr_t ProgID, enum componenttype_enum * type, BSTR * desc, enum regaccessmode_enum mode ) {
+    HRESULT _hr = QueryComponent(ProgID, type, desc, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__UnregisterComponent ( _bstr_t ProgID, enum regaccessmode_enum mode ) {
+    HRESULT _hr = UnregisterComponent(ProgID, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+void IMgaRegistrar::PutComponentExtraInfo ( enum regaccessmode_enum mode, _bstr_t ProgID, _bstr_t name, _bstr_t pVal ) {
+    HRESULT _hr = put_ComponentExtraInfo(mode, ProgID, name, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaRegistrar::GetComponentExtraInfo ( enum regaccessmode_enum mode, _bstr_t ProgID, _bstr_t name ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ComponentExtraInfo(mode, ProgID, name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__SetComponentExtraInfoDisp ( enum regaccessmode_enum mode, _bstr_t ProgID, _bstr_t name, _bstr_t newVal ) {
+    HRESULT _hr = SetComponentExtraInfoDisp(mode, ProgID, name, newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaRegistrar::__GetComponentExtraInfoDisp ( enum regaccessmode_enum mode, _bstr_t ProgID, _bstr_t name ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetComponentExtraInfoDisp(mode, ProgID, name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaRegistrar::GetLocalDllPath ( _bstr_t ProgID ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_LocalDllPath(ProgID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaRegistrar::__GetLocalDllPathDisp ( _bstr_t ProgID ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetLocalDllPathDisp(ProgID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_variant_t IMgaRegistrar::GetAssociatedComponents ( _bstr_t Paradigm, enum componenttype_enum type, enum regaccessmode_enum mode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_AssociatedComponents(Paradigm, type, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t IMgaRegistrar::__GetAssociatedComponentsDisp ( _bstr_t Paradigm, enum componenttype_enum type, enum regaccessmode_enum mode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetAssociatedComponentsDisp(Paradigm, type, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t IMgaRegistrar::GetAssociatedParadigms ( _bstr_t ProgID, enum regaccessmode_enum mode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_AssociatedParadigms(ProgID, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_variant_t IMgaRegistrar::__GetAssociatedParadigmsDisp ( _bstr_t ProgID, enum regaccessmode_enum mode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetAssociatedParadigmsDisp(ProgID, mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+HRESULT IMgaRegistrar::__Associate ( _bstr_t ProgID, _bstr_t Paradigm, enum regaccessmode_enum mode ) {
+    HRESULT _hr = Associate(ProgID, Paradigm, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__Disassociate ( _bstr_t ProgID, _bstr_t Paradigm, enum regaccessmode_enum mode ) {
+    HRESULT _hr = Disassociate(ProgID, Paradigm, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__IsAssociated ( _bstr_t ProgID, _bstr_t Paradigm, VARIANT_BOOL * is_ass, VARIANT_BOOL * can_ass, enum regaccessmode_enum mode ) {
+    HRESULT _hr = IsAssociated(ProgID, Paradigm, is_ass, can_ass, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__RegisterComponentLibrary ( _bstr_t path, enum regaccessmode_enum mode ) {
+    HRESULT _hr = RegisterComponentLibrary(path, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegistrar::__UnregisterComponentLibrary ( _bstr_t path, enum regaccessmode_enum mode ) {
+    HRESULT _hr = UnregisterComponentLibrary(path, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaRegistrar2 wrapper method implementations
+//
+
+void IMgaRegistrar2::PutParadigmExtraInfo ( enum regaccessmode_enum mode, _bstr_t ParadigmName, _bstr_t ParadigmVersionGUID, _bstr_t name, _bstr_t pVal ) {
+    HRESULT _hr = put_ParadigmExtraInfo(mode, ParadigmName, ParadigmVersionGUID, name, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaRegistrar2::GetParadigmExtraInfo ( enum regaccessmode_enum mode, _bstr_t ParadigmName, _bstr_t ParadigmVersionGUID, _bstr_t name ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ParadigmExtraInfo(mode, ParadigmName, ParadigmVersionGUID, name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaRegistrar2::__SetParadigmExtraInfoDisp ( _bstr_t ParadigmName, _bstr_t ParadigmVersionGUID, _bstr_t name, _bstr_t newVal, enum regaccessmode_enum mode ) {
+    HRESULT _hr = SetParadigmExtraInfoDisp(ParadigmName, ParadigmVersionGUID, name, newVal, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaRegistrar2::__GetParadigmExtraInfoDisp ( _bstr_t ParadigmName, _bstr_t ParadigmVersionGUID, _bstr_t name ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetParadigmExtraInfoDisp(ParadigmName, ParadigmVersionGUID, name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMgaLauncher wrapper method implementations
+//
+
+void IMgaLauncher::PutParadigmName ( _bstr_t p ) {
+    HRESULT _hr = put_ParadigmName(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+void IMgaLauncher::PutComponentType ( enum componenttype_enum _arg1 ) {
+    HRESULT _hr = put_ComponentType(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+void IMgaLauncher::PutParameter ( const _variant_t & _arg1 ) {
+    HRESULT _hr = put_Parameter(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaLauncher::GetParadigmName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ParadigmName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaLauncher::GetConnStr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ConnStr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+IMgaMetaProjectPtr IMgaLauncher::GetParadigm ( ) {
+    struct IMgaMetaProject * _result = 0;
+    HRESULT _hr = get_Paradigm(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaProjectPtr(_result, false);
+}
+
+_bstr_t IMgaLauncher::GetProgID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ProgID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaLauncher::__MetaDlg ( enum metadlg_enum flags ) {
+    HRESULT _hr = MetaDlg(flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaLauncher::__GmeDlg ( ) {
+    HRESULT _hr = GmeDlg();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaLauncher::__ComponentDlg ( enum componentdlg_enum flags ) {
+    HRESULT _hr = ComponentDlg(flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaLauncher::__PropDlg ( struct IMgaObject * obj ) {
+    HRESULT _hr = PropDlg(obj);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaLauncher::__AttrDlg ( struct IMgaObject * obj ) {
+    HRESULT _hr = AttrDlg(obj);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaLauncher::__ShowHelp ( struct IMgaObject * obj ) {
+    HRESULT _hr = ShowHelp(obj);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaLauncher::__RegistryBrowser ( struct IMgaObject * obj ) {
+    HRESULT _hr = RegistryBrowser(obj);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaLauncher::__AnnotationBrowser ( struct IMgaObject * obj, struct IMgaRegNode * focus ) {
+    HRESULT _hr = AnnotationBrowser(obj, focus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaLauncher::__RunComponent ( _bstr_t ProgID, struct IMgaProject * p, struct IMgaFCO * focusobj, struct IMgaFCOs * selectedobjs, long param ) {
+    HRESULT _hr = RunComponent(ProgID, p, focusobj, selectedobjs, param);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaProgressDlg wrapper method implementations
+//
+
+HRESULT IMgaProgressDlg::__SetTitle ( _bstr_t title ) {
+    HRESULT _hr = SetTitle(title);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProgressDlg::__SetLine ( int line, _bstr_t msg ) {
+    HRESULT _hr = SetLine(line, msg);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProgressDlg::__StartProgressDialog ( wireHWND hwndParent ) {
+    HRESULT _hr = StartProgressDialog(hwndParent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaProgressDlg::__HasUserCancelled ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = HasUserCancelled(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaProgressDlg::__SetProgress ( long completed, long total ) {
+    HRESULT _hr = SetProgress(completed, total);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProgressDlg::__StopProgressDialog ( ) {
+    HRESULT _hr = StopProgressDialog();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaComponentProxy wrapper method implementations
+//
+
+void IMgaComponentProxy::PutDispatchComponent ( IDispatch * _arg1 ) {
+    HRESULT _hr = put_DispatchComponent(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// dispinterface IMgaComponentDispatch wrapper method implementations
+//
+
+HRESULT IMgaComponentDispatch::__Invoke ( struct IMgaProject * project, struct IMgaFCOs * selectedobjs, long param ) {
+    return _com_dispatch_method(this, 0x14, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0009\x0003", project, selectedobjs, param);
+}
+
+HRESULT IMgaComponentDispatch::__Initialize ( struct IMgaProject * p ) {
+    return _com_dispatch_method(this, 0x15, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009", p);
+}
+
+HRESULT IMgaComponentDispatch::__Enable ( VARIANT_BOOL newVal ) {
+    return _com_dispatch_method(this, 0x16, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000b", newVal);
+}
+
+HRESULT IMgaComponentDispatch::__InvokeEx ( struct IMgaProject * project, struct IMgaFCO * currentobj, struct IMgaFCOs * selectedobjs, long param ) {
+    return _com_dispatch_method(this, 0x17, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0009\x0009\x0003", project, currentobj, selectedobjs, param);
+}
+
+HRESULT IMgaComponentDispatch::__ObjectsInvokeEx ( struct IMgaProject * project, struct IMgaObject * currentobj, struct IMgaObjects * selectedobjs, long param ) {
+    return _com_dispatch_method(this, 0x18, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0009\x0009\x0009\x0003", project, currentobj, selectedobjs, param);
+}
+
+HRESULT IMgaComponentDispatch::__SetComponentParameter ( _bstr_t name, const _variant_t & newVal ) {
+    return _com_dispatch_method(this, 0x19, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x000c", (BSTR)name, &newVal);
+}
+
+_variant_t IMgaComponentDispatch::__GetComponentParameter ( _bstr_t name ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x1a, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0008", (BSTR)name);
+    return _variant_t(_result, false);
+}
+
+VARIANT_BOOL IMgaComponentDispatch::GetInteractiveMode ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0x1, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+void IMgaComponentDispatch::PutInteractiveMode ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0x1, VT_BOOL, _val);
+}
+
+_bstr_t IMgaComponentDispatch::GetComponentName ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x2, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+void IMgaComponentDispatch::PutComponentName ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x2, VT_BSTR, (BSTR)_val);
+}
+
+long IMgaComponentDispatch::GetComponentType ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0x3, VT_I4, (void*)&_result);
+    return _result;
+}
+
+void IMgaComponentDispatch::PutComponentType ( long _val ) {
+    _com_dispatch_propput(this, 0x3, VT_I4, _val);
+}
+
+_bstr_t IMgaComponentDispatch::GetParadigm ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x4, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+void IMgaComponentDispatch::PutParadigm ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x4, VT_BSTR, (BSTR)_val);
+}
+
+_bstr_t IMgaComponentDispatch::GetComponentProgID ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x5, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+void IMgaComponentDispatch::PutComponentProgID ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x5, VT_BSTR, (BSTR)_val);
+}
+
+long IMgaComponentDispatch::GetVersion ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0x6, VT_I4, (void*)&_result);
+    return _result;
+}
+
+void IMgaComponentDispatch::PutVersion ( long _val ) {
+    _com_dispatch_propput(this, 0x6, VT_I4, _val);
+}
+
+//
+// interface IMgaClosure wrapper method implementations
+//
+
+long IMgaClosure::__GetLastClosureId ( struct IMgaProject * p ) {
+    long _result = 0;
+    HRESULT _hr = GetLastClosureId(p, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaClosure::__PutLastClosureId ( struct IMgaProject * p, long p_iMarkWith ) {
+    HRESULT _hr = PutLastClosureId(p, p_iMarkWith);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaClosure::__SelectiveClosureDlg ( VARIANT_BOOL folder_containment_needed, VARIANT_BOOL * refers_to, VARIANT_BOOL * referred_by, VARIANT_BOOL * connections, VARIANT_BOOL * conns_through_refport, VARIANT_BOOL * set_members, VARIANT_BOOL * member_of_sets, VARIANT_BOOL * model_containment, VARIANT_BOOL * part_of_models, VARIANT_BOOL * folder_containment, VARIANT_BOOL * part_of_folders, VARIANT_BOOL * base_type_of, VARIANT_BOOL * derived_types_of, long * library_element_handling, long * wrapping, long * kind_filter, long * mark_value, long * options, VARIANT_BOOL * direction_down, VARIANT_BOOL * copy_to_file, VARIANT_BOOL * ok_pressed, BSTR * file_name_selected ) {
+    HRESULT _hr = SelectiveClosureDlg(folder_containment_needed, refers_to, referred_by, connections, conns_through_refport, set_members, member_of_sets, model_containment, part_of_models, folder_containment, part_of_folders, base_type_of, derived_types_of, library_element_handling, wrapping, kind_filter, mark_value, options, direction_down, copy_to_file, ok_pressed, file_name_selected);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaClosure::__SelectiveClosureCalc ( struct IMgaFCOs * init_sel_fcos, struct IMgaFolders * init_sel_folders, VARIANT_BOOL refers_to, VARIANT_BOOL referred_by, VARIANT_BOOL connections, VARIANT_BOOL conns_through_refport, VARIANT_BOOL set_members, VARIANT_BOOL member_of_sets, VARIANT_BOOL model_containment, VARIANT_BOOL part_of_models, VARIANT_BOOL folder_containment, VARIANT_BOOL part_of_folders, VARIANT_BOOL base_type_of, VARIANT_BOOL derived_types_of, long library_element_handling, long wrapping, long kind_filter, long mark_value, VARIANT_BOOL direction_down, struct IMgaFCOs * * sel_fcos, struct IMgaFolders * * sel_folders, struct IMgaFCOs * * top_fcos, struct IMgaFolders * * top_folders, VARIANT_BOOL * top_collections_filled, BSTR * acc_kinds ) {
+    HRESULT _hr = SelectiveClosureCalc(init_sel_fcos, init_sel_folders, refers_to, referred_by, connections, conns_through_refport, set_members, member_of_sets, model_containment, part_of_models, folder_containment, part_of_folders, base_type_of, derived_types_of, library_element_handling, wrapping, kind_filter, mark_value, direction_down, sel_fcos, sel_folders, top_fcos, top_folders, top_collections_filled, acc_kinds);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaClosure::__SmartCopy ( struct IMgaFCOs * init_sel_fcos, struct IMgaFolders * init_sel_folders, struct IMgaFCOs * * sel_fcos, struct IMgaFolders * * sel_folders, struct IMgaFCOs * * top_fcos, struct IMgaFolders * * top_folders, int folder_containment, long * options, BSTR * acckinds, BSTR * path ) {
+    HRESULT _hr = SmartCopy(init_sel_fcos, init_sel_folders, sel_fcos, sel_folders, top_fcos, top_folders, folder_containment, options, acckinds, path);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaEventLogger wrapper method implementations
+//
+
+HRESULT IMgaEventLogger::__LogEvent ( _bstr_t eventMsg ) {
+    HRESULT _hr = LogEvent(eventMsg);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaEventLogger::__StartLogging ( ) {
+    HRESULT _hr = StartLogging();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaEventLogger::__StopLogging ( ) {
+    HRESULT _hr = StopLogging();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaEventLogger::__EmergencyEvent ( ) {
+    HRESULT _hr = EmergencyEvent();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

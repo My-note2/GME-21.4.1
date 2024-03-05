@@ -1,0 +1,3197 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (a91c1397).
+//
+// c:\users\69038\documents\gme-21.4.1_src\gme\partbrowser\debug\mgalib.tli
+//
+// Wrapper implementations for Win32 type library MgaLib.tlb
+// compiler-generated file created 01/11/24 at 17:50:57 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IMgaComponent wrapper method implementations
+//
+
+HRESULT IMgaComponent::__Invoke ( struct IMgaProject * Project, struct IMgaFCOs * selectedobjs, long param ) {
+    HRESULT _hr = Invoke(Project, selectedobjs, param);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaComponent::__Initialize ( struct IMgaProject * p ) {
+    HRESULT _hr = Initialize(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaComponent::__Enable ( VARIANT_BOOL newval ) {
+    HRESULT _hr = Enable(newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaComponent::GetInteractiveMode ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_InteractiveMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaComponent::PutInteractiveMode ( VARIANT_BOOL enabled ) {
+    HRESULT _hr = put_InteractiveMode(enabled);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaComponent::GetComponentName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ComponentName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+enum componenttype_enum IMgaComponent::GetComponentType ( ) {
+    enum componenttype_enum _result;
+    HRESULT _hr = get_ComponentType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+_bstr_t IMgaComponent::GetParadigm ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Paradigm(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMgaComponents wrapper method implementations
+//
+
+long IMgaComponents::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaComponentPtr IMgaComponents::GetItem ( long n ) {
+    struct IMgaComponent * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaComponentPtr(_result, false);
+}
+
+IUnknownPtr IMgaComponents::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaComponents::__GetAll ( long Count, struct IMgaComponent * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaComponents::__Insert ( struct IMgaComponent * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaComponents::__Append ( struct IMgaComponent * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaComponents::__Find ( struct IMgaComponent * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaComponents::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaProject wrapper method implementations
+//
+
+HRESULT IMgaProject::__Create ( _bstr_t projectname, _bstr_t paradigmname ) {
+    HRESULT _hr = Create(projectname, paradigmname);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__CreateEx ( _bstr_t projectname, _bstr_t paradigmname, const _variant_t & paradigmGUID ) {
+    HRESULT _hr = CreateEx(projectname, paradigmname, paradigmGUID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__Open ( _bstr_t projectname, VARIANT_BOOL * ro_mode ) {
+    HRESULT _hr = Open(projectname, ro_mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__OpenEx ( _bstr_t projectname, _bstr_t paradigmname, const _variant_t & paradigmGUID ) {
+    HRESULT _hr = OpenEx(projectname, paradigmname, paradigmGUID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__Close ( VARIANT_BOOL abort ) {
+    HRESULT _hr = Close(abort);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__Save ( _bstr_t save_as_conn, VARIANT_BOOL keepoldname ) {
+    HRESULT _hr = Save(save_as_conn, keepoldname);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__CheckLocks ( _bstr_t filename, VARIANT_BOOL clearlocks ) {
+    HRESULT _hr = CheckLocks(filename, clearlocks);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+void IMgaProject::PutPreferences ( long prefmask ) {
+    HRESULT _hr = put_Preferences(prefmask);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+long IMgaProject::GetPreferences ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Preferences(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaProject::PutOperationsMask ( long opmask ) {
+    HRESULT _hr = put_OperationsMask(opmask);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+long IMgaProject::GetOperationsMask ( ) {
+    long _result = 0;
+    HRESULT _hr = get_OperationsMask(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaProject::__CreateTerritory ( struct IMgaEventSink * handler, struct IMgaTerritory * * terr, struct IMgaEventSink * rwhandler ) {
+    HRESULT _hr = CreateTerritory(handler, terr, rwhandler);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__CreateAddOn ( struct IMgaEventSink * handler, struct IMgaAddOn * * addon ) {
+    HRESULT _hr = CreateAddOn(handler, addon);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaAddOnsPtr IMgaProject::GetAddOns ( ) {
+    struct IMgaAddOns * _result = 0;
+    HRESULT _hr = get_AddOns(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaAddOnsPtr(_result, false);
+}
+
+IMgaTerritoriesPtr IMgaProject::GetTerritories ( ) {
+    struct IMgaTerritories * _result = 0;
+    HRESULT _hr = get_Territories(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaTerritoriesPtr(_result, false);
+}
+
+HRESULT IMgaProject::__EnableAutoAddOns ( VARIANT_BOOL bEnable ) {
+    HRESULT _hr = EnableAutoAddOns(bEnable);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaComponentsPtr IMgaProject::GetAddOnComponents ( ) {
+    struct IMgaComponents * _result = 0;
+    HRESULT _hr = get_AddOnComponents(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaComponentsPtr(_result, false);
+}
+
+IMgaTerritoryPtr IMgaProject::GetActiveTerritory ( ) {
+    struct IMgaTerritory * _result = 0;
+    HRESULT _hr = get_ActiveTerritory(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaTerritoryPtr(_result, false);
+}
+
+HRESULT IMgaProject::__BeginTransaction ( struct IMgaTerritory * terr, enum transactiontype_enum mode ) {
+    HRESULT _hr = BeginTransaction(terr, mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaTerritoryPtr IMgaProject::__BeginTransactionInNewTerr ( enum transactiontype_enum mode ) {
+    struct IMgaTerritory * _result = 0;
+    HRESULT _hr = BeginTransactionInNewTerr(mode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaTerritoryPtr(_result, false);
+}
+
+long IMgaProject::GetProjectStatus ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ProjectStatus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaProject::__Notify ( enum globalevent_enum event ) {
+    HRESULT _hr = Notify(event);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__CommitTransaction ( ) {
+    HRESULT _hr = CommitTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__AbortTransaction ( ) {
+    HRESULT _hr = AbortTransaction();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__CheckSupress ( VARIANT_BOOL mode ) {
+    HRESULT _hr = CheckSupress(mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__Undo ( ) {
+    HRESULT _hr = Undo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__Redo ( ) {
+    HRESULT _hr = Redo();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__UndoRedoSize ( short * undosize, short * redosize ) {
+    HRESULT _hr = UndoRedoSize(undosize, redosize);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__FlushUndoQueue ( ) {
+    HRESULT _hr = FlushUndoQueue();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__UpdateSourceControlInfo ( _bstr_t p_optionalID ) {
+    HRESULT _hr = UpdateSourceControlInfo(p_optionalID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__SourceControlActiveUsers ( ) {
+    HRESULT _hr = SourceControlActiveUsers();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaProject::__SourceControlObjectOwner ( _bstr_t p_optionalID ) {
+    HRESULT _hr = SourceControlObjectOwner(p_optionalID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaMetaProjectPtr IMgaProject::GetRootMeta ( ) {
+    struct IMgaMetaProject * _result = 0;
+    HRESULT _hr = get_RootMeta(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaProjectPtr(_result, false);
+}
+
+IMgaFolderPtr IMgaProject::GetRootFolder ( ) {
+    struct IMgaFolder * _result = 0;
+    HRESULT _hr = get_RootFolder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFolderPtr(_result, false);
+}
+
+IMgaFilterPtr IMgaProject::__CreateFilter ( ) {
+    struct IMgaFilter * _result = 0;
+    HRESULT _hr = CreateFilter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFilterPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaProject::__AllFCOs ( struct IMgaFilter * filter ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = AllFCOs(filter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaObjectPtr IMgaProject::__GetObjectByID ( _bstr_t ID ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = GetObjectByID(ID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaProject::__GetFCOByID ( _bstr_t ID ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = GetFCOByID(ID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaProject::__GetFCOsByName ( _bstr_t Name ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = GetFCOsByName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaFolderPtr IMgaProject::__GetFolderByPath ( _bstr_t Path ) {
+    struct IMgaFolder * _result = 0;
+    HRESULT _hr = GetFolderByPath(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFolderPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaProject::__EnumExtReferences ( struct IMgaFCOs * fcos ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = EnumExtReferences(fcos, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaObjectPtr IMgaProject::GetObjectByPath ( _bstr_t Path ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = get_ObjectByPath(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+IMgaObjectPtr IMgaProject::GetNthObjectByPath ( long n_th, _bstr_t Path ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = get_NthObjectByPath(n_th, Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+IMgaFoldersPtr IMgaProject::__GetTopLibraries ( _bstr_t dispGuid ) {
+    struct IMgaFolders * _result = 0;
+    HRESULT _hr = GetTopLibraries(dispGuid, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFoldersPtr(_result, false);
+}
+
+_bstr_t IMgaProject::__GetStatistics ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetStatistics(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaProject::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaProject::PutName ( _bstr_t pVal ) {
+    HRESULT _hr = put_Name(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaProject::GetVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Version(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaProject::PutVersion ( _bstr_t pVal ) {
+    HRESULT _hr = put_Version(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaProject::GetMetaName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_MetaName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_variant_t IMgaProject::GetMetaGUID ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_MetaGUID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+_bstr_t IMgaProject::GetMetaVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_MetaVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_variant_t IMgaProject::GetGUID ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_GUID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+void IMgaProject::PutGUID ( const _variant_t & pVal ) {
+    HRESULT _hr = put_GUID(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaProject::GetCreateTime ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_CreateTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaProject::GetChangeTime ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ChangeTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaProject::GetAuthor ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Author(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaProject::PutAuthor ( _bstr_t pVal ) {
+    HRESULT _hr = put_Author(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaProject::GetComment ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Comment(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaProject::PutComment ( _bstr_t pVal ) {
+    HRESULT _hr = put_Comment(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaProject::GetProjectConnStr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ProjectConnStr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaProject::GetParadigmConnStr ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ParadigmConnStr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+IMgaMetaBasePtr IMgaProject::GetMetaObj ( long mref ) {
+    struct IMgaMetaBase * _result = 0;
+    HRESULT _hr = get_MetaObj(mref, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaBasePtr(_result, false);
+}
+
+IMgaMetaBasePtr IMgaProject::__GetMetaObjDisp ( long mref ) {
+    struct IMgaMetaBase * _result = 0;
+    HRESULT _hr = GetMetaObjDisp(mref, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaBasePtr(_result, false);
+}
+
+HRESULT IMgaProject::__QueryProjectInfo ( _bstr_t projectname, long * mgaversion, BSTR * paradigmname, BSTR * paradigmversion, VARIANT * paradigmGUID, VARIANT_BOOL * ro_mode ) {
+    HRESULT _hr = QueryProjectInfo(projectname, mgaversion, paradigmname, paradigmversion, paradigmGUID, ro_mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaClientsPtr IMgaProject::GetClients ( ) {
+    struct IMgaClients * _result = 0;
+    HRESULT _hr = get_Clients(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaClientsPtr(_result, false);
+}
+
+IMgaClientPtr IMgaProject::__RegisterClient ( _bstr_t Name, IDispatch * OLEServer ) {
+    struct IMgaClient * _result = 0;
+    HRESULT _hr = RegisterClient(Name, OLEServer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaClientPtr(_result, false);
+}
+
+IMgaClientPtr IMgaProject::__GetClientByName ( _bstr_t Name ) {
+    struct IMgaClient * _result = 0;
+    HRESULT _hr = GetClientByName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaClientPtr(_result, false);
+}
+
+HRESULT IMgaProject::__CreateTerritoryWithoutSink ( struct IMgaTerritory * * terr ) {
+    HRESULT _hr = CreateTerritoryWithoutSink(terr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaFilter wrapper method implementations
+//
+
+_bstr_t IMgaFilter::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaFilter::PutName ( _bstr_t pVal ) {
+    HRESULT _hr = put_Name(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaFilter::GetKind ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Kind(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaFilter::PutKind ( _bstr_t pVal ) {
+    HRESULT _hr = put_Kind(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaFilter::GetRole ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Role(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaFilter::PutRole ( _bstr_t pVal ) {
+    HRESULT _hr = put_Role(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaFilter::GetObjType ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ObjType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaFilter::PutObjType ( _bstr_t pVal ) {
+    HRESULT _hr = put_ObjType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaFilter::GetLevel ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Level(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaFilter::PutLevel ( _bstr_t pVal ) {
+    HRESULT _hr = put_Level(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaProjectPtr IMgaFilter::GetProject ( ) {
+    struct IMgaProject * _result = 0;
+    HRESULT _hr = get_Project(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaProjectPtr(_result, false);
+}
+
+//
+// interface IMgaAddOn wrapper method implementations
+//
+
+long IMgaAddOn::GetPriority ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Priority(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaAddOn::PutPriority ( long pVal ) {
+    HRESULT _hr = put_Priority(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+void IMgaAddOn::PutEventMask ( unsigned long _arg1 ) {
+    HRESULT _hr = put_EventMask(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+HRESULT IMgaAddOn::__Destroy ( ) {
+    HRESULT _hr = Destroy();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaProjectPtr IMgaAddOn::GetProject ( ) {
+    struct IMgaProject * _result = 0;
+    HRESULT _hr = get_Project(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaProjectPtr(_result, false);
+}
+
+HRESULT IMgaAddOn::__CheckProject ( struct IMgaProject * p_project ) {
+    HRESULT _hr = CheckProject(p_project);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaAddOns wrapper method implementations
+//
+
+long IMgaAddOns::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaAddOnPtr IMgaAddOns::GetItem ( long n ) {
+    struct IMgaAddOn * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaAddOnPtr(_result, false);
+}
+
+IUnknownPtr IMgaAddOns::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaAddOns::__GetAll ( long Count, struct IMgaAddOn * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaAddOns::__Insert ( struct IMgaAddOn * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaAddOns::__Append ( struct IMgaAddOn * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaAddOns::__Find ( struct IMgaAddOn * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaAddOns::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaClient wrapper method implementations
+//
+
+_bstr_t IMgaClient::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+IDispatchPtr IMgaClient::GetOLEServer ( ) {
+    IDispatch * _result = 0;
+    HRESULT _hr = get_OLEServer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+IMgaProjectPtr IMgaClient::GetProject ( ) {
+    struct IMgaProject * _result = 0;
+    HRESULT _hr = get_Project(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaProjectPtr(_result, false);
+}
+
+HRESULT IMgaClient::__Destroy ( ) {
+    HRESULT _hr = Destroy();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaClients wrapper method implementations
+//
+
+long IMgaClients::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaClientPtr IMgaClients::GetItem ( long n ) {
+    struct IMgaClient * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaClientPtr(_result, false);
+}
+
+IUnknownPtr IMgaClients::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaClients::__GetAll ( long Count, struct IMgaClient * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaClients::__Insert ( struct IMgaClient * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaClients::__Append ( struct IMgaClient * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaClients::__Find ( struct IMgaClient * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaClients::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaEventSink wrapper method implementations
+//
+
+HRESULT IMgaEventSink::__GlobalEvent ( enum globalevent_enum event ) {
+    HRESULT _hr = GlobalEvent(event);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaEventSink::__ObjectEvent ( struct IMgaObject * obj, unsigned long EventMask, const _variant_t & v ) {
+    HRESULT _hr = ObjectEvent(obj, EventMask, v);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaObject wrapper method implementations
+//
+
+long IMgaObject::GetStatus ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+VARIANT_BOOL IMgaObject::GetIsWritable ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsWritable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+_bstr_t IMgaObject::GetID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaObject::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaObject::PutName ( _bstr_t pVal ) {
+    HRESULT _hr = put_Name(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaObject::GetAbsPath ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_AbsPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+IMgaMetaBasePtr IMgaObject::GetMetaBase ( ) {
+    struct IMgaMetaBase * _result = 0;
+    HRESULT _hr = get_MetaBase(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaBasePtr(_result, false);
+}
+
+enum objtype_enum IMgaObject::GetObjType ( ) {
+    enum objtype_enum _result;
+    HRESULT _hr = get_ObjType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaProjectPtr IMgaObject::GetProject ( ) {
+    struct IMgaProject * _result = 0;
+    HRESULT _hr = get_Project(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaProjectPtr(_result, false);
+}
+
+IMgaTerritoryPtr IMgaObject::GetTerritory ( ) {
+    struct IMgaTerritory * _result = 0;
+    HRESULT _hr = get_Territory(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaTerritoryPtr(_result, false);
+}
+
+VARIANT_BOOL IMgaObject::GetIsEqual ( struct IMgaObject * o ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsEqual(o, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+VARIANT_BOOL IMgaObject::__GetIsEqualDisp ( struct IMgaObject * o ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetIsEqualDisp(o, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaObject::__GetParent ( struct IMgaObject * * pVal, enum objtype_enum * ObjType ) {
+    HRESULT _hr = GetParent(pVal, ObjType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObject::__CheckProject ( struct IMgaProject * Project ) {
+    HRESULT _hr = CheckProject(Project);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObject::__DestroyObject ( ) {
+    HRESULT _hr = DestroyObject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObject::__Open ( enum openmode mode ) {
+    HRESULT _hr = Open(mode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObject::__Close ( ) {
+    HRESULT _hr = Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObject::__Associate ( const _variant_t & userdata ) {
+    HRESULT _hr = Associate(userdata);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_variant_t IMgaObject::GetCurrentAssociation ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_CurrentAssociation(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+HRESULT IMgaObject::__SendEvent ( long mask ) {
+    HRESULT _hr = SendEvent(mask);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaObject::GetRelID ( ) {
+    long _result = 0;
+    HRESULT _hr = get_RelID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaObject::PutRelID ( long pVal ) {
+    HRESULT _hr = put_RelID(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaObject::GetIsLibObject ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsLibObject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaObject::__Check ( ) {
+    HRESULT _hr = Check();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObject::__CheckTree ( ) {
+    HRESULT _hr = CheckTree();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+void IMgaObject::PutExempt ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_Exempt(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaObject::GetExempt ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Exempt(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaObjectsPtr IMgaObject::GetChildObjects ( ) {
+    struct IMgaObjects * _result = 0;
+    HRESULT _hr = get_ChildObjects(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectsPtr(_result, false);
+}
+
+IMgaObjectPtr IMgaObject::GetChildObjectByRelID ( long RelID ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = get_ChildObjectByRelID(RelID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+IMgaObjectPtr IMgaObject::__GetChildObjectByRelIDDisp ( long RelID ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = GetChildObjectByRelIDDisp(RelID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+IMgaObjectPtr IMgaObject::GetObjectByPath ( _bstr_t Path ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = get_ObjectByPath(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+IMgaObjectPtr IMgaObject::__GetObjectByPathDisp ( _bstr_t Path ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = GetObjectByPathDisp(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+IMgaObjectPtr IMgaObject::GetNthObjectByPath ( long n_th, _bstr_t Path ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = get_NthObjectByPath(n_th, Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+IMgaObjectPtr IMgaObject::__GetNthObjectByPathDisp ( long n_th, _bstr_t Path ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = GetNthObjectByPathDisp(n_th, Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+HRESULT IMgaObject::__PutReadOnlyAccessWithPropagate ( VARIANT_BOOL pReadOnly ) {
+    HRESULT _hr = PutReadOnlyAccessWithPropagate(pReadOnly);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObject::__PutReadOnlyAccess ( VARIANT_BOOL pReadOnly ) {
+    HRESULT _hr = PutReadOnlyAccess(pReadOnly);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaObject::__HasReadOnlyAccess ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = HasReadOnlyAccess(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaObject::__GetGuid ( long * l1, long * l2, long * l3, long * l4 ) {
+    HRESULT _hr = GetGuid(l1, l2, l3, l4);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObject::__PutGuid ( long l1, long l2, long l3, long l4 ) {
+    HRESULT _hr = PutGuid(l1, l2, l3, l4);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaObject::__GetGuidDisp ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetGuidDisp(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaObject::__PutGuidDisp ( _bstr_t guid_str ) {
+    HRESULT _hr = PutGuidDisp(guid_str);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaObjects wrapper method implementations
+//
+
+long IMgaObjects::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaObjectPtr IMgaObjects::GetItem ( long n ) {
+    struct IMgaObject * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaObjectPtr(_result, false);
+}
+
+IUnknownPtr IMgaObjects::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaObjects::__GetAll ( long Count, struct IMgaObject * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObjects::__Insert ( struct IMgaObject * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaObjects::__Append ( struct IMgaObject * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaObjects::__Find ( struct IMgaObject * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaObjects::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaTerritory wrapper method implementations
+//
+
+HRESULT IMgaTerritory::__Flush ( ) {
+    HRESULT _hr = Flush();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaTerritory::__Destroy ( ) {
+    HRESULT _hr = Destroy();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+void IMgaTerritory::PutEventMask ( unsigned long _arg1 ) {
+    HRESULT _hr = put_EventMask(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+void IMgaTerritory::PutRWEventMask ( unsigned long _arg1 ) {
+    HRESULT _hr = put_RWEventMask(_arg1);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+HRESULT IMgaTerritory::__Associate ( struct IMgaObject * obj, const _variant_t & userdata ) {
+    HRESULT _hr = Associate(obj, userdata);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaTerritory::__OpenObj ( struct IMgaObject * obj, struct IMgaObject * * newobj ) {
+    HRESULT _hr = OpenObj(obj, newobj);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaTerritory::__OpenFCO ( struct IMgaFCO * obj, struct IMgaFCO * * newobj ) {
+    HRESULT _hr = OpenFCO(obj, newobj);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaTerritory::__OpenFCOs ( struct IMgaFCOs * obj, struct IMgaFCOs * * newobj ) {
+    HRESULT _hr = OpenFCOs(obj, newobj);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaTerritory::__CloseObj ( struct IMgaObject * obj ) {
+    HRESULT _hr = CloseObj(obj);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaProjectPtr IMgaTerritory::GetProject ( ) {
+    struct IMgaProject * _result = 0;
+    HRESULT _hr = get_Project(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaProjectPtr(_result, false);
+}
+
+HRESULT IMgaTerritory::__CheckProject ( struct IMgaProject * Project ) {
+    HRESULT _hr = CheckProject(Project);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaTerritory::__SetNamespace ( _bstr_t pNmsp ) {
+    HRESULT _hr = SetNamespace(pNmsp);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaTerritory::__GetNamespace ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetNamespace(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMgaTerritories wrapper method implementations
+//
+
+long IMgaTerritories::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaTerritoryPtr IMgaTerritories::GetItem ( long n ) {
+    struct IMgaTerritory * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaTerritoryPtr(_result, false);
+}
+
+IUnknownPtr IMgaTerritories::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaTerritories::__GetAll ( long Count, struct IMgaTerritory * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaTerritories::__Insert ( struct IMgaTerritory * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaTerritories::__Append ( struct IMgaTerritory * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaTerritories::__Find ( struct IMgaTerritory * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaTerritories::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaFCO wrapper method implementations
+//
+
+IMgaMetaFCOPtr IMgaFCO::GetMeta ( ) {
+    struct IMgaMetaFCO * _result = 0;
+    HRESULT _hr = get_Meta(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaFCOPtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaFCO::GetMetaRole ( ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = get_MetaRole(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaModelPtr IMgaFCO::GetParentModel ( ) {
+    struct IMgaModel * _result = 0;
+    HRESULT _hr = get_ParentModel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaModelPtr(_result, false);
+}
+
+IMgaFolderPtr IMgaFCO::GetParentFolder ( ) {
+    struct IMgaFolder * _result = 0;
+    HRESULT _hr = get_ParentFolder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFolderPtr(_result, false);
+}
+
+IMgaPartsPtr IMgaFCO::GetParts ( ) {
+    struct IMgaParts * _result = 0;
+    HRESULT _hr = get_Parts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaPartsPtr(_result, false);
+}
+
+IMgaPartPtr IMgaFCO::GetPart ( struct IMgaMetaAspect * asp ) {
+    struct IMgaPart * _result = 0;
+    HRESULT _hr = get_Part(asp, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaPartPtr(_result, false);
+}
+
+IMgaPartPtr IMgaFCO::__GetPartDisp ( struct IMgaMetaAspect * asp ) {
+    struct IMgaPart * _result = 0;
+    HRESULT _hr = GetPartDisp(asp, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaPartPtr(_result, false);
+}
+
+IMgaPartPtr IMgaFCO::GetPartByMetaPart ( struct IMgaMetaPart * Part ) {
+    struct IMgaPart * _result = 0;
+    HRESULT _hr = get_PartByMetaPart(Part, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaPartPtr(_result, false);
+}
+
+IMgaPartPtr IMgaFCO::__GetPartByMetaPartDisp ( struct IMgaMetaPart * Part ) {
+    struct IMgaPart * _result = 0;
+    HRESULT _hr = GetPartByMetaPartDisp(Part, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaPartPtr(_result, false);
+}
+
+IMgaAttributesPtr IMgaFCO::GetAttributes ( ) {
+    struct IMgaAttributes * _result = 0;
+    HRESULT _hr = get_Attributes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaAttributesPtr(_result, false);
+}
+
+IMgaAttributePtr IMgaFCO::GetAttribute ( struct IMgaMetaAttribute * Meta ) {
+    struct IMgaAttribute * _result = 0;
+    HRESULT _hr = get_Attribute(Meta, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaAttributePtr(_result, false);
+}
+
+IMgaAttributePtr IMgaFCO::__GetAttributeDisp ( struct IMgaMetaAttribute * Meta ) {
+    struct IMgaAttribute * _result = 0;
+    HRESULT _hr = GetAttributeDisp(Meta, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaAttributePtr(_result, false);
+}
+
+_variant_t IMgaFCO::GetAttributeByName ( _bstr_t Name ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_AttributeByName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+void IMgaFCO::PutAttributeByName ( _bstr_t Name, const _variant_t & pVal ) {
+    HRESULT _hr = put_AttributeByName(Name, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_variant_t IMgaFCO::__GetAttributeByNameDisp ( _bstr_t Name ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = GetAttributeByNameDisp(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+HRESULT IMgaFCO::__SetAttributeByNameDisp ( _bstr_t Name, const _variant_t & newval ) {
+    HRESULT _hr = SetAttributeByNameDisp(Name, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaFCO::GetStrAttrByName ( _bstr_t Name ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_StrAttrByName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaFCO::PutStrAttrByName ( _bstr_t Name, _bstr_t pVal ) {
+    HRESULT _hr = put_StrAttrByName(Name, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaFCO::__GetStrAttrByNameDisp ( _bstr_t Name ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetStrAttrByNameDisp(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaFCO::__SetStrAttrByNameDisp ( _bstr_t Name, _bstr_t newval ) {
+    HRESULT _hr = SetStrAttrByNameDisp(Name, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaFCO::GetIntAttrByName ( _bstr_t Name ) {
+    long _result = 0;
+    HRESULT _hr = get_IntAttrByName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaFCO::PutIntAttrByName ( _bstr_t Name, long pVal ) {
+    HRESULT _hr = put_IntAttrByName(Name, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+long IMgaFCO::__GetIntAttrByNameDisp ( _bstr_t Name ) {
+    long _result = 0;
+    HRESULT _hr = GetIntAttrByNameDisp(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaFCO::__SetIntAttrByNameDisp ( _bstr_t Name, long newval ) {
+    HRESULT _hr = SetIntAttrByNameDisp(Name, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+double IMgaFCO::GetFloatAttrByName ( _bstr_t Name ) {
+    double _result = 0;
+    HRESULT _hr = get_FloatAttrByName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaFCO::PutFloatAttrByName ( _bstr_t Name, double pVal ) {
+    HRESULT _hr = put_FloatAttrByName(Name, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+double IMgaFCO::__GetFloatAttrByNameDisp ( _bstr_t Name ) {
+    double _result = 0;
+    HRESULT _hr = GetFloatAttrByNameDisp(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaFCO::__SetFloatAttrByNameDisp ( _bstr_t Name, double newval ) {
+    HRESULT _hr = SetFloatAttrByNameDisp(Name, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaFCO::GetBoolAttrByName ( _bstr_t Name ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_BoolAttrByName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaFCO::PutBoolAttrByName ( _bstr_t Name, VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_BoolAttrByName(Name, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaFCO::__GetBoolAttrByNameDisp ( _bstr_t Name ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetBoolAttrByNameDisp(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaFCO::__SetBoolAttrByNameDisp ( _bstr_t Name, VARIANT_BOOL newval ) {
+    HRESULT _hr = SetBoolAttrByNameDisp(Name, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOPtr IMgaFCO::GetRefAttrByName ( _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_RefAttrByName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+void IMgaFCO::PutRefAttrByName ( _bstr_t Name, struct IMgaFCO * pVal ) {
+    HRESULT _hr = put_RefAttrByName(Name, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaFCOPtr IMgaFCO::__GetRefAttrByNameDisp ( _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = GetRefAttrByNameDisp(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+HRESULT IMgaFCO::__SetRefAttrByNameDisp ( _bstr_t Name, struct IMgaFCO * newval ) {
+    HRESULT _hr = SetRefAttrByNameDisp(Name, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFCO::__ClearAttrByName ( _bstr_t Name ) {
+    HRESULT _hr = ClearAttrByName(Name);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaRegNodePtr IMgaFCO::GetRegistryNode ( _bstr_t Path ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = get_RegistryNode(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodePtr IMgaFCO::__GetRegistryNodeDisp ( _bstr_t Path ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = GetRegistryNodeDisp(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodesPtr IMgaFCO::GetRegistry ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = get_Registry(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+IMgaRegNodesPtr IMgaFCO::__GetRegistryDisp ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = GetRegistryDisp(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+_bstr_t IMgaFCO::GetRegistryValue ( _bstr_t Path ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_RegistryValue(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaFCO::PutRegistryValue ( _bstr_t Path, _bstr_t pVal ) {
+    HRESULT _hr = put_RegistryValue(Path, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaFCO::__GetRegistryValueDisp ( _bstr_t Path ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetRegistryValueDisp(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaFCO::__SetRegistryValueDisp ( _bstr_t Path, _bstr_t newval ) {
+    HRESULT _hr = SetRegistryValueDisp(Path, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaConstraintsPtr IMgaFCO::GetConstraints ( VARIANT_BOOL includemeta ) {
+    struct IMgaConstraints * _result = 0;
+    HRESULT _hr = get_Constraints(includemeta, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConstraintsPtr(_result, false);
+}
+
+IMgaConstraintsPtr IMgaFCO::__GetConstraintsDisp ( VARIANT_BOOL includemeta ) {
+    struct IMgaConstraints * _result = 0;
+    HRESULT _hr = GetConstraintsDisp(includemeta, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConstraintsPtr(_result, false);
+}
+
+HRESULT IMgaFCO::__AddConstraint ( struct IMgaConstraint * constraint ) {
+    HRESULT _hr = AddConstraint(constraint);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFCO::__DefineConstraint ( _bstr_t Name, long mask, _bstr_t expr, struct IMgaConstraint * * nconstraint ) {
+    HRESULT _hr = DefineConstraint(Name, mask, expr, nconstraint);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOPtr IMgaFCO::GetDerivedFrom ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_DerivedFrom(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaFCO::GetDerivedObjects ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = get_DerivedObjects(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaFCO::GetType ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaFCO::GetBaseType ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_BaseType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaFCO::GetArcheType ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_ArcheType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+VARIANT_BOOL IMgaFCO::GetIsInstance ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsInstance(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+VARIANT_BOOL IMgaFCO::GetIsPrimaryDerived ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsPrimaryDerived(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaFCO::__AttachToArcheType ( struct IMgaFCO * newtype, VARIANT_BOOL instance ) {
+    HRESULT _hr = AttachToArcheType(newtype, instance);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFCO::__DetachFromArcheType ( ) {
+    HRESULT _hr = DetachFromArcheType();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFCO::__GetAbsMetaPath ( BSTR * AbsPath ) {
+    HRESULT _hr = GetAbsMetaPath(AbsPath);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFCO::__GetRelMetaPath ( struct IMgaFCO * begfco, BSTR * relpath, struct IMgaFCOs * refs ) {
+    HRESULT _hr = GetRelMetaPath(begfco, relpath, refs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaConnPointsPtr IMgaFCO::GetPartOfConns ( ) {
+    struct IMgaConnPoints * _result = 0;
+    HRESULT _hr = get_PartOfConns(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConnPointsPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaFCO::GetMemberOfSets ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = get_MemberOfSets(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaFCO::GetReferencedBy ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = get_ReferencedBy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+HRESULT IMgaFCO::__CreateCollection ( struct IMgaFCOs * * pVal ) {
+    HRESULT _hr = CreateCollection(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOPtr IMgaFCO::GetRootFCO ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_RootFCO(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+//
+// interface IMgaFCOs wrapper method implementations
+//
+
+long IMgaFCOs::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaFCOPtr IMgaFCOs::GetItem ( long n ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IUnknownPtr IMgaFCOs::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaFCOs::__GetAll ( long Count, struct IMgaFCO * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFCOs::__Insert ( struct IMgaFCO * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFCOs::__Append ( struct IMgaFCO * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaFCOs::__Find ( struct IMgaFCO * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaFCOs::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaComponentEx wrapper method implementations
+//
+
+HRESULT IMgaComponentEx::__InvokeEx ( struct IMgaProject * Project, struct IMgaFCO * currentobj, struct IMgaFCOs * selectedobjs, long param ) {
+    HRESULT _hr = InvokeEx(Project, currentobj, selectedobjs, param);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaComponentEx::__ObjectsInvokeEx ( struct IMgaProject * Project, struct IMgaObject * currentobj, struct IMgaObjects * selectedobjs, long param ) {
+    HRESULT _hr = ObjectsInvokeEx(Project, currentobj, selectedobjs, param);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaComponentEx::GetComponentProgID ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ComponentProgID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaComponentEx::PutComponentParameter ( _bstr_t Name, const _variant_t & pVal ) {
+    HRESULT _hr = put_ComponentParameter(Name, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_variant_t IMgaComponentEx::GetComponentParameter ( _bstr_t Name ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_ComponentParameter(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface IMgaSet wrapper method implementations
+//
+
+HRESULT IMgaSet::__AddMember ( struct IMgaFCO * mem ) {
+    HRESULT _hr = AddMember(mem);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaSet::__RemoveMember ( struct IMgaFCO * member ) {
+    HRESULT _hr = RemoveMember(member);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaSet::__RemoveAll ( ) {
+    HRESULT _hr = RemoveAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOsPtr IMgaSet::GetMembers ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = get_Members(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+VARIANT_BOOL IMgaSet::GetIsMember ( struct IMgaFCO * obj ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsMember(obj, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaSet::__CompareToBase ( short * Status ) {
+    HRESULT _hr = CompareToBase(Status);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaSet::__RevertToBase ( ) {
+    HRESULT _hr = RevertToBase();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+VARIANT_BOOL IMgaSet::__GetIsMemberDisp ( struct IMgaFCO * obj ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = GetIsMemberDisp(obj, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMgaModel wrapper method implementations
+//
+
+IMgaFCOPtr IMgaModel::__CreateChildObject ( struct IMgaMetaRole * Meta ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CreateChildObject(Meta, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::__DeriveChildObject ( struct IMgaFCO * base, struct IMgaMetaRole * Role, VARIANT_BOOL instance ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = DeriveChildObject(base, Role, instance, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::GetChildDerivedFrom ( struct IMgaFCO * baseobj ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_ChildDerivedFrom(baseobj, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::__GetChildDerivedFromDisp ( struct IMgaFCO * baseobj ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = GetChildDerivedFromDisp(baseobj, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaPartsPtr IMgaModel::GetAspectParts ( struct IMgaMetaAspect * asp, unsigned int filter ) {
+    struct IMgaParts * _result = 0;
+    HRESULT _hr = get_AspectParts(asp, filter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaPartsPtr(_result, false);
+}
+
+IMgaPartsPtr IMgaModel::__GetAspectPartsDisp ( struct IMgaMetaAspect * asp, unsigned int filter ) {
+    struct IMgaParts * _result = 0;
+    HRESULT _hr = GetAspectPartsDisp(asp, filter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaPartsPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::__CreateSimpleConn ( struct IMgaMetaRole * Meta, struct IMgaFCO * Src, struct IMgaFCO * Dst, struct IMgaFCOs * srcrefs, struct IMgaFCOs * dstrefs ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CreateSimpleConn(Meta, Src, Dst, srcrefs, dstrefs, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::__CreateReference ( struct IMgaMetaRole * Meta, struct IMgaFCO * Target ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CreateReference(Meta, Target, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaModel::__AddInternalConnections ( struct IMgaFCOs * inobjs ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = AddInternalConnections(inobjs, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+HRESULT IMgaModel::__MoveFCOs ( struct IMgaFCOs * to_copy, struct IMgaMetaRoles * destroles, struct IMgaFCOs * * objs ) {
+    HRESULT _hr = MoveFCOs(to_copy, destroles, objs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaModel::__CopyFCOs ( struct IMgaFCOs * to_move, struct IMgaMetaRoles * destroles, struct IMgaFCOs * * objs ) {
+    HRESULT _hr = CopyFCOs(to_move, destroles, objs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOsPtr IMgaModel::GetChildFCOs ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = get_ChildFCOs(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::GetChildFCO ( _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_ChildFCO(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::__GetChildFCODisp ( _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = GetChildFCODisp(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaModel::__GetDescendantFCOs ( struct IMgaFilter * filter ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = GetDescendantFCOs(filter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaModel::__GetChildrenOfKind ( _bstr_t kindname ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = GetChildrenOfKind(kindname, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+long IMgaModel::GetChildRelIDCounter ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ChildRelIDCounter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaModel::PutChildRelIDCounter ( long pVal ) {
+    HRESULT _hr = put_ChildRelIDCounter(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaFCOPtr IMgaModel::__CreateSimpleConnDisp ( struct IMgaMetaRole * Meta, struct IMgaFCO * Src, struct IMgaFCO * Dst, struct IMgaFCO * Srcref, struct IMgaFCO * Dstref ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CreateSimpleConnDisp(Meta, Src, Dst, Srcref, Dstref, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::__CreateSimplerConnDisp ( struct IMgaMetaRole * Meta, struct IMgaFCO * Src, struct IMgaFCO * Dst ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CreateSimplerConnDisp(Meta, Src, Dst, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::__MoveFCODisp ( struct IMgaFCO * to_copy, struct IMgaMetaRole * destrole ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = MoveFCODisp(to_copy, destrole, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaModel::__CopyFCODisp ( struct IMgaFCO * to_move, struct IMgaMetaRole * destrole ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CopyFCODisp(to_move, destrole, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+long IMgaModel::__GetSourceControlInfo ( ) {
+    long _result = 0;
+    HRESULT _hr = GetSourceControlInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMgaParts wrapper method implementations
+//
+
+long IMgaParts::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaPartPtr IMgaParts::GetItem ( long n ) {
+    struct IMgaPart * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaPartPtr(_result, false);
+}
+
+IUnknownPtr IMgaParts::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaParts::__GetAll ( long Count, struct IMgaPart * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaParts::__Insert ( struct IMgaPart * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaParts::__Append ( struct IMgaPart * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaParts::__Find ( struct IMgaPart * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaParts::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaPart wrapper method implementations
+//
+
+IMgaModelPtr IMgaPart::GetModel ( ) {
+    struct IMgaModel * _result = 0;
+    HRESULT _hr = get_Model(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaModelPtr(_result, false);
+}
+
+IMgaMetaPartPtr IMgaPart::GetMeta ( ) {
+    struct IMgaMetaPart * _result = 0;
+    HRESULT _hr = get_Meta(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaPartPtr(_result, false);
+}
+
+IMgaMetaAspectPtr IMgaPart::GetMetaAspect ( ) {
+    struct IMgaMetaAspect * _result = 0;
+    HRESULT _hr = get_MetaAspect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaAspectPtr(_result, false);
+}
+
+IMgaMetaRolePtr IMgaPart::GetMetaRole ( ) {
+    struct IMgaMetaRole * _result = 0;
+    HRESULT _hr = get_MetaRole(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaRolePtr(_result, false);
+}
+
+IMgaFCOPtr IMgaPart::GetFCO ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_FCO(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+long IMgaPart::GetAccessMask ( ) {
+    long _result = 0;
+    HRESULT _hr = get_AccessMask(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+VARIANT_BOOL IMgaPart::GetRegistryMode ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_RegistryMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaPart::PutRegistryMode ( VARIANT_BOOL own ) {
+    HRESULT _hr = put_RegistryMode(own);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaRegNodePtr IMgaPart::GetRegistryNode ( _bstr_t Path ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = get_RegistryNode(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodePtr IMgaPart::__GetRegistryNodeDisp ( _bstr_t Path ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = GetRegistryNodeDisp(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodesPtr IMgaPart::GetRegistry ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = get_Registry(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+IMgaRegNodesPtr IMgaPart::__GetRegistryDisp ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = GetRegistryDisp(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+_bstr_t IMgaPart::GetRegistryValue ( _bstr_t Path ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_RegistryValue(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaPart::PutRegistryValue ( _bstr_t Path, _bstr_t pVal ) {
+    HRESULT _hr = put_RegistryValue(Path, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaPart::__GetRegistryValueDisp ( _bstr_t Path ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetRegistryValueDisp(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaPart::__SetRegistryValueDisp ( _bstr_t Path, _bstr_t newval ) {
+    HRESULT _hr = SetRegistryValueDisp(Path, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaPart::__GetGmeAttrs ( BSTR * Icon, long * xpos, long * ypos ) {
+    HRESULT _hr = GetGmeAttrs(Icon, xpos, ypos);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaPart::__SetGmeAttrs ( _bstr_t Icon, long xpos, long ypos ) {
+    HRESULT _hr = SetGmeAttrs(Icon, xpos, ypos);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaRegNode wrapper method implementations
+//
+
+_bstr_t IMgaRegNode::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaRegNode::GetPath ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Path(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaRegNode::GetValue ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Value(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaRegNode::PutValue ( _bstr_t pVal ) {
+    HRESULT _hr = put_Value(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaFCOPtr IMgaRegNode::GetFCOValue ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_FCOValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+void IMgaRegNode::PutFCOValue ( struct IMgaFCO * pVal ) {
+    HRESULT _hr = put_FCOValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaRegNodesPtr IMgaRegNode::GetSubNodes ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = get_SubNodes(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+IMgaRegNodesPtr IMgaRegNode::__GetSubNodesDisp ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = GetSubNodesDisp(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+IMgaRegNodePtr IMgaRegNode::GetSubNodeByName ( _bstr_t Name ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = get_SubNodeByName(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodePtr IMgaRegNode::__GetSubNodeByNameDisp ( _bstr_t Name ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = GetSubNodeByNameDisp(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodePtr IMgaRegNode::GetParentNode ( ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = get_ParentNode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+void IMgaRegNode::GetStatus ( long * Status ) {
+    HRESULT _hr = get_Status(Status);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaRegNode::GetOpacity ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Opacity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaRegNode::PutOpacity ( VARIANT_BOOL p ) {
+    HRESULT _hr = put_Opacity(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+HRESULT IMgaRegNode::__Clear ( ) {
+    HRESULT _hr = Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegNode::__RemoveTree ( ) {
+    HRESULT _hr = RemoveTree();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaRegNodes wrapper method implementations
+//
+
+long IMgaRegNodes::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaRegNodePtr IMgaRegNodes::GetItem ( long n ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IUnknownPtr IMgaRegNodes::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaRegNodes::__GetAll ( long Count, struct IMgaRegNode * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegNodes::__Insert ( struct IMgaRegNode * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaRegNodes::__Append ( struct IMgaRegNode * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaRegNodes::__Find ( struct IMgaRegNode * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaRegNodes::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaAttribute wrapper method implementations
+//
+
+IMgaMetaAttributePtr IMgaAttribute::GetMeta ( ) {
+    struct IMgaMetaAttribute * _result = 0;
+    HRESULT _hr = get_Meta(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaAttributePtr(_result, false);
+}
+
+_variant_t IMgaAttribute::GetValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Value(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+void IMgaAttribute::PutValue ( const _variant_t & pVal ) {
+    HRESULT _hr = put_Value(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaFCOPtr IMgaAttribute::GetOwner ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_Owner(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+long IMgaAttribute::GetStatus ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+_variant_t IMgaAttribute::GetOrigValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_OrigValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+VARIANT_BOOL IMgaAttribute::GetHasChanged ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasChanged(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+_bstr_t IMgaAttribute::GetStringValue ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_StringValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaAttribute::PutStringValue ( _bstr_t pVal ) {
+    HRESULT _hr = put_StringValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+long IMgaAttribute::GetIntValue ( ) {
+    long _result = 0;
+    HRESULT _hr = get_IntValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaAttribute::PutIntValue ( long pVal ) {
+    HRESULT _hr = put_IntValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+VARIANT_BOOL IMgaAttribute::GetBoolValue ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_BoolValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaAttribute::PutBoolValue ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_BoolValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+double IMgaAttribute::GetFloatValue ( ) {
+    double _result = 0;
+    HRESULT _hr = get_FloatValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaAttribute::PutFloatValue ( double pVal ) {
+    HRESULT _hr = put_FloatValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaFCOPtr IMgaAttribute::GetFCOValue ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_FCOValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+void IMgaAttribute::PutFCOValue ( struct IMgaFCO * pVal ) {
+    HRESULT _hr = put_FCOValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaRegNodePtr IMgaAttribute::GetRegistryNode ( _bstr_t Path ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = get_RegistryNode(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodePtr IMgaAttribute::__GetRegistryNodeDisp ( _bstr_t Path ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = GetRegistryNodeDisp(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodesPtr IMgaAttribute::GetRegistry ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = get_Registry(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+IMgaRegNodesPtr IMgaAttribute::__GetRegistryDisp ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = GetRegistryDisp(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+_bstr_t IMgaAttribute::GetRegistryValue ( _bstr_t Path ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_RegistryValue(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaAttribute::PutRegistryValue ( _bstr_t Path, _bstr_t pVal ) {
+    HRESULT _hr = put_RegistryValue(Path, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+_bstr_t IMgaAttribute::__GetRegistryValueDisp ( _bstr_t Path ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetRegistryValueDisp(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+HRESULT IMgaAttribute::__SetRegistryValueDisp ( _bstr_t Path, _bstr_t newval ) {
+    HRESULT _hr = SetRegistryValueDisp(Path, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaAttribute::__Clear ( ) {
+    HRESULT _hr = Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaAttributes wrapper method implementations
+//
+
+long IMgaAttributes::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaAttributePtr IMgaAttributes::GetItem ( long n ) {
+    struct IMgaAttribute * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaAttributePtr(_result, false);
+}
+
+IUnknownPtr IMgaAttributes::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaAttributes::__GetAll ( long Count, struct IMgaAttribute * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaAttributes::__Insert ( struct IMgaAttribute * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaAttributes::__Append ( struct IMgaAttribute * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaAttributes::__Find ( struct IMgaAttribute * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaAttributes::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaFolder wrapper method implementations
+//
+
+IMgaMetaFolderPtr IMgaFolder::GetMetaFolder ( ) {
+    struct IMgaMetaFolder * _result = 0;
+    HRESULT _hr = get_MetaFolder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaFolderPtr(_result, false);
+}
+
+IMgaFolderPtr IMgaFolder::GetParentFolder ( ) {
+    struct IMgaFolder * _result = 0;
+    HRESULT _hr = get_ParentFolder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFolderPtr(_result, false);
+}
+
+IMgaFoldersPtr IMgaFolder::GetChildFolders ( ) {
+    struct IMgaFolders * _result = 0;
+    HRESULT _hr = get_ChildFolders(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFoldersPtr(_result, false);
+}
+
+IMgaFolderPtr IMgaFolder::__CreateFolder ( struct IMgaMetaFolder * Meta ) {
+    struct IMgaFolder * _result = 0;
+    HRESULT _hr = CreateFolder(Meta, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFolderPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaFolder::__CreateRootObject ( struct IMgaMetaFCO * Meta ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CreateRootObject(Meta, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaFolder::__DeriveRootObject ( struct IMgaFCO * base, VARIANT_BOOL instance ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = DeriveRootObject(base, instance, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaRegNodePtr IMgaFolder::GetRegistryNode ( _bstr_t Path ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = get_RegistryNode(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodePtr IMgaFolder::__GetRegistryNodeDisp ( _bstr_t Path ) {
+    struct IMgaRegNode * _result = 0;
+    HRESULT _hr = GetRegistryNodeDisp(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodePtr(_result, false);
+}
+
+IMgaRegNodesPtr IMgaFolder::GetRegistry ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = get_Registry(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+IMgaRegNodesPtr IMgaFolder::__GetRegistryDisp ( VARIANT_BOOL virtuals ) {
+    struct IMgaRegNodes * _result = 0;
+    HRESULT _hr = GetRegistryDisp(virtuals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaRegNodesPtr(_result, false);
+}
+
+_bstr_t IMgaFolder::GetRegistryValue ( _bstr_t Path ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_RegistryValue(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+_bstr_t IMgaFolder::__GetRegistryValueDisp ( _bstr_t Path ) {
+    BSTR _result = 0;
+    HRESULT _hr = GetRegistryValueDisp(Path, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaFolder::PutRegistryValue ( _bstr_t Path, _bstr_t pVal ) {
+    HRESULT _hr = put_RegistryValue(Path, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+HRESULT IMgaFolder::__SetRegistryValueDisp ( _bstr_t Path, _bstr_t newval ) {
+    HRESULT _hr = SetRegistryValueDisp(Path, newval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaConstraintsPtr IMgaFolder::GetConstraints ( VARIANT_BOOL includemeta ) {
+    struct IMgaConstraints * _result = 0;
+    HRESULT _hr = get_Constraints(includemeta, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConstraintsPtr(_result, false);
+}
+
+IMgaConstraintsPtr IMgaFolder::__GetConstraintsDisp ( VARIANT_BOOL includemeta ) {
+    struct IMgaConstraints * _result = 0;
+    HRESULT _hr = GetConstraintsDisp(includemeta, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConstraintsPtr(_result, false);
+}
+
+HRESULT IMgaFolder::__AddConstraint ( struct IMgaConstraint * constraint ) {
+    HRESULT _hr = AddConstraint(constraint);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolder::__DefineConstraint ( _bstr_t Name, long mask, _bstr_t expr, struct IMgaConstraint * * nconstraint ) {
+    HRESULT _hr = DefineConstraint(Name, mask, expr, nconstraint);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolder::__MoveFCOs ( struct IMgaFCOs * to_copy, struct IMgaFCOs * * objs ) {
+    HRESULT _hr = MoveFCOs(to_copy, objs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolder::__CopyFCOs ( struct IMgaFCOs * to_move, struct IMgaFCOs * * objs ) {
+    HRESULT _hr = CopyFCOs(to_move, objs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolder::__MoveFolders ( struct IMgaFolders * to_copy, struct IMgaFolders * * objs ) {
+    HRESULT _hr = MoveFolders(to_copy, objs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolder::__CopyFolders ( struct IMgaFolders * to_move, struct IMgaFolders * * objs ) {
+    HRESULT _hr = CopyFolders(to_move, objs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolder::__RefreshParent ( struct IMgaFolder * folder ) {
+    HRESULT _hr = RefreshParent(folder);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOsPtr IMgaFolder::GetChildFCOs ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = get_ChildFCOs(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaFolder::GetChildFCO ( _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_ChildFCO(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaFolder::__GetChildFCODisp ( _bstr_t Name ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = GetChildFCODisp(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaFolder::__GetDescendantFCOs ( struct IMgaFilter * filter ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = GetDescendantFCOs(filter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaFolder::__GetChildrenOfKind ( _bstr_t kindname ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = GetChildrenOfKind(kindname, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+long IMgaFolder::GetChildRelIDCounter ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ChildRelIDCounter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+void IMgaFolder::PutChildRelIDCounter ( long pVal ) {
+    HRESULT _hr = put_ChildRelIDCounter(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+HRESULT IMgaFolder::__AttachLibrary ( _bstr_t connstring, struct IMgaFolder * * nf ) {
+    HRESULT _hr = AttachLibrary(connstring, nf);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolder::__RefreshLibrary ( _bstr_t connstring ) {
+    HRESULT _hr = RefreshLibrary(connstring);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+_bstr_t IMgaFolder::GetLibraryName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_LibraryName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaFolder::PutLibraryName ( _bstr_t connstring ) {
+    HRESULT _hr = put_LibraryName(connstring);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaFolderPtr IMgaFolder::__AttachLibraryV3 ( _bstr_t connstring, VARIANT_BOOL ungroup ) {
+    struct IMgaFolder * _result = 0;
+    HRESULT _hr = AttachLibraryV3(connstring, ungroup, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFolderPtr(_result, false);
+}
+
+long IMgaFolder::__RefreshLibraryV3 ( _bstr_t connstring, VARIANT_BOOL ungroup ) {
+    long _result = 0;
+    HRESULT _hr = RefreshLibraryV3(connstring, ungroup, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaFoldersPtr IMgaFolder::__GetVirtuallyIncludes ( ) {
+    struct IMgaFolders * _result = 0;
+    HRESULT _hr = GetVirtuallyIncludes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFoldersPtr(_result, false);
+}
+
+IMgaFoldersPtr IMgaFolder::__GetVirtuallyIncludedBy ( ) {
+    struct IMgaFolders * _result = 0;
+    HRESULT _hr = GetVirtuallyIncludedBy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFoldersPtr(_result, false);
+}
+
+HRESULT IMgaFolder::__SetVirtuallyIncludes ( struct IMgaFolders * pDep ) {
+    HRESULT _hr = SetVirtuallyIncludes(pDep);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolder::__SetVirtuallyIncludedBy ( struct IMgaFolders * pDep ) {
+    HRESULT _hr = SetVirtuallyIncludedBy(pDep);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaFCOPtr IMgaFolder::__MoveFCODisp ( struct IMgaFCO * to_copy ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = MoveFCODisp(to_copy, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaFolder::__CopyFCODisp ( struct IMgaFCO * to_move ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = CopyFCODisp(to_move, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFolderPtr IMgaFolder::__MoveFolderDisp ( struct IMgaFolder * to_copy ) {
+    struct IMgaFolder * _result = 0;
+    HRESULT _hr = MoveFolderDisp(to_copy, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFolderPtr(_result, false);
+}
+
+IMgaFolderPtr IMgaFolder::__CopyFolderDisp ( struct IMgaFolder * to_move ) {
+    struct IMgaFolder * _result = 0;
+    HRESULT _hr = CopyFolderDisp(to_move, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFolderPtr(_result, false);
+}
+
+long IMgaFolder::__GetSourceControlInfo ( ) {
+    long _result = 0;
+    HRESULT _hr = GetSourceControlInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IMgaFolders wrapper method implementations
+//
+
+long IMgaFolders::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaFolderPtr IMgaFolders::GetItem ( long n ) {
+    struct IMgaFolder * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFolderPtr(_result, false);
+}
+
+IUnknownPtr IMgaFolders::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaFolders::__GetAll ( long Count, struct IMgaFolder * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolders::__Insert ( struct IMgaFolder * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaFolders::__Append ( struct IMgaFolder * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaFolders::__Find ( struct IMgaFolder * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaFolders::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaConnPoints wrapper method implementations
+//
+
+long IMgaConnPoints::GetCount ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+IMgaConnPointPtr IMgaConnPoints::GetItem ( long n ) {
+    struct IMgaConnPoint * _result = 0;
+    HRESULT _hr = get_Item(n, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConnPointPtr(_result, false);
+}
+
+IUnknownPtr IMgaConnPoints::Get_NewEnum ( ) {
+    IUnknown * _result = 0;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+HRESULT IMgaConnPoints::__GetAll ( long Count, struct IMgaConnPoint * * p ) {
+    HRESULT _hr = GetAll(Count, p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaConnPoints::__Insert ( struct IMgaConnPoint * p, long at ) {
+    HRESULT _hr = Insert(p, at);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaConnPoints::__Append ( struct IMgaConnPoint * p ) {
+    HRESULT _hr = Append(p);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+long IMgaConnPoints::__Find ( struct IMgaConnPoint * p, long start ) {
+    long _result = 0;
+    HRESULT _hr = Find(p, start, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+HRESULT IMgaConnPoints::__Remove ( long n ) {
+    HRESULT _hr = Remove(n);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaReference wrapper method implementations
+//
+
+IMgaFCOPtr IMgaReference::GetReferred ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_Referred(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+void IMgaReference::PutReferred ( struct IMgaFCO * pVal ) {
+    HRESULT _hr = put_Referred(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaMetaAspectPtr IMgaReference::GetRefAspect ( ) {
+    struct IMgaMetaAspect * _result = 0;
+    HRESULT _hr = get_RefAspect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaMetaAspectPtr(_result, false);
+}
+
+void IMgaReference::PutRefAspect ( struct IMgaMetaAspect * pVal ) {
+    HRESULT _hr = put_RefAspect(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaConnPointsPtr IMgaReference::GetUsedByConns ( ) {
+    struct IMgaConnPoints * _result = 0;
+    HRESULT _hr = get_UsedByConns(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConnPointsPtr(_result, false);
+}
+
+HRESULT IMgaReference::__CompareToBase ( short * Status ) {
+    HRESULT _hr = CompareToBase(Status);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaReference::__RevertToBase ( ) {
+    HRESULT _hr = RevertToBase();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaReference::__ClearRef ( ) {
+    HRESULT _hr = ClearRef();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaConnPoint wrapper method implementations
+//
+
+IMgaConnectionPtr IMgaConnPoint::GetOwner ( ) {
+    struct IMgaConnection * _result = 0;
+    HRESULT _hr = get_Owner(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConnectionPtr(_result, false);
+}
+
+_bstr_t IMgaConnPoint::GetConnRole ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ConnRole(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+void IMgaConnPoint::PutConnRole ( _bstr_t pVal ) {
+    HRESULT _hr = put_ConnRole(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+IMgaFCOPtr IMgaConnPoint::GetTarget ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_Target(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaConnPoint::GetReferences ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = get_References(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+HRESULT IMgaConnPoint::__Remove ( ) {
+    HRESULT _hr = Remove();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaConnection wrapper method implementations
+//
+
+HRESULT IMgaConnection::__AddConnPoint ( _bstr_t rolename, long maxinrole, struct IMgaFCO * Target, struct IMgaFCOs * refs, struct IMgaConnPoint * * pVal ) {
+    HRESULT _hr = AddConnPoint(rolename, maxinrole, Target, refs, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+IMgaConnPointsPtr IMgaConnection::GetConnPoints ( ) {
+    struct IMgaConnPoints * _result = 0;
+    HRESULT _hr = get_ConnPoints(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaConnPointsPtr(_result, false);
+}
+
+HRESULT IMgaConnection::__CompareToBase ( struct IMgaConnPoint * connpoint, short * Status ) {
+    HRESULT _hr = CompareToBase(connpoint, Status);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaConnection::__RevertToBase ( struct IMgaConnPoint * connpoint ) {
+    HRESULT _hr = RevertToBase(connpoint);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMgaSimpleConnection wrapper method implementations
+//
+
+IMgaFCOPtr IMgaSimpleConnection::GetSrc ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_Src(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOPtr IMgaSimpleConnection::GetDst ( ) {
+    struct IMgaFCO * _result = 0;
+    HRESULT _hr = get_Dst(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaSimpleConnection::GetSrcReferences ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = get_SrcReferences(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+IMgaFCOsPtr IMgaSimpleConnection::GetDstReferences ( ) {
+    struct IMgaFCOs * _result = 0;
+    HRESULT _hr = get_DstReferences(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMgaFCOsPtr(_result, false);
+}
+
+HRESULT IMgaSimpleConnection::__SetDst ( struct IMgaFCOs * References, struct IMgaFCO * Target ) {
+    HRESULT _hr = SetDst(References, Target);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+HRESULT IMgaSimpleConnection::__SetSrc ( struct IMgaFCOs * References, struct IMgaFCO * Target ) {
+    HRESULT _hr = SetSrc(References, Target);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

@@ -1,0 +1,3637 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (32cf0e94).
+//
+// c:\users\69038\documents\gme-21.4.1_src\gme\objectinspector\debug\mgalib.tlh
+//
+// C++ source equivalent of Win32 type library MgaLib.tlb
+// compiler-generated file created 06/28/23 at 14:39:06 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("270b4f86-b17c-11d3-9ad1-00aa00b6fe26"))
+/* LIBID */ __MGALib;
+struct __declspec(uuid("11bb02d9-2e2c-11d3-b36d-0060082df884"))
+/* interface */ IMgaComponent;
+struct __declspec(uuid("270b4f92-b17c-11d3-9ad1-00aa00b6fe26"))
+/* dual interface */ IMgaProject;
+struct __declspec(uuid("32d1f3a5-d276-11d3-9ad5-00aa00b6fe26"))
+/* interface */ IMgaEventSink;
+enum globalevent_enum;
+struct __declspec(uuid("32d1f3a7-d276-11d3-9ad5-00aa00b6fe26"))
+/* dual interface */ IMgaObject;
+struct __declspec(uuid("32d1f3a3-d276-11d3-9ad5-00aa00b6fe26"))
+/* dual interface */ IMgaTerritory;
+struct __declspec(uuid("270b4f98-b17c-11d3-9ad1-00aa00b6fe26"))
+/* dual interface */ IMgaFCO;
+struct __declspec(uuid("270b4f9a-b17c-11d3-9ad1-00aa00b6fe26"))
+/* dual interface */ IMgaModel;
+struct __declspec(uuid("c71a26f0-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaParts;
+struct __declspec(uuid("270b4f9e-b17c-11d3-9ad1-00aa00b6fe26"))
+/* dual interface */ IMgaPart;
+struct __declspec(uuid("83ba323d-b758-11d3-abae-000000000000"))
+/* dual interface */ IMgaRegNode;
+struct __declspec(uuid("c79f1840-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaRegNodes;
+struct __declspec(uuid("c5f4c2f0-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaFCOs;
+struct __declspec(uuid("c8f6e970-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaFilter;
+struct __declspec(uuid("270b4f96-b17c-11d3-9ad1-00aa00b6fe26"))
+/* dual interface */ IMgaFolder;
+struct __declspec(uuid("c59c2210-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaFolders;
+struct __declspec(uuid("c6f3f340-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaAttributes;
+struct __declspec(uuid("cbf20084-bd43-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaAttribute;
+struct __declspec(uuid("c7f19c60-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaConnPoints;
+struct __declspec(uuid("cb8fa000-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaConnPoint;
+struct __declspec(uuid("270b4fa0-b17c-11d3-9ad1-00aa00b6fe26"))
+/* dual interface */ IMgaConnection;
+enum openmode;
+struct __declspec(uuid("c5aac2f0-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaObjects;
+struct __declspec(uuid("80a6d661-d411-11d3-9ad5-00aa00b6fe26"))
+/* dual interface */ IMgaAddOn;
+struct __declspec(uuid("c8a5ec80-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaAddOns;
+struct __declspec(uuid("c87caa70-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaTerritories;
+struct __declspec(uuid("c8cda760-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaComponents;
+enum transactiontype_enum;
+struct __declspec(uuid("c9d8df93-c1fd-11d3-9ad2-00aa00b6fe26"))
+/* dual interface */ IMgaClients;
+struct __declspec(uuid("f07ee1a2-2d53-449b-a2da-45a1a9110e53"))
+/* dual interface */ IMgaClient;
+enum componenttype_enum;
+struct __declspec(uuid("11bb44d9-2e2c-11d3-b36d-0060082df884"))
+/* interface */ IMgaComponentEx;
+enum accesstype_enum;
+enum attstatus_enum;
+enum objectevent_enum;
+enum objectstatus_enum;
+enum preference_flags;
+enum opmask_codes;
+enum opmask_shifts;
+enum mgaerrors;
+enum component_startmode_enum;
+struct /* coclass */ MgaProject;
+struct /* coclass */ MgaTerritory;
+struct /* coclass */ MgaAddOn;
+struct /* coclass */ MgaObject;
+struct /* coclass */ MgaFolder;
+struct /* coclass */ MgaFCO;
+struct /* coclass */ MgaModel;
+struct /* coclass */ MgaAtom;
+struct __declspec(uuid("270b4f9c-b17c-11d3-9ad1-00aa00b6fe26"))
+/* dual interface */ IMgaAtom;
+struct /* coclass */ MgaPart;
+struct /* coclass */ MgaConnection;
+struct /* coclass */ MgaReference;
+struct __declspec(uuid("83ba3233-b758-11d3-abae-000000000000"))
+/* dual interface */ IMgaReference;
+struct /* coclass */ MgaSet;
+struct __declspec(uuid("83ba3235-b758-11d3-abae-000000000000"))
+/* dual interface */ IMgaSet;
+struct /* coclass */ MgaSimpleConnection;
+struct __declspec(uuid("83ba3237-b758-11d3-abae-000000000000"))
+/* dual interface */ IMgaSimpleConnection;
+struct /* coclass */ MgaConnPoint;
+struct /* coclass */ MgaFilter;
+struct /* coclass */ MgaAttribute;
+struct /* coclass */ MgaRegNode;
+struct /* coclass */ MgaConstraint;
+struct /* coclass */ MgaO;
+struct __declspec(uuid("c356b135-961d-4b6c-8b1f-257e19117cc1"))
+/* dual interface */ IMgaO;
+struct /* coclass */ MgaClient;
+struct /* coclass */ MgaFolders;
+struct /* coclass */ MgaFCOs;
+struct /* coclass */ MgaAttributes;
+struct /* coclass */ MgaParts;
+struct /* coclass */ MgaConnPoints;
+struct /* coclass */ MgaRegNodes;
+struct /* coclass */ MgaAddOns;
+struct /* coclass */ MgaTerritories;
+struct /* coclass */ MgaComponents;
+struct /* coclass */ MgaClients;
+struct /* coclass */ MgaObjects;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IMgaO, __uuidof(IMgaO));
+_COM_SMARTPTR_TYPEDEF(IMgaComponent, __uuidof(IMgaComponent));
+_COM_SMARTPTR_TYPEDEF(IMgaComponents, __uuidof(IMgaComponents));
+_COM_SMARTPTR_TYPEDEF(IMgaProject, __uuidof(IMgaProject));
+_COM_SMARTPTR_TYPEDEF(IMgaFilter, __uuidof(IMgaFilter));
+_COM_SMARTPTR_TYPEDEF(IMgaAddOn, __uuidof(IMgaAddOn));
+_COM_SMARTPTR_TYPEDEF(IMgaAddOns, __uuidof(IMgaAddOns));
+_COM_SMARTPTR_TYPEDEF(IMgaClient, __uuidof(IMgaClient));
+_COM_SMARTPTR_TYPEDEF(IMgaClients, __uuidof(IMgaClients));
+_COM_SMARTPTR_TYPEDEF(IMgaEventSink, __uuidof(IMgaEventSink));
+_COM_SMARTPTR_TYPEDEF(IMgaObject, __uuidof(IMgaObject));
+_COM_SMARTPTR_TYPEDEF(IMgaObjects, __uuidof(IMgaObjects));
+_COM_SMARTPTR_TYPEDEF(IMgaTerritory, __uuidof(IMgaTerritory));
+_COM_SMARTPTR_TYPEDEF(IMgaTerritories, __uuidof(IMgaTerritories));
+_COM_SMARTPTR_TYPEDEF(IMgaFCO, __uuidof(IMgaFCO));
+_COM_SMARTPTR_TYPEDEF(IMgaFCOs, __uuidof(IMgaFCOs));
+_COM_SMARTPTR_TYPEDEF(IMgaComponentEx, __uuidof(IMgaComponentEx));
+_COM_SMARTPTR_TYPEDEF(IMgaAtom, __uuidof(IMgaAtom));
+_COM_SMARTPTR_TYPEDEF(IMgaSet, __uuidof(IMgaSet));
+_COM_SMARTPTR_TYPEDEF(IMgaModel, __uuidof(IMgaModel));
+_COM_SMARTPTR_TYPEDEF(IMgaParts, __uuidof(IMgaParts));
+_COM_SMARTPTR_TYPEDEF(IMgaPart, __uuidof(IMgaPart));
+_COM_SMARTPTR_TYPEDEF(IMgaRegNode, __uuidof(IMgaRegNode));
+_COM_SMARTPTR_TYPEDEF(IMgaRegNodes, __uuidof(IMgaRegNodes));
+_COM_SMARTPTR_TYPEDEF(IMgaAttribute, __uuidof(IMgaAttribute));
+_COM_SMARTPTR_TYPEDEF(IMgaAttributes, __uuidof(IMgaAttributes));
+_COM_SMARTPTR_TYPEDEF(IMgaFolder, __uuidof(IMgaFolder));
+_COM_SMARTPTR_TYPEDEF(IMgaFolders, __uuidof(IMgaFolders));
+_COM_SMARTPTR_TYPEDEF(IMgaConnPoints, __uuidof(IMgaConnPoints));
+_COM_SMARTPTR_TYPEDEF(IMgaReference, __uuidof(IMgaReference));
+_COM_SMARTPTR_TYPEDEF(IMgaConnPoint, __uuidof(IMgaConnPoint));
+_COM_SMARTPTR_TYPEDEF(IMgaConnection, __uuidof(IMgaConnection));
+_COM_SMARTPTR_TYPEDEF(IMgaSimpleConnection, __uuidof(IMgaSimpleConnection));
+
+//
+// Type library items
+//
+
+enum globalevent_enum
+{
+    GLOBALEVENT_OPEN_PROJECT = 0,
+    GLOBALEVENT_CLOSE_PROJECT = 1,
+    GLOBALEVENT_SAVE_PROJECT = 2,
+    GLOBALEVENT_NEW_TERRITORY = 3,
+    GLOBALEVENT_DESTROY_TERRITORY = 4,
+    GLOBALEVENT_COMMIT_TRANSACTION = 5,
+    GLOBALEVENT_ABORT_TRANSACTION = 6,
+    GLOBALEVENT_UNDO = 7,
+    GLOBALEVENT_REDO = 8,
+    GLOBALEVENT_PROJECT_PROPERTIES = 9,
+    GLOBALEVENT_NOTIFICATION_READY = 10,
+    GLOBALEVENT_OPEN_PROJECT_FINISHED = 11,
+    APPEVENT_XML_IMPORT_BEGIN = 255,
+    APPEVENT_XML_IMPORT_END = 256,
+    APPEVENT_XML_IMPORT_FCOS_BEGIN = 257,
+    APPEVENT_XML_IMPORT_FCOS_END = 258,
+    APPEVENT_XML_IMPORT_SPECIAL_BEGIN = 259,
+    APPEVENT_XML_IMPORT_SPECIAL_END = 260,
+    APPEVENT_LIB_ATTACH_BEGIN = 261,
+    APPEVENT_LIB_ATTACH_END = 262
+};
+
+enum openmode
+{
+    OPEN_READ = 1,
+    OPEN_READWRITE = 3
+};
+
+enum transactiontype_enum
+{
+    TRANSACTION_GENERAL = 0,
+    TRANSACTION_READ_ONLY = 1,
+    TRANSACTION_NON_NESTED = 2
+};
+
+enum componenttype_enum
+{
+    COMPONENTTYPE_NONE = 0,
+    COMPONENTTYPE_INTERPRETER = 1,
+    COMPONENTTYPE_ADDON = 2,
+    COMPONENTTYPE_PLUGIN = 4,
+    COMPONENTTYPE_ALL = 7,
+    COMPONENTTYPE_EVENT_BASED = 2,
+    COMPONENTTYPE_PARADIGM_INDEPENDENT = 8,
+    COMPONENTTYPE_EXECENGINE = 16,
+    COMPONENTTYPE_SCRIPT = 32,
+    COMPONENTTYPE_SYSREGREF = 128
+};
+
+enum accesstype_enum
+{
+    ACC_NULL = 0,
+    ACC_READ = 1,
+    ACC_WRITE = 2,
+    ACC_LINK = 4
+};
+
+enum attstatus_enum
+{
+    ATTSTATUS_HERE = 0,
+    ATTSTATUS_METADEFAULT = -1,
+    ATTSTATUS_UNDEFINED = -2,
+    ATTSTATUS_INVALID = -3,
+    ATTSTATUS_IN_ARCHETYPE1 = 1,
+    ATTSTATUS_IN_ARCHETYPE2 = 2,
+    ATTSTATUS_IN_ARCHETYPE3 = 3,
+    ATTSTATUS_IN_ARCHETYPE4 = 4
+};
+
+enum objectevent_enum
+{
+    OBJEVENT_CREATED = 0x80000000,
+    OBJEVENT_DESTROYED = 1073741824,
+    OBJEVENT_PRE_DESTROYED = 536870912,
+    OBJEVENT_PRE_STATUS = 268435456,
+    OBJEVENT_COPIED = 134217728,
+    OBJEVENT_ATTR = 1,
+    OBJEVENT_REGISTRY = 2,
+    OBJEVENT_NEWCHILD = 4,
+    OBJEVENT_RELATION = 8,
+    OBJEVENT_PROPERTIES = 16,
+    OBJEVENT_SUBT_INST = 32,
+    OBJEVENT_PARENT = 256,
+    OBJEVENT_LOSTCHILD = 512,
+    OBJEVENT_REFERENCED = 1024,
+    OBJEVENT_CONNECTED = 2048,
+    OBJEVENT_SETINCLUDED = 4096,
+    OBJEVENT_REFRELEASED = 8192,
+    OBJEVENT_DISCONNECTED = 16384,
+    OBJEVENT_SETEXCLUDED = 32768,
+    OBJEVENT_MARKEDRO = 65536,
+    OBJEVENT_MARKEDRW = 131072,
+    OBJEVENT_USERBITS = 16711680,
+    OBJEVENT_OPENMODEL = 524288,
+    OBJEVENT_SELECT = 1048576,
+    OBJEVENT_DESELECT = 2097152,
+    OBJEVENT_MOUSEOVER = 4194304,
+    OBJEVENT_CLOSEMODEL = 8388608
+};
+
+enum objectstatus_enum
+{
+    OBJECT_EXISTS = 0,
+    OBJECT_DELETED = 1,
+    OBJECT_ZOMBIE = 2
+};
+
+enum preference_flags
+{
+    MGAPREF_NODUPLICATENAMES = 1,
+    MGAPREF_NAMENEWOBJECTS = 2,
+    MGAPREF_IGNORECONNCHECKS = 4,
+    MGAPREF_FREEINSTANCEREFS = 8,
+    MGAPREF_RELAXED_RDATTRTYPES = 16,
+    MGAPREF_RELAXED_WRATTRTYPES = 32,
+    MGAPREF_MANUAL_RELIDS = 64,
+    MGAPREF_NO_NESTED_TX = 128
+};
+
+enum opmask_codes
+{
+    MM_ERROR = 0,
+    MM_CLEAR = 1,
+    MM_DO = 2,
+    MM_FULLDELETE = 64
+};
+
+enum opmask_shifts
+{
+    MM_REF = 0,
+    MM_CONN = 8,
+    MM_SET = 16,
+    MM_INTERNAL = 0,
+    MM_INTO = 2,
+    MM_OUTOF = 4
+};
+
+enum mgaerrors
+{
+    E_MGA_NOT_IMPLEMENTED = -2023424000,
+    E_MGA_NOT_SUPPORTED = -2023423999,
+    E_MGA_MODULE_INCOMPATIBILITY = -2023423984,
+    E_MGA_PARADIGM_NOTREG = -2023423983,
+    E_MGA_PARADIGM_INVALID = -2023423982,
+    E_MGA_COMPONENT_ERROR = -2023423981,
+    E_MGA_DATA_INCONSISTENCY = -2023423967,
+    E_MGA_META_INCOMPATIBILITY = -2023423966,
+    E_MGA_PROJECT_OPEN = -2023423951,
+    E_MGA_PROJECT_NOT_OPEN = -2023423950,
+    E_MGA_READ_ONLY_ACCESS = -2023423949,
+    E_MGA_NOT_IN_TERRITORY = -2023423948,
+    E_MGA_NOT_IN_TRANSACTION = -2023423947,
+    E_MGA_ALREADY_IN_TRANSACTION = -2023423946,
+    E_MGA_MUST_ABORT = -2023423945,
+    E_MGA_TARGET_DESTROYED = -2023423944,
+    E_MGA_FOREIGN_PROJECT = -2023423935,
+    E_MGA_FOREIGN_OBJECT = -2023423934,
+    E_MGA_OBJECT_DELETED = -2023423919,
+    E_MGA_OBJECT_ZOMBIE = -2023423918,
+    E_MGA_ZOMBIE_NOPROJECT = -2023423917,
+    E_MGA_ZOMBIE_CLOSED_PROJECT = -2023423916,
+    E_MGA_INVALID_ARG = -2023423904,
+    E_MGA_ARG_RANGE = -2023423903,
+    E_MGA_INPTR_NULL = -2023423902,
+    E_MGA_OUTPTR_NONEMPTY = -2023423901,
+    E_MGA_OUTPTR_NULL = -2023423900,
+    E_MGA_NAME_NOT_FOUND = -2023423888,
+    E_MGA_NAME_DUPLICATE = -2023423887,
+    E_MGA_META_VIOLATION = -2023423886,
+    E_MGA_NOT_CHANGEABLE = -2023423885,
+    E_MGA_OP_REFUSED = -2023423884,
+    E_MGA_LIBOBJECT = -2023423883,
+    E_META_INVALIDATTR = -2023423872,
+    E_META_INVALIDASPECT = -2023423871,
+    E_MGA_ACCESS_TYPE = -2023423870,
+    E_MGA_BAD_ENUMVALUE = -2023423869,
+    E_MGA_REFPORTS_USED = -2023423695,
+    E_MGA_VIRTUAL_NODE = -2023423690,
+    E_MGA_BAD_POSITIONVALUE = -2023423689,
+    E_MGA_ROOTFCO = -2023423688,
+    E_MGA_NOT_ROOTOBJECT = -2023423688,
+    E_MGA_BAD_COLLENGTH = -2023423680,
+    E_MGA_INVALID_ROLE = -2023423678,
+    E_MGA_BAD_ID = -2023423677,
+    E_MGA_NOT_DERIVABLE = -2023423676,
+    E_MGA_OBJECT_NOT_MEMBER = -2023423675,
+    E_MGA_NOT_CONNECTIBLE = -2023423674,
+    E_MGA_NO_ROLE = -2023423673,
+    E_MGA_CONNROLE_USED = -2023423672,
+    E_MGA_NOT_DERIVED = -2023423671,
+    E_MGA_NOT_INSTANCE = -2023423664,
+    E_MGA_INSTANCE = -2023423663,
+    E_MGA_REFERENCE_EXPECTED = -2023423662,
+    E_MGA_FILTERFORMAT = -2023423661,
+    E_MGA_GEN_OUT_OF_SPACE = -2023423660,
+    E_MGA_INVALID_TARGET = -2023423659,
+    E_MGA_LONG_DERIVCHAIN = -2023423658,
+    E_MGA_LIB_DIFF = -2023423657,
+    E_MGA_BAD_MASKVALUE = -2023423632,
+    E_MGA_CONSTRAINT_VIOLATION = -2023391233,
+    E_MGA_ERRCODE_ERROR = -2023391232
+};
+
+enum component_startmode_enum
+{
+    GME_MAIN_START = 0,
+    GME_BROWSER_START = 1,
+    GME_CONTEXT_START = 2,
+    GME_EMBEDDED_START = 3,
+    GME_MENU_START = 16,
+    GME_BGCONTEXT_START = 18,
+    GME_ICON_START = 32,
+    METAMODEL_CHECK_SYNTAX = 101,
+    CONSTMGR_SHOW_CONSTRAINTS = 102,
+    GME_SILENT_MODE = 128
+};
+
+struct __declspec(uuid("270b4f93-b17c-11d3-9ad1-00aa00b6fe26"))
+MgaProject;
+    // [ default ] interface IMgaProject
+    // interface ISupportErrorInfo
+    // interface IGMEVersionInfo
+
+struct __declspec(uuid("32d1f3a4-d276-11d3-9ad5-00aa00b6fe26"))
+MgaTerritory;
+    // [ default ] interface IMgaTerritory
+    // interface IMgaEventSink
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("80a6d662-d411-11d3-9ad5-00aa00b6fe26"))
+MgaAddOn;
+    // [ default ] interface IMgaAddOn
+    // interface IMgaEventSink
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("32d1f3a8-d276-11d3-9ad5-00aa00b6fe26"))
+MgaObject;
+    // [ default ] interface IMgaObject
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("270b4f97-b17c-11d3-9ad1-00aa00b6fe26"))
+MgaFolder;
+    // [ default ] interface IMgaFolder
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("270b4f99-b17c-11d3-9ad1-00aa00b6fe26"))
+MgaFCO;
+    // [ default ] interface IMgaFCO
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("270b4f9b-b17c-11d3-9ad1-00aa00b6fe26"))
+MgaModel;
+    // [ default ] interface IMgaModel
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("270b4f9d-b17c-11d3-9ad1-00aa00b6fe26"))
+MgaAtom;
+    // [ default ] interface IMgaAtom
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("270b4f9f-b17c-11d3-9ad1-00aa00b6fe26"))
+MgaPart;
+    // [ default ] interface IMgaPart
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("270b4fa1-b17c-11d3-9ad1-00aa00b6fe26"))
+MgaConnection;
+    // [ default ] interface IMgaConnection
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("83ba3234-b758-11d3-abae-000000000000"))
+MgaReference;
+    // [ default ] interface IMgaReference
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("83ba3236-b758-11d3-abae-000000000000"))
+MgaSet;
+    // [ default ] interface IMgaSet
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("83ba3238-b758-11d3-abae-000000000000"))
+MgaSimpleConnection;
+    // [ default ] interface IMgaSimpleConnection
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("cb64d6c0-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaConnPoint;
+    // [ default ] interface IMgaConnPoint
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("83ba323a-b758-11d3-abae-000000000000"))
+MgaFilter;
+    // [ default ] interface IMgaFilter
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("cbf20085-bd43-11d3-9ad2-00aa00b6fe26"))
+MgaAttribute;
+    // [ default ] interface IMgaAttribute
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("15abd2c3-65c9-4b9a-8d01-a03d0bb794eb"))
+MgaRegNode;
+    // [ default ] interface IMgaRegNode
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("63379445-4f8d-4daa-8687-2933dc679bcf"))
+MgaConstraint;
+    // [ default ] interface IMgaConstraint
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("1df52e42-bcc0-4439-b3cd-75610ac372a3"))
+MgaO;
+    // [ default ] interface IMgaO
+
+struct __declspec(uuid("c356b135-961d-4b6c-8b1f-257e19117cc1"))
+IMgaO : IDispatch
+{};
+
+struct __declspec(uuid("320279f8-eba2-41c5-aca5-ea1c9e71217a"))
+MgaClient;
+    // [ default ] interface IMgaClient
+
+struct __declspec(uuid("c592f6f0-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaFolders;
+    // [ default ] interface IMgaFolders
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c81decd0-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaFCOs;
+    // [ default ] interface IMgaFCOs
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c6eac820-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaAttributes;
+    // [ default ] interface IMgaAttributes
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c7128300-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaParts;
+    // [ default ] interface IMgaParts
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c7e87140-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaConnPoints;
+    // [ default ] interface IMgaConnPoints
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c795ed20-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaRegNodes;
+    // [ default ] interface IMgaRegNodes
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c848b610-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaAddOns;
+    // [ default ] interface IMgaAddOns
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c871f820-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaTerritories;
+    // [ default ] interface IMgaTerritory
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c89b3a30-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaComponents;
+    // [ default ] interface IMgaComponents
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("850c4a97-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaClients;
+    // [ default ] interface IMgaClients
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c996e971-c1fd-11d3-9ad2-00aa00b6fe26"))
+MgaObjects;
+    // [ default ] interface IMgaObjects
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("11bb02d9-2e2c-11d3-b36d-0060082df884"))
+IMgaComponent : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetInteractiveMode,put=PutInteractiveMode))
+    VARIANT_BOOL InteractiveMode;
+    __declspec(property(get=GetComponentName))
+    _bstr_t ComponentName;
+    __declspec(property(get=GetComponentType))
+    enum componenttype_enum ComponentType;
+    __declspec(property(get=GetParadigm))
+    _bstr_t Paradigm;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __Invoke (
+        struct IMgaProject * Project,
+        struct IMgaFCOs * selectedobjs,
+        long param );
+    HRESULT __Initialize (
+        struct IMgaProject * p );
+    HRESULT __Enable (
+        VARIANT_BOOL newval );
+    VARIANT_BOOL GetInteractiveMode ( );
+    void PutInteractiveMode (
+        VARIANT_BOOL enabled );
+    _bstr_t GetComponentName ( );
+    enum componenttype_enum GetComponentType ( );
+    _bstr_t GetParadigm ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Invoke (
+        /*[in]*/ struct IMgaProject * Project,
+        /*[in]*/ struct IMgaFCOs * selectedobjs,
+        /*[in]*/ long param ) = 0;
+      virtual HRESULT __stdcall Initialize (
+        struct IMgaProject * p ) = 0;
+      virtual HRESULT __stdcall Enable (
+        VARIANT_BOOL newval ) = 0;
+      virtual HRESULT __stdcall get_InteractiveMode (
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall put_InteractiveMode (
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall get_ComponentName (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_ComponentType (
+        /*[out,retval]*/ enum componenttype_enum * t ) = 0;
+      virtual HRESULT __stdcall get_Paradigm (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+};
+
+struct __declspec(uuid("c8cda760-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaComponents : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaComponentPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaComponentPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaComponent * * p );
+    HRESULT __Insert (
+        struct IMgaComponent * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaComponent * p );
+    long __Find (
+        struct IMgaComponent * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaComponent * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaComponent * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaComponent * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaComponent * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaComponent * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("270b4f92-b17c-11d3-9ad1-00aa00b6fe26"))
+IMgaProject : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetVersion,put=PutVersion))
+    _bstr_t Version;
+    __declspec(property(get=GetMetaName))
+    _bstr_t MetaName;
+    __declspec(property(get=GetMetaGUID))
+    _variant_t MetaGUID;
+    __declspec(property(get=GetPreferences,put=PutPreferences))
+    long Preferences;
+    __declspec(property(get=GetMetaVersion))
+    _bstr_t MetaVersion;
+    __declspec(property(get=GetOperationsMask,put=PutOperationsMask))
+    long OperationsMask;
+    __declspec(property(get=GetGUID,put=PutGUID))
+    _variant_t GUID;
+    __declspec(property(get=GetCreateTime))
+    _bstr_t CreateTime;
+    __declspec(property(get=GetChangeTime))
+    _bstr_t ChangeTime;
+    __declspec(property(get=GetAddOns))
+    IMgaAddOnsPtr AddOns;
+    __declspec(property(get=GetTerritories))
+    IMgaTerritoriesPtr Territories;
+    __declspec(property(get=GetAuthor,put=PutAuthor))
+    _bstr_t Author;
+    __declspec(property(get=GetAddOnComponents))
+    IMgaComponentsPtr AddOnComponents;
+    __declspec(property(get=GetActiveTerritory))
+    IMgaTerritoryPtr ActiveTerritory;
+    __declspec(property(get=GetComment,put=PutComment))
+    _bstr_t Comment;
+    __declspec(property(get=GetProjectConnStr))
+    _bstr_t ProjectConnStr;
+    __declspec(property(get=GetProjectStatus))
+    long ProjectStatus;
+    __declspec(property(get=GetParadigmConnStr))
+    _bstr_t ParadigmConnStr;
+    __declspec(property(get=GetMetaObj))
+    IMgaMetaBasePtr MetaObj[];
+    __declspec(property(get=GetClients))
+    IMgaClientsPtr Clients;
+    __declspec(property(get=GetRootMeta))
+    IMgaMetaProjectPtr RootMeta;
+    __declspec(property(get=GetRootFolder))
+    IMgaFolderPtr RootFolder;
+    __declspec(property(get=GetObjectByPath))
+    IMgaObjectPtr ObjectByPath[];
+    __declspec(property(get=GetNthObjectByPath))
+    IMgaObjectPtr NthObjectByPath[][];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __Create (
+        _bstr_t projectname,
+        _bstr_t paradigmname );
+    HRESULT __CreateEx (
+        _bstr_t projectname,
+        _bstr_t paradigmname,
+        const _variant_t & paradigmGUID );
+    HRESULT __Open (
+        _bstr_t projectname,
+        VARIANT_BOOL * ro_mode );
+    HRESULT __OpenEx (
+        _bstr_t projectname,
+        _bstr_t paradigmname,
+        const _variant_t & paradigmGUID );
+    HRESULT __Close (
+        VARIANT_BOOL abort );
+    HRESULT __Save (
+        _bstr_t save_as_conn,
+        VARIANT_BOOL keepoldname );
+    HRESULT __CheckLocks (
+        _bstr_t filename,
+        VARIANT_BOOL clearlocks );
+    void PutPreferences (
+        long prefmask );
+    long GetPreferences ( );
+    void PutOperationsMask (
+        long opmask );
+    long GetOperationsMask ( );
+    HRESULT __CreateTerritory (
+        struct IMgaEventSink * handler,
+        struct IMgaTerritory * * terr,
+        struct IMgaEventSink * rwhandler );
+    HRESULT __CreateAddOn (
+        struct IMgaEventSink * handler,
+        struct IMgaAddOn * * addon );
+    IMgaAddOnsPtr GetAddOns ( );
+    IMgaTerritoriesPtr GetTerritories ( );
+    HRESULT __EnableAutoAddOns (
+        VARIANT_BOOL bEnable );
+    IMgaComponentsPtr GetAddOnComponents ( );
+    IMgaTerritoryPtr GetActiveTerritory ( );
+    HRESULT __BeginTransaction (
+        struct IMgaTerritory * terr,
+        enum transactiontype_enum mode );
+    IMgaTerritoryPtr __BeginTransactionInNewTerr (
+        enum transactiontype_enum mode );
+    long GetProjectStatus ( );
+    HRESULT __Notify (
+        enum globalevent_enum event );
+    HRESULT __CommitTransaction ( );
+    HRESULT __AbortTransaction ( );
+    HRESULT __CheckSupress (
+        VARIANT_BOOL mode );
+    HRESULT __Undo ( );
+    HRESULT __Redo ( );
+    HRESULT __UndoRedoSize (
+        short * undosize,
+        short * redosize );
+    HRESULT __FlushUndoQueue ( );
+    HRESULT __UpdateSourceControlInfo (
+        _bstr_t p_optionalID );
+    HRESULT __SourceControlActiveUsers ( );
+    HRESULT __SourceControlObjectOwner (
+        _bstr_t p_optionalID );
+    IMgaMetaProjectPtr GetRootMeta ( );
+    IMgaFolderPtr GetRootFolder ( );
+    IMgaFilterPtr __CreateFilter ( );
+    IMgaFCOsPtr __AllFCOs (
+        struct IMgaFilter * filter );
+    IMgaObjectPtr __GetObjectByID (
+        _bstr_t ID );
+    IMgaFCOPtr __GetFCOByID (
+        _bstr_t ID );
+    IMgaFCOsPtr __GetFCOsByName (
+        _bstr_t Name );
+    IMgaFolderPtr __GetFolderByPath (
+        _bstr_t Path );
+    IMgaFCOsPtr __EnumExtReferences (
+        struct IMgaFCOs * fcos );
+    IMgaObjectPtr GetObjectByPath (
+        _bstr_t Path );
+    IMgaObjectPtr GetNthObjectByPath (
+        long n_th,
+        _bstr_t Path );
+    IMgaFoldersPtr __GetTopLibraries (
+        _bstr_t dispGuid );
+    _bstr_t __GetStatistics ( );
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t pVal );
+    _bstr_t GetVersion ( );
+    void PutVersion (
+        _bstr_t pVal );
+    _bstr_t GetMetaName ( );
+    _variant_t GetMetaGUID ( );
+    _bstr_t GetMetaVersion ( );
+    _variant_t GetGUID ( );
+    void PutGUID (
+        const _variant_t & pVal );
+    _bstr_t GetCreateTime ( );
+    _bstr_t GetChangeTime ( );
+    _bstr_t GetAuthor ( );
+    void PutAuthor (
+        _bstr_t pVal );
+    _bstr_t GetComment ( );
+    void PutComment (
+        _bstr_t pVal );
+    _bstr_t GetProjectConnStr ( );
+    _bstr_t GetParadigmConnStr ( );
+    IMgaMetaBasePtr GetMetaObj (
+        long mref );
+    IMgaMetaBasePtr __GetMetaObjDisp (
+        long mref );
+    HRESULT __QueryProjectInfo (
+        _bstr_t projectname,
+        long * mgaversion,
+        BSTR * paradigmname,
+        BSTR * paradigmversion,
+        VARIANT * paradigmGUID,
+        VARIANT_BOOL * ro_mode );
+    IMgaClientsPtr GetClients ( );
+    IMgaClientPtr __RegisterClient (
+        _bstr_t Name,
+        IDispatch * OLEServer );
+    IMgaClientPtr __GetClientByName (
+        _bstr_t Name );
+    HRESULT __CreateTerritoryWithoutSink (
+        struct IMgaTerritory * * terr );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Create (
+        /*[in]*/ BSTR projectname,
+        /*[in]*/ BSTR paradigmname ) = 0;
+      virtual HRESULT __stdcall CreateEx (
+        /*[in]*/ BSTR projectname,
+        /*[in]*/ BSTR paradigmname,
+        /*[in]*/ VARIANT paradigmGUID ) = 0;
+      virtual HRESULT __stdcall Open (
+        /*[in]*/ BSTR projectname,
+        /*[out]*/ VARIANT_BOOL * ro_mode ) = 0;
+      virtual HRESULT __stdcall OpenEx (
+        /*[in]*/ BSTR projectname,
+        /*[in]*/ BSTR paradigmname,
+        /*[in]*/ VARIANT paradigmGUID ) = 0;
+      virtual HRESULT __stdcall Close (
+        /*[in]*/ VARIANT_BOOL abort ) = 0;
+      virtual HRESULT __stdcall Save (
+        /*[in]*/ BSTR save_as_conn,
+        /*[in]*/ VARIANT_BOOL keepoldname ) = 0;
+      virtual HRESULT __stdcall CheckLocks (
+        /*[in]*/ BSTR filename,
+        /*[in]*/ VARIANT_BOOL clearlocks ) = 0;
+      virtual HRESULT __stdcall put_Preferences (
+        /*[in]*/ long prefmask ) = 0;
+      virtual HRESULT __stdcall get_Preferences (
+        /*[out,retval]*/ long * prefmask ) = 0;
+      virtual HRESULT __stdcall put_OperationsMask (
+        /*[in]*/ long opmask ) = 0;
+      virtual HRESULT __stdcall get_OperationsMask (
+        /*[out,retval]*/ long * opmask ) = 0;
+      virtual HRESULT __stdcall CreateTerritory (
+        /*[in]*/ struct IMgaEventSink * handler,
+        /*[out]*/ struct IMgaTerritory * * terr,
+        /*[in]*/ struct IMgaEventSink * rwhandler ) = 0;
+      virtual HRESULT __stdcall CreateAddOn (
+        /*[in]*/ struct IMgaEventSink * handler,
+        /*[out]*/ struct IMgaAddOn * * addon ) = 0;
+      virtual HRESULT __stdcall get_AddOns (
+        /*[out,retval]*/ struct IMgaAddOns * * AddOns ) = 0;
+      virtual HRESULT __stdcall get_Territories (
+        /*[out,retval]*/ struct IMgaTerritories * * terrs ) = 0;
+      virtual HRESULT __stdcall EnableAutoAddOns (
+        /*[in]*/ VARIANT_BOOL bEnable ) = 0;
+      virtual HRESULT __stdcall get_AddOnComponents (
+        /*[out,retval]*/ struct IMgaComponents * * comps ) = 0;
+      virtual HRESULT __stdcall get_ActiveTerritory (
+        /*[out,retval]*/ struct IMgaTerritory * * aterr ) = 0;
+      virtual HRESULT __stdcall BeginTransaction (
+        /*[in]*/ struct IMgaTerritory * terr,
+        /*[in]*/ enum transactiontype_enum mode ) = 0;
+      virtual HRESULT __stdcall BeginTransactionInNewTerr (
+        /*[in]*/ enum transactiontype_enum mode,
+        /*[out,retval]*/ struct IMgaTerritory * * terr ) = 0;
+      virtual HRESULT __stdcall get_ProjectStatus (
+        /*[out,retval]*/ long * stat ) = 0;
+      virtual HRESULT __stdcall Notify (
+        /*[in]*/ enum globalevent_enum event ) = 0;
+      virtual HRESULT __stdcall CommitTransaction ( ) = 0;
+      virtual HRESULT __stdcall AbortTransaction ( ) = 0;
+      virtual HRESULT __stdcall CheckSupress (
+        /*[in]*/ VARIANT_BOOL mode ) = 0;
+      virtual HRESULT __stdcall Undo ( ) = 0;
+      virtual HRESULT __stdcall Redo ( ) = 0;
+      virtual HRESULT __stdcall UndoRedoSize (
+        /*[out]*/ short * undosize,
+        /*[out]*/ short * redosize ) = 0;
+      virtual HRESULT __stdcall FlushUndoQueue ( ) = 0;
+      virtual HRESULT __stdcall UpdateSourceControlInfo (
+        /*[in]*/ BSTR p_optionalID ) = 0;
+      virtual HRESULT __stdcall SourceControlActiveUsers ( ) = 0;
+      virtual HRESULT __stdcall SourceControlObjectOwner (
+        /*[in]*/ BSTR p_optionalID ) = 0;
+      virtual HRESULT __stdcall get_RootMeta (
+        /*[out,retval]*/ struct IMgaMetaProject * * pVal ) = 0;
+      virtual HRESULT __stdcall get_RootFolder (
+        /*[out,retval]*/ struct IMgaFolder * * pVal ) = 0;
+      virtual HRESULT __stdcall CreateFilter (
+        /*[out,retval]*/ struct IMgaFilter * * filter ) = 0;
+      virtual HRESULT __stdcall AllFCOs (
+        /*[in]*/ struct IMgaFilter * filter,
+        /*[out,retval]*/ struct IMgaFCOs * * returnset ) = 0;
+      virtual HRESULT __stdcall GetObjectByID (
+        /*[in]*/ BSTR ID,
+        /*[out,retval]*/ struct IMgaObject * * pVal ) = 0;
+      virtual HRESULT __stdcall GetFCOByID (
+        /*[in]*/ BSTR ID,
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall GetFCOsByName (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall GetFolderByPath (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaFolder * * pVal ) = 0;
+      virtual HRESULT __stdcall EnumExtReferences (
+        /*[in]*/ struct IMgaFCOs * fcos,
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ObjectByPath (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaObject * * pVal ) = 0;
+      virtual HRESULT __stdcall get_NthObjectByPath (
+        /*[in]*/ long n_th,
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaObject * * pVal ) = 0;
+      virtual HRESULT __stdcall GetTopLibraries (
+        /*[in]*/ BSTR dispGuid,
+        /*[out,retval]*/ struct IMgaFolders * * returnset ) = 0;
+      virtual HRESULT __stdcall GetStatistics (
+        /*[out,retval]*/ BSTR * statstr ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Name (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Version (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Version (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_MetaName (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_MetaGUID (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_MetaVersion (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GUID (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_GUID (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_CreateTime (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_ChangeTime (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Author (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Author (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Comment (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Comment (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ProjectConnStr (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_ParadigmConnStr (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_MetaObj (
+        /*[in]*/ long mref,
+        /*[out,retval]*/ struct IMgaMetaBase * * pVal ) = 0;
+      virtual HRESULT __stdcall GetMetaObjDisp (
+        /*[in]*/ long mref,
+        /*[out,retval]*/ struct IMgaMetaBase * * pVal ) = 0;
+      virtual HRESULT __stdcall QueryProjectInfo (
+        /*[in]*/ BSTR projectname,
+        /*[out]*/ long * mgaversion,
+        /*[out]*/ BSTR * paradigmname,
+        /*[out]*/ BSTR * paradigmversion,
+        /*[out]*/ VARIANT * paradigmGUID,
+        /*[out]*/ VARIANT_BOOL * ro_mode ) = 0;
+      virtual HRESULT __stdcall get_Clients (
+        /*[out,retval]*/ struct IMgaClients * * Clients ) = 0;
+      virtual HRESULT __stdcall RegisterClient (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ IDispatch * OLEServer,
+        /*[out,retval]*/ struct IMgaClient * * client ) = 0;
+      virtual HRESULT __stdcall GetClientByName (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaClient * * client ) = 0;
+      virtual HRESULT __stdcall CreateTerritoryWithoutSink (
+        /*[out]*/ struct IMgaTerritory * * terr ) = 0;
+};
+
+struct __declspec(uuid("c8f6e970-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaFilter : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetKind,put=PutKind))
+    _bstr_t Kind;
+    __declspec(property(get=GetRole,put=PutRole))
+    _bstr_t Role;
+    __declspec(property(get=GetObjType,put=PutObjType))
+    _bstr_t ObjType;
+    __declspec(property(get=GetLevel,put=PutLevel))
+    _bstr_t Level;
+    __declspec(property(get=GetProject))
+    IMgaProjectPtr Project;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t pVal );
+    _bstr_t GetKind ( );
+    void PutKind (
+        _bstr_t pVal );
+    _bstr_t GetRole ( );
+    void PutRole (
+        _bstr_t pVal );
+    _bstr_t GetObjType ( );
+    void PutObjType (
+        _bstr_t pVal );
+    _bstr_t GetLevel ( );
+    void PutLevel (
+        _bstr_t pVal );
+    IMgaProjectPtr GetProject ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Name (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Kind (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Kind (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Role (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Role (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ObjType (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ObjType (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Level (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Level (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Project (
+        /*[out,retval]*/ struct IMgaProject * * pVal ) = 0;
+};
+
+struct __declspec(uuid("80a6d661-d411-11d3-9ad5-00aa00b6fe26"))
+IMgaAddOn : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetPriority,put=PutPriority))
+    long Priority;
+    __declspec(property(put=PutEventMask))
+    unsigned long EventMask;
+    __declspec(property(get=GetProject))
+    IMgaProjectPtr Project;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetPriority ( );
+    void PutPriority (
+        long pVal );
+    void PutEventMask (
+        unsigned long _arg1 );
+    HRESULT __Destroy ( );
+    IMgaProjectPtr GetProject ( );
+    HRESULT __CheckProject (
+        struct IMgaProject * p_project );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Priority (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Priority (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall put_EventMask (
+        /*[in]*/ unsigned long _arg1 ) = 0;
+      virtual HRESULT __stdcall Destroy ( ) = 0;
+      virtual HRESULT __stdcall get_Project (
+        /*[out,retval]*/ struct IMgaProject * * pVal ) = 0;
+      virtual HRESULT __stdcall CheckProject (
+        /*[in]*/ struct IMgaProject * p_project ) = 0;
+};
+
+struct __declspec(uuid("c8a5ec80-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaAddOns : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaAddOnPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaAddOnPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaAddOn * * p );
+    HRESULT __Insert (
+        struct IMgaAddOn * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaAddOn * p );
+    long __Find (
+        struct IMgaAddOn * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaAddOn * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaAddOn * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaAddOn * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaAddOn * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaAddOn * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("f07ee1a2-2d53-449b-a2da-45a1a9110e53"))
+IMgaClient : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetOLEServer))
+    IDispatchPtr OLEServer;
+    __declspec(property(get=GetProject))
+    IMgaProjectPtr Project;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    IDispatchPtr GetOLEServer ( );
+    IMgaProjectPtr GetProject ( );
+    HRESULT __Destroy ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pName ) = 0;
+      virtual HRESULT __stdcall get_OLEServer (
+        /*[out,retval]*/ IDispatch * * pServer ) = 0;
+      virtual HRESULT __stdcall get_Project (
+        /*[out,retval]*/ struct IMgaProject * * pVal ) = 0;
+      virtual HRESULT __stdcall Destroy ( ) = 0;
+};
+
+struct __declspec(uuid("c9d8df93-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaClients : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaClientPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaClientPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaClient * * p );
+    HRESULT __Insert (
+        struct IMgaClient * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaClient * p );
+    long __Find (
+        struct IMgaClient * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaClient * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaClient * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaClient * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaClient * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaClient * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("32d1f3a5-d276-11d3-9ad5-00aa00b6fe26"))
+IMgaEventSink : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __GlobalEvent (
+        enum globalevent_enum event );
+    HRESULT __ObjectEvent (
+        struct IMgaObject * obj,
+        unsigned long EventMask,
+        const _variant_t & v );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall GlobalEvent (
+        /*[in]*/ enum globalevent_enum event ) = 0;
+      virtual HRESULT __stdcall ObjectEvent (
+        /*[in]*/ struct IMgaObject * obj,
+        /*[in]*/ unsigned long EventMask,
+        /*[in]*/ VARIANT v ) = 0;
+};
+
+struct __declspec(uuid("32d1f3a7-d276-11d3-9ad5-00aa00b6fe26"))
+IMgaObject : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetStatus))
+    long Status;
+    __declspec(property(get=GetIsWritable))
+    VARIANT_BOOL IsWritable;
+    __declspec(property(get=GetID))
+    _bstr_t ID;
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetNthObjectByPath))
+    IMgaObjectPtr NthObjectByPath[][];
+    __declspec(property(get=GetAbsPath))
+    _bstr_t AbsPath;
+    __declspec(property(get=GetMetaBase))
+    IMgaMetaBasePtr MetaBase;
+    __declspec(property(get=GetObjType))
+    enum objtype_enum ObjType;
+    __declspec(property(get=GetProject))
+    IMgaProjectPtr Project;
+    __declspec(property(get=GetTerritory))
+    IMgaTerritoryPtr Territory;
+    __declspec(property(get=GetIsEqual))
+    VARIANT_BOOL IsEqual[];
+    __declspec(property(get=GetCurrentAssociation))
+    _variant_t CurrentAssociation;
+    __declspec(property(get=GetRelID,put=PutRelID))
+    long RelID;
+    __declspec(property(get=GetIsLibObject))
+    VARIANT_BOOL IsLibObject;
+    __declspec(property(get=GetExempt,put=PutExempt))
+    VARIANT_BOOL Exempt;
+    __declspec(property(get=GetChildObjects))
+    IMgaObjectsPtr ChildObjects;
+    __declspec(property(get=GetChildObjectByRelID))
+    IMgaObjectPtr ChildObjectByRelID[];
+    __declspec(property(get=GetObjectByPath))
+    IMgaObjectPtr ObjectByPath[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetStatus ( );
+    VARIANT_BOOL GetIsWritable ( );
+    _bstr_t GetID ( );
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t pVal );
+    _bstr_t GetAbsPath ( );
+    IMgaMetaBasePtr GetMetaBase ( );
+    enum objtype_enum GetObjType ( );
+    IMgaProjectPtr GetProject ( );
+    IMgaTerritoryPtr GetTerritory ( );
+    VARIANT_BOOL GetIsEqual (
+        struct IMgaObject * o );
+    VARIANT_BOOL __GetIsEqualDisp (
+        struct IMgaObject * o );
+    HRESULT __GetParent (
+        struct IMgaObject * * pVal,
+        enum objtype_enum * ObjType );
+    HRESULT __CheckProject (
+        struct IMgaProject * Project );
+    HRESULT __DestroyObject ( );
+    HRESULT __Open (
+        enum openmode mode );
+    HRESULT __Close ( );
+    HRESULT __Associate (
+        const _variant_t & userdata );
+    _variant_t GetCurrentAssociation ( );
+    HRESULT __SendEvent (
+        long mask );
+    long GetRelID ( );
+    void PutRelID (
+        long pVal );
+    VARIANT_BOOL GetIsLibObject ( );
+    HRESULT __Check ( );
+    HRESULT __CheckTree ( );
+    void PutExempt (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL GetExempt ( );
+    IMgaObjectsPtr GetChildObjects ( );
+    IMgaObjectPtr GetChildObjectByRelID (
+        long RelID );
+    IMgaObjectPtr __GetChildObjectByRelIDDisp (
+        long RelID );
+    IMgaObjectPtr GetObjectByPath (
+        _bstr_t Path );
+    IMgaObjectPtr __GetObjectByPathDisp (
+        _bstr_t Path );
+    IMgaObjectPtr GetNthObjectByPath (
+        long n_th,
+        _bstr_t Path );
+    IMgaObjectPtr __GetNthObjectByPathDisp (
+        long n_th,
+        _bstr_t Path );
+    HRESULT __PutReadOnlyAccessWithPropagate (
+        VARIANT_BOOL pReadOnly );
+    HRESULT __PutReadOnlyAccess (
+        VARIANT_BOOL pReadOnly );
+    VARIANT_BOOL __HasReadOnlyAccess ( );
+    HRESULT __GetGuid (
+        long * l1,
+        long * l2,
+        long * l3,
+        long * l4 );
+    HRESULT __PutGuid (
+        long l1,
+        long l2,
+        long l3,
+        long l4 );
+    _bstr_t __GetGuidDisp ( );
+    HRESULT __PutGuidDisp (
+        _bstr_t guid_str );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Status (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_IsWritable (
+        /*[out,retval]*/ VARIANT_BOOL * p ) = 0;
+      virtual HRESULT __stdcall get_ID (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Name (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_AbsPath (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_MetaBase (
+        /*[out,retval]*/ struct IMgaMetaBase * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ObjType (
+        /*[out,retval]*/ enum objtype_enum * pVal ) = 0;
+      virtual HRESULT __stdcall get_Project (
+        /*[out,retval]*/ struct IMgaProject * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Territory (
+        /*[out,retval]*/ struct IMgaTerritory * * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsEqual (
+        /*[in]*/ struct IMgaObject * o,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall GetIsEqualDisp (
+        /*[in]*/ struct IMgaObject * o,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall GetParent (
+        /*[out]*/ struct IMgaObject * * pVal,
+        /*[out]*/ enum objtype_enum * ObjType ) = 0;
+      virtual HRESULT __stdcall CheckProject (
+        /*[in]*/ struct IMgaProject * Project ) = 0;
+      virtual HRESULT __stdcall DestroyObject ( ) = 0;
+      virtual HRESULT __stdcall Open (
+        /*[in]*/ enum openmode mode ) = 0;
+      virtual HRESULT __stdcall Close ( ) = 0;
+      virtual HRESULT __stdcall Associate (
+        /*[in]*/ VARIANT userdata ) = 0;
+      virtual HRESULT __stdcall get_CurrentAssociation (
+        /*[out,retval]*/ VARIANT * userdata ) = 0;
+      virtual HRESULT __stdcall SendEvent (
+        /*[in]*/ long mask ) = 0;
+      virtual HRESULT __stdcall get_RelID (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_RelID (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_IsLibObject (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall Check ( ) = 0;
+      virtual HRESULT __stdcall CheckTree ( ) = 0;
+      virtual HRESULT __stdcall put_Exempt (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_Exempt (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_ChildObjects (
+        /*[out,retval]*/ struct IMgaObjects * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ChildObjectByRelID (
+        /*[in]*/ long RelID,
+        /*[out,retval]*/ struct IMgaObject * * pVal ) = 0;
+      virtual HRESULT __stdcall GetChildObjectByRelIDDisp (
+        /*[in]*/ long RelID,
+        /*[out,retval]*/ struct IMgaObject * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ObjectByPath (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaObject * * pVal ) = 0;
+      virtual HRESULT __stdcall GetObjectByPathDisp (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaObject * * pVal ) = 0;
+      virtual HRESULT __stdcall get_NthObjectByPath (
+        /*[in]*/ long n_th,
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaObject * * pVal ) = 0;
+      virtual HRESULT __stdcall GetNthObjectByPathDisp (
+        /*[in]*/ long n_th,
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaObject * * pVal ) = 0;
+      virtual HRESULT __stdcall PutReadOnlyAccessWithPropagate (
+        /*[in]*/ VARIANT_BOOL pReadOnly ) = 0;
+      virtual HRESULT __stdcall PutReadOnlyAccess (
+        /*[in]*/ VARIANT_BOOL pReadOnly ) = 0;
+      virtual HRESULT __stdcall HasReadOnlyAccess (
+        /*[out,retval]*/ VARIANT_BOOL * pReadOnly ) = 0;
+      virtual HRESULT __stdcall GetGuid (
+        /*[in,out]*/ long * l1,
+        /*[in,out]*/ long * l2,
+        /*[in,out]*/ long * l3,
+        /*[in,out]*/ long * l4 ) = 0;
+      virtual HRESULT __stdcall PutGuid (
+        /*[in]*/ long l1,
+        /*[in]*/ long l2,
+        /*[in]*/ long l3,
+        /*[in]*/ long l4 ) = 0;
+      virtual HRESULT __stdcall GetGuidDisp (
+        /*[out,retval]*/ BSTR * guid_str ) = 0;
+      virtual HRESULT __stdcall PutGuidDisp (
+        /*[in]*/ BSTR guid_str ) = 0;
+};
+
+struct __declspec(uuid("c5aac2f0-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaObjects : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaObjectPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaObjectPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaObject * * p );
+    HRESULT __Insert (
+        struct IMgaObject * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaObject * p );
+    long __Find (
+        struct IMgaObject * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaObject * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaObject * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaObject * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaObject * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaObject * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("32d1f3a3-d276-11d3-9ad5-00aa00b6fe26"))
+IMgaTerritory : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(put=PutEventMask))
+    unsigned long EventMask;
+    __declspec(property(put=PutRWEventMask))
+    unsigned long RWEventMask;
+    __declspec(property(get=GetProject))
+    IMgaProjectPtr Project;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __Flush ( );
+    HRESULT __Destroy ( );
+    void PutEventMask (
+        unsigned long _arg1 );
+    void PutRWEventMask (
+        unsigned long _arg1 );
+    HRESULT __Associate (
+        struct IMgaObject * obj,
+        const _variant_t & userdata );
+    HRESULT __OpenObj (
+        struct IMgaObject * obj,
+        struct IMgaObject * * newobj );
+    HRESULT __OpenFCO (
+        struct IMgaFCO * obj,
+        struct IMgaFCO * * newobj );
+    HRESULT __OpenFCOs (
+        struct IMgaFCOs * obj,
+        struct IMgaFCOs * * newobj );
+    HRESULT __CloseObj (
+        struct IMgaObject * obj );
+    IMgaProjectPtr GetProject ( );
+    HRESULT __CheckProject (
+        struct IMgaProject * Project );
+    HRESULT __SetNamespace (
+        _bstr_t pNmsp );
+    _bstr_t __GetNamespace ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Flush ( ) = 0;
+      virtual HRESULT __stdcall Destroy ( ) = 0;
+      virtual HRESULT __stdcall put_EventMask (
+        /*[in]*/ unsigned long _arg1 ) = 0;
+      virtual HRESULT __stdcall put_RWEventMask (
+        /*[in]*/ unsigned long _arg1 ) = 0;
+      virtual HRESULT __stdcall Associate (
+        /*[in]*/ struct IMgaObject * obj,
+        /*[in]*/ VARIANT userdata ) = 0;
+      virtual HRESULT __stdcall OpenObj (
+        /*[in]*/ struct IMgaObject * obj,
+        /*[in,out]*/ struct IMgaObject * * newobj ) = 0;
+      virtual HRESULT __stdcall OpenFCO (
+        /*[in]*/ struct IMgaFCO * obj,
+        /*[in,out]*/ struct IMgaFCO * * newobj ) = 0;
+      virtual HRESULT __stdcall OpenFCOs (
+        /*[in]*/ struct IMgaFCOs * obj,
+        /*[in,out]*/ struct IMgaFCOs * * newobj ) = 0;
+      virtual HRESULT __stdcall CloseObj (
+        /*[in]*/ struct IMgaObject * obj ) = 0;
+      virtual HRESULT __stdcall get_Project (
+        /*[out,retval]*/ struct IMgaProject * * pVal ) = 0;
+      virtual HRESULT __stdcall CheckProject (
+        /*[in]*/ struct IMgaProject * Project ) = 0;
+      virtual HRESULT __stdcall SetNamespace (
+        /*[in]*/ BSTR pNmsp ) = 0;
+      virtual HRESULT __stdcall GetNamespace (
+        /*[out,retval]*/ BSTR * pNmsp ) = 0;
+};
+
+struct __declspec(uuid("c87caa70-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaTerritories : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaTerritoryPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaTerritoryPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaTerritory * * p );
+    HRESULT __Insert (
+        struct IMgaTerritory * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaTerritory * p );
+    long __Find (
+        struct IMgaTerritory * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaTerritory * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaTerritory * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaTerritory * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaTerritory * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaTerritory * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("270b4f98-b17c-11d3-9ad1-00aa00b6fe26"))
+IMgaFCO : IMgaObject
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMeta))
+    IMgaMetaFCOPtr Meta;
+    __declspec(property(get=GetMetaRole))
+    IMgaMetaRolePtr MetaRole;
+    __declspec(property(get=GetParentModel))
+    IMgaModelPtr ParentModel;
+    __declspec(property(get=GetParentFolder))
+    IMgaFolderPtr ParentFolder;
+    __declspec(property(get=GetParts))
+    IMgaPartsPtr Parts;
+    __declspec(property(get=GetPart))
+    IMgaPartPtr Part[];
+    __declspec(property(get=GetAttributeByName,put=PutAttributeByName))
+    _variant_t AttributeByName[];
+    __declspec(property(get=GetPartByMetaPart))
+    IMgaPartPtr PartByMetaPart[];
+    __declspec(property(get=GetPartOfConns))
+    IMgaConnPointsPtr PartOfConns;
+    __declspec(property(get=GetAttributes))
+    IMgaAttributesPtr Attributes;
+    __declspec(property(get=GetAttribute))
+    IMgaAttributePtr Attribute[];
+    __declspec(property(get=GetMemberOfSets))
+    IMgaFCOsPtr MemberOfSets;
+    __declspec(property(get=GetReferencedBy))
+    IMgaFCOsPtr ReferencedBy;
+    __declspec(property(get=GetRootFCO))
+    IMgaFCOPtr RootFCO;
+    __declspec(property(get=GetStrAttrByName,put=PutStrAttrByName))
+    _bstr_t StrAttrByName[];
+    __declspec(property(get=GetIntAttrByName,put=PutIntAttrByName))
+    long IntAttrByName[];
+    __declspec(property(get=GetRegistryNode))
+    IMgaRegNodePtr RegistryNode[];
+    __declspec(property(get=GetRegistry))
+    IMgaRegNodesPtr Registry[];
+    __declspec(property(get=GetRegistryValue,put=PutRegistryValue))
+    _bstr_t RegistryValue[];
+    __declspec(property(get=GetFloatAttrByName,put=PutFloatAttrByName))
+    double FloatAttrByName[];
+    __declspec(property(get=GetConstraints))
+    IMgaConstraintsPtr Constraints[];
+    __declspec(property(get=GetBoolAttrByName,put=PutBoolAttrByName))
+    VARIANT_BOOL BoolAttrByName[];
+    __declspec(property(get=GetRefAttrByName,put=PutRefAttrByName))
+    IMgaFCOPtr RefAttrByName[];
+    __declspec(property(get=GetDerivedFrom))
+    IMgaFCOPtr DerivedFrom;
+    __declspec(property(get=GetDerivedObjects))
+    IMgaFCOsPtr DerivedObjects;
+    __declspec(property(get=GetType))
+    IMgaFCOPtr Type;
+    __declspec(property(get=GetBaseType))
+    IMgaFCOPtr BaseType;
+    __declspec(property(get=GetArcheType))
+    IMgaFCOPtr ArcheType;
+    __declspec(property(get=GetIsInstance))
+    VARIANT_BOOL IsInstance;
+    __declspec(property(get=GetIsPrimaryDerived))
+    VARIANT_BOOL IsPrimaryDerived;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaMetaFCOPtr GetMeta ( );
+    IMgaMetaRolePtr GetMetaRole ( );
+    IMgaModelPtr GetParentModel ( );
+    IMgaFolderPtr GetParentFolder ( );
+    IMgaPartsPtr GetParts ( );
+    IMgaPartPtr GetPart (
+        struct IMgaMetaAspect * asp );
+    IMgaPartPtr __GetPartDisp (
+        struct IMgaMetaAspect * asp );
+    IMgaPartPtr GetPartByMetaPart (
+        struct IMgaMetaPart * Part );
+    IMgaPartPtr __GetPartByMetaPartDisp (
+        struct IMgaMetaPart * Part );
+    IMgaAttributesPtr GetAttributes ( );
+    IMgaAttributePtr GetAttribute (
+        struct IMgaMetaAttribute * Meta );
+    IMgaAttributePtr __GetAttributeDisp (
+        struct IMgaMetaAttribute * Meta );
+    _variant_t GetAttributeByName (
+        _bstr_t Name );
+    void PutAttributeByName (
+        _bstr_t Name,
+        const _variant_t & pVal );
+    _variant_t __GetAttributeByNameDisp (
+        _bstr_t Name );
+    HRESULT __SetAttributeByNameDisp (
+        _bstr_t Name,
+        const _variant_t & newval );
+    _bstr_t GetStrAttrByName (
+        _bstr_t Name );
+    void PutStrAttrByName (
+        _bstr_t Name,
+        _bstr_t pVal );
+    _bstr_t __GetStrAttrByNameDisp (
+        _bstr_t Name );
+    HRESULT __SetStrAttrByNameDisp (
+        _bstr_t Name,
+        _bstr_t newval );
+    long GetIntAttrByName (
+        _bstr_t Name );
+    void PutIntAttrByName (
+        _bstr_t Name,
+        long pVal );
+    long __GetIntAttrByNameDisp (
+        _bstr_t Name );
+    HRESULT __SetIntAttrByNameDisp (
+        _bstr_t Name,
+        long newval );
+    double GetFloatAttrByName (
+        _bstr_t Name );
+    void PutFloatAttrByName (
+        _bstr_t Name,
+        double pVal );
+    double __GetFloatAttrByNameDisp (
+        _bstr_t Name );
+    HRESULT __SetFloatAttrByNameDisp (
+        _bstr_t Name,
+        double newval );
+    VARIANT_BOOL GetBoolAttrByName (
+        _bstr_t Name );
+    void PutBoolAttrByName (
+        _bstr_t Name,
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL __GetBoolAttrByNameDisp (
+        _bstr_t Name );
+    HRESULT __SetBoolAttrByNameDisp (
+        _bstr_t Name,
+        VARIANT_BOOL newval );
+    IMgaFCOPtr GetRefAttrByName (
+        _bstr_t Name );
+    void PutRefAttrByName (
+        _bstr_t Name,
+        struct IMgaFCO * pVal );
+    IMgaFCOPtr __GetRefAttrByNameDisp (
+        _bstr_t Name );
+    HRESULT __SetRefAttrByNameDisp (
+        _bstr_t Name,
+        struct IMgaFCO * newval );
+    HRESULT __ClearAttrByName (
+        _bstr_t Name );
+    IMgaRegNodePtr GetRegistryNode (
+        _bstr_t Path );
+    IMgaRegNodePtr __GetRegistryNodeDisp (
+        _bstr_t Path );
+    IMgaRegNodesPtr GetRegistry (
+        VARIANT_BOOL virtuals );
+    IMgaRegNodesPtr __GetRegistryDisp (
+        VARIANT_BOOL virtuals );
+    _bstr_t GetRegistryValue (
+        _bstr_t Path );
+    void PutRegistryValue (
+        _bstr_t Path,
+        _bstr_t pVal );
+    _bstr_t __GetRegistryValueDisp (
+        _bstr_t Path );
+    HRESULT __SetRegistryValueDisp (
+        _bstr_t Path,
+        _bstr_t newval );
+    IMgaConstraintsPtr GetConstraints (
+        VARIANT_BOOL includemeta );
+    IMgaConstraintsPtr __GetConstraintsDisp (
+        VARIANT_BOOL includemeta );
+    HRESULT __AddConstraint (
+        struct IMgaConstraint * constraint );
+    HRESULT __DefineConstraint (
+        _bstr_t Name,
+        long mask,
+        _bstr_t expr,
+        struct IMgaConstraint * * nconstraint );
+    IMgaFCOPtr GetDerivedFrom ( );
+    IMgaFCOsPtr GetDerivedObjects ( );
+    IMgaFCOPtr GetType ( );
+    IMgaFCOPtr GetBaseType ( );
+    IMgaFCOPtr GetArcheType ( );
+    VARIANT_BOOL GetIsInstance ( );
+    VARIANT_BOOL GetIsPrimaryDerived ( );
+    HRESULT __AttachToArcheType (
+        struct IMgaFCO * newtype,
+        VARIANT_BOOL instance );
+    HRESULT __DetachFromArcheType ( );
+    HRESULT __GetAbsMetaPath (
+        BSTR * AbsPath );
+    HRESULT __GetRelMetaPath (
+        struct IMgaFCO * begfco,
+        BSTR * relpath,
+        struct IMgaFCOs * refs );
+    IMgaConnPointsPtr GetPartOfConns ( );
+    IMgaFCOsPtr GetMemberOfSets ( );
+    IMgaFCOsPtr GetReferencedBy ( );
+    HRESULT __CreateCollection (
+        struct IMgaFCOs * * pVal );
+    IMgaFCOPtr GetRootFCO ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Meta (
+        /*[out,retval]*/ struct IMgaMetaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_MetaRole (
+        /*[out,retval]*/ struct IMgaMetaRole * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ParentModel (
+        /*[out,retval]*/ struct IMgaModel * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ParentFolder (
+        /*[out,retval]*/ struct IMgaFolder * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Parts (
+        /*[out,retval]*/ struct IMgaParts * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Part (
+        /*[in]*/ struct IMgaMetaAspect * asp,
+        /*[out,retval]*/ struct IMgaPart * * pVal ) = 0;
+      virtual HRESULT __stdcall GetPartDisp (
+        /*[in]*/ struct IMgaMetaAspect * asp,
+        /*[out,retval]*/ struct IMgaPart * * pVal ) = 0;
+      virtual HRESULT __stdcall get_PartByMetaPart (
+        /*[in]*/ struct IMgaMetaPart * Part,
+        /*[out,retval]*/ struct IMgaPart * * pVal ) = 0;
+      virtual HRESULT __stdcall GetPartByMetaPartDisp (
+        /*[in]*/ struct IMgaMetaPart * Part,
+        /*[out,retval]*/ struct IMgaPart * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Attributes (
+        /*[out,retval]*/ struct IMgaAttributes * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Attribute (
+        /*[in]*/ struct IMgaMetaAttribute * Meta,
+        /*[out,retval]*/ struct IMgaAttribute * * pVal ) = 0;
+      virtual HRESULT __stdcall GetAttributeDisp (
+        /*[in]*/ struct IMgaMetaAttribute * Meta,
+        /*[out,retval]*/ struct IMgaAttribute * * pVal ) = 0;
+      virtual HRESULT __stdcall get_AttributeByName (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_AttributeByName (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall GetAttributeByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall SetAttributeByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ VARIANT newval ) = 0;
+      virtual HRESULT __stdcall get_StrAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_StrAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall GetStrAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall SetStrAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ BSTR newval ) = 0;
+      virtual HRESULT __stdcall get_IntAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_IntAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall GetIntAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall SetIntAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ long newval ) = 0;
+      virtual HRESULT __stdcall get_FloatAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_FloatAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall GetFloatAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall SetFloatAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ double newval ) = 0;
+      virtual HRESULT __stdcall get_BoolAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_BoolAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall GetBoolAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall SetBoolAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ VARIANT_BOOL newval ) = 0;
+      virtual HRESULT __stdcall get_RefAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall put_RefAttrByName (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ struct IMgaFCO * pVal ) = 0;
+      virtual HRESULT __stdcall GetRefAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall SetRefAttrByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ struct IMgaFCO * newval ) = 0;
+      virtual HRESULT __stdcall ClearAttrByName (
+        /*[in]*/ BSTR Name ) = 0;
+      virtual HRESULT __stdcall get_RegistryNode (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryNodeDisp (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Registry (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryDisp (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * pVal ) = 0;
+      virtual HRESULT __stdcall get_RegistryValue (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_RegistryValue (
+        /*[in]*/ BSTR Path,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryValueDisp (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall SetRegistryValueDisp (
+        /*[in]*/ BSTR Path,
+        /*[in]*/ BSTR newval ) = 0;
+      virtual HRESULT __stdcall get_Constraints (
+        /*[in]*/ VARIANT_BOOL includemeta,
+        /*[out,retval]*/ struct IMgaConstraints * * pVal ) = 0;
+      virtual HRESULT __stdcall GetConstraintsDisp (
+        /*[in]*/ VARIANT_BOOL includemeta,
+        /*[out,retval]*/ struct IMgaConstraints * * pVal ) = 0;
+      virtual HRESULT __stdcall AddConstraint (
+        /*[in]*/ struct IMgaConstraint * constraint ) = 0;
+      virtual HRESULT __stdcall DefineConstraint (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ long mask,
+        /*[in]*/ BSTR expr,
+        /*[out]*/ struct IMgaConstraint * * nconstraint ) = 0;
+      virtual HRESULT __stdcall get_DerivedFrom (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_DerivedObjects (
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Type (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_BaseType (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ArcheType (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsInstance (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsPrimaryDerived (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall AttachToArcheType (
+        /*[in]*/ struct IMgaFCO * newtype,
+        /*[in]*/ VARIANT_BOOL instance ) = 0;
+      virtual HRESULT __stdcall DetachFromArcheType ( ) = 0;
+      virtual HRESULT __stdcall GetAbsMetaPath (
+        /*[in,out]*/ BSTR * AbsPath ) = 0;
+      virtual HRESULT __stdcall GetRelMetaPath (
+        /*[in]*/ struct IMgaFCO * begfco,
+        /*[in,out]*/ BSTR * relpath,
+        /*[in]*/ struct IMgaFCOs * refs ) = 0;
+      virtual HRESULT __stdcall get_PartOfConns (
+        /*[out,retval]*/ struct IMgaConnPoints * * pVal ) = 0;
+      virtual HRESULT __stdcall get_MemberOfSets (
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ReferencedBy (
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall CreateCollection (
+        /*[in,out]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall get_RootFCO (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+};
+
+struct __declspec(uuid("c5f4c2f0-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaFCOs : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaFCOPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaFCOPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaFCO * * p );
+    HRESULT __Insert (
+        struct IMgaFCO * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaFCO * p );
+    long __Find (
+        struct IMgaFCO * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaFCO * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaFCO * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaFCO * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaFCO * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaFCO * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("11bb44d9-2e2c-11d3-b36d-0060082df884"))
+IMgaComponentEx : IMgaComponent
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetComponentProgID))
+    _bstr_t ComponentProgID;
+    __declspec(property(get=GetComponentParameter,put=PutComponentParameter))
+    _variant_t ComponentParameter[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __InvokeEx (
+        struct IMgaProject * Project,
+        struct IMgaFCO * currentobj,
+        struct IMgaFCOs * selectedobjs,
+        long param );
+    HRESULT __ObjectsInvokeEx (
+        struct IMgaProject * Project,
+        struct IMgaObject * currentobj,
+        struct IMgaObjects * selectedobjs,
+        long param );
+    _bstr_t GetComponentProgID ( );
+    void PutComponentParameter (
+        _bstr_t Name,
+        const _variant_t & pVal );
+    _variant_t GetComponentParameter (
+        _bstr_t Name );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall InvokeEx (
+        /*[in]*/ struct IMgaProject * Project,
+        /*[in]*/ struct IMgaFCO * currentobj,
+        /*[in,out]*/ struct IMgaFCOs * selectedobjs,
+        /*[in]*/ long param ) = 0;
+      virtual HRESULT __stdcall ObjectsInvokeEx (
+        /*[in]*/ struct IMgaProject * Project,
+        /*[in]*/ struct IMgaObject * currentobj,
+        /*[in,out]*/ struct IMgaObjects * selectedobjs,
+        /*[in]*/ long param ) = 0;
+      virtual HRESULT __stdcall get_ComponentProgID (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ComponentParameter (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_ComponentParameter (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+};
+
+struct __declspec(uuid("270b4f9c-b17c-11d3-9ad1-00aa00b6fe26"))
+IMgaAtom : IMgaFCO
+{};
+
+struct __declspec(uuid("83ba3235-b758-11d3-abae-000000000000"))
+IMgaSet : IMgaFCO
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMembers))
+    IMgaFCOsPtr Members;
+    __declspec(property(get=GetIsMember))
+    VARIANT_BOOL IsMember[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __AddMember (
+        struct IMgaFCO * mem );
+    HRESULT __RemoveMember (
+        struct IMgaFCO * member );
+    HRESULT __RemoveAll ( );
+    IMgaFCOsPtr GetMembers ( );
+    VARIANT_BOOL GetIsMember (
+        struct IMgaFCO * obj );
+    HRESULT __CompareToBase (
+        short * Status );
+    HRESULT __RevertToBase ( );
+    VARIANT_BOOL __GetIsMemberDisp (
+        struct IMgaFCO * obj );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall AddMember (
+        /*[in]*/ struct IMgaFCO * mem ) = 0;
+      virtual HRESULT __stdcall RemoveMember (
+        /*[in]*/ struct IMgaFCO * member ) = 0;
+      virtual HRESULT __stdcall RemoveAll ( ) = 0;
+      virtual HRESULT __stdcall get_Members (
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsMember (
+        /*[in]*/ struct IMgaFCO * obj,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall CompareToBase (
+        /*[out]*/ short * Status ) = 0;
+      virtual HRESULT __stdcall RevertToBase ( ) = 0;
+      virtual HRESULT __stdcall GetIsMemberDisp (
+        /*[in]*/ struct IMgaFCO * obj,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+};
+
+struct __declspec(uuid("270b4f9a-b17c-11d3-9ad1-00aa00b6fe26"))
+IMgaModel : IMgaFCO
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetChildRelIDCounter,put=PutChildRelIDCounter))
+    long ChildRelIDCounter;
+    __declspec(property(get=GetChildDerivedFrom))
+    IMgaFCOPtr ChildDerivedFrom[];
+    __declspec(property(get=GetAspectParts))
+    IMgaPartsPtr AspectParts[][];
+    __declspec(property(get=GetChildFCOs))
+    IMgaFCOsPtr ChildFCOs;
+    __declspec(property(get=GetChildFCO))
+    IMgaFCOPtr ChildFCO[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaFCOPtr __CreateChildObject (
+        struct IMgaMetaRole * Meta );
+    IMgaFCOPtr __DeriveChildObject (
+        struct IMgaFCO * base,
+        struct IMgaMetaRole * Role,
+        VARIANT_BOOL instance );
+    IMgaFCOPtr GetChildDerivedFrom (
+        struct IMgaFCO * baseobj );
+    IMgaFCOPtr __GetChildDerivedFromDisp (
+        struct IMgaFCO * baseobj );
+    IMgaPartsPtr GetAspectParts (
+        struct IMgaMetaAspect * asp,
+        unsigned int filter );
+    IMgaPartsPtr __GetAspectPartsDisp (
+        struct IMgaMetaAspect * asp,
+        unsigned int filter );
+    IMgaFCOPtr __CreateSimpleConn (
+        struct IMgaMetaRole * Meta,
+        struct IMgaFCO * Src,
+        struct IMgaFCO * Dst,
+        struct IMgaFCOs * srcrefs,
+        struct IMgaFCOs * dstrefs );
+    IMgaFCOPtr __CreateReference (
+        struct IMgaMetaRole * Meta,
+        struct IMgaFCO * Target );
+    IMgaFCOsPtr __AddInternalConnections (
+        struct IMgaFCOs * inobjs );
+    HRESULT __MoveFCOs (
+        struct IMgaFCOs * to_copy,
+        struct IMgaMetaRoles * destroles,
+        struct IMgaFCOs * * objs );
+    HRESULT __CopyFCOs (
+        struct IMgaFCOs * to_move,
+        struct IMgaMetaRoles * destroles,
+        struct IMgaFCOs * * objs );
+    IMgaFCOsPtr GetChildFCOs ( );
+    IMgaFCOPtr GetChildFCO (
+        _bstr_t Name );
+    IMgaFCOPtr __GetChildFCODisp (
+        _bstr_t Name );
+    IMgaFCOsPtr __GetDescendantFCOs (
+        struct IMgaFilter * filter );
+    IMgaFCOsPtr __GetChildrenOfKind (
+        _bstr_t kindname );
+    long GetChildRelIDCounter ( );
+    void PutChildRelIDCounter (
+        long pVal );
+    IMgaFCOPtr __CreateSimpleConnDisp (
+        struct IMgaMetaRole * Meta,
+        struct IMgaFCO * Src,
+        struct IMgaFCO * Dst,
+        struct IMgaFCO * Srcref,
+        struct IMgaFCO * Dstref );
+    IMgaFCOPtr __CreateSimplerConnDisp (
+        struct IMgaMetaRole * Meta,
+        struct IMgaFCO * Src,
+        struct IMgaFCO * Dst );
+    IMgaFCOPtr __MoveFCODisp (
+        struct IMgaFCO * to_copy,
+        struct IMgaMetaRole * destrole );
+    IMgaFCOPtr __CopyFCODisp (
+        struct IMgaFCO * to_move,
+        struct IMgaMetaRole * destrole );
+    long __GetSourceControlInfo ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall CreateChildObject (
+        /*[in]*/ struct IMgaMetaRole * Meta,
+        /*[out,retval]*/ struct IMgaFCO * * newobj ) = 0;
+      virtual HRESULT __stdcall DeriveChildObject (
+        /*[in]*/ struct IMgaFCO * base,
+        /*[in]*/ struct IMgaMetaRole * Role,
+        /*[in]*/ VARIANT_BOOL instance,
+        /*[out,retval]*/ struct IMgaFCO * * newobj ) = 0;
+      virtual HRESULT __stdcall get_ChildDerivedFrom (
+        /*[in]*/ struct IMgaFCO * baseobj,
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall GetChildDerivedFromDisp (
+        /*[in]*/ struct IMgaFCO * baseobj,
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_AspectParts (
+        /*[in]*/ struct IMgaMetaAspect * asp,
+        /*[in]*/ unsigned int filter,
+        /*[out,retval]*/ struct IMgaParts * * pVal ) = 0;
+      virtual HRESULT __stdcall GetAspectPartsDisp (
+        /*[in]*/ struct IMgaMetaAspect * asp,
+        /*[in]*/ unsigned int filter,
+        /*[out,retval]*/ struct IMgaParts * * pVal ) = 0;
+      virtual HRESULT __stdcall CreateSimpleConn (
+        /*[in]*/ struct IMgaMetaRole * Meta,
+        /*[in]*/ struct IMgaFCO * Src,
+        /*[in]*/ struct IMgaFCO * Dst,
+        /*[in]*/ struct IMgaFCOs * srcrefs,
+        /*[in]*/ struct IMgaFCOs * dstrefs,
+        /*[out,retval]*/ struct IMgaFCO * * newobj ) = 0;
+      virtual HRESULT __stdcall CreateReference (
+        /*[in]*/ struct IMgaMetaRole * Meta,
+        /*[in]*/ struct IMgaFCO * Target,
+        /*[out,retval]*/ struct IMgaFCO * * newobj ) = 0;
+      virtual HRESULT __stdcall AddInternalConnections (
+        /*[in]*/ struct IMgaFCOs * inobjs,
+        /*[out,retval]*/ struct IMgaFCOs * * outobjs ) = 0;
+      virtual HRESULT __stdcall MoveFCOs (
+        /*[in]*/ struct IMgaFCOs * to_copy,
+        /*[in]*/ struct IMgaMetaRoles * destroles,
+        /*[out]*/ struct IMgaFCOs * * objs ) = 0;
+      virtual HRESULT __stdcall CopyFCOs (
+        /*[in]*/ struct IMgaFCOs * to_move,
+        /*[in]*/ struct IMgaMetaRoles * destroles,
+        /*[out]*/ struct IMgaFCOs * * objs ) = 0;
+      virtual HRESULT __stdcall get_ChildFCOs (
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ChildFCO (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall GetChildFCODisp (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall GetDescendantFCOs (
+        /*[in]*/ struct IMgaFilter * filter,
+        /*[out,retval]*/ struct IMgaFCOs * * returnset ) = 0;
+      virtual HRESULT __stdcall GetChildrenOfKind (
+        /*[in]*/ BSTR kindname,
+        /*[out,retval]*/ struct IMgaFCOs * * returnset ) = 0;
+      virtual HRESULT __stdcall get_ChildRelIDCounter (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_ChildRelIDCounter (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall CreateSimpleConnDisp (
+        /*[in]*/ struct IMgaMetaRole * Meta,
+        /*[in]*/ struct IMgaFCO * Src,
+        /*[in]*/ struct IMgaFCO * Dst,
+        /*[in]*/ struct IMgaFCO * Srcref,
+        /*[in]*/ struct IMgaFCO * Dstref,
+        /*[out,retval]*/ struct IMgaFCO * * newobj ) = 0;
+      virtual HRESULT __stdcall CreateSimplerConnDisp (
+        /*[in]*/ struct IMgaMetaRole * Meta,
+        /*[in]*/ struct IMgaFCO * Src,
+        /*[in]*/ struct IMgaFCO * Dst,
+        /*[out,retval]*/ struct IMgaFCO * * newobj ) = 0;
+      virtual HRESULT __stdcall MoveFCODisp (
+        /*[in]*/ struct IMgaFCO * to_copy,
+        /*[in]*/ struct IMgaMetaRole * destrole,
+        /*[out,retval]*/ struct IMgaFCO * * obj ) = 0;
+      virtual HRESULT __stdcall CopyFCODisp (
+        /*[in]*/ struct IMgaFCO * to_move,
+        /*[in]*/ struct IMgaMetaRole * destrole,
+        /*[out,retval]*/ struct IMgaFCO * * obj ) = 0;
+      virtual HRESULT __stdcall GetSourceControlInfo (
+        /*[out,retval]*/ long * scInfo ) = 0;
+};
+
+struct __declspec(uuid("c71a26f0-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaParts : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaPartPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaPartPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaPart * * p );
+    HRESULT __Insert (
+        struct IMgaPart * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaPart * p );
+    long __Find (
+        struct IMgaPart * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaPart * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaPart * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaPart * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaPart * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaPart * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("270b4f9e-b17c-11d3-9ad1-00aa00b6fe26"))
+IMgaPart : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetModel))
+    IMgaModelPtr Model;
+    __declspec(property(get=GetMeta))
+    IMgaMetaPartPtr Meta;
+    __declspec(property(get=GetMetaAspect))
+    IMgaMetaAspectPtr MetaAspect;
+    __declspec(property(get=GetMetaRole))
+    IMgaMetaRolePtr MetaRole;
+    __declspec(property(get=GetFCO))
+    IMgaFCOPtr FCO;
+    __declspec(property(get=GetAccessMask))
+    long AccessMask;
+    __declspec(property(get=GetRegistryMode,put=PutRegistryMode))
+    VARIANT_BOOL RegistryMode;
+    __declspec(property(get=GetRegistryNode))
+    IMgaRegNodePtr RegistryNode[];
+    __declspec(property(get=GetRegistry))
+    IMgaRegNodesPtr Registry[];
+    __declspec(property(get=GetRegistryValue,put=PutRegistryValue))
+    _bstr_t RegistryValue[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaModelPtr GetModel ( );
+    IMgaMetaPartPtr GetMeta ( );
+    IMgaMetaAspectPtr GetMetaAspect ( );
+    IMgaMetaRolePtr GetMetaRole ( );
+    IMgaFCOPtr GetFCO ( );
+    long GetAccessMask ( );
+    VARIANT_BOOL GetRegistryMode ( );
+    void PutRegistryMode (
+        VARIANT_BOOL own );
+    IMgaRegNodePtr GetRegistryNode (
+        _bstr_t Path );
+    IMgaRegNodePtr __GetRegistryNodeDisp (
+        _bstr_t Path );
+    IMgaRegNodesPtr GetRegistry (
+        VARIANT_BOOL virtuals );
+    IMgaRegNodesPtr __GetRegistryDisp (
+        VARIANT_BOOL virtuals );
+    _bstr_t GetRegistryValue (
+        _bstr_t Path );
+    void PutRegistryValue (
+        _bstr_t Path,
+        _bstr_t pVal );
+    _bstr_t __GetRegistryValueDisp (
+        _bstr_t Path );
+    HRESULT __SetRegistryValueDisp (
+        _bstr_t Path,
+        _bstr_t newval );
+    HRESULT __GetGmeAttrs (
+        BSTR * Icon,
+        long * xpos,
+        long * ypos );
+    HRESULT __SetGmeAttrs (
+        _bstr_t Icon,
+        long xpos,
+        long ypos );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Model (
+        /*[out,retval]*/ struct IMgaModel * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Meta (
+        /*[out,retval]*/ struct IMgaMetaPart * * pVal ) = 0;
+      virtual HRESULT __stdcall get_MetaAspect (
+        /*[out,retval]*/ struct IMgaMetaAspect * * pVal ) = 0;
+      virtual HRESULT __stdcall get_MetaRole (
+        /*[out,retval]*/ struct IMgaMetaRole * * pVal ) = 0;
+      virtual HRESULT __stdcall get_FCO (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_AccessMask (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_RegistryMode (
+        /*[out,retval]*/ VARIANT_BOOL * own ) = 0;
+      virtual HRESULT __stdcall put_RegistryMode (
+        /*[in]*/ VARIANT_BOOL own ) = 0;
+      virtual HRESULT __stdcall get_RegistryNode (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryNodeDisp (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Registry (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryDisp (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * pVal ) = 0;
+      virtual HRESULT __stdcall get_RegistryValue (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_RegistryValue (
+        /*[in]*/ BSTR Path,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryValueDisp (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall SetRegistryValueDisp (
+        /*[in]*/ BSTR Path,
+        /*[in]*/ BSTR newval ) = 0;
+      virtual HRESULT __stdcall GetGmeAttrs (
+        /*[out]*/ BSTR * Icon,
+        /*[out]*/ long * xpos,
+        /*[out]*/ long * ypos ) = 0;
+      virtual HRESULT __stdcall SetGmeAttrs (
+        /*[in]*/ BSTR Icon,
+        /*[in]*/ long xpos,
+        /*[in]*/ long ypos ) = 0;
+};
+
+struct __declspec(uuid("83ba323d-b758-11d3-abae-000000000000"))
+IMgaRegNode : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetPath))
+    _bstr_t Path;
+    __declspec(property(get=GetValue,put=PutValue))
+    _bstr_t Value;
+    __declspec(property(get=GetFCOValue,put=PutFCOValue))
+    IMgaFCOPtr FCOValue;
+    __declspec(property(get=GetSubNodes))
+    IMgaRegNodesPtr SubNodes[];
+    __declspec(property(get=GetSubNodeByName))
+    IMgaRegNodePtr SubNodeByName[];
+    __declspec(property(get=GetParentNode))
+    IMgaRegNodePtr ParentNode;
+    __declspec(property(get=GetOpacity,put=PutOpacity))
+    VARIANT_BOOL Opacity;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    _bstr_t GetPath ( );
+    _bstr_t GetValue ( );
+    void PutValue (
+        _bstr_t pVal );
+    IMgaFCOPtr GetFCOValue ( );
+    void PutFCOValue (
+        struct IMgaFCO * pVal );
+    IMgaRegNodesPtr GetSubNodes (
+        VARIANT_BOOL virtuals );
+    IMgaRegNodesPtr __GetSubNodesDisp (
+        VARIANT_BOOL virtuals );
+    IMgaRegNodePtr GetSubNodeByName (
+        _bstr_t Name );
+    IMgaRegNodePtr __GetSubNodeByNameDisp (
+        _bstr_t Name );
+    IMgaRegNodePtr GetParentNode ( );
+    void GetStatus (
+        long * Status );
+    VARIANT_BOOL GetOpacity ( );
+    void PutOpacity (
+        VARIANT_BOOL p );
+    HRESULT __Clear ( );
+    HRESULT __RemoveTree ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Path (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Value (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Value (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_FCOValue (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall put_FCOValue (
+        /*[in]*/ struct IMgaFCO * pVal ) = 0;
+      virtual HRESULT __stdcall get_SubNodes (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * p ) = 0;
+      virtual HRESULT __stdcall GetSubNodesDisp (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * p ) = 0;
+      virtual HRESULT __stdcall get_SubNodeByName (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall GetSubNodeByNameDisp (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ParentNode (
+        /*[out,retval]*/ struct IMgaRegNode * * p ) = 0;
+      virtual HRESULT __stdcall get_Status (
+        /*[out]*/ long * Status ) = 0;
+      virtual HRESULT __stdcall get_Opacity (
+        /*[out,retval]*/ VARIANT_BOOL * p ) = 0;
+      virtual HRESULT __stdcall put_Opacity (
+        /*[in]*/ VARIANT_BOOL p ) = 0;
+      virtual HRESULT __stdcall Clear ( ) = 0;
+      virtual HRESULT __stdcall RemoveTree ( ) = 0;
+};
+
+struct __declspec(uuid("c79f1840-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaRegNodes : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaRegNodePtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaRegNodePtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaRegNode * * p );
+    HRESULT __Insert (
+        struct IMgaRegNode * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaRegNode * p );
+    long __Find (
+        struct IMgaRegNode * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaRegNode * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaRegNode * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaRegNode * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaRegNode * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaRegNode * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("cbf20084-bd43-11d3-9ad2-00aa00b6fe26"))
+IMgaAttribute : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMeta))
+    IMgaMetaAttributePtr Meta;
+    __declspec(property(get=GetValue,put=PutValue))
+    _variant_t Value;
+    __declspec(property(get=GetOwner))
+    IMgaFCOPtr Owner;
+    __declspec(property(get=GetStatus))
+    long Status;
+    __declspec(property(get=GetOrigValue))
+    _variant_t OrigValue;
+    __declspec(property(get=GetHasChanged))
+    VARIANT_BOOL HasChanged;
+    __declspec(property(get=GetStringValue,put=PutStringValue))
+    _bstr_t StringValue;
+    __declspec(property(get=GetIntValue,put=PutIntValue))
+    long IntValue;
+    __declspec(property(get=GetBoolValue,put=PutBoolValue))
+    VARIANT_BOOL BoolValue;
+    __declspec(property(get=GetFloatValue,put=PutFloatValue))
+    double FloatValue;
+    __declspec(property(get=GetFCOValue,put=PutFCOValue))
+    IMgaFCOPtr FCOValue;
+    __declspec(property(get=GetRegistryNode))
+    IMgaRegNodePtr RegistryNode[];
+    __declspec(property(get=GetRegistry))
+    IMgaRegNodesPtr Registry[];
+    __declspec(property(get=GetRegistryValue,put=PutRegistryValue))
+    _bstr_t RegistryValue[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaMetaAttributePtr GetMeta ( );
+    _variant_t GetValue ( );
+    void PutValue (
+        const _variant_t & pVal );
+    IMgaFCOPtr GetOwner ( );
+    long GetStatus ( );
+    _variant_t GetOrigValue ( );
+    VARIANT_BOOL GetHasChanged ( );
+    _bstr_t GetStringValue ( );
+    void PutStringValue (
+        _bstr_t pVal );
+    long GetIntValue ( );
+    void PutIntValue (
+        long pVal );
+    VARIANT_BOOL GetBoolValue ( );
+    void PutBoolValue (
+        VARIANT_BOOL pVal );
+    double GetFloatValue ( );
+    void PutFloatValue (
+        double pVal );
+    IMgaFCOPtr GetFCOValue ( );
+    void PutFCOValue (
+        struct IMgaFCO * pVal );
+    IMgaRegNodePtr GetRegistryNode (
+        _bstr_t Path );
+    IMgaRegNodePtr __GetRegistryNodeDisp (
+        _bstr_t Path );
+    IMgaRegNodesPtr GetRegistry (
+        VARIANT_BOOL virtuals );
+    IMgaRegNodesPtr __GetRegistryDisp (
+        VARIANT_BOOL virtuals );
+    _bstr_t GetRegistryValue (
+        _bstr_t Path );
+    void PutRegistryValue (
+        _bstr_t Path,
+        _bstr_t pVal );
+    _bstr_t __GetRegistryValueDisp (
+        _bstr_t Path );
+    HRESULT __SetRegistryValueDisp (
+        _bstr_t Path,
+        _bstr_t newval );
+    HRESULT __Clear ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Meta (
+        /*[out,retval]*/ struct IMgaMetaAttribute * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Value (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_Value (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_Owner (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Status (
+        /*[out,retval]*/ long * Status ) = 0;
+      virtual HRESULT __stdcall get_OrigValue (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_HasChanged (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_StringValue (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_StringValue (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_IntValue (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_IntValue (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_BoolValue (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_BoolValue (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_FloatValue (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_FloatValue (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_FCOValue (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall put_FCOValue (
+        /*[in]*/ struct IMgaFCO * pVal ) = 0;
+      virtual HRESULT __stdcall get_RegistryNode (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryNodeDisp (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Registry (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryDisp (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * pVal ) = 0;
+      virtual HRESULT __stdcall get_RegistryValue (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_RegistryValue (
+        /*[in]*/ BSTR Path,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryValueDisp (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall SetRegistryValueDisp (
+        /*[in]*/ BSTR Path,
+        /*[in]*/ BSTR newval ) = 0;
+      virtual HRESULT __stdcall Clear ( ) = 0;
+};
+
+struct __declspec(uuid("c6f3f340-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaAttributes : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaAttributePtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaAttributePtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaAttribute * * p );
+    HRESULT __Insert (
+        struct IMgaAttribute * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaAttribute * p );
+    long __Find (
+        struct IMgaAttribute * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaAttribute * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaAttribute * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaAttribute * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("270b4f96-b17c-11d3-9ad1-00aa00b6fe26"))
+IMgaFolder : IMgaObject
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMetaFolder))
+    IMgaMetaFolderPtr MetaFolder;
+    __declspec(property(get=GetParentFolder))
+    IMgaFolderPtr ParentFolder;
+    __declspec(property(get=GetChildFolders))
+    IMgaFoldersPtr ChildFolders;
+    __declspec(property(get=GetRegistryNode))
+    IMgaRegNodePtr RegistryNode[];
+    __declspec(property(get=GetRegistry))
+    IMgaRegNodesPtr Registry[];
+    __declspec(property(get=GetRegistryValue,put=PutRegistryValue))
+    _bstr_t RegistryValue[];
+    __declspec(property(get=GetConstraints))
+    IMgaConstraintsPtr Constraints[];
+    __declspec(property(get=GetChildRelIDCounter,put=PutChildRelIDCounter))
+    long ChildRelIDCounter;
+    __declspec(property(get=GetLibraryName,put=PutLibraryName))
+    _bstr_t LibraryName;
+    __declspec(property(get=GetChildFCOs))
+    IMgaFCOsPtr ChildFCOs;
+    __declspec(property(get=GetChildFCO))
+    IMgaFCOPtr ChildFCO[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaMetaFolderPtr GetMetaFolder ( );
+    IMgaFolderPtr GetParentFolder ( );
+    IMgaFoldersPtr GetChildFolders ( );
+    IMgaFolderPtr __CreateFolder (
+        struct IMgaMetaFolder * Meta );
+    IMgaFCOPtr __CreateRootObject (
+        struct IMgaMetaFCO * Meta );
+    IMgaFCOPtr __DeriveRootObject (
+        struct IMgaFCO * base,
+        VARIANT_BOOL instance );
+    IMgaRegNodePtr GetRegistryNode (
+        _bstr_t Path );
+    IMgaRegNodePtr __GetRegistryNodeDisp (
+        _bstr_t Path );
+    IMgaRegNodesPtr GetRegistry (
+        VARIANT_BOOL virtuals );
+    IMgaRegNodesPtr __GetRegistryDisp (
+        VARIANT_BOOL virtuals );
+    _bstr_t GetRegistryValue (
+        _bstr_t Path );
+    _bstr_t __GetRegistryValueDisp (
+        _bstr_t Path );
+    void PutRegistryValue (
+        _bstr_t Path,
+        _bstr_t pVal );
+    HRESULT __SetRegistryValueDisp (
+        _bstr_t Path,
+        _bstr_t newval );
+    IMgaConstraintsPtr GetConstraints (
+        VARIANT_BOOL includemeta );
+    IMgaConstraintsPtr __GetConstraintsDisp (
+        VARIANT_BOOL includemeta );
+    HRESULT __AddConstraint (
+        struct IMgaConstraint * constraint );
+    HRESULT __DefineConstraint (
+        _bstr_t Name,
+        long mask,
+        _bstr_t expr,
+        struct IMgaConstraint * * nconstraint );
+    HRESULT __MoveFCOs (
+        struct IMgaFCOs * to_copy,
+        struct IMgaFCOs * * objs );
+    HRESULT __CopyFCOs (
+        struct IMgaFCOs * to_move,
+        struct IMgaFCOs * * objs );
+    HRESULT __MoveFolders (
+        struct IMgaFolders * to_copy,
+        struct IMgaFolders * * objs );
+    HRESULT __CopyFolders (
+        struct IMgaFolders * to_move,
+        struct IMgaFolders * * objs );
+    HRESULT __RefreshParent (
+        struct IMgaFolder * folder );
+    IMgaFCOsPtr GetChildFCOs ( );
+    IMgaFCOPtr GetChildFCO (
+        _bstr_t Name );
+    IMgaFCOPtr __GetChildFCODisp (
+        _bstr_t Name );
+    IMgaFCOsPtr __GetDescendantFCOs (
+        struct IMgaFilter * filter );
+    IMgaFCOsPtr __GetChildrenOfKind (
+        _bstr_t kindname );
+    long GetChildRelIDCounter ( );
+    void PutChildRelIDCounter (
+        long pVal );
+    HRESULT __AttachLibrary (
+        _bstr_t connstring,
+        struct IMgaFolder * * nf );
+    HRESULT __RefreshLibrary (
+        _bstr_t connstring );
+    _bstr_t GetLibraryName ( );
+    void PutLibraryName (
+        _bstr_t connstring );
+    IMgaFolderPtr __AttachLibraryV3 (
+        _bstr_t connstring,
+        VARIANT_BOOL ungroup );
+    long __RefreshLibraryV3 (
+        _bstr_t connstring,
+        VARIANT_BOOL ungroup );
+    IMgaFoldersPtr __GetVirtuallyIncludes ( );
+    IMgaFoldersPtr __GetVirtuallyIncludedBy ( );
+    HRESULT __SetVirtuallyIncludes (
+        struct IMgaFolders * pDep );
+    HRESULT __SetVirtuallyIncludedBy (
+        struct IMgaFolders * pDep );
+    IMgaFCOPtr __MoveFCODisp (
+        struct IMgaFCO * to_copy );
+    IMgaFCOPtr __CopyFCODisp (
+        struct IMgaFCO * to_move );
+    IMgaFolderPtr __MoveFolderDisp (
+        struct IMgaFolder * to_copy );
+    IMgaFolderPtr __CopyFolderDisp (
+        struct IMgaFolder * to_move );
+    long __GetSourceControlInfo ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_MetaFolder (
+        /*[out,retval]*/ struct IMgaMetaFolder * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ParentFolder (
+        /*[out,retval]*/ struct IMgaFolder * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ChildFolders (
+        /*[out,retval]*/ struct IMgaFolders * * pVal ) = 0;
+      virtual HRESULT __stdcall CreateFolder (
+        /*[in]*/ struct IMgaMetaFolder * Meta,
+        /*[out,retval]*/ struct IMgaFolder * * nf ) = 0;
+      virtual HRESULT __stdcall CreateRootObject (
+        /*[in]*/ struct IMgaMetaFCO * Meta,
+        /*[out,retval]*/ struct IMgaFCO * * nobj ) = 0;
+      virtual HRESULT __stdcall DeriveRootObject (
+        /*[in]*/ struct IMgaFCO * base,
+        /*[in]*/ VARIANT_BOOL instance,
+        /*[out,retval]*/ struct IMgaFCO * * nobj ) = 0;
+      virtual HRESULT __stdcall get_RegistryNode (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryNodeDisp (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ struct IMgaRegNode * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Registry (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryDisp (
+        /*[in]*/ VARIANT_BOOL virtuals,
+        /*[out,retval]*/ struct IMgaRegNodes * * pVal ) = 0;
+      virtual HRESULT __stdcall get_RegistryValue (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall GetRegistryValueDisp (
+        /*[in]*/ BSTR Path,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_RegistryValue (
+        /*[in]*/ BSTR Path,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall SetRegistryValueDisp (
+        /*[in]*/ BSTR Path,
+        /*[in]*/ BSTR newval ) = 0;
+      virtual HRESULT __stdcall get_Constraints (
+        /*[in]*/ VARIANT_BOOL includemeta,
+        /*[out,retval]*/ struct IMgaConstraints * * pVal ) = 0;
+      virtual HRESULT __stdcall GetConstraintsDisp (
+        /*[in]*/ VARIANT_BOOL includemeta,
+        /*[out,retval]*/ struct IMgaConstraints * * pVal ) = 0;
+      virtual HRESULT __stdcall AddConstraint (
+        /*[in]*/ struct IMgaConstraint * constraint ) = 0;
+      virtual HRESULT __stdcall DefineConstraint (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ long mask,
+        /*[in]*/ BSTR expr,
+        /*[out]*/ struct IMgaConstraint * * nconstraint ) = 0;
+      virtual HRESULT __stdcall MoveFCOs (
+        /*[in]*/ struct IMgaFCOs * to_copy,
+        /*[out]*/ struct IMgaFCOs * * objs ) = 0;
+      virtual HRESULT __stdcall CopyFCOs (
+        /*[in]*/ struct IMgaFCOs * to_move,
+        /*[out]*/ struct IMgaFCOs * * objs ) = 0;
+      virtual HRESULT __stdcall MoveFolders (
+        /*[in]*/ struct IMgaFolders * to_copy,
+        /*[out]*/ struct IMgaFolders * * objs ) = 0;
+      virtual HRESULT __stdcall CopyFolders (
+        /*[in]*/ struct IMgaFolders * to_move,
+        /*[out]*/ struct IMgaFolders * * objs ) = 0;
+      virtual HRESULT __stdcall RefreshParent (
+        /*[in]*/ struct IMgaFolder * folder ) = 0;
+      virtual HRESULT __stdcall get_ChildFCOs (
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ChildFCO (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall GetChildFCODisp (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall GetDescendantFCOs (
+        /*[in]*/ struct IMgaFilter * filter,
+        /*[out,retval]*/ struct IMgaFCOs * * returnset ) = 0;
+      virtual HRESULT __stdcall GetChildrenOfKind (
+        /*[in]*/ BSTR kindname,
+        /*[out,retval]*/ struct IMgaFCOs * * returnset ) = 0;
+      virtual HRESULT __stdcall get_ChildRelIDCounter (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_ChildRelIDCounter (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall AttachLibrary (
+        /*[in]*/ BSTR connstring,
+        /*[out]*/ struct IMgaFolder * * nf ) = 0;
+      virtual HRESULT __stdcall RefreshLibrary (
+        /*[in]*/ BSTR connstring ) = 0;
+      virtual HRESULT __stdcall get_LibraryName (
+        /*[out,retval]*/ BSTR * connstring ) = 0;
+      virtual HRESULT __stdcall put_LibraryName (
+        /*[in]*/ BSTR connstring ) = 0;
+      virtual HRESULT __stdcall AttachLibraryV3 (
+        /*[in]*/ BSTR connstring,
+        /*[in]*/ VARIANT_BOOL ungroup,
+        /*[out,retval]*/ struct IMgaFolder * * nf ) = 0;
+      virtual HRESULT __stdcall RefreshLibraryV3 (
+        /*[in]*/ BSTR connstring,
+        /*[in]*/ VARIANT_BOOL ungroup,
+        /*[out,retval]*/ long * numOfErrors ) = 0;
+      virtual HRESULT __stdcall GetVirtuallyIncludes (
+        /*[out,retval]*/ struct IMgaFolders * * pDep ) = 0;
+      virtual HRESULT __stdcall GetVirtuallyIncludedBy (
+        /*[out,retval]*/ struct IMgaFolders * * pDep ) = 0;
+      virtual HRESULT __stdcall SetVirtuallyIncludes (
+        /*[in]*/ struct IMgaFolders * pDep ) = 0;
+      virtual HRESULT __stdcall SetVirtuallyIncludedBy (
+        /*[in]*/ struct IMgaFolders * pDep ) = 0;
+      virtual HRESULT __stdcall MoveFCODisp (
+        /*[in]*/ struct IMgaFCO * to_copy,
+        /*[out,retval]*/ struct IMgaFCO * * obj ) = 0;
+      virtual HRESULT __stdcall CopyFCODisp (
+        /*[in]*/ struct IMgaFCO * to_move,
+        /*[out,retval]*/ struct IMgaFCO * * obj ) = 0;
+      virtual HRESULT __stdcall MoveFolderDisp (
+        /*[in]*/ struct IMgaFolder * to_copy,
+        /*[out,retval]*/ struct IMgaFolder * * obj ) = 0;
+      virtual HRESULT __stdcall CopyFolderDisp (
+        /*[in]*/ struct IMgaFolder * to_move,
+        /*[out,retval]*/ struct IMgaFolder * * obj ) = 0;
+      virtual HRESULT __stdcall GetSourceControlInfo (
+        /*[out,retval]*/ long * scInfo ) = 0;
+};
+
+struct __declspec(uuid("c59c2210-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaFolders : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaFolderPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaFolderPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaFolder * * p );
+    HRESULT __Insert (
+        struct IMgaFolder * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaFolder * p );
+    long __Find (
+        struct IMgaFolder * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaFolder * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaFolder * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaFolder * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaFolder * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaFolder * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("c7f19c60-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaConnPoints : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetItem))
+    IMgaConnPointPtr Item[];
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IMgaConnPointPtr GetItem (
+        long n );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT __GetAll (
+        long Count,
+        struct IMgaConnPoint * * p );
+    HRESULT __Insert (
+        struct IMgaConnPoint * p,
+        long at );
+    HRESULT __Append (
+        struct IMgaConnPoint * p );
+    long __Find (
+        struct IMgaConnPoint * p,
+        long start );
+    HRESULT __Remove (
+        long n );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * p ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long n,
+        /*[out,retval]*/ struct IMgaConnPoint * * p ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall GetAll (
+        /*[in]*/ long Count,
+        /*[out]*/ struct IMgaConnPoint * * p ) = 0;
+      virtual HRESULT __stdcall Insert (
+        /*[in]*/ struct IMgaConnPoint * p,
+        /*[in]*/ long at ) = 0;
+      virtual HRESULT __stdcall Append (
+        /*[in]*/ struct IMgaConnPoint * p ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ struct IMgaConnPoint * p,
+        /*[in]*/ long start,
+        /*[out,retval]*/ long * res ) = 0;
+      virtual HRESULT __stdcall Remove (
+        /*[in]*/ long n ) = 0;
+};
+
+struct __declspec(uuid("83ba3233-b758-11d3-abae-000000000000"))
+IMgaReference : IMgaFCO
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetReferred,put=PutReferred))
+    IMgaFCOPtr Referred;
+    __declspec(property(get=GetRefAspect,put=PutRefAspect))
+    IMgaMetaAspectPtr RefAspect;
+    __declspec(property(get=GetUsedByConns))
+    IMgaConnPointsPtr UsedByConns;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaFCOPtr GetReferred ( );
+    void PutReferred (
+        struct IMgaFCO * pVal );
+    IMgaMetaAspectPtr GetRefAspect ( );
+    void PutRefAspect (
+        struct IMgaMetaAspect * pVal );
+    IMgaConnPointsPtr GetUsedByConns ( );
+    HRESULT __CompareToBase (
+        short * Status );
+    HRESULT __RevertToBase ( );
+    HRESULT __ClearRef ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Referred (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall put_Referred (
+        /*[in]*/ struct IMgaFCO * pVal ) = 0;
+      virtual HRESULT __stdcall get_RefAspect (
+        /*[out,retval]*/ struct IMgaMetaAspect * * pVal ) = 0;
+      virtual HRESULT __stdcall put_RefAspect (
+        /*[in]*/ struct IMgaMetaAspect * pVal ) = 0;
+      virtual HRESULT __stdcall get_UsedByConns (
+        /*[out,retval]*/ struct IMgaConnPoints * * pVal ) = 0;
+      virtual HRESULT __stdcall CompareToBase (
+        /*[out]*/ short * Status ) = 0;
+      virtual HRESULT __stdcall RevertToBase ( ) = 0;
+      virtual HRESULT __stdcall ClearRef ( ) = 0;
+};
+
+struct __declspec(uuid("cb8fa000-c1fd-11d3-9ad2-00aa00b6fe26"))
+IMgaConnPoint : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetOwner))
+    IMgaConnectionPtr Owner;
+    __declspec(property(get=GetConnRole,put=PutConnRole))
+    _bstr_t ConnRole;
+    __declspec(property(get=GetTarget))
+    IMgaFCOPtr Target;
+    __declspec(property(get=GetReferences))
+    IMgaFCOsPtr References;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaConnectionPtr GetOwner ( );
+    _bstr_t GetConnRole ( );
+    void PutConnRole (
+        _bstr_t pVal );
+    IMgaFCOPtr GetTarget ( );
+    IMgaFCOsPtr GetReferences ( );
+    HRESULT __Remove ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Owner (
+        /*[out,retval]*/ struct IMgaConnection * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ConnRole (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ConnRole (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Target (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_References (
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall Remove ( ) = 0;
+};
+
+struct __declspec(uuid("270b4fa0-b17c-11d3-9ad1-00aa00b6fe26"))
+IMgaConnection : IMgaFCO
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetConnPoints))
+    IMgaConnPointsPtr ConnPoints;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __AddConnPoint (
+        _bstr_t rolename,
+        long maxinrole,
+        struct IMgaFCO * Target,
+        struct IMgaFCOs * refs,
+        struct IMgaConnPoint * * pVal );
+    IMgaConnPointsPtr GetConnPoints ( );
+    HRESULT __CompareToBase (
+        struct IMgaConnPoint * connpoint,
+        short * Status );
+    HRESULT __RevertToBase (
+        struct IMgaConnPoint * connpoint );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall AddConnPoint (
+        /*[in]*/ BSTR rolename,
+        /*[in]*/ long maxinrole,
+        /*[in]*/ struct IMgaFCO * Target,
+        /*[in]*/ struct IMgaFCOs * refs,
+        /*[out]*/ struct IMgaConnPoint * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ConnPoints (
+        /*[out,retval]*/ struct IMgaConnPoints * * pVal ) = 0;
+      virtual HRESULT __stdcall CompareToBase (
+        /*[in]*/ struct IMgaConnPoint * connpoint,
+        /*[out]*/ short * Status ) = 0;
+      virtual HRESULT __stdcall RevertToBase (
+        /*[in]*/ struct IMgaConnPoint * connpoint ) = 0;
+};
+
+struct __declspec(uuid("83ba3237-b758-11d3-abae-000000000000"))
+IMgaSimpleConnection : IMgaConnection
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetSrc))
+    IMgaFCOPtr Src;
+    __declspec(property(get=GetDst))
+    IMgaFCOPtr Dst;
+    __declspec(property(get=GetSrcReferences))
+    IMgaFCOsPtr SrcReferences;
+    __declspec(property(get=GetDstReferences))
+    IMgaFCOsPtr DstReferences;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaFCOPtr GetSrc ( );
+    IMgaFCOPtr GetDst ( );
+    IMgaFCOsPtr GetSrcReferences ( );
+    IMgaFCOsPtr GetDstReferences ( );
+    HRESULT __SetDst (
+        struct IMgaFCOs * References,
+        struct IMgaFCO * Target );
+    HRESULT __SetSrc (
+        struct IMgaFCOs * References,
+        struct IMgaFCO * Target );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Src (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Dst (
+        /*[out,retval]*/ struct IMgaFCO * * pVal ) = 0;
+      virtual HRESULT __stdcall get_SrcReferences (
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall get_DstReferences (
+        /*[out,retval]*/ struct IMgaFCOs * * pVal ) = 0;
+      virtual HRESULT __stdcall SetDst (
+        /*[in]*/ struct IMgaFCOs * References,
+        /*[in]*/ struct IMgaFCO * Target ) = 0;
+      virtual HRESULT __stdcall SetSrc (
+        /*[in]*/ struct IMgaFCOs * References,
+        /*[in]*/ struct IMgaFCO * Target ) = 0;
+};
+
+#pragma pack(pop)

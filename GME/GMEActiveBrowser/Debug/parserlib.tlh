@@ -1,0 +1,338 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (05116817).
+//
+// c:\users\69038\documents\gme-21.4.1_src\gme\gmeactivebrowser\debug\parserlib.tlh
+//
+// C++ source equivalent of Win32 type library ParserLib.tlb
+// compiler-generated file created 01/19/24 at 15:48:35 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("70c41b15-e3ce-11d3-b37a-005004d38590"))
+/* LIBID */ __MGAParserLib;
+enum inserttype_enum;
+struct /* coclass */ MgaMetaParser;
+struct __declspec(uuid("70c41b24-e3ce-11d3-b37a-005004d38590"))
+/* dual interface */ IMgaMetaParser;
+struct /* coclass */ MgaDumper;
+struct __declspec(uuid("3813768b-5a4c-477d-bcd5-1776089948ec"))
+/* dual interface */ IMgaDumper2;
+struct __declspec(uuid("a5d0dae6-16ee-11d4-b3c2-005004d38590"))
+/* dual interface */ IMgaDumper;
+struct /* coclass */ MgaParser;
+struct __declspec(uuid("5cab528b-474b-4c52-be40-74ff29afbb58"))
+/* dual interface */ IMgaParser3;
+struct __declspec(uuid("e39bea37-384d-423b-addf-2bb13550f577"))
+/* dual interface */ IMgaParser2;
+struct __declspec(uuid("94d6fb53-1f7c-11d4-b3d0-005004d38590"))
+/* dual interface */ IMgaParser;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IMgaMetaParser, __uuidof(IMgaMetaParser));
+_COM_SMARTPTR_TYPEDEF(IMgaDumper, __uuidof(IMgaDumper));
+_COM_SMARTPTR_TYPEDEF(IMgaDumper2, __uuidof(IMgaDumper2));
+_COM_SMARTPTR_TYPEDEF(IMgaParser, __uuidof(IMgaParser));
+_COM_SMARTPTR_TYPEDEF(IMgaParser2, __uuidof(IMgaParser2));
+_COM_SMARTPTR_TYPEDEF(IMgaParser3, __uuidof(IMgaParser3));
+
+//
+// Type library items
+//
+
+enum inserttype_enum
+{
+    ADDITION = 0,
+    MERGE = 1
+};
+
+struct __declspec(uuid("70c41b25-e3ce-11d3-b37a-005004d38590"))
+MgaMetaParser;
+    // [ default ] interface IMgaMetaParser
+    // interface ISupportErrorInfo
+    // interface IGMEVersionInfo
+
+struct __declspec(uuid("70c41b24-e3ce-11d3-b37a-005004d38590"))
+IMgaMetaParser : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __Parse (
+        _bstr_t xmlfile,
+        _bstr_t connection );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Parse (
+        /*[in]*/ BSTR xmlfile,
+        /*[in]*/ BSTR connection ) = 0;
+};
+
+struct __declspec(uuid("a5d0dae7-16ee-11d4-b3c2-005004d38590"))
+MgaDumper;
+    // [ default ] interface IMgaDumper2
+    // interface IMgaDumper
+    // interface IGMEVersionInfo
+
+struct __declspec(uuid("a5d0dae6-16ee-11d4-b3c2-005004d38590"))
+IMgaDumper : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(put=PutFormatVersion))
+    long FormatVersion;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __DumpProject (
+        struct IMgaProject * p,
+        _bstr_t xmlfile );
+    HRESULT __DumpFCOs (
+        struct IMgaProject * proj,
+        struct IMgaFCOs * p,
+        struct IMgaFolders * f,
+        struct IMgaRegNodes * r,
+        _bstr_t xmlfile );
+    HRESULT __DumpClos (
+        struct IMgaFCOs * fco,
+        struct IMgaFolders * fld,
+        _bstr_t xmlfile,
+        int libr_stub );
+    HRESULT __DumpClosR (
+        struct IMgaFCOs * fco,
+        struct IMgaFolders * fld,
+        _bstr_t xmlfile,
+        struct IMgaFCOs * topfco,
+        struct IMgaFolders * topfld,
+        int options,
+        _bstr_t abspath,
+        _bstr_t acceptingkinds );
+    void PutFormatVersion (
+        long _arg1 );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall DumpProject (
+        /*[in]*/ struct IMgaProject * p,
+        /*[in]*/ BSTR xmlfile ) = 0;
+      virtual HRESULT __stdcall DumpFCOs (
+        /*[in]*/ struct IMgaProject * proj,
+        /*[in]*/ struct IMgaFCOs * p,
+        /*[in]*/ struct IMgaFolders * f,
+        /*[in]*/ struct IMgaRegNodes * r,
+        /*[in]*/ BSTR xmlfile ) = 0;
+      virtual HRESULT __stdcall DumpClos (
+        /*[in]*/ struct IMgaFCOs * fco,
+        /*[in]*/ struct IMgaFolders * fld,
+        /*[in]*/ BSTR xmlfile,
+        /*[in]*/ int libr_stub ) = 0;
+      virtual HRESULT __stdcall DumpClosR (
+        /*[in]*/ struct IMgaFCOs * fco,
+        /*[in]*/ struct IMgaFolders * fld,
+        /*[in]*/ BSTR xmlfile,
+        /*[in]*/ struct IMgaFCOs * topfco,
+        /*[in]*/ struct IMgaFolders * topfld,
+        /*[in]*/ int options,
+        /*[in]*/ BSTR abspath,
+        /*[in]*/ BSTR acceptingkinds ) = 0;
+      virtual HRESULT __stdcall put_FormatVersion (
+        /*[in]*/ long _arg1 ) = 0;
+};
+
+struct __declspec(uuid("3813768b-5a4c-477d-bcd5-1776089948ec"))
+IMgaDumper2 : IMgaDumper
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __DumpProject2 (
+        struct IMgaProject * p,
+        _bstr_t xmlfile,
+        unsigned __int64 hwndParent );
+    HRESULT __DumpFCOs2 (
+        struct IMgaProject * proj,
+        struct IMgaFCOs * p,
+        struct IMgaFolders * f,
+        struct IMgaRegNodes * r,
+        _bstr_t xmlfile,
+        unsigned __int64 hwndParent );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall DumpProject2 (
+        /*[in]*/ struct IMgaProject * p,
+        /*[in]*/ BSTR xmlfile,
+        unsigned __int64 hwndParent ) = 0;
+      virtual HRESULT __stdcall DumpFCOs2 (
+        /*[in]*/ struct IMgaProject * proj,
+        /*[in]*/ struct IMgaFCOs * p,
+        /*[in]*/ struct IMgaFolders * f,
+        /*[in]*/ struct IMgaRegNodes * r,
+        /*[in]*/ BSTR xmlfile,
+        unsigned __int64 hwndParent ) = 0;
+};
+
+struct __declspec(uuid("94d6fb54-1f7c-11d4-b3d0-005004d38590"))
+MgaParser;
+    // [ default ] interface IMgaParser3
+    // interface IMgaParser2
+    // interface IMgaParser
+    // interface IGMEVersionInfo
+
+struct __declspec(uuid("94d6fb53-1f7c-11d4-b3d0-005004d38590"))
+IMgaParser : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __GetXMLInfo (
+        _bstr_t xmlfile,
+        BSTR * Paradigm,
+        BSTR * parversion,
+        VARIANT * parguid,
+        BSTR * basename,
+        BSTR * ver );
+    HRESULT __ParseProject (
+        struct IMgaProject * p,
+        _bstr_t xmlfile );
+    HRESULT __ParseFCOs (
+        struct IMgaObject * here,
+        _bstr_t xmlfile );
+    HRESULT __GetClipXMLInfo (
+        _bstr_t xmlfile,
+        struct IMgaObject * Target,
+        VARIANT_BOOL * parguid,
+        BSTR * acckind,
+        BSTR * ver );
+    HRESULT __ParseClos1 (
+        struct IMgaObject * here,
+        _bstr_t xmlfile );
+    HRESULT __ParseClos4 (
+        struct IMgaObject * here,
+        _bstr_t xmlfile,
+        int options );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall GetXMLInfo (
+        /*[in]*/ BSTR xmlfile,
+        /*[out]*/ BSTR * Paradigm,
+        /*[out]*/ BSTR * parversion,
+        /*[out]*/ VARIANT * parguid,
+        /*[out]*/ BSTR * basename,
+        /*[out]*/ BSTR * ver ) = 0;
+      virtual HRESULT __stdcall ParseProject (
+        /*[in]*/ struct IMgaProject * p,
+        /*[in]*/ BSTR xmlfile ) = 0;
+      virtual HRESULT __stdcall ParseFCOs (
+        /*[in]*/ struct IMgaObject * here,
+        /*[in]*/ BSTR xmlfile ) = 0;
+      virtual HRESULT __stdcall GetClipXMLInfo (
+        /*[in]*/ BSTR xmlfile,
+        /*[in]*/ struct IMgaObject * Target,
+        /*[out]*/ VARIANT_BOOL * parguid,
+        /*[out]*/ BSTR * acckind,
+        /*[out]*/ BSTR * ver ) = 0;
+      virtual HRESULT __stdcall ParseClos1 (
+        /*[in]*/ struct IMgaObject * here,
+        /*[in]*/ BSTR xmlfile ) = 0;
+      virtual HRESULT __stdcall ParseClos4 (
+        /*[in]*/ struct IMgaObject * here,
+        /*[in]*/ BSTR xmlfile,
+        /*[in]*/ int options ) = 0;
+};
+
+struct __declspec(uuid("e39bea37-384d-423b-addf-2bb13550f577"))
+IMgaParser2 : IMgaParser
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __ParseProject2 (
+        struct IMgaProject * p,
+        _bstr_t xmlfile,
+        unsigned __int64 hwndParent );
+    HRESULT __ParseFCOs2 (
+        struct IMgaObject * here,
+        _bstr_t xmlfile,
+        unsigned __int64 hwndParent );
+    HRESULT __GetXMLParadigm (
+        _bstr_t xmlfile,
+        BSTR * Paradigm );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall ParseProject2 (
+        /*[in]*/ struct IMgaProject * p,
+        /*[in]*/ BSTR xmlfile,
+        unsigned __int64 hwndParent ) = 0;
+      virtual HRESULT __stdcall ParseFCOs2 (
+        /*[in]*/ struct IMgaObject * here,
+        /*[in]*/ BSTR xmlfile,
+        unsigned __int64 hwndParent ) = 0;
+      virtual HRESULT __stdcall GetXMLParadigm (
+        /*[in]*/ BSTR xmlfile,
+        /*[out]*/ BSTR * Paradigm ) = 0;
+};
+
+struct __declspec(uuid("5cab528b-474b-4c52-be40-74ff29afbb58"))
+IMgaParser3 : IMgaParser2
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetResolver,put=PutResolver))
+    IMgaResolverPtr Resolver;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaResolverPtr GetResolver ( );
+    void PutResolver (
+        struct IMgaResolver * MgaResolver );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Resolver (
+        /*[out,retval]*/ struct IMgaResolver * * MgaResolver ) = 0;
+      virtual HRESULT __stdcall put_Resolver (
+        /*[in]*/ struct IMgaResolver * MgaResolver ) = 0;
+};
+
+#pragma pack(pop)

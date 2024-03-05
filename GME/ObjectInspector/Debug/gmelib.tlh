@@ -1,0 +1,1645 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (600afb96).
+//
+// c:\users\69038\documents\gme-21.4.1_src\gme\objectinspector\debug\gmelib.tlh
+//
+// C++ source equivalent of Win32 type library GMELib.tlb
+// compiler-generated file created 06/28/23 at 14:39:06 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("0adeec71-d83a-11d3-b36b-005004cc8592"))
+/* LIBID */ __GmeLib;
+struct __declspec(uuid("1e13054e-5ad1-41eb-8ff1-c3901d99fdcc"))
+/* interface */ IMgaDecorator;
+struct __declspec(uuid("d25188f5-3ecf-433e-85c5-8b9574ca264c"))
+/* interface */ IMgaCommonDecoratorEvents;
+enum refresh_mode_enum;
+struct __declspec(uuid("91004115-2d1f-44a8-b6a0-09a2750bf278"))
+/* interface */ IMgaDecoratorCommon;
+struct __declspec(uuid("1d63d045-28c9-4902-8e5f-46f4ac1f8c5b"))
+/* interface */ IMgaElementDecoratorEvents;
+struct __declspec(uuid("2bead76c-126e-405d-aac6-b9ca39067006"))
+/* interface */ IMgaElementDecorator;
+enum decorator_error;
+struct /* coclass */ MgaDataSource;
+struct __declspec(uuid("9ff8f4e0-e0c9-11d3-b376-005004d38590"))
+/* dual interface */ IMgaDataSource;
+struct /* coclass */ Application;
+struct __declspec(uuid("81191a44-b898-4143-bf8b-ca7501fec19a"))
+/* dual interface */ IGMEOLEApp;
+struct __declspec(uuid("36c7b797-6bde-46d0-8870-70189000edf9"))
+/* dual interface */ IGMEOLEColl;
+enum msgtype_enum;
+enum editmode_enum;
+enum attribpanel_page;
+struct __declspec(uuid("f2181278-749f-459d-8700-92f088b80d72"))
+/* dual interface */ IGMEOLEIt;
+enum bar_enum;
+enum scroll_enum;
+struct /* coclass */ It;
+struct /* coclass */ model;
+struct __declspec(uuid("399a16a0-d209-4d00-9bdf-858d87ec4641"))
+/* dual interface */ IGMEOLEModel;
+struct /* coclass */ aspect;
+struct __declspec(uuid("edeeb1f8-bc44-40d2-be91-83e8ccd59845"))
+/* dual interface */ IGMEOLEAspect;
+struct /* coclass */ Panel;
+struct __declspec(uuid("c047faeb-7ae7-40fb-8c5c-90c73dad4bc6"))
+/* dual interface */ IGMEOLEPanel;
+struct /* coclass */ Collection;
+struct /* coclass */ DecoratorEventSink;
+struct /* coclass */ AnnotatorEventSink;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IMgaDecorator, __uuidof(IMgaDecorator));
+_COM_SMARTPTR_TYPEDEF(IMgaCommonDecoratorEvents, __uuidof(IMgaCommonDecoratorEvents));
+_COM_SMARTPTR_TYPEDEF(IMgaDecoratorCommon, __uuidof(IMgaDecoratorCommon));
+_COM_SMARTPTR_TYPEDEF(IMgaElementDecoratorEvents, __uuidof(IMgaElementDecoratorEvents));
+_COM_SMARTPTR_TYPEDEF(IMgaElementDecorator, __uuidof(IMgaElementDecorator));
+_COM_SMARTPTR_TYPEDEF(IMgaDataSource, __uuidof(IMgaDataSource));
+_COM_SMARTPTR_TYPEDEF(IGMEOLEColl, __uuidof(IGMEOLEColl));
+_COM_SMARTPTR_TYPEDEF(IGMEOLEIt, __uuidof(IGMEOLEIt));
+_COM_SMARTPTR_TYPEDEF(IGMEOLEApp, __uuidof(IGMEOLEApp));
+_COM_SMARTPTR_TYPEDEF(IGMEOLEModel, __uuidof(IGMEOLEModel));
+_COM_SMARTPTR_TYPEDEF(IGMEOLEAspect, __uuidof(IGMEOLEAspect));
+_COM_SMARTPTR_TYPEDEF(IGMEOLEPanel, __uuidof(IGMEOLEPanel));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("1e13054e-5ad1-41eb-8ff1-c3901d99fdcc"))
+IMgaDecorator : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __Initialize (
+        struct IMgaProject * p,
+        struct IMgaMetaPart * meta,
+        struct IMgaFCO * obj );
+    HRESULT __Destroy ( );
+    HRESULT __GetMnemonic (
+        BSTR * mnemonic );
+    HRESULT __GetFeatures (
+        unsigned long * features );
+    HRESULT __SetParam (
+        _bstr_t Name,
+        const _variant_t & value );
+    HRESULT __GetParam (
+        _bstr_t Name,
+        VARIANT * value );
+    HRESULT __SetActive (
+        VARIANT_BOOL isActive );
+    HRESULT __GetPreferredSize (
+        long * sizex,
+        long * sizey );
+    HRESULT __SetLocation (
+        long sx,
+        long sy,
+        long ex,
+        long ey );
+    HRESULT __GetLocation (
+        long * sx,
+        long * sy,
+        long * ex,
+        long * ey );
+    HRESULT __GetLabelLocation (
+        long * sx,
+        long * sy,
+        long * ex,
+        long * ey );
+    HRESULT __GetPortLocation (
+        struct IMgaFCO * fco,
+        long * sx,
+        long * sy,
+        long * ex,
+        long * ey );
+    IMgaFCOsPtr __GetPorts ( );
+    HRESULT __Draw (
+        unsigned long hdc );
+    HRESULT __SaveState ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Initialize (
+        /*[in]*/ struct IMgaProject * p,
+        /*[in]*/ struct IMgaMetaPart * meta,
+        /*[in]*/ struct IMgaFCO * obj ) = 0;
+      virtual HRESULT __stdcall Destroy ( ) = 0;
+      virtual HRESULT __stdcall GetMnemonic (
+        /*[out]*/ BSTR * mnemonic ) = 0;
+      virtual HRESULT __stdcall GetFeatures (
+        /*[out]*/ unsigned long * features ) = 0;
+      virtual HRESULT __stdcall SetParam (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ VARIANT value ) = 0;
+      virtual HRESULT __stdcall GetParam (
+        /*[in]*/ BSTR Name,
+        /*[out]*/ VARIANT * value ) = 0;
+      virtual HRESULT __stdcall SetActive (
+        /*[in]*/ VARIANT_BOOL isActive ) = 0;
+      virtual HRESULT __stdcall GetPreferredSize (
+        /*[out]*/ long * sizex,
+        /*[out]*/ long * sizey ) = 0;
+      virtual HRESULT __stdcall SetLocation (
+        /*[in]*/ long sx,
+        /*[in]*/ long sy,
+        /*[in]*/ long ex,
+        /*[in]*/ long ey ) = 0;
+      virtual HRESULT __stdcall GetLocation (
+        /*[out]*/ long * sx,
+        /*[out]*/ long * sy,
+        /*[out]*/ long * ex,
+        /*[out]*/ long * ey ) = 0;
+      virtual HRESULT __stdcall GetLabelLocation (
+        /*[out]*/ long * sx,
+        /*[out]*/ long * sy,
+        /*[out]*/ long * ex,
+        /*[out]*/ long * ey ) = 0;
+      virtual HRESULT __stdcall GetPortLocation (
+        /*[in]*/ struct IMgaFCO * fco,
+        /*[out]*/ long * sx,
+        /*[out]*/ long * sy,
+        /*[out]*/ long * ex,
+        /*[out]*/ long * ey ) = 0;
+      virtual HRESULT __stdcall GetPorts (
+        /*[out,retval]*/ struct IMgaFCOs * * portFCOs ) = 0;
+      virtual HRESULT __stdcall Draw (
+        /*[in]*/ unsigned long hdc ) = 0;
+      virtual HRESULT __stdcall SaveState ( ) = 0;
+};
+
+enum refresh_mode_enum
+{
+    RM_NOREFRESH = 0,
+    RM_REDRAW_SELF = 1,
+    RM_REGENERATE_SELF = 2,
+    RM_REGENERATE_PARENT_ALSO = 3,
+    RM_REGENERATE_ALL_VIEWS = 4
+};
+
+struct __declspec(uuid("d25188f5-3ecf-433e-85c5-8b9574ca264c"))
+IMgaCommonDecoratorEvents : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __Refresh (
+        enum refresh_mode_enum refreshMode );
+    HRESULT __OperationCanceled ( );
+    HRESULT __CursorChanged (
+        long newCursorID );
+    HRESULT __CursorRestored ( );
+    HRESULT __LabelEditingStarted (
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __LabelEditingFinished (
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __LabelChanged (
+        _bstr_t newLabel );
+    HRESULT __LabelMovingStarted (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __LabelMoving (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __LabelMovingFinished (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __LabelMoved (
+        long nFlags,
+        long x,
+        long y );
+    HRESULT __LabelResizingStarted (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __LabelResizing (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __LabelResizingFinished (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __LabelResized (
+        long nFlags,
+        long cx,
+        long cy );
+    HRESULT __GeneralOperationStarted (
+        unsigned __int64 operationData );
+    HRESULT __GeneralOperationFinished (
+        unsigned __int64 * operationData );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Refresh (
+        /*[in]*/ enum refresh_mode_enum refreshMode ) = 0;
+      virtual HRESULT __stdcall OperationCanceled ( ) = 0;
+      virtual HRESULT __stdcall CursorChanged (
+        /*[in]*/ long newCursorID ) = 0;
+      virtual HRESULT __stdcall CursorRestored ( ) = 0;
+      virtual HRESULT __stdcall LabelEditingStarted (
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall LabelEditingFinished (
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall LabelChanged (
+        /*[in]*/ BSTR newLabel ) = 0;
+      virtual HRESULT __stdcall LabelMovingStarted (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall LabelMoving (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall LabelMovingFinished (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall LabelMoved (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long x,
+        /*[in]*/ long y ) = 0;
+      virtual HRESULT __stdcall LabelResizingStarted (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall LabelResizing (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall LabelResizingFinished (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall LabelResized (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long cx,
+        /*[in]*/ long cy ) = 0;
+      virtual HRESULT __stdcall GeneralOperationStarted (
+        /*[in]*/ unsigned __int64 operationData ) = 0;
+      virtual HRESULT __stdcall GeneralOperationFinished (
+        /*[out]*/ unsigned __int64 * operationData ) = 0;
+};
+
+struct __declspec(uuid("91004115-2d1f-44a8-b6a0-09a2750bf278"))
+IMgaDecoratorCommon : IMgaDecorator
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __InitializeEx (
+        struct IMgaProject * p,
+        struct IMgaMetaPart * meta,
+        struct IMgaFCO * obj,
+        struct IMgaCommonDecoratorEvents * eventSink,
+        unsigned __int64 parentWnd );
+    HRESULT __DrawEx (
+        unsigned long hdc,
+        unsigned __int64 gdip );
+    HRESULT __SetSelected (
+        VARIANT_BOOL isSelected );
+    HRESULT __MouseMoved (
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseLeftButtonDown (
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseLeftButtonUp (
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseLeftButtonDoubleClick (
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseRightButtonDown (
+        unsigned __int64 hCtxMenu,
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseRightButtonUp (
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseRightButtonDoubleClick (
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseMiddleButtonDown (
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseMiddleButtonUp (
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseMiddleButtonDoubleClick (
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MouseWheelTurned (
+        unsigned long nFlags,
+        long distance,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __MenuItemSelected (
+        unsigned long menuItemId,
+        unsigned long nFlags,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __OperationCanceled ( );
+    HRESULT __DragEnter (
+        unsigned long * dropEffect,
+        unsigned __int64 pCOleDataObject,
+        unsigned long keyState,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __DragOver (
+        unsigned long * dropEffect,
+        unsigned __int64 pCOleDataObject,
+        unsigned long keyState,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __Drop (
+        unsigned __int64 pCOleDataObject,
+        unsigned long dropEffect,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+    HRESULT __DropFile (
+        unsigned __int64 hDropInfo,
+        long pointx,
+        long pointy,
+        unsigned __int64 transformHDC );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall InitializeEx (
+        /*[in]*/ struct IMgaProject * p,
+        /*[in]*/ struct IMgaMetaPart * meta,
+        /*[in]*/ struct IMgaFCO * obj,
+        /*[in]*/ struct IMgaCommonDecoratorEvents * eventSink,
+        /*[in]*/ unsigned __int64 parentWnd ) = 0;
+      virtual HRESULT __stdcall DrawEx (
+        /*[in]*/ unsigned long hdc,
+        /*[in]*/ unsigned __int64 gdip ) = 0;
+      virtual HRESULT __stdcall SetSelected (
+        /*[in]*/ VARIANT_BOOL isSelected ) = 0;
+      virtual HRESULT __stdcall MouseMoved (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseLeftButtonDown (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseLeftButtonUp (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseLeftButtonDoubleClick (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseRightButtonDown (
+        /*[in]*/ unsigned __int64 hCtxMenu,
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseRightButtonUp (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseRightButtonDoubleClick (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseMiddleButtonDown (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseMiddleButtonUp (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseMiddleButtonDoubleClick (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MouseWheelTurned (
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long distance,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall MenuItemSelected (
+        /*[in]*/ unsigned long menuItemId,
+        /*[in]*/ unsigned long nFlags,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall OperationCanceled ( ) = 0;
+      virtual HRESULT __stdcall DragEnter (
+        /*[out]*/ unsigned long * dropEffect,
+        /*[in]*/ unsigned __int64 pCOleDataObject,
+        /*[in]*/ unsigned long keyState,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall DragOver (
+        /*[out]*/ unsigned long * dropEffect,
+        /*[in]*/ unsigned __int64 pCOleDataObject,
+        /*[in]*/ unsigned long keyState,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall Drop (
+        /*[in]*/ unsigned __int64 pCOleDataObject,
+        /*[in]*/ unsigned long dropEffect,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+      virtual HRESULT __stdcall DropFile (
+        /*[in]*/ unsigned __int64 hDropInfo,
+        /*[in]*/ long pointx,
+        /*[in]*/ long pointy,
+        /*[in]*/ unsigned __int64 transformHDC ) = 0;
+};
+
+struct __declspec(uuid("1d63d045-28c9-4902-8e5f-46f4ac1f8c5b"))
+IMgaElementDecoratorEvents : IMgaCommonDecoratorEvents
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __WindowMovingStarted (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __WindowMoving (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __WindowMovingFinished (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __WindowMoved (
+        long nFlags,
+        long x,
+        long y );
+    HRESULT __WindowResizingStarted (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __WindowResizing (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __WindowResizingFinished (
+        long nFlags,
+        long left,
+        long top,
+        long right,
+        long bottom );
+    HRESULT __WindowResized (
+        long nFlags,
+        long cx,
+        long cy );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall WindowMovingStarted (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall WindowMoving (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall WindowMovingFinished (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall WindowMoved (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long x,
+        /*[in]*/ long y ) = 0;
+      virtual HRESULT __stdcall WindowResizingStarted (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall WindowResizing (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall WindowResizingFinished (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long left,
+        /*[in]*/ long top,
+        /*[in]*/ long right,
+        /*[in]*/ long bottom ) = 0;
+      virtual HRESULT __stdcall WindowResized (
+        /*[in]*/ long nFlags,
+        /*[in]*/ long cx,
+        /*[in]*/ long cy ) = 0;
+};
+
+struct __declspec(uuid("2bead76c-126e-405d-aac6-b9ca39067006"))
+IMgaElementDecorator : IMgaDecoratorCommon
+{};
+
+enum decorator_error
+{
+    E_DECORATOR_UNKNOWN_PARAMETER = -2139918335,
+    E_DECORATOR_INIT_WITH_NULL = -2139918334,
+    E_DECORATOR_UNINITIALIZED = -2139918333,
+    E_DECORATOR_LOCISNOTSET = -2139918332,
+    E_DECORATOR_PORTNOTFOUND = -2139918331,
+    E_DECORATOR_USING_DEPRECATED_FUNCTION = -2139918330,
+    E_DECORATOR_NOT_IMPLEMENTED = -2139918329,
+    S_DECORATOR_EVENT_HANDLED = 7565313,
+    S_DECORATOR_EVENT_NOT_HANDLED = 7565314
+};
+
+struct __declspec(uuid("fcb7db63-9f59-46a6-9fef-5c2679aea69a"))
+MgaDataSource;
+    // [ default ] interface IMgaDataSource
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("9ff8f4e0-e0c9-11d3-b376-005004d38590"))
+IMgaDataSource : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetData))
+    IUnknownPtr Data;
+    __declspec(property(get=GetFolders))
+    IUnknownPtr Folders;
+    __declspec(property(get=GetRegistryData))
+    IUnknownPtr RegistryData;
+    __declspec(property(get=GetProject))
+    IUnknownPtr Project;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr GetData ( );
+    IUnknownPtr GetFolders ( );
+    IUnknownPtr GetRegistryData ( );
+    IUnknownPtr GetProject ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Data (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall get_Folders (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall get_RegistryData (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+      virtual HRESULT __stdcall get_Project (
+        /*[out,retval]*/ IUnknown * * p ) = 0;
+};
+
+struct __declspec(uuid("c7dccc2e-1642-4a40-8060-51a7b9fae488"))
+Application;
+    // [ default ] interface IGMEOLEApp
+    // [ default, source ] interface IMgaComponent
+    // [ source ] interface IMgaComponentEx
+    // interface IGMEVersionInfo
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("36c7b797-6bde-46d0-8870-70189000edf9"))
+IGMEOLEColl : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    HRESULT __Add (
+        IDispatch * newValue );
+    long __Find (
+        IDispatch * findValue );
+    HRESULT __Remove (
+        const _variant_t & removeValue );
+    HRESULT __RemoveAll ( );
+    IDispatchPtr GetItem (
+        long nIndex );
+    void PutItem (
+        long nIndex,
+        IDispatch * val );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * cnt ) = 0;
+      virtual HRESULT __stdcall Add (
+        IDispatch * newValue ) = 0;
+      virtual HRESULT __stdcall Find (
+        IDispatch * findValue,
+        /*[out,retval]*/ long * cnt ) = 0;
+      virtual HRESULT __stdcall Remove (
+        VARIANT removeValue ) = 0;
+      virtual HRESULT __stdcall RemoveAll ( ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        long nIndex,
+        /*[out,retval]*/ IDispatch * * val ) = 0;
+      virtual HRESULT __stdcall put_Item (
+        long nIndex,
+        IDispatch * val ) = 0;
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * e ) = 0;
+};
+
+enum msgtype_enum
+{
+    MSG_NORMAL = 0,
+    MSG_INFO = 1,
+    MSG_WARNING = 2,
+    MSG_ERROR = 3
+};
+
+enum editmode_enum
+{
+    MODE_EDIT = 0,
+    MODE_CONNECT = 1,
+    MODE_DISCONNECT = 2,
+    MODE_SET = 3,
+    MODE_ZOOM = 4,
+    MODE_VISUALIZE = 5
+};
+
+enum attribpanel_page
+{
+    PAGE_ATTRIB = 0,
+    PAGE_PREF = 1,
+    PAGE_PROP = 2
+};
+
+enum bar_enum
+{
+    BAR_HORIZ = 0,
+    BAR_VERTI = 1
+};
+
+enum scroll_enum
+{
+    SCROL_UP = 0,
+    SCROL_DOWN = 1,
+    SCROL_PGUP = 2,
+    SCROL_PGDN = 3,
+    SCROL_HOME = 4,
+    SCROL_END = 5
+};
+
+struct __declspec(uuid("f2181278-749f-459d-8700-92f088b80d72"))
+IGMEOLEIt : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetValid))
+    VARIANT_BOOL Valid;
+    __declspec(property(get=GetAspects))
+    IGMEOLECollPtr Aspects;
+    __declspec(property(get=GetMgaModel))
+    IMgaModelPtr MgaModel;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetValid ( );
+    IGMEOLECollPtr GetAspects ( );
+    IMgaModelPtr GetMgaModel ( );
+    HRESULT __Print ( );
+    HRESULT __PrintDialog ( );
+    HRESULT __DumpWindowsMetaFile (
+        _bstr_t filePath );
+    HRESULT __CheckConstraints ( );
+    HRESULT __RunComponent (
+        _bstr_t appID );
+    HRESULT __RunComponentDialog ( );
+    HRESULT __Close ( );
+    HRESULT __GrayOutFCO (
+        VARIANT_BOOL bGray,
+        VARIANT_BOOL bNeighbours,
+        struct IMgaFCOs * mgaFCO );
+    HRESULT __GrayOutHide ( );
+    HRESULT __ShowSetMembers (
+        struct IMgaFCO * mgaFCO );
+    HRESULT __HideSetMembers ( );
+    HRESULT __Zoom (
+        unsigned long percent );
+    HRESULT __ZoomTo (
+        struct IMgaFCOs * mgaFCOs );
+    HRESULT __Scroll (
+        enum bar_enum __MIDL__IGMEOLEIt0000,
+        enum scroll_enum __MIDL__IGMEOLEIt0001 );
+    HRESULT __DumpModelGeometryXML (
+        _bstr_t filePath );
+    HRESULT __ShowFCO (
+        _bstr_t path,
+        VARIANT_BOOL inParent );
+    HRESULT __ShowFCOPtr (
+        struct IMgaFCO * fco,
+        VARIANT_BOOL inParent );
+    IMgaFCOPtr __Child (
+        _bstr_t Name );
+    IMgaFCOPtr __Create (
+        _bstr_t part,
+        _bstr_t Name );
+    IMgaFCOPtr __CreateInChild (
+        _bstr_t child_as_parent,
+        _bstr_t part,
+        _bstr_t Name );
+    IMgaFCOPtr __CreateInChildFCO (
+        struct IMgaFCO * child_as_parent,
+        _bstr_t part,
+        _bstr_t Name );
+    IMgaFCOPtr __Duplicate (
+        _bstr_t existing_fco_name,
+        _bstr_t new_fco_name );
+    IMgaFCOPtr __DuplicateFCO (
+        struct IMgaFCO * existing_fco,
+        _bstr_t new_fco_name );
+    HRESULT __Rename (
+        _bstr_t oldname,
+        _bstr_t newname );
+    HRESULT __SetName (
+        struct IMgaFCO * __MIDL__IGMEOLEIt0002,
+        _bstr_t Name );
+    HRESULT __Include (
+        _bstr_t SetName,
+        _bstr_t Name );
+    HRESULT __Exclude (
+        _bstr_t SetName,
+        _bstr_t membername );
+    HRESULT __IncludeFCO (
+        struct IMgaSet * p_set,
+        struct IMgaFCO * fco );
+    HRESULT __ExcludeFCO (
+        struct IMgaSet * p_set,
+        struct IMgaFCO * fco );
+    IMgaConnectionPtr __Connect (
+        _bstr_t src_part,
+        _bstr_t dst_part,
+        _bstr_t connection_role );
+    HRESULT __Disconnect (
+        _bstr_t src_part,
+        _bstr_t dst_part,
+        _bstr_t connection_name );
+    IMgaConnectionPtr __ConnectThruPort (
+        _bstr_t src_part_1,
+        _bstr_t src_part_2,
+        _bstr_t dst_part_1,
+        _bstr_t dst_part_2,
+        _bstr_t connection_role );
+    IMgaConnectionPtr __ConnectThruPortFCO (
+        struct IMgaFCO * src_part_1,
+        struct IMgaFCO * src_part_2,
+        struct IMgaFCO * dst_part_1,
+        struct IMgaFCO * dst_part_2,
+        _bstr_t connection_role );
+    HRESULT __DisconnectThruPort (
+        _bstr_t src_part_1,
+        _bstr_t src_part_2,
+        _bstr_t dst_part_1,
+        _bstr_t dst_part_2,
+        _bstr_t connection_name );
+    IMgaConnectionPtr __ConnectFCOs (
+        struct IMgaFCO * src_part,
+        struct IMgaFCO * dst_part,
+        _bstr_t connection_role );
+    HRESULT __DisconnectFCOs (
+        struct IMgaFCO * src_part,
+        struct IMgaFCO * dst_part,
+        _bstr_t connection_name );
+    HRESULT __Refer (
+        _bstr_t reference,
+        _bstr_t Referred );
+    HRESULT __ClearRef (
+        _bstr_t reference );
+    HRESULT __FollowRef (
+        _bstr_t reference );
+    HRESULT __ReferFCO (
+        struct IMgaReference * reference,
+        struct IMgaFCO * Referred );
+    HRESULT __ClearRefFCO (
+        struct IMgaReference * reference );
+    HRESULT __FollowRefFCO (
+        struct IMgaReference * reference );
+    IMgaFCOPtr __NullFCO ( );
+    HRESULT __SetAttribute (
+        _bstr_t Name,
+        _bstr_t attr_name,
+        const _variant_t & value );
+    _variant_t __GetAttribute (
+        _bstr_t Name,
+        _bstr_t attr_name );
+    HRESULT __SetAttributeFCO (
+        struct IMgaFCO * fco,
+        _bstr_t attr_name,
+        const _variant_t & value );
+    _variant_t __GetAttributeFCO (
+        struct IMgaFCO * fco,
+        _bstr_t attr_name );
+    IMgaFCOPtr __SubType (
+        _bstr_t base,
+        _bstr_t name_of_subtype );
+    IMgaFCOPtr __Instantiate (
+        _bstr_t base,
+        _bstr_t name_of_instance );
+    IMgaFCOPtr __SubTypeFCO (
+        struct IMgaFCO * base,
+        _bstr_t name_of_subtype );
+    IMgaFCOPtr __InstantiateFCO (
+        struct IMgaFCO * base,
+        _bstr_t name_of_instance );
+    HRESULT __BeginTransaction ( );
+    HRESULT __CommitTransaction ( );
+    HRESULT __AbortTransaction ( );
+    VARIANT_BOOL __IsInTransaction ( );
+    IMgaFCOPtr __PutInTerritory (
+        struct IMgaFCO * fco );
+    HRESULT __Help ( );
+    HRESULT __SetSelected (
+        _bstr_t space_delimited_string );
+    _bstr_t __GetSelected ( );
+    HRESULT __SetSelectedFCOs (
+        struct IMgaFCOs * fcos_to_select );
+    IMgaFCOsPtr __GetSelectedFCOs ( );
+    _bstr_t __GetCurrentAspect ( );
+    HRESULT __SetCurrentAspect (
+        _bstr_t aspectName );
+    HRESULT __NextAspect ( );
+    HRESULT __PrevAspect ( );
+    HRESULT __Next ( );
+    HRESULT __Prev ( );
+    HRESULT __Position (
+        _bstr_t Child,
+        _bstr_t aspect,
+        long parX,
+        long parY );
+    HRESULT __PositionFCO (
+        struct IMgaFCO * fco,
+        _bstr_t aspect,
+        long parX,
+        long parY );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Valid (
+        /*[out,retval]*/ VARIANT_BOOL * isValid ) = 0;
+      virtual HRESULT __stdcall get_Aspects (
+        /*[out,retval]*/ struct IGMEOLEColl * * coll ) = 0;
+      virtual HRESULT __stdcall get_MgaModel (
+        /*[out,retval]*/ struct IMgaModel * * model ) = 0;
+      virtual HRESULT __stdcall Print ( ) = 0;
+      virtual HRESULT __stdcall PrintDialog ( ) = 0;
+      virtual HRESULT __stdcall DumpWindowsMetaFile (
+        /*[in]*/ BSTR filePath ) = 0;
+      virtual HRESULT __stdcall CheckConstraints ( ) = 0;
+      virtual HRESULT __stdcall RunComponent (
+        /*[in]*/ BSTR appID ) = 0;
+      virtual HRESULT __stdcall RunComponentDialog ( ) = 0;
+      virtual HRESULT __stdcall Close ( ) = 0;
+      virtual HRESULT __stdcall GrayOutFCO (
+        /*[in]*/ VARIANT_BOOL bGray,
+        /*[in]*/ VARIANT_BOOL bNeighbours,
+        /*[in]*/ struct IMgaFCOs * mgaFCO ) = 0;
+      virtual HRESULT __stdcall GrayOutHide ( ) = 0;
+      virtual HRESULT __stdcall ShowSetMembers (
+        /*[in]*/ struct IMgaFCO * mgaFCO ) = 0;
+      virtual HRESULT __stdcall HideSetMembers ( ) = 0;
+      virtual HRESULT __stdcall Zoom (
+        /*[in]*/ unsigned long percent ) = 0;
+      virtual HRESULT __stdcall ZoomTo (
+        /*[in]*/ struct IMgaFCOs * mgaFCOs ) = 0;
+      virtual HRESULT __stdcall Scroll (
+        /*[in]*/ enum bar_enum __MIDL__IGMEOLEIt0000,
+        /*[in]*/ enum scroll_enum __MIDL__IGMEOLEIt0001 ) = 0;
+      virtual HRESULT __stdcall DumpModelGeometryXML (
+        /*[in]*/ BSTR filePath ) = 0;
+      virtual HRESULT __stdcall ShowFCO (
+        /*[in]*/ BSTR path,
+        /*[in]*/ VARIANT_BOOL inParent ) = 0;
+      virtual HRESULT __stdcall ShowFCOPtr (
+        /*[in]*/ struct IMgaFCO * fco,
+        /*[in]*/ VARIANT_BOOL inParent ) = 0;
+      virtual HRESULT __stdcall Child (
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * child_fco ) = 0;
+      virtual HRESULT __stdcall Create (
+        /*[in]*/ BSTR part,
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * new_fco ) = 0;
+      virtual HRESULT __stdcall CreateInChild (
+        /*[in]*/ BSTR child_as_parent,
+        /*[in]*/ BSTR part,
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * new_fco ) = 0;
+      virtual HRESULT __stdcall CreateInChildFCO (
+        /*[in]*/ struct IMgaFCO * child_as_parent,
+        /*[in]*/ BSTR part,
+        /*[in]*/ BSTR Name,
+        /*[out,retval]*/ struct IMgaFCO * * new_fco ) = 0;
+      virtual HRESULT __stdcall Duplicate (
+        /*[in]*/ BSTR existing_fco_name,
+        /*[in]*/ BSTR new_fco_name,
+        /*[out,retval]*/ struct IMgaFCO * * new_fco ) = 0;
+      virtual HRESULT __stdcall DuplicateFCO (
+        /*[in]*/ struct IMgaFCO * existing_fco,
+        /*[in]*/ BSTR new_fco_name,
+        /*[out,retval]*/ struct IMgaFCO * * new_fco ) = 0;
+      virtual HRESULT __stdcall Rename (
+        /*[in]*/ BSTR oldname,
+        /*[in]*/ BSTR newname ) = 0;
+      virtual HRESULT __stdcall SetName (
+        /*[in]*/ struct IMgaFCO * __MIDL__IGMEOLEIt0002,
+        /*[in]*/ BSTR Name ) = 0;
+      virtual HRESULT __stdcall Include (
+        /*[in]*/ BSTR SetName,
+        /*[in]*/ BSTR Name ) = 0;
+      virtual HRESULT __stdcall Exclude (
+        /*[in]*/ BSTR SetName,
+        /*[in]*/ BSTR membername ) = 0;
+      virtual HRESULT __stdcall IncludeFCO (
+        /*[in]*/ struct IMgaSet * p_set,
+        /*[in]*/ struct IMgaFCO * fco ) = 0;
+      virtual HRESULT __stdcall ExcludeFCO (
+        /*[in]*/ struct IMgaSet * p_set,
+        /*[in]*/ struct IMgaFCO * fco ) = 0;
+      virtual HRESULT __stdcall Connect (
+        /*[in]*/ BSTR src_part,
+        /*[in]*/ BSTR dst_part,
+        /*[in]*/ BSTR connection_role,
+        /*[out,retval]*/ struct IMgaConnection * * conn ) = 0;
+      virtual HRESULT __stdcall Disconnect (
+        /*[in]*/ BSTR src_part,
+        /*[in]*/ BSTR dst_part,
+        /*[in]*/ BSTR connection_name ) = 0;
+      virtual HRESULT __stdcall ConnectThruPort (
+        /*[in]*/ BSTR src_part_1,
+        /*[in]*/ BSTR src_part_2,
+        /*[in]*/ BSTR dst_part_1,
+        /*[in]*/ BSTR dst_part_2,
+        /*[in]*/ BSTR connection_role,
+        /*[out,retval]*/ struct IMgaConnection * * conn ) = 0;
+      virtual HRESULT __stdcall ConnectThruPortFCO (
+        /*[in]*/ struct IMgaFCO * src_part_1,
+        /*[in]*/ struct IMgaFCO * src_part_2,
+        /*[in]*/ struct IMgaFCO * dst_part_1,
+        /*[in]*/ struct IMgaFCO * dst_part_2,
+        /*[in]*/ BSTR connection_role,
+        /*[out,retval]*/ struct IMgaConnection * * conn ) = 0;
+      virtual HRESULT __stdcall DisconnectThruPort (
+        /*[in]*/ BSTR src_part_1,
+        /*[in]*/ BSTR src_part_2,
+        /*[in]*/ BSTR dst_part_1,
+        /*[in]*/ BSTR dst_part_2,
+        /*[in]*/ BSTR connection_name ) = 0;
+      virtual HRESULT __stdcall ConnectFCOs (
+        /*[in]*/ struct IMgaFCO * src_part,
+        /*[in]*/ struct IMgaFCO * dst_part,
+        /*[in]*/ BSTR connection_role,
+        /*[out,retval]*/ struct IMgaConnection * * conn ) = 0;
+      virtual HRESULT __stdcall DisconnectFCOs (
+        /*[in]*/ struct IMgaFCO * src_part,
+        /*[in]*/ struct IMgaFCO * dst_part,
+        /*[in]*/ BSTR connection_name ) = 0;
+      virtual HRESULT __stdcall Refer (
+        /*[in]*/ BSTR reference,
+        /*[in]*/ BSTR Referred ) = 0;
+      virtual HRESULT __stdcall ClearRef (
+        /*[in]*/ BSTR reference ) = 0;
+      virtual HRESULT __stdcall FollowRef (
+        /*[in]*/ BSTR reference ) = 0;
+      virtual HRESULT __stdcall ReferFCO (
+        /*[in]*/ struct IMgaReference * reference,
+        /*[in]*/ struct IMgaFCO * Referred ) = 0;
+      virtual HRESULT __stdcall ClearRefFCO (
+        /*[in]*/ struct IMgaReference * reference ) = 0;
+      virtual HRESULT __stdcall FollowRefFCO (
+        /*[in]*/ struct IMgaReference * reference ) = 0;
+      virtual HRESULT __stdcall NullFCO (
+        /*[out,retval]*/ struct IMgaFCO * * nullobj ) = 0;
+      virtual HRESULT __stdcall SetAttribute (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ BSTR attr_name,
+        /*[in]*/ VARIANT value ) = 0;
+      virtual HRESULT __stdcall GetAttribute (
+        /*[in]*/ BSTR Name,
+        /*[in]*/ BSTR attr_name,
+        /*[out,retval]*/ VARIANT * value ) = 0;
+      virtual HRESULT __stdcall SetAttributeFCO (
+        /*[in]*/ struct IMgaFCO * fco,
+        /*[in]*/ BSTR attr_name,
+        /*[in]*/ VARIANT value ) = 0;
+      virtual HRESULT __stdcall GetAttributeFCO (
+        /*[in]*/ struct IMgaFCO * fco,
+        /*[in]*/ BSTR attr_name,
+        /*[out,retval]*/ VARIANT * value ) = 0;
+      virtual HRESULT __stdcall SubType (
+        /*[in]*/ BSTR base,
+        /*[in]*/ BSTR name_of_subtype,
+        /*[out,retval]*/ struct IMgaFCO * * SubType ) = 0;
+      virtual HRESULT __stdcall Instantiate (
+        /*[in]*/ BSTR base,
+        /*[in]*/ BSTR name_of_instance,
+        /*[out,retval]*/ struct IMgaFCO * * instance ) = 0;
+      virtual HRESULT __stdcall SubTypeFCO (
+        /*[in]*/ struct IMgaFCO * base,
+        /*[in]*/ BSTR name_of_subtype,
+        /*[out,retval]*/ struct IMgaFCO * * SubType ) = 0;
+      virtual HRESULT __stdcall InstantiateFCO (
+        /*[in]*/ struct IMgaFCO * base,
+        /*[in]*/ BSTR name_of_instance,
+        /*[out,retval]*/ struct IMgaFCO * * instance ) = 0;
+      virtual HRESULT __stdcall BeginTransaction ( ) = 0;
+      virtual HRESULT __stdcall CommitTransaction ( ) = 0;
+      virtual HRESULT __stdcall AbortTransaction ( ) = 0;
+      virtual HRESULT __stdcall IsInTransaction (
+        /*[out,retval]*/ VARIANT_BOOL * intrans ) = 0;
+      virtual HRESULT __stdcall PutInTerritory (
+        /*[in]*/ struct IMgaFCO * fco,
+        /*[out,retval]*/ struct IMgaFCO * * newfco ) = 0;
+      virtual HRESULT __stdcall Help ( ) = 0;
+      virtual HRESULT __stdcall SetSelected (
+        /*[in]*/ BSTR space_delimited_string ) = 0;
+      virtual HRESULT __stdcall GetSelected (
+        /*[out,retval]*/ BSTR * space_delimited_string ) = 0;
+      virtual HRESULT __stdcall SetSelectedFCOs (
+        /*[in]*/ struct IMgaFCOs * fcos_to_select ) = 0;
+      virtual HRESULT __stdcall GetSelectedFCOs (
+        /*[out,retval]*/ struct IMgaFCOs * * selected_fcos ) = 0;
+      virtual HRESULT __stdcall GetCurrentAspect (
+        /*[out,retval]*/ BSTR * aspectName ) = 0;
+      virtual HRESULT __stdcall SetCurrentAspect (
+        /*[in]*/ BSTR aspectName ) = 0;
+      virtual HRESULT __stdcall NextAspect ( ) = 0;
+      virtual HRESULT __stdcall PrevAspect ( ) = 0;
+      virtual HRESULT __stdcall Next ( ) = 0;
+      virtual HRESULT __stdcall Prev ( ) = 0;
+      virtual HRESULT __stdcall Position (
+        /*[in]*/ BSTR Child,
+        /*[in]*/ BSTR aspect,
+        /*[in]*/ long parX,
+        /*[in]*/ long parY ) = 0;
+      virtual HRESULT __stdcall PositionFCO (
+        /*[in]*/ struct IMgaFCO * fco,
+        /*[in]*/ BSTR aspect,
+        /*[in]*/ long parX,
+        /*[in]*/ long parY ) = 0;
+};
+
+struct __declspec(uuid("81191a44-b898-4143-bf8b-ca7501fec19a"))
+IGMEOLEApp : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetVisible,put=PutVisible))
+    VARIANT_BOOL Visible;
+    __declspec(property(get=GetVersion))
+    _bstr_t Version;
+    __declspec(property(get=GetVersionMajor))
+    short VersionMajor;
+    __declspec(property(get=GetVersionMinor))
+    short VersionMinor;
+    __declspec(property(get=GetVersionPatchLevel))
+    short VersionPatchLevel;
+    __declspec(property(get=GetModels))
+    IGMEOLECollPtr Models;
+    __declspec(property(get=GetMgaProject))
+    IMgaProjectPtr MgaProject;
+    __declspec(property(get=GetPanels))
+    IGMEOLECollPtr Panels;
+    __declspec(property(get=GetConsoleContents,put=PutConsoleContents))
+    _bstr_t ConsoleContents;
+    __declspec(property(get=GetOleIt))
+    IGMEOLEItPtr OleIt;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    void PutVisible (
+        VARIANT_BOOL isVisible );
+    VARIANT_BOOL GetVisible ( );
+    _bstr_t GetVersion ( );
+    short GetVersionMajor ( );
+    short GetVersionMinor ( );
+    short GetVersionPatchLevel ( );
+    IGMEOLECollPtr GetModels ( );
+    IMgaProjectPtr GetMgaProject ( );
+    IGMEOLECollPtr GetPanels ( );
+    void PutConsoleContents (
+        _bstr_t contents );
+    _bstr_t GetConsoleContents ( );
+    HRESULT __CreateProject (
+        _bstr_t metaname,
+        _bstr_t ConnStr );
+    HRESULT __OpenProject (
+        _bstr_t ConnStr );
+    HRESULT __CreateProjectDialog ( );
+    HRESULT __OpenProjectDialog ( );
+    HRESULT __CloseProject (
+        VARIANT_BOOL saveOnClose );
+    HRESULT __SaveProject ( );
+    HRESULT __SaveProjectAs (
+        _bstr_t ConnStr );
+    HRESULT __SaveProjectAsDialog ( );
+    HRESULT __ExportProject (
+        _bstr_t ConnStr );
+    HRESULT __ImportProject (
+        _bstr_t ConnStr );
+    HRESULT __ConstraintsDialog ( );
+    HRESULT __CheckAllConstraints ( );
+    HRESULT __RegisterParagimsDialog ( );
+    HRESULT __RegisterComponentsDialog ( );
+    HRESULT __RunComponent (
+        _bstr_t progID );
+    HRESULT __RunComponentDialog ( );
+    HRESULT __SettingsDialog ( );
+    HRESULT __Undo ( );
+    HRESULT __Redo ( );
+    HRESULT __ClearUndoQueue ( );
+    HRESULT __ProjectPropertiesDialog ( );
+    HRESULT __ShowHelpContents ( );
+    HRESULT __ShowAbout ( );
+    HRESULT __ShowFCO (
+        struct IMgaFCO * mgaFCO,
+        VARIANT_BOOL inParent );
+    HRESULT __ConsoleMessage (
+        _bstr_t msg,
+        enum msgtype_enum type );
+    HRESULT __ConsoleClear ( );
+    HRESULT __ConsoleNavigateTo (
+        _bstr_t url );
+    HRESULT __ChangeEditmode (
+        enum editmode_enum mode );
+    HRESULT __GridShow (
+        VARIANT_BOOL show );
+    HRESULT __AttributepanelPage (
+        enum attribpanel_page page );
+    IGMEOLEItPtr GetOleIt ( );
+    HRESULT __DisableComp (
+        _bstr_t pCompProgID,
+        VARIANT_BOOL pDisable );
+    HRESULT __DisableCompForKinds (
+        _bstr_t pCompProgID,
+        _bstr_t pKindSequenceDelimitedBySemicolon );
+    HRESULT __SetCompFiltering (
+        VARIANT_BOOL pTurnOn );
+    VARIANT_BOOL __GetCompFiltering ( );
+    HRESULT __SetWorkingDirectory (
+        _bstr_t pDirPath );
+    HRESULT __Exit ( );
+    long __RefreshLib (
+        _bstr_t pLibName,
+        VARIANT_BOOL ungroup );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_Visible (
+        /*[in]*/ VARIANT_BOOL isVisible ) = 0;
+      virtual HRESULT __stdcall get_Visible (
+        /*[out,retval]*/ VARIANT_BOOL * isVisible ) = 0;
+      virtual HRESULT __stdcall get_Version (
+        /*[out,retval]*/ BSTR * versionStr ) = 0;
+      virtual HRESULT __stdcall get_VersionMajor (
+        /*[out,retval]*/ short * n ) = 0;
+      virtual HRESULT __stdcall get_VersionMinor (
+        /*[out,retval]*/ short * n ) = 0;
+      virtual HRESULT __stdcall get_VersionPatchLevel (
+        /*[out,retval]*/ short * n ) = 0;
+      virtual HRESULT __stdcall get_Models (
+        /*[out,retval]*/ struct IGMEOLEColl * * coll ) = 0;
+      virtual HRESULT __stdcall get_MgaProject (
+        /*[out,retval]*/ struct IMgaProject * * p ) = 0;
+      virtual HRESULT __stdcall get_Panels (
+        /*[out,retval]*/ struct IGMEOLEColl * * coll ) = 0;
+      virtual HRESULT __stdcall put_ConsoleContents (
+        /*[in]*/ BSTR contents ) = 0;
+      virtual HRESULT __stdcall get_ConsoleContents (
+        /*[out,retval]*/ BSTR * contents ) = 0;
+      virtual HRESULT __stdcall CreateProject (
+        /*[in]*/ BSTR metaname,
+        /*[in]*/ BSTR ConnStr ) = 0;
+      virtual HRESULT __stdcall OpenProject (
+        /*[in]*/ BSTR ConnStr ) = 0;
+      virtual HRESULT __stdcall CreateProjectDialog ( ) = 0;
+      virtual HRESULT __stdcall OpenProjectDialog ( ) = 0;
+      virtual HRESULT __stdcall CloseProject (
+        /*[in]*/ VARIANT_BOOL saveOnClose ) = 0;
+      virtual HRESULT __stdcall SaveProject ( ) = 0;
+      virtual HRESULT __stdcall SaveProjectAs (
+        /*[in]*/ BSTR ConnStr ) = 0;
+      virtual HRESULT __stdcall SaveProjectAsDialog ( ) = 0;
+      virtual HRESULT __stdcall ExportProject (
+        /*[in]*/ BSTR ConnStr ) = 0;
+      virtual HRESULT __stdcall ImportProject (
+        /*[in]*/ BSTR ConnStr ) = 0;
+      virtual HRESULT __stdcall ConstraintsDialog ( ) = 0;
+      virtual HRESULT __stdcall CheckAllConstraints ( ) = 0;
+      virtual HRESULT __stdcall RegisterParagimsDialog ( ) = 0;
+      virtual HRESULT __stdcall RegisterComponentsDialog ( ) = 0;
+      virtual HRESULT __stdcall RunComponent (
+        /*[in]*/ BSTR progID ) = 0;
+      virtual HRESULT __stdcall RunComponentDialog ( ) = 0;
+      virtual HRESULT __stdcall SettingsDialog ( ) = 0;
+      virtual HRESULT __stdcall Undo ( ) = 0;
+      virtual HRESULT __stdcall Redo ( ) = 0;
+      virtual HRESULT __stdcall ClearUndoQueue ( ) = 0;
+      virtual HRESULT __stdcall ProjectPropertiesDialog ( ) = 0;
+      virtual HRESULT __stdcall ShowHelpContents ( ) = 0;
+      virtual HRESULT __stdcall ShowAbout ( ) = 0;
+      virtual HRESULT __stdcall ShowFCO (
+        /*[in]*/ struct IMgaFCO * mgaFCO,
+        /*[in]*/ VARIANT_BOOL inParent ) = 0;
+      virtual HRESULT __stdcall ConsoleMessage (
+        /*[in]*/ BSTR msg,
+        /*[in]*/ enum msgtype_enum type ) = 0;
+      virtual HRESULT __stdcall ConsoleClear ( ) = 0;
+      virtual HRESULT __stdcall ConsoleNavigateTo (
+        /*[in]*/ BSTR url ) = 0;
+      virtual HRESULT __stdcall ChangeEditmode (
+        /*[in]*/ enum editmode_enum mode ) = 0;
+      virtual HRESULT __stdcall GridShow (
+        /*[in]*/ VARIANT_BOOL show ) = 0;
+      virtual HRESULT __stdcall AttributepanelPage (
+        /*[in]*/ enum attribpanel_page page ) = 0;
+      virtual HRESULT __stdcall get_OleIt (
+        /*[out,retval]*/ struct IGMEOLEIt * * MgaModel ) = 0;
+      virtual HRESULT __stdcall DisableComp (
+        /*[in]*/ BSTR pCompProgID,
+        /*[in]*/ VARIANT_BOOL pDisable ) = 0;
+      virtual HRESULT __stdcall DisableCompForKinds (
+        /*[in]*/ BSTR pCompProgID,
+        /*[in]*/ BSTR pKindSequenceDelimitedBySemicolon ) = 0;
+      virtual HRESULT __stdcall SetCompFiltering (
+        /*[in]*/ VARIANT_BOOL pTurnOn ) = 0;
+      virtual HRESULT __stdcall GetCompFiltering (
+        /*[out,retval]*/ VARIANT_BOOL * pPtrTurnedOn ) = 0;
+      virtual HRESULT __stdcall SetWorkingDirectory (
+        /*[in]*/ BSTR pDirPath ) = 0;
+      virtual HRESULT __stdcall Exit ( ) = 0;
+      virtual HRESULT __stdcall RefreshLib (
+        /*[in]*/ BSTR pLibName,
+        /*[in]*/ VARIANT_BOOL ungroup,
+        /*[out,retval]*/ long * numOfErrors ) = 0;
+};
+
+struct __declspec(uuid("a19756e1-56ab-4ae5-974a-b3766e190697"))
+It;
+    // [ default ] interface IGMEOLEIt
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("7b512d6a-6767-4e3f-bf1f-a22943e68c32"))
+model;
+    // [ default ] interface IGMEOLEModel
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("399a16a0-d209-4d00-9bdf-858d87ec4641"))
+IGMEOLEModel : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetActive,put=PutActive))
+    VARIANT_BOOL Active;
+    __declspec(property(get=GetAspects))
+    IGMEOLECollPtr Aspects;
+    __declspec(property(get=GetMgaModel))
+    IMgaModelPtr MgaModel;
+    __declspec(property(get=GetValid))
+    VARIANT_BOOL Valid;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    void PutActive (
+        VARIANT_BOOL isActive );
+    VARIANT_BOOL GetActive ( );
+    IGMEOLECollPtr GetAspects ( );
+    IMgaModelPtr GetMgaModel ( );
+    VARIANT_BOOL GetValid ( );
+    HRESULT __Print ( );
+    HRESULT __PrintDialog ( );
+    HRESULT __DumpWindowsMetaFile (
+        _bstr_t filePath );
+    HRESULT __CheckConstraints ( );
+    HRESULT __RunComponent (
+        _bstr_t appID );
+    HRESULT __RunComponentDialog ( );
+    HRESULT __Close ( );
+    HRESULT __GrayOutFCO (
+        VARIANT_BOOL bGray,
+        VARIANT_BOOL bNeighbours,
+        struct IMgaFCOs * mgaFCO );
+    HRESULT __GrayOutHide ( );
+    HRESULT __ShowSetMembers (
+        struct IMgaFCO * mgaFCO );
+    HRESULT __HideSetMembers ( );
+    HRESULT __Zoom (
+        unsigned long percent );
+    HRESULT __ZoomTo (
+        struct IMgaFCOs * mgaFCOs );
+    HRESULT __Scroll (
+        enum bar_enum __MIDL__IGMEOLEModel0000,
+        enum scroll_enum __MIDL__IGMEOLEModel0001 );
+    HRESULT __DumpModelGeometryXML (
+        _bstr_t filePath );
+    _bstr_t __GetCurrentAspect ( );
+    HRESULT __SetCurrentAspect (
+        _bstr_t aspectName );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_Active (
+        /*[in]*/ VARIANT_BOOL isActive ) = 0;
+      virtual HRESULT __stdcall get_Active (
+        /*[out,retval]*/ VARIANT_BOOL * isActive ) = 0;
+      virtual HRESULT __stdcall get_Aspects (
+        /*[out,retval]*/ struct IGMEOLEColl * * coll ) = 0;
+      virtual HRESULT __stdcall get_MgaModel (
+        /*[out,retval]*/ struct IMgaModel * * model ) = 0;
+      virtual HRESULT __stdcall get_Valid (
+        /*[out,retval]*/ VARIANT_BOOL * isValid ) = 0;
+      virtual HRESULT __stdcall Print ( ) = 0;
+      virtual HRESULT __stdcall PrintDialog ( ) = 0;
+      virtual HRESULT __stdcall DumpWindowsMetaFile (
+        /*[in]*/ BSTR filePath ) = 0;
+      virtual HRESULT __stdcall CheckConstraints ( ) = 0;
+      virtual HRESULT __stdcall RunComponent (
+        /*[in]*/ BSTR appID ) = 0;
+      virtual HRESULT __stdcall RunComponentDialog ( ) = 0;
+      virtual HRESULT __stdcall Close ( ) = 0;
+      virtual HRESULT __stdcall GrayOutFCO (
+        /*[in]*/ VARIANT_BOOL bGray,
+        /*[in]*/ VARIANT_BOOL bNeighbours,
+        /*[in]*/ struct IMgaFCOs * mgaFCO ) = 0;
+      virtual HRESULT __stdcall GrayOutHide ( ) = 0;
+      virtual HRESULT __stdcall ShowSetMembers (
+        /*[in]*/ struct IMgaFCO * mgaFCO ) = 0;
+      virtual HRESULT __stdcall HideSetMembers ( ) = 0;
+      virtual HRESULT __stdcall Zoom (
+        /*[in]*/ unsigned long percent ) = 0;
+      virtual HRESULT __stdcall ZoomTo (
+        /*[in]*/ struct IMgaFCOs * mgaFCOs ) = 0;
+      virtual HRESULT __stdcall Scroll (
+        /*[in]*/ enum bar_enum __MIDL__IGMEOLEModel0000,
+        /*[in]*/ enum scroll_enum __MIDL__IGMEOLEModel0001 ) = 0;
+      virtual HRESULT __stdcall DumpModelGeometryXML (
+        /*[in]*/ BSTR filePath ) = 0;
+      virtual HRESULT __stdcall GetCurrentAspect (
+        /*[out,retval]*/ BSTR * aspectName ) = 0;
+      virtual HRESULT __stdcall SetCurrentAspect (
+        /*[in]*/ BSTR aspectName ) = 0;
+};
+
+struct __declspec(uuid("d4afdd5a-037a-42d5-a9a1-f44c81ea7af7"))
+aspect;
+    // [ default ] interface IGMEOLEAspect
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("edeeb1f8-bc44-40d2-be91-83e8ccd59845"))
+IGMEOLEAspect : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMgaAspect))
+    IMgaMetaAspectPtr MgaAspect;
+    __declspec(property(get=GetActive,put=PutActive))
+    VARIANT_BOOL Active;
+    __declspec(property(get=GetValid))
+    VARIANT_BOOL Valid;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMgaMetaAspectPtr GetMgaAspect ( );
+    void PutActive (
+        VARIANT_BOOL isActive );
+    VARIANT_BOOL GetActive ( );
+    VARIANT_BOOL GetValid ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_MgaAspect (
+        /*[out,retval]*/ struct IMgaMetaAspect * * aspect ) = 0;
+      virtual HRESULT __stdcall put_Active (
+        /*[in]*/ VARIANT_BOOL isActive ) = 0;
+      virtual HRESULT __stdcall get_Active (
+        /*[out,retval]*/ VARIANT_BOOL * isActive ) = 0;
+      virtual HRESULT __stdcall get_Valid (
+        /*[out,retval]*/ VARIANT_BOOL * isValid ) = 0;
+};
+
+struct __declspec(uuid("a946466f-29e2-44a6-a69a-4d6d9268a37f"))
+Panel;
+    // [ default ] interface IGMEOLEPanel
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("c047faeb-7ae7-40fb-8c5c-90c73dad4bc6"))
+IGMEOLEPanel : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetVisible,put=PutVisible))
+    VARIANT_BOOL Visible;
+    __declspec(property(get=GetInterface))
+    IDispatchPtr Interface;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    void PutVisible (
+        VARIANT_BOOL isVisible );
+    VARIANT_BOOL GetVisible ( );
+    IDispatchPtr GetInterface ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * Name ) = 0;
+      virtual HRESULT __stdcall put_Visible (
+        /*[in]*/ VARIANT_BOOL isVisible ) = 0;
+      virtual HRESULT __stdcall get_Visible (
+        /*[out,retval]*/ VARIANT_BOOL * isVisible ) = 0;
+      virtual HRESULT __stdcall get_Interface (
+        /*[out,retval]*/ IDispatch * * interf ) = 0;
+};
+
+struct __declspec(uuid("05403cf4-5c53-49d4-8f63-ed37870abf1f"))
+Collection;
+    // [ default ] interface IGMEOLEColl
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("8b4648c1-c3a9-45dd-ae8c-63db998f5cc0"))
+DecoratorEventSink;
+    // [ default ] interface IMgaElementDecoratorEvents
+    // interface ISupportErrorInfo
+
+struct __declspec(uuid("133ab952-9a84-49e0-98ca-c2484d959f3e"))
+AnnotatorEventSink;
+    // [ default ] interface IMgaElementDecoratorEvents
+    // interface ISupportErrorInfo
+
+#pragma pack(pop)

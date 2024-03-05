@@ -1,0 +1,1538 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (304514fe).
+//
+// c:\users\69038\documents\gme-21.4.1_src\gme\objectinspector\debug\mgautillib.tlh
+//
+// C++ source equivalent of Win32 type library MgaUtilLib.tlb
+// compiler-generated file created 06/28/23 at 14:39:06 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("461f30ae-3bf0-11d4-b3f0-005004d38590"))
+/* LIBID */ __MGAUtilLib;
+enum mgautil_error;
+struct /* coclass */ MgaResolver;
+struct __declspec(uuid("461f30b0-3bf0-11d4-b3f0-005004d38590"))
+/* dual interface */ IMgaResolver;
+struct /* coclass */ MgaRegistrar;
+struct __declspec(uuid("0e3c2752-6173-4050-bd47-ae54da1c373a"))
+/* dual interface */ IMgaRegistrar2;
+struct __declspec(uuid("f1d6bb05-42ee-11d4-b3f4-005004d38590"))
+/* dual interface */ IMgaRegistrar;
+enum regaccessmode_enum;
+enum edgesmoothmode_enum;
+enum fontsmoothmode_enum;
+struct /* coclass */ MgaLauncher;
+struct __declspec(uuid("d03ec326-447b-11d4-b3f6-005004d38590"))
+/* dual interface */ IMgaLauncher;
+enum metadlg_enum;
+enum componentdlg_enum;
+struct /* coclass */ MgaProgressDlg;
+struct __declspec(uuid("d0317326-447b-12d4-b3f6-005004d38590"))
+/* interface */ IMgaProgressDlg;
+struct /* coclass */ ComponentProxy;
+struct __declspec(uuid("ff01497a-36eb-4ea7-be44-2fa98bd703db"))
+/* interface */ IMgaComponentProxy;
+struct /* coclass */ MgaComponentDispatch;
+struct __declspec(uuid("52871786-9c85-408f-a7d1-ae507905a540"))
+/* dispinterface */ IMgaComponentDispatch;
+struct /* coclass */ MgaClosure;
+struct __declspec(uuid("74348e5a-c76d-4c2e-88d5-d968c01ce432"))
+/* dual interface */ IMgaClosure;
+struct /* coclass */ MgaEventLogger;
+struct __declspec(uuid("9d46c230-31a5-4248-b61e-4223fa6a7f7a"))
+/* dual interface */ IMgaEventLogger;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IMgaResolver, __uuidof(IMgaResolver));
+_COM_SMARTPTR_TYPEDEF(IMgaRegistrar, __uuidof(IMgaRegistrar));
+_COM_SMARTPTR_TYPEDEF(IMgaRegistrar2, __uuidof(IMgaRegistrar2));
+_COM_SMARTPTR_TYPEDEF(IMgaLauncher, __uuidof(IMgaLauncher));
+_COM_SMARTPTR_TYPEDEF(IMgaProgressDlg, __uuidof(IMgaProgressDlg));
+_COM_SMARTPTR_TYPEDEF(IMgaComponentProxy, __uuidof(IMgaComponentProxy));
+_COM_SMARTPTR_TYPEDEF(IMgaComponentDispatch, __uuidof(IMgaComponentDispatch));
+_COM_SMARTPTR_TYPEDEF(IMgaClosure, __uuidof(IMgaClosure));
+_COM_SMARTPTR_TYPEDEF(IMgaEventLogger, __uuidof(IMgaEventLogger));
+
+//
+// Type library items
+//
+
+enum mgautil_error
+{
+    E_MGAUTIL_COMPONENTPROXY_NOTINITIALIZED = -2139918335
+};
+
+struct __declspec(uuid("461f30b1-3bf0-11d4-b3f0-005004d38590"))
+MgaResolver;
+    // [ default ] interface IMgaResolver
+
+struct __declspec(uuid("461f30b0-3bf0-11d4-b3f0-005004d38590"))
+IMgaResolver : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetIsInteractive,put=PutIsInteractive))
+    VARIANT_BOOL IsInteractive;
+    __declspec(property(get=GetIsStickyEnabled,put=PutIsStickyEnabled))
+    VARIANT_BOOL IsStickyEnabled;
+    __declspec(property(get=GetFolderByStr))
+    IMgaMetaFolderPtr FolderByStr[][];
+    __declspec(property(get=GetKindByStr))
+    IMgaMetaFCOPtr KindByStr[][][];
+    __declspec(property(get=GetRoleByStr))
+    IMgaMetaRolePtr RoleByStr[][][][][];
+    __declspec(property(get=GetAttrByStr))
+    IMgaMetaAttributePtr AttrByStr[][];
+    __declspec(property(get=GetRoleByMeta))
+    IMgaMetaRolePtr RoleByMeta[][][][][];
+    __declspec(property(get=GetConnRoleByMeta))
+    IMgaMetaRolePtr ConnRoleByMeta[][][][][][];
+    __declspec(property(get=GetRefRoleByMeta))
+    IMgaMetaRolePtr RefRoleByMeta[][][];
+    __declspec(property(get=GetRolesByMetas))
+    IMgaMetaRolesPtr RolesByMetas[][][][];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __Clear ( );
+    void PutIsInteractive (
+        VARIANT_BOOL p );
+    VARIANT_BOOL GetIsInteractive ( );
+    void PutIsStickyEnabled (
+        VARIANT_BOOL p );
+    VARIANT_BOOL GetIsStickyEnabled ( );
+    HRESULT __getUserOptions ( );
+    IMgaMetaFolderPtr GetFolderByStr (
+        struct IMgaFolder * parent,
+        _bstr_t kindname );
+    IMgaMetaFolderPtr __GetFolderByStrDisp (
+        struct IMgaFolder * parent,
+        _bstr_t kindname );
+    IMgaMetaFCOPtr GetKindByStr (
+        struct IMgaFolder * parent,
+        _bstr_t kindname,
+        enum objtype_enum objtype );
+    IMgaMetaFCOPtr __GetKindByStrDisp (
+        struct IMgaFolder * parent,
+        _bstr_t kindname,
+        enum objtype_enum objtype );
+    IMgaMetaRolePtr GetRoleByStr (
+        struct IMgaModel * parent,
+        _bstr_t kindname,
+        enum objtype_enum objtype,
+        _bstr_t rolename,
+        _bstr_t aspect );
+    IMgaMetaRolePtr __GetRoleByStrDisp (
+        struct IMgaModel * parent,
+        _bstr_t kindname,
+        enum objtype_enum objtype,
+        _bstr_t rolename,
+        _bstr_t aspect );
+    IMgaMetaAttributePtr GetAttrByStr (
+        struct IMgaFCO * parent,
+        _bstr_t kindname );
+    IMgaMetaAttributePtr __GetAttrByStrDisp (
+        struct IMgaFCO * parent,
+        _bstr_t kindname );
+    IMgaMetaRolePtr GetRoleByMeta (
+        struct IMgaModel * parent,
+        struct IMgaMetaFCO * p_kind,
+        enum objtype_enum objtype,
+        struct IMgaMetaRole * p_role,
+        struct IMgaMetaAspect * aspect );
+    IMgaMetaRolePtr __GetRoleByMetaDisp (
+        struct IMgaModel * parent,
+        struct IMgaMetaFCO * p_kind,
+        enum objtype_enum objtype,
+        struct IMgaMetaRole * p_role,
+        struct IMgaMetaAspect * aspect );
+    IMgaMetaRolePtr GetConnRoleByMeta (
+        struct IMgaModel * parent,
+        struct IMgaMetaAspect * aspect,
+        struct IMgaFCO * src,
+        struct IMgaFCO * src_port,
+        struct IMgaFCO * dst,
+        struct IMgaFCO * dst_port );
+    IMgaMetaRolePtr __GetConnRoleByMetaDisp (
+        struct IMgaModel * parent,
+        struct IMgaMetaAspect * aspect,
+        struct IMgaFCO * src,
+        struct IMgaFCO * src_port,
+        struct IMgaFCO * dst,
+        struct IMgaFCO * dst_port );
+    IMgaMetaRolePtr GetRefRoleByMeta (
+        struct IMgaModel * parent,
+        struct IMgaMetaAspect * aspect,
+        struct IMgaFCO * src );
+    IMgaMetaRolePtr __GetRefRoleByMetaDisp (
+        struct IMgaModel * parent,
+        struct IMgaMetaAspect * aspect,
+        struct IMgaFCO * src );
+    IMgaMetaRolesPtr GetRolesByMetas (
+        struct IMgaModel * dst_parent,
+        struct IMgaFCOs * src,
+        struct IMgaMetaAspect * aspect,
+        _bstr_t sz_aspect );
+    IMgaMetaRolesPtr __GetRolesByMetasDisp (
+        struct IMgaModel * dst_parent,
+        struct IMgaFCOs * src,
+        struct IMgaMetaAspect * aspect,
+        _bstr_t sz_aspect );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Clear ( ) = 0;
+      virtual HRESULT __stdcall put_IsInteractive (
+        /*[in]*/ VARIANT_BOOL p ) = 0;
+      virtual HRESULT __stdcall get_IsInteractive (
+        /*[out,retval]*/ VARIANT_BOOL * p ) = 0;
+      virtual HRESULT __stdcall put_IsStickyEnabled (
+        /*[in]*/ VARIANT_BOOL p ) = 0;
+      virtual HRESULT __stdcall get_IsStickyEnabled (
+        /*[out,retval]*/ VARIANT_BOOL * p ) = 0;
+      virtual HRESULT __stdcall getUserOptions ( ) = 0;
+      virtual HRESULT __stdcall get_FolderByStr (
+        /*[in]*/ struct IMgaFolder * parent,
+        /*[in]*/ BSTR kindname,
+        /*[out,retval]*/ struct IMgaMetaFolder * * p ) = 0;
+      virtual HRESULT __stdcall GetFolderByStrDisp (
+        /*[in]*/ struct IMgaFolder * parent,
+        /*[in]*/ BSTR kindname,
+        /*[out,retval]*/ struct IMgaMetaFolder * * p ) = 0;
+      virtual HRESULT __stdcall get_KindByStr (
+        /*[in]*/ struct IMgaFolder * parent,
+        /*[in]*/ BSTR kindname,
+        /*[in]*/ enum objtype_enum objtype,
+        /*[out,retval]*/ struct IMgaMetaFCO * * p ) = 0;
+      virtual HRESULT __stdcall GetKindByStrDisp (
+        /*[in]*/ struct IMgaFolder * parent,
+        /*[in]*/ BSTR kindname,
+        /*[in]*/ enum objtype_enum objtype,
+        /*[out,retval]*/ struct IMgaMetaFCO * * p ) = 0;
+      virtual HRESULT __stdcall get_RoleByStr (
+        /*[in]*/ struct IMgaModel * parent,
+        /*[in]*/ BSTR kindname,
+        /*[in]*/ enum objtype_enum objtype,
+        /*[in]*/ BSTR rolename,
+        /*[in]*/ BSTR aspect,
+        /*[out,retval]*/ struct IMgaMetaRole * * p ) = 0;
+      virtual HRESULT __stdcall GetRoleByStrDisp (
+        /*[in]*/ struct IMgaModel * parent,
+        /*[in]*/ BSTR kindname,
+        /*[in]*/ enum objtype_enum objtype,
+        /*[in]*/ BSTR rolename,
+        /*[in]*/ BSTR aspect,
+        /*[out,retval]*/ struct IMgaMetaRole * * p ) = 0;
+      virtual HRESULT __stdcall get_AttrByStr (
+        /*[in]*/ struct IMgaFCO * parent,
+        /*[in]*/ BSTR kindname,
+        /*[out,retval]*/ struct IMgaMetaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall GetAttrByStrDisp (
+        /*[in]*/ struct IMgaFCO * parent,
+        /*[in]*/ BSTR kindname,
+        /*[out,retval]*/ struct IMgaMetaAttribute * * p ) = 0;
+      virtual HRESULT __stdcall get_RoleByMeta (
+        /*[in]*/ struct IMgaModel * parent,
+        /*[in]*/ struct IMgaMetaFCO * p_kind,
+        /*[in]*/ enum objtype_enum objtype,
+        /*[in]*/ struct IMgaMetaRole * p_role,
+        /*[in]*/ struct IMgaMetaAspect * aspect,
+        /*[out,retval]*/ struct IMgaMetaRole * * p ) = 0;
+      virtual HRESULT __stdcall GetRoleByMetaDisp (
+        /*[in]*/ struct IMgaModel * parent,
+        /*[in]*/ struct IMgaMetaFCO * p_kind,
+        /*[in]*/ enum objtype_enum objtype,
+        /*[in]*/ struct IMgaMetaRole * p_role,
+        /*[in]*/ struct IMgaMetaAspect * aspect,
+        /*[out,retval]*/ struct IMgaMetaRole * * p ) = 0;
+      virtual HRESULT __stdcall get_ConnRoleByMeta (
+        /*[in]*/ struct IMgaModel * parent,
+        /*[in]*/ struct IMgaMetaAspect * aspect,
+        /*[in]*/ struct IMgaFCO * src,
+        /*[in]*/ struct IMgaFCO * src_port,
+        /*[in]*/ struct IMgaFCO * dst,
+        /*[in]*/ struct IMgaFCO * dst_port,
+        /*[out,retval]*/ struct IMgaMetaRole * * p ) = 0;
+      virtual HRESULT __stdcall GetConnRoleByMetaDisp (
+        /*[in]*/ struct IMgaModel * parent,
+        /*[in]*/ struct IMgaMetaAspect * aspect,
+        /*[in]*/ struct IMgaFCO * src,
+        /*[in]*/ struct IMgaFCO * src_port,
+        /*[in]*/ struct IMgaFCO * dst,
+        /*[in]*/ struct IMgaFCO * dst_port,
+        /*[out,retval]*/ struct IMgaMetaRole * * p ) = 0;
+      virtual HRESULT __stdcall get_RefRoleByMeta (
+        /*[in]*/ struct IMgaModel * parent,
+        /*[in]*/ struct IMgaMetaAspect * aspect,
+        /*[in]*/ struct IMgaFCO * src,
+        /*[out,retval]*/ struct IMgaMetaRole * * p ) = 0;
+      virtual HRESULT __stdcall GetRefRoleByMetaDisp (
+        /*[in]*/ struct IMgaModel * parent,
+        /*[in]*/ struct IMgaMetaAspect * aspect,
+        /*[in]*/ struct IMgaFCO * src,
+        /*[out,retval]*/ struct IMgaMetaRole * * p ) = 0;
+      virtual HRESULT __stdcall get_RolesByMetas (
+        /*[in]*/ struct IMgaModel * dst_parent,
+        /*[in]*/ struct IMgaFCOs * src,
+        /*[in]*/ struct IMgaMetaAspect * aspect,
+        /*[in]*/ BSTR sz_aspect,
+        /*[out,retval]*/ struct IMgaMetaRoles * * p ) = 0;
+      virtual HRESULT __stdcall GetRolesByMetasDisp (
+        /*[in]*/ struct IMgaModel * dst_parent,
+        /*[in]*/ struct IMgaFCOs * src,
+        /*[in]*/ struct IMgaMetaAspect * aspect,
+        /*[in]*/ BSTR sz_aspect,
+        /*[out,retval]*/ struct IMgaMetaRoles * * p ) = 0;
+};
+
+struct __declspec(uuid("f1d6bb06-42ee-11d4-b3f4-005004d38590"))
+MgaRegistrar;
+    // [ default ] interface IMgaRegistrar2
+    // interface IMgaRegistrar
+    // interface IGMEVersionInfo
+
+enum regaccessmode_enum
+{
+    REGACCESS_NONE = 0,
+    REGACCESS_USER = 1,
+    REGACCESS_SYSTEM = 2,
+    REGACCESS_PRIORITY = 5,
+    REGACCESS_BOTH = 3,
+    REGACCESS_TEST = 8
+};
+
+enum edgesmoothmode_enum
+{
+    EdgeSmooth_NoSmooth = 0,
+    EdgeSmooth_HighSpeedMode = 1,
+    EdgeSmooth_HighQualityMode = 2
+};
+
+enum fontsmoothmode_enum
+{
+    FontSmooth_SystemDefault = 0,
+    FontSmooth_SingleBitPerPixelGridFit = 1,
+    FontSmooth_SingleBitPerPixel = 2,
+    FontSmooth_AntiAliasGridFit = 3,
+    FontSmooth_AntiAlias = 4,
+    FontSmooth_ClearTypeGridFit = 5
+};
+
+struct __declspec(uuid("f1d6bb05-42ee-11d4-b3f4-005004d38590"))
+IMgaRegistrar : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetIconPath,put=PutIconPath))
+    _bstr_t IconPath[];
+    __declspec(property(get=GetExternalEditor,put=PutExternalEditor))
+    _bstr_t ExternalEditor[];
+    __declspec(property(get=GetFontSmoothMode,put=PutFontSmoothMode))
+    enum fontsmoothmode_enum FontSmoothMode[];
+    __declspec(property(get=GetShowMultipleView,put=PutShowMultipleView))
+    VARIANT_BOOL ShowMultipleView[];
+    __declspec(property(get=GetUseAutoRouting,put=PutUseAutoRouting))
+    VARIANT_BOOL UseAutoRouting[];
+    __declspec(property(get=GetParadigms))
+    _variant_t Paradigms[];
+    __declspec(property(get=GetEventLoggingEnabled,put=PutEventLoggingEnabled))
+    VARIANT_BOOL EventLoggingEnabled[];
+    __declspec(property(get=GetLabelAvoidance,put=PutLabelAvoidance))
+    VARIANT_BOOL LabelAvoidance[];
+    __declspec(property(get=GetParadigmGUIDString))
+    _bstr_t ParadigmGUIDString[][];
+    __declspec(property(get=GetAutosaveEnabled,put=PutAutosaveEnabled))
+    VARIANT_BOOL AutosaveEnabled[];
+    __declspec(property(get=GetScriptEngine,put=PutScriptEngine))
+    _bstr_t ScriptEngine[];
+    __declspec(property(get=GetAutosaveFreq,put=PutAutosaveFreq))
+    long AutosaveFreq[];
+    __declspec(property(get=GetComponents))
+    _variant_t Components[];
+    __declspec(property(get=GetAutosaveUseDir,put=PutAutosaveUseDir))
+    VARIANT_BOOL AutosaveUseDir[];
+    __declspec(property(get=GetComponentExtraInfo,put=PutComponentExtraInfo))
+    _bstr_t ComponentExtraInfo[][][];
+    __declspec(property(get=GetAutosaveDir,put=PutAutosaveDir))
+    _bstr_t AutosaveDir[];
+    __declspec(property(get=GetLocalDllPath))
+    _bstr_t LocalDllPath[];
+    __declspec(property(get=GetExternalEditorEnabled,put=PutExternalEditorEnabled))
+    VARIANT_BOOL ExternalEditorEnabled[];
+    __declspec(property(get=GetEdgeSmoothMode,put=PutEdgeSmoothMode))
+    enum edgesmoothmode_enum EdgeSmoothMode[];
+    __declspec(property(get=GetAssociatedComponents))
+    _variant_t AssociatedComponents[][][];
+    __declspec(property(get=GetAssociatedParadigms))
+    _variant_t AssociatedParadigms[][];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetIconPath (
+        enum regaccessmode_enum mode );
+    void PutIconPath (
+        enum regaccessmode_enum mode,
+        _bstr_t path );
+    _bstr_t __GetIconPathDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetIconPathDisp (
+        enum regaccessmode_enum mode,
+        _bstr_t path );
+    VARIANT_BOOL GetShowMultipleView (
+        enum regaccessmode_enum mode );
+    void PutShowMultipleView (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL __GetShowMultipleViewDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetShowMultipleViewDisp (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL GetEventLoggingEnabled (
+        enum regaccessmode_enum mode );
+    void PutEventLoggingEnabled (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL __GetEventLoggingEnabledDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetEventLoggingEnabledDisp (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL GetAutosaveEnabled (
+        enum regaccessmode_enum mode );
+    void PutAutosaveEnabled (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL __GetAutosaveEnabledDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetAutosaveEnabledDisp (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    long GetAutosaveFreq (
+        enum regaccessmode_enum mode );
+    void PutAutosaveFreq (
+        enum regaccessmode_enum mode,
+        long secs );
+    long __GetAutosaveFreqDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetAutosaveFreqDisp (
+        enum regaccessmode_enum mode,
+        long secs );
+    VARIANT_BOOL GetAutosaveUseDir (
+        enum regaccessmode_enum mode );
+    void PutAutosaveUseDir (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL use );
+    VARIANT_BOOL __GetAutosaveUseDirDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetAutosaveUseDirDisp (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL use );
+    _bstr_t GetAutosaveDir (
+        enum regaccessmode_enum mode );
+    void PutAutosaveDir (
+        enum regaccessmode_enum mode,
+        _bstr_t dir );
+    _bstr_t __GetAutosaveDirDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetAutosaveDirDisp (
+        enum regaccessmode_enum mode,
+        _bstr_t dir );
+    VARIANT_BOOL GetExternalEditorEnabled (
+        enum regaccessmode_enum mode );
+    void PutExternalEditorEnabled (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL __GetExternalEditorEnabledDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetExternalEditorEnabledDisp (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    _bstr_t GetExternalEditor (
+        enum regaccessmode_enum mode );
+    void PutExternalEditor (
+        enum regaccessmode_enum mode,
+        _bstr_t path );
+    _bstr_t __GetExternalEditorDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetExternalEditorDisp (
+        enum regaccessmode_enum mode,
+        _bstr_t path );
+    VARIANT_BOOL GetUseAutoRouting (
+        enum regaccessmode_enum mode );
+    void PutUseAutoRouting (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL __GetUseAutoRoutingDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetUseAutoRoutingDisp (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL GetLabelAvoidance (
+        enum regaccessmode_enum mode );
+    void PutLabelAvoidance (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL __GetLabelAvoidanceDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetLabelAvoidanceDisp (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    _bstr_t GetScriptEngine (
+        enum regaccessmode_enum mode );
+    void PutScriptEngine (
+        enum regaccessmode_enum mode,
+        _bstr_t path );
+    _bstr_t __GetScriptEngineDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetScriptEngineDisp (
+        enum regaccessmode_enum mode,
+        _bstr_t path );
+    _bstr_t __GetDefZoomLevel (
+        enum regaccessmode_enum mode );
+    HRESULT __SetDefZoomLevel (
+        enum regaccessmode_enum mode,
+        _bstr_t zlevel );
+    VARIANT_BOOL __GetMouseOverNotify (
+        enum regaccessmode_enum mode );
+    HRESULT __SetMouseOverNotify (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    _bstr_t __GetRealNmbFmtStr (
+        enum regaccessmode_enum mode );
+    HRESULT __SetRealNmbFmtStr (
+        enum regaccessmode_enum mode,
+        _bstr_t fmtStr );
+    VARIANT_BOOL __GetTimeStamping (
+        enum regaccessmode_enum mode );
+    HRESULT __SetTimeStamping (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    VARIANT_BOOL __GetNavigation (
+        enum regaccessmode_enum mode );
+    HRESULT __SetNavigation (
+        enum regaccessmode_enum mode,
+        VARIANT_BOOL enabled );
+    HRESULT __GetUndoQueueSize (
+        enum regaccessmode_enum mode,
+        BSTR * queuesz );
+    HRESULT __SetUndoQueueSize (
+        enum regaccessmode_enum mode,
+        _bstr_t queuesz );
+    enum edgesmoothmode_enum GetEdgeSmoothMode (
+        enum regaccessmode_enum mode );
+    void PutEdgeSmoothMode (
+        enum regaccessmode_enum mode,
+        enum edgesmoothmode_enum smoothMode );
+    enum edgesmoothmode_enum __GetEdgeSmoothModeDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetEdgeSmoothModeDisp (
+        enum regaccessmode_enum mode,
+        enum edgesmoothmode_enum smoothMode );
+    enum fontsmoothmode_enum GetFontSmoothMode (
+        enum regaccessmode_enum mode );
+    void PutFontSmoothMode (
+        enum regaccessmode_enum mode,
+        enum fontsmoothmode_enum smoothMode );
+    enum fontsmoothmode_enum __GetFontSmoothModeDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __SetFontSmoothModeDisp (
+        enum regaccessmode_enum mode,
+        enum fontsmoothmode_enum smoothMode );
+    _variant_t GetParadigms (
+        enum regaccessmode_enum mode );
+    _variant_t __GetParadigmsDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __RegisterParadigmFromData (
+        _bstr_t ConnStr,
+        BSTR * newname,
+        enum regaccessmode_enum mode );
+    _bstr_t __RegisterParadigmFromDataDisp (
+        _bstr_t ConnStr,
+        enum regaccessmode_enum mode );
+    HRESULT __RegisterParadigm (
+        _bstr_t name,
+        _bstr_t ConnStr,
+        _bstr_t ver,
+        const _variant_t & guid,
+        enum regaccessmode_enum mode );
+    HRESULT __QueryParadigm (
+        _bstr_t name,
+        BSTR * ConnStr,
+        VARIANT * guid,
+        enum regaccessmode_enum mode );
+    _bstr_t GetParadigmGUIDString (
+        enum regaccessmode_enum mode,
+        _bstr_t name );
+    _bstr_t __GetParadigmGUIDStringDisp (
+        enum regaccessmode_enum mode,
+        _bstr_t name );
+    HRESULT __QueryParadigmAllGUIDs (
+        _bstr_t name,
+        VARIANT * names,
+        enum regaccessmode_enum mode );
+    HRESULT __UnregisterParadigm (
+        _bstr_t name,
+        enum regaccessmode_enum mode );
+    HRESULT __UnregisterParadigmGUID (
+        _bstr_t name,
+        const _variant_t & guid,
+        enum regaccessmode_enum mode );
+    HRESULT __VersionFromGUID (
+        _bstr_t name,
+        const _variant_t & guid,
+        BSTR * ver,
+        enum regaccessmode_enum mode );
+    HRESULT __GUIDFromVersion (
+        _bstr_t name,
+        _bstr_t ver,
+        VARIANT * guid,
+        enum regaccessmode_enum mode );
+    _variant_t GetComponents (
+        enum regaccessmode_enum mode );
+    _variant_t __GetComponentsDisp (
+        enum regaccessmode_enum mode );
+    HRESULT __RegisterComponent (
+        _bstr_t ProgID,
+        enum componenttype_enum type,
+        _bstr_t desc,
+        enum regaccessmode_enum mode );
+    HRESULT __QueryComponent (
+        _bstr_t ProgID,
+        enum componenttype_enum * type,
+        BSTR * desc,
+        enum regaccessmode_enum mode );
+    HRESULT __UnregisterComponent (
+        _bstr_t ProgID,
+        enum regaccessmode_enum mode );
+    void PutComponentExtraInfo (
+        enum regaccessmode_enum mode,
+        _bstr_t ProgID,
+        _bstr_t name,
+        _bstr_t pVal );
+    _bstr_t GetComponentExtraInfo (
+        enum regaccessmode_enum mode,
+        _bstr_t ProgID,
+        _bstr_t name );
+    HRESULT __SetComponentExtraInfoDisp (
+        enum regaccessmode_enum mode,
+        _bstr_t ProgID,
+        _bstr_t name,
+        _bstr_t newVal );
+    _bstr_t __GetComponentExtraInfoDisp (
+        enum regaccessmode_enum mode,
+        _bstr_t ProgID,
+        _bstr_t name );
+    _bstr_t GetLocalDllPath (
+        _bstr_t ProgID );
+    _bstr_t __GetLocalDllPathDisp (
+        _bstr_t ProgID );
+    _variant_t GetAssociatedComponents (
+        _bstr_t Paradigm,
+        enum componenttype_enum type,
+        enum regaccessmode_enum mode );
+    _variant_t __GetAssociatedComponentsDisp (
+        _bstr_t Paradigm,
+        enum componenttype_enum type,
+        enum regaccessmode_enum mode );
+    _variant_t GetAssociatedParadigms (
+        _bstr_t ProgID,
+        enum regaccessmode_enum mode );
+    _variant_t __GetAssociatedParadigmsDisp (
+        _bstr_t ProgID,
+        enum regaccessmode_enum mode );
+    HRESULT __Associate (
+        _bstr_t ProgID,
+        _bstr_t Paradigm,
+        enum regaccessmode_enum mode );
+    HRESULT __Disassociate (
+        _bstr_t ProgID,
+        _bstr_t Paradigm,
+        enum regaccessmode_enum mode );
+    HRESULT __IsAssociated (
+        _bstr_t ProgID,
+        _bstr_t Paradigm,
+        VARIANT_BOOL * is_ass,
+        VARIANT_BOOL * can_ass,
+        enum regaccessmode_enum mode );
+    HRESULT __RegisterComponentLibrary (
+        _bstr_t path,
+        enum regaccessmode_enum mode );
+    HRESULT __UnregisterComponentLibrary (
+        _bstr_t path,
+        enum regaccessmode_enum mode );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_IconPath (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * path ) = 0;
+      virtual HRESULT __stdcall put_IconPath (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR path ) = 0;
+      virtual HRESULT __stdcall GetIconPathDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * path ) = 0;
+      virtual HRESULT __stdcall SetIconPathDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR path ) = 0;
+      virtual HRESULT __stdcall get_ShowMultipleView (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall put_ShowMultipleView (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall GetShowMultipleViewDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall SetShowMultipleViewDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall get_EventLoggingEnabled (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall put_EventLoggingEnabled (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall GetEventLoggingEnabledDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall SetEventLoggingEnabledDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall get_AutosaveEnabled (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall put_AutosaveEnabled (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall GetAutosaveEnabledDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall SetAutosaveEnabledDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall get_AutosaveFreq (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ long * secs ) = 0;
+      virtual HRESULT __stdcall put_AutosaveFreq (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ long secs ) = 0;
+      virtual HRESULT __stdcall GetAutosaveFreqDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ long * secs ) = 0;
+      virtual HRESULT __stdcall SetAutosaveFreqDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ long secs ) = 0;
+      virtual HRESULT __stdcall get_AutosaveUseDir (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * use ) = 0;
+      virtual HRESULT __stdcall put_AutosaveUseDir (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL use ) = 0;
+      virtual HRESULT __stdcall GetAutosaveUseDirDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * use ) = 0;
+      virtual HRESULT __stdcall SetAutosaveUseDirDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL use ) = 0;
+      virtual HRESULT __stdcall get_AutosaveDir (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * dir ) = 0;
+      virtual HRESULT __stdcall put_AutosaveDir (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR dir ) = 0;
+      virtual HRESULT __stdcall GetAutosaveDirDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * dir ) = 0;
+      virtual HRESULT __stdcall SetAutosaveDirDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR dir ) = 0;
+      virtual HRESULT __stdcall get_ExternalEditorEnabled (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall put_ExternalEditorEnabled (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall GetExternalEditorEnabledDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall SetExternalEditorEnabledDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall get_ExternalEditor (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * path ) = 0;
+      virtual HRESULT __stdcall put_ExternalEditor (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR path ) = 0;
+      virtual HRESULT __stdcall GetExternalEditorDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * path ) = 0;
+      virtual HRESULT __stdcall SetExternalEditorDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR path ) = 0;
+      virtual HRESULT __stdcall get_UseAutoRouting (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall put_UseAutoRouting (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall GetUseAutoRoutingDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall SetUseAutoRoutingDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall get_LabelAvoidance (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall put_LabelAvoidance (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall GetLabelAvoidanceDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall SetLabelAvoidanceDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall get_ScriptEngine (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * path ) = 0;
+      virtual HRESULT __stdcall put_ScriptEngine (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR path ) = 0;
+      virtual HRESULT __stdcall GetScriptEngineDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * path ) = 0;
+      virtual HRESULT __stdcall SetScriptEngineDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR path ) = 0;
+      virtual HRESULT __stdcall GetDefZoomLevel (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * zlevel ) = 0;
+      virtual HRESULT __stdcall SetDefZoomLevel (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR zlevel ) = 0;
+      virtual HRESULT __stdcall GetMouseOverNotify (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall SetMouseOverNotify (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall GetRealNmbFmtStr (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * fmtStr ) = 0;
+      virtual HRESULT __stdcall SetRealNmbFmtStr (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR fmtStr ) = 0;
+      virtual HRESULT __stdcall GetTimeStamping (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall SetTimeStamping (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall GetNavigation (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT_BOOL * enabled ) = 0;
+      virtual HRESULT __stdcall SetNavigation (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ VARIANT_BOOL enabled ) = 0;
+      virtual HRESULT __stdcall GetUndoQueueSize (
+        enum regaccessmode_enum mode,
+        BSTR * queuesz ) = 0;
+      virtual HRESULT __stdcall SetUndoQueueSize (
+        enum regaccessmode_enum mode,
+        BSTR queuesz ) = 0;
+      virtual HRESULT __stdcall get_EdgeSmoothMode (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ enum edgesmoothmode_enum * smoothMode ) = 0;
+      virtual HRESULT __stdcall put_EdgeSmoothMode (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ enum edgesmoothmode_enum smoothMode ) = 0;
+      virtual HRESULT __stdcall GetEdgeSmoothModeDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ enum edgesmoothmode_enum * smoothMode ) = 0;
+      virtual HRESULT __stdcall SetEdgeSmoothModeDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ enum edgesmoothmode_enum smoothMode ) = 0;
+      virtual HRESULT __stdcall get_FontSmoothMode (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ enum fontsmoothmode_enum * smoothMode ) = 0;
+      virtual HRESULT __stdcall put_FontSmoothMode (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ enum fontsmoothmode_enum smoothMode ) = 0;
+      virtual HRESULT __stdcall GetFontSmoothModeDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ enum fontsmoothmode_enum * smoothMode ) = 0;
+      virtual HRESULT __stdcall SetFontSmoothModeDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ enum fontsmoothmode_enum smoothMode ) = 0;
+      virtual HRESULT __stdcall get_Paradigms (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT * names ) = 0;
+      virtual HRESULT __stdcall GetParadigmsDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT * names ) = 0;
+      virtual HRESULT __stdcall RegisterParadigmFromData (
+        /*[in]*/ BSTR ConnStr,
+        /*[out]*/ BSTR * newname,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall RegisterParadigmFromDataDisp (
+        /*[in]*/ BSTR ConnStr,
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ BSTR * newname ) = 0;
+      virtual HRESULT __stdcall RegisterParadigm (
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR ConnStr,
+        /*[in]*/ BSTR ver,
+        /*[in]*/ VARIANT guid,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall QueryParadigm (
+        /*[in]*/ BSTR name,
+        /*[out]*/ BSTR * ConnStr,
+        /*[in,out]*/ VARIANT * guid,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall get_ParadigmGUIDString (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR name,
+        /*[out,retval]*/ BSTR * guidstr ) = 0;
+      virtual HRESULT __stdcall GetParadigmGUIDStringDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR name,
+        /*[out,retval]*/ BSTR * guidstr ) = 0;
+      virtual HRESULT __stdcall QueryParadigmAllGUIDs (
+        /*[in]*/ BSTR name,
+        /*[out]*/ VARIANT * names,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall UnregisterParadigm (
+        /*[in]*/ BSTR name,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall UnregisterParadigmGUID (
+        /*[in]*/ BSTR name,
+        /*[in]*/ VARIANT guid,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall VersionFromGUID (
+        /*[in]*/ BSTR name,
+        /*[in]*/ VARIANT guid,
+        /*[out]*/ BSTR * ver,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall GUIDFromVersion (
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR ver,
+        /*[out]*/ VARIANT * guid,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall get_Components (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT * progids ) = 0;
+      virtual HRESULT __stdcall GetComponentsDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT * progids ) = 0;
+      virtual HRESULT __stdcall RegisterComponent (
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ enum componenttype_enum type,
+        /*[in]*/ BSTR desc,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall QueryComponent (
+        /*[in]*/ BSTR ProgID,
+        /*[out]*/ enum componenttype_enum * type,
+        /*[out]*/ BSTR * desc,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall UnregisterComponent (
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall put_ComponentExtraInfo (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ComponentExtraInfo (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ BSTR name,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall SetComponentExtraInfoDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR newVal ) = 0;
+      virtual HRESULT __stdcall GetComponentExtraInfoDisp (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ BSTR name,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_LocalDllPath (
+        /*[in]*/ BSTR ProgID,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall GetLocalDllPathDisp (
+        /*[in]*/ BSTR ProgID,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_AssociatedComponents (
+        /*[in]*/ BSTR Paradigm,
+        /*[in]*/ enum componenttype_enum type,
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT * progids ) = 0;
+      virtual HRESULT __stdcall GetAssociatedComponentsDisp (
+        /*[in]*/ BSTR Paradigm,
+        /*[in]*/ enum componenttype_enum type,
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT * progids ) = 0;
+      virtual HRESULT __stdcall get_AssociatedParadigms (
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT * Paradigms ) = 0;
+      virtual HRESULT __stdcall GetAssociatedParadigmsDisp (
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[out,retval]*/ VARIANT * Paradigms ) = 0;
+      virtual HRESULT __stdcall Associate (
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ BSTR Paradigm,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall Disassociate (
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ BSTR Paradigm,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall IsAssociated (
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ BSTR Paradigm,
+        /*[out]*/ VARIANT_BOOL * is_ass,
+        /*[out]*/ VARIANT_BOOL * can_ass,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall RegisterComponentLibrary (
+        /*[in]*/ BSTR path,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall UnregisterComponentLibrary (
+        /*[in]*/ BSTR path,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+};
+
+struct __declspec(uuid("0e3c2752-6173-4050-bd47-ae54da1c373a"))
+IMgaRegistrar2 : IMgaRegistrar
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetParadigmExtraInfo,put=PutParadigmExtraInfo))
+    _bstr_t ParadigmExtraInfo[][][][];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    void PutParadigmExtraInfo (
+        enum regaccessmode_enum mode,
+        _bstr_t ParadigmName,
+        _bstr_t ParadigmVersionGUID,
+        _bstr_t name,
+        _bstr_t pVal );
+    _bstr_t GetParadigmExtraInfo (
+        enum regaccessmode_enum mode,
+        _bstr_t ParadigmName,
+        _bstr_t ParadigmVersionGUID,
+        _bstr_t name );
+    HRESULT __SetParadigmExtraInfoDisp (
+        _bstr_t ParadigmName,
+        _bstr_t ParadigmVersionGUID,
+        _bstr_t name,
+        _bstr_t newVal,
+        enum regaccessmode_enum mode );
+    _bstr_t __GetParadigmExtraInfoDisp (
+        _bstr_t ParadigmName,
+        _bstr_t ParadigmVersionGUID,
+        _bstr_t name );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_ParadigmExtraInfo (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR ParadigmName,
+        /*[in]*/ BSTR ParadigmVersionGUID,
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ParadigmExtraInfo (
+        /*[in]*/ enum regaccessmode_enum mode,
+        /*[in]*/ BSTR ParadigmName,
+        /*[in]*/ BSTR ParadigmVersionGUID,
+        /*[in]*/ BSTR name,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall SetParadigmExtraInfoDisp (
+        /*[in]*/ BSTR ParadigmName,
+        /*[in]*/ BSTR ParadigmVersionGUID,
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR newVal,
+        /*[in]*/ enum regaccessmode_enum mode ) = 0;
+      virtual HRESULT __stdcall GetParadigmExtraInfoDisp (
+        /*[in]*/ BSTR ParadigmName,
+        /*[in]*/ BSTR ParadigmVersionGUID,
+        /*[in]*/ BSTR name,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+};
+
+struct __declspec(uuid("d03ec327-447b-11d4-b3f6-005004d38590"))
+MgaLauncher;
+    // [ default ] interface IMgaLauncher
+
+enum metadlg_enum
+{
+    METADLG_NONE = 0,
+    METADLG_NEWFILE = 1,
+    METADLG_PARREG = 2
+};
+
+enum componentdlg_enum
+{
+    COMPONENTDLG_NONE = 0,
+    COMPONENTDLG_INTERP = 1
+};
+
+struct __declspec(uuid("d03ec326-447b-11d4-b3f6-005004d38590"))
+IMgaLauncher : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetParadigmName,put=PutParadigmName))
+    _bstr_t ParadigmName;
+    __declspec(property(put=PutComponentType))
+    enum componenttype_enum ComponentType;
+    __declspec(property(put=PutParameter))
+    _variant_t Parameter;
+    __declspec(property(get=GetConnStr))
+    _bstr_t ConnStr;
+    __declspec(property(get=GetParadigm))
+    IMgaMetaProjectPtr Paradigm;
+    __declspec(property(get=GetProgID))
+    _bstr_t ProgID;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    void PutParadigmName (
+        _bstr_t p );
+    void PutComponentType (
+        enum componenttype_enum _arg1 );
+    void PutParameter (
+        const _variant_t & _arg1 );
+    _bstr_t GetParadigmName ( );
+    _bstr_t GetConnStr ( );
+    IMgaMetaProjectPtr GetParadigm ( );
+    _bstr_t GetProgID ( );
+    HRESULT __MetaDlg (
+        enum metadlg_enum flags );
+    HRESULT __GmeDlg ( );
+    HRESULT __ComponentDlg (
+        enum componentdlg_enum flags );
+    HRESULT __PropDlg (
+        struct IMgaObject * obj );
+    HRESULT __AttrDlg (
+        struct IMgaObject * obj );
+    HRESULT __ShowHelp (
+        struct IMgaObject * obj );
+    HRESULT __RegistryBrowser (
+        struct IMgaObject * obj );
+    HRESULT __AnnotationBrowser (
+        struct IMgaObject * obj,
+        struct IMgaRegNode * focus );
+    HRESULT __RunComponent (
+        _bstr_t ProgID,
+        struct IMgaProject * p,
+        struct IMgaFCO * focusobj,
+        struct IMgaFCOs * selectedobjs,
+        long param );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_ParadigmName (
+        /*[in]*/ BSTR p ) = 0;
+      virtual HRESULT __stdcall put_ComponentType (
+        /*[in]*/ enum componenttype_enum _arg1 ) = 0;
+      virtual HRESULT __stdcall put_Parameter (
+        /*[in]*/ VARIANT _arg1 ) = 0;
+      virtual HRESULT __stdcall get_ParadigmName (
+        /*[out,retval]*/ BSTR * p ) = 0;
+      virtual HRESULT __stdcall get_ConnStr (
+        /*[out,retval]*/ BSTR * p ) = 0;
+      virtual HRESULT __stdcall get_Paradigm (
+        /*[out,retval]*/ struct IMgaMetaProject * * p ) = 0;
+      virtual HRESULT __stdcall get_ProgID (
+        /*[out,retval]*/ BSTR * p ) = 0;
+      virtual HRESULT __stdcall MetaDlg (
+        enum metadlg_enum flags ) = 0;
+      virtual HRESULT __stdcall GmeDlg ( ) = 0;
+      virtual HRESULT __stdcall ComponentDlg (
+        enum componentdlg_enum flags ) = 0;
+      virtual HRESULT __stdcall PropDlg (
+        /*[in]*/ struct IMgaObject * obj ) = 0;
+      virtual HRESULT __stdcall AttrDlg (
+        /*[in]*/ struct IMgaObject * obj ) = 0;
+      virtual HRESULT __stdcall ShowHelp (
+        /*[in]*/ struct IMgaObject * obj ) = 0;
+      virtual HRESULT __stdcall RegistryBrowser (
+        /*[in]*/ struct IMgaObject * obj ) = 0;
+      virtual HRESULT __stdcall AnnotationBrowser (
+        /*[in]*/ struct IMgaObject * obj,
+        /*[in]*/ struct IMgaRegNode * focus ) = 0;
+      virtual HRESULT __stdcall RunComponent (
+        /*[in]*/ BSTR ProgID,
+        /*[in]*/ struct IMgaProject * p,
+        /*[in]*/ struct IMgaFCO * focusobj,
+        /*[in]*/ struct IMgaFCOs * selectedobjs,
+        /*[in]*/ long param ) = 0;
+};
+
+struct __declspec(uuid("b88cdeea-a4fb-11d4-b44b-005004d38590"))
+MgaProgressDlg;
+    // [ default ] interface IMgaProgressDlg
+
+struct __declspec(uuid("d0317326-447b-12d4-b3f6-005004d38590"))
+IMgaProgressDlg : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __SetTitle (
+        _bstr_t title );
+    HRESULT __SetLine (
+        int line,
+        _bstr_t msg );
+    HRESULT __StartProgressDialog (
+        wireHWND hwndParent );
+    VARIANT_BOOL __HasUserCancelled ( );
+    HRESULT __SetProgress (
+        long completed,
+        long total );
+    HRESULT __StopProgressDialog ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall SetTitle (
+        /*[in]*/ BSTR title ) = 0;
+      virtual HRESULT __stdcall SetLine (
+        /*[in]*/ int line,
+        /*[in]*/ BSTR msg ) = 0;
+      virtual HRESULT __stdcall StartProgressDialog (
+        /*[in]*/ wireHWND hwndParent ) = 0;
+      virtual HRESULT __stdcall HasUserCancelled (
+        /*[out,retval]*/ VARIANT_BOOL * p ) = 0;
+      virtual HRESULT __stdcall SetProgress (
+        /*[in]*/ long completed,
+        /*[in]*/ long total ) = 0;
+      virtual HRESULT __stdcall StopProgressDialog ( ) = 0;
+};
+
+struct __declspec(uuid("789c184d-b3e3-4b35-b3ae-665da236f59c"))
+ComponentProxy;
+    // [ default ] interface IMgaComponentProxy
+    // interface IMgaComponent
+    // interface IMgaComponentEx
+    // interface IGMEVersionInfo
+
+struct __declspec(uuid("ff01497a-36eb-4ea7-be44-2fa98bd703db"))
+IMgaComponentProxy : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(put=PutDispatchComponent))
+    IDispatchPtr DispatchComponent;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    void PutDispatchComponent (
+        IDispatch * _arg1 );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_DispatchComponent (
+        /*[in]*/ IDispatch * _arg1 ) = 0;
+};
+
+struct __declspec(uuid("bebd0575-bb6f-48ea-8373-7436f04efeec"))
+MgaComponentDispatch;
+    // [ default ] dispinterface IMgaComponentDispatch
+
+struct __declspec(uuid("52871786-9c85-408f-a7d1-ae507905a540"))
+IMgaComponentDispatch : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetInteractiveMode,put=PutInteractiveMode))
+    VARIANT_BOOL InteractiveMode;
+    __declspec(property(get=GetComponentName,put=PutComponentName))
+    _bstr_t ComponentName;
+    __declspec(property(get=GetComponentType,put=PutComponentType))
+    long ComponentType;
+    __declspec(property(get=GetParadigm,put=PutParadigm))
+    _bstr_t Paradigm;
+    __declspec(property(get=GetComponentProgID,put=PutComponentProgID))
+    _bstr_t ComponentProgID;
+    __declspec(property(get=GetVersion,put=PutVersion))
+    long Version;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT __Invoke (
+        struct IMgaProject * project,
+        struct IMgaFCOs * selectedobjs,
+        long param );
+    HRESULT __Initialize (
+        struct IMgaProject * p );
+    HRESULT __Enable (
+        VARIANT_BOOL newVal );
+    HRESULT __InvokeEx (
+        struct IMgaProject * project,
+        struct IMgaFCO * currentobj,
+        struct IMgaFCOs * selectedobjs,
+        long param );
+    HRESULT __ObjectsInvokeEx (
+        struct IMgaProject * project,
+        struct IMgaObject * currentobj,
+        struct IMgaObjects * selectedobjs,
+        long param );
+    HRESULT __SetComponentParameter (
+        _bstr_t name,
+        const _variant_t & newVal );
+    _variant_t __GetComponentParameter (
+        _bstr_t name );
+
+    // Properties:
+    VARIANT_BOOL GetInteractiveMode ( );
+    void PutInteractiveMode ( VARIANT_BOOL _val );
+    _bstr_t GetComponentName ( );
+    void PutComponentName ( _bstr_t _val );
+    long GetComponentType ( );
+    void PutComponentType ( long _val );
+    _bstr_t GetParadigm ( );
+    void PutParadigm ( _bstr_t _val );
+    _bstr_t GetComponentProgID ( );
+    void PutComponentProgID ( _bstr_t _val );
+    long GetVersion ( );
+    void PutVersion ( long _val );
+};
+
+struct __declspec(uuid("d6f2fbc5-3405-40fd-8880-7e99dd10f0ba"))
+MgaClosure;
+    // [ default ] interface IMgaClosure
+
+struct __declspec(uuid("74348e5a-c76d-4c2e-88d5-d968c01ce432"))
+IMgaClosure : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long __GetLastClosureId (
+        struct IMgaProject * p );
+    HRESULT __PutLastClosureId (
+        struct IMgaProject * p,
+        long p_iMarkWith );
+    HRESULT __SelectiveClosureDlg (
+        VARIANT_BOOL folder_containment_needed,
+        VARIANT_BOOL * refers_to,
+        VARIANT_BOOL * referred_by,
+        VARIANT_BOOL * connections,
+        VARIANT_BOOL * conns_through_refport,
+        VARIANT_BOOL * set_members,
+        VARIANT_BOOL * member_of_sets,
+        VARIANT_BOOL * model_containment,
+        VARIANT_BOOL * part_of_models,
+        VARIANT_BOOL * folder_containment,
+        VARIANT_BOOL * part_of_folders,
+        VARIANT_BOOL * base_type_of,
+        VARIANT_BOOL * derived_types_of,
+        long * library_element_handling,
+        long * wrapping,
+        long * kind_filter,
+        long * mark_value,
+        long * options,
+        VARIANT_BOOL * direction_down,
+        VARIANT_BOOL * copy_to_file,
+        VARIANT_BOOL * ok_pressed,
+        BSTR * file_name_selected );
+    HRESULT __SelectiveClosureCalc (
+        struct IMgaFCOs * init_sel_fcos,
+        struct IMgaFolders * init_sel_folders,
+        VARIANT_BOOL refers_to,
+        VARIANT_BOOL referred_by,
+        VARIANT_BOOL connections,
+        VARIANT_BOOL conns_through_refport,
+        VARIANT_BOOL set_members,
+        VARIANT_BOOL member_of_sets,
+        VARIANT_BOOL model_containment,
+        VARIANT_BOOL part_of_models,
+        VARIANT_BOOL folder_containment,
+        VARIANT_BOOL part_of_folders,
+        VARIANT_BOOL base_type_of,
+        VARIANT_BOOL derived_types_of,
+        long library_element_handling,
+        long wrapping,
+        long kind_filter,
+        long mark_value,
+        VARIANT_BOOL direction_down,
+        struct IMgaFCOs * * sel_fcos,
+        struct IMgaFolders * * sel_folders,
+        struct IMgaFCOs * * top_fcos,
+        struct IMgaFolders * * top_folders,
+        VARIANT_BOOL * top_collections_filled,
+        BSTR * acc_kinds );
+    HRESULT __SmartCopy (
+        struct IMgaFCOs * init_sel_fcos,
+        struct IMgaFolders * init_sel_folders,
+        struct IMgaFCOs * * sel_fcos,
+        struct IMgaFolders * * sel_folders,
+        struct IMgaFCOs * * top_fcos,
+        struct IMgaFolders * * top_folders,
+        int folder_containment,
+        long * options,
+        BSTR * acckinds,
+        BSTR * path );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall GetLastClosureId (
+        /*[in]*/ struct IMgaProject * p,
+        /*[out,retval]*/ long * p_pMarkWith ) = 0;
+      virtual HRESULT __stdcall PutLastClosureId (
+        /*[in]*/ struct IMgaProject * p,
+        /*[in]*/ long p_iMarkWith ) = 0;
+      virtual HRESULT __stdcall SelectiveClosureDlg (
+        /*[in]*/ VARIANT_BOOL folder_containment_needed,
+        /*[out]*/ VARIANT_BOOL * refers_to,
+        /*[out]*/ VARIANT_BOOL * referred_by,
+        /*[out]*/ VARIANT_BOOL * connections,
+        /*[out]*/ VARIANT_BOOL * conns_through_refport,
+        /*[out]*/ VARIANT_BOOL * set_members,
+        /*[out]*/ VARIANT_BOOL * member_of_sets,
+        /*[out]*/ VARIANT_BOOL * model_containment,
+        /*[out]*/ VARIANT_BOOL * part_of_models,
+        /*[out]*/ VARIANT_BOOL * folder_containment,
+        /*[out]*/ VARIANT_BOOL * part_of_folders,
+        /*[out]*/ VARIANT_BOOL * base_type_of,
+        /*[out]*/ VARIANT_BOOL * derived_types_of,
+        /*[out]*/ long * library_element_handling,
+        /*[out]*/ long * wrapping,
+        /*[out]*/ long * kind_filter,
+        /*[in,out]*/ long * mark_value,
+        /*[out]*/ long * options,
+        /*[out]*/ VARIANT_BOOL * direction_down,
+        /*[out]*/ VARIANT_BOOL * copy_to_file,
+        /*[out]*/ VARIANT_BOOL * ok_pressed,
+        /*[out]*/ BSTR * file_name_selected ) = 0;
+      virtual HRESULT __stdcall SelectiveClosureCalc (
+        /*[in]*/ struct IMgaFCOs * init_sel_fcos,
+        /*[in]*/ struct IMgaFolders * init_sel_folders,
+        /*[in]*/ VARIANT_BOOL refers_to,
+        /*[in]*/ VARIANT_BOOL referred_by,
+        /*[in]*/ VARIANT_BOOL connections,
+        /*[in]*/ VARIANT_BOOL conns_through_refport,
+        /*[in]*/ VARIANT_BOOL set_members,
+        /*[in]*/ VARIANT_BOOL member_of_sets,
+        /*[in]*/ VARIANT_BOOL model_containment,
+        /*[in]*/ VARIANT_BOOL part_of_models,
+        /*[in]*/ VARIANT_BOOL folder_containment,
+        /*[in]*/ VARIANT_BOOL part_of_folders,
+        /*[in]*/ VARIANT_BOOL base_type_of,
+        /*[in]*/ VARIANT_BOOL derived_types_of,
+        /*[in]*/ long library_element_handling,
+        /*[in]*/ long wrapping,
+        /*[in]*/ long kind_filter,
+        /*[in]*/ long mark_value,
+        /*[in]*/ VARIANT_BOOL direction_down,
+        /*[out]*/ struct IMgaFCOs * * sel_fcos,
+        /*[out]*/ struct IMgaFolders * * sel_folders,
+        /*[out]*/ struct IMgaFCOs * * top_fcos,
+        /*[out]*/ struct IMgaFolders * * top_folders,
+        /*[out]*/ VARIANT_BOOL * top_collections_filled,
+        /*[out]*/ BSTR * acc_kinds ) = 0;
+      virtual HRESULT __stdcall SmartCopy (
+        /*[in]*/ struct IMgaFCOs * init_sel_fcos,
+        /*[in]*/ struct IMgaFolders * init_sel_folders,
+        /*[out]*/ struct IMgaFCOs * * sel_fcos,
+        /*[out]*/ struct IMgaFolders * * sel_folders,
+        /*[out]*/ struct IMgaFCOs * * top_fcos,
+        /*[out]*/ struct IMgaFolders * * top_folders,
+        /*[in]*/ int folder_containment,
+        /*[out]*/ long * options,
+        /*[out]*/ BSTR * acckinds,
+        /*[out]*/ BSTR * path ) = 0;
+};
+
+struct __declspec(uuid("98c2f832-0209-45c9-b665-829b88aa9399"))
+MgaEventLogger;
+    // [ default ] interface IMgaEventLogger
+
+struct __declspec(uuid("9d46c230-31a5-4248-b61e-4223fa6a7f7a"))
+IMgaEventLogger : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT __LogEvent (
+        _bstr_t eventMsg );
+    HRESULT __StartLogging ( );
+    HRESULT __StopLogging ( );
+    HRESULT __EmergencyEvent ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall LogEvent (
+        /*[in]*/ BSTR eventMsg ) = 0;
+      virtual HRESULT __stdcall StartLogging ( ) = 0;
+      virtual HRESULT __stdcall StopLogging ( ) = 0;
+      virtual HRESULT __stdcall EmergencyEvent ( ) = 0;
+};
+
+#pragma pack(pop)
